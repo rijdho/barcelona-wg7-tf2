@@ -1,9 +1,14 @@
 import { UI, LOCALES, detectLocale } from "./i18n.js?v=4";
 
-// Suggestion channel: a Google Form with a "Node" short-answer question.
-// Fill in from the Form's "Get pre-filled link" (url = the /viewform base,
-// entry = the entry.<id> of the Node question). Empty url hides the button.
-const SUGGEST_FORM = { url: "", entry: "" };
+// Suggestion channel: a prefilled GitHub issue form. Issues need the repo to
+// be public, so the button stays hidden until `enabled` flips on flip day.
+// A GitHub Action then exports all taxonomy-suggestion issues to
+// suggestions/suggestions.csv in the repo.
+const SUGGEST = {
+  enabled: false,
+  repo: "rijdho/barcelona-wg7-tf2",
+  template: "suggest-change.yml",
+};
 
 const state = { lang: detectLocale(), selected: null, data: null };
 
@@ -145,12 +150,14 @@ function renderDetail() {
   $("#btn-clear").hidden = !id;
   $("#btn-share").hidden = !id;
   const suggest = $("#btn-suggest");
-  suggest.hidden = !id || !SUGGEST_FORM.url;
-  if (id && SUGGEST_FORM.url) {
+  suggest.hidden = !id || !SUGGEST.enabled;
+  if (id && SUGGEST.enabled) {
     const en = (d.benefits.find((x) => x.id === id) || d.roles.find((x) => x.id === id) ||
       d.stakeholders.find((x) => x.id === id)).name.en;
     const value = `${id} · ${en} (taxonomy v${d.version})`;
-    suggest.href = `${SUGGEST_FORM.url}?usp=pp_url&entry.${SUGGEST_FORM.entry}=${encodeURIComponent(value)}`;
+    suggest.href =
+      `https://github.com/${SUGGEST.repo}/issues/new?template=${SUGGEST.template}` +
+      `&title=${encodeURIComponent(`[Suggestion] ${value}`)}&node=${encodeURIComponent(value)}`;
   }
 
   if (!id) {

@@ -48,7 +48,12 @@ tests/
 qc/
   VERIFICATION_REPORT.md                  URL, date, and consistency verification of
                                           the taxonomy and white paper (2026-01-20)
+.github/ISSUE_TEMPLATE/suggest-change.yml Structured issue form for proposing edits;
+                                          the explorer's "Suggest a change" button
+                                          opens it pre-filled (active once public)
 .github/workflows/pages.yml               Pages deploy (manual until repo is public)
+.github/workflows/suggestions-export.yml  Keeps suggestions/suggestions.csv in sync
+                                          with the taxonomy-suggestion issues
 _ref/                                     Source material and internal TF2 material
                                           (private, not versioned)
   drive/                                  Local copies of the Google Drive working

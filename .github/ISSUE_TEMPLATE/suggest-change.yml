@@ -1,0 +1,54 @@
+name: Suggest a change to the taxonomy
+description: Propose an edit to a benefit dimension, stakeholder category, functional role, or mapping.
+title: "[Suggestion] "
+labels: ["taxonomy-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the taxonomy. Suggestions are reviewed by the
+        WG7-TF2 coordinators and discussed openly here. If you prefer not to use
+        GitHub, the explorer's "Suggest a change" button offers a form that needs
+        no account.
+  - type: input
+    id: node
+    attributes:
+      label: Node
+      description: Which element is this about? Pre-filled if you came from the explorer.
+      placeholder: "B6 · Visibility, Equity & Societal Relevance (taxonomy v1.0)"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of change
+      options:
+        - Wording (name or definition)
+        - Mapping (roles or benefits connected to it)
+        - Add something missing
+        - Remove or merge
+        - Translation (German or Spanish text)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your suggestion
+      description: What should change, and to what? Concrete wording is most helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why
+      description: The reasoning, evidence, or use case behind the suggestion.
+    validations:
+      required: false
+  - type: input
+    id: affiliation
+    attributes:
+      label: Name / affiliation (optional)
+      description: Helps the coordinators follow up; leave empty to stay with your GitHub handle.
+    validations:
+      required: false

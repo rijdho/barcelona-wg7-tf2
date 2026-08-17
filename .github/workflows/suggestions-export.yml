@@ -1,0 +1,74 @@
+# Keeps suggestions/suggestions.csv in sync with the taxonomy-suggestion
+# issues. Runs on every issue change (and on demand); parses the issue-form
+# sections into columns and commits the CSV only when it actually changed.
+# The CSV carries a UTF-8 BOM so Excel opens accented text correctly.
+name: Export suggestions to CSV
+
+on:
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: suggestions-export
+  cancel-in-progress: true
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: "taxonomy-suggestion",
+              state: "all",
+              per_page: 100,
+            });
+            // Issue-form bodies render as "### <Label>\n\n<value>" sections.
+            const section = (body, label) => {
+              const m = (body || "").match(new RegExp(`### ${label}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`));
+              const v = m ? m[1].trim() : "";
+              return v === "_No response_" ? "" : v;
+            };
+            const esc = (v) => `"${String(v).replace(/"/g, '""')}"`;
+            const header = ["issue", "state", "created", "author", "node", "type_of_change",
+              "suggestion", "why", "name_affiliation", "url"];
+            const rows = issues
+              .filter((i) => !i.pull_request)
+              .sort((a, b) => a.number - b.number)
+              .map((i) => [
+                i.number,
+                i.state,
+                i.created_at,
+                i.user ? i.user.login : "",
+                section(i.body, "Node"),
+                section(i.body, "Type of change"),
+                section(i.body, "Your suggestion"),
+                section(i.body, "Why"),
+                section(i.body, "Name / affiliation \\(optional\\)"),
+                i.html_url,
+              ]);
+            const csv = "\uFEFF" + [header, ...rows].map((r) => r.map(esc).join(",")).join("\r\n") + "\r\n";
+            fs.mkdirSync("suggestions", { recursive: true });
+            fs.writeFileSync("suggestions/suggestions.csv", csv);
+            core.info(`Exported ${rows.length} suggestions`);
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add suggestions/suggestions.csv
+          if git diff --cached --quiet; then
+            echo "CSV unchanged"
+          else
+            git commit -m "Update suggestions export"
+            git push
+          fi
