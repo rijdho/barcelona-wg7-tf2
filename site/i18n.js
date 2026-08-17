@@ -49,6 +49,7 @@ export const UI = {
       "needs a GitHub account; the explorer's button pre-fills it for the selected item), or the " +
       "shared WG7-TF2 spreadsheet, which needs no account at all.",
     aboutRefsTitle: "References",
+    sourceLabel: "Source:",
   },
   de: {
     title: "Die acht Nutzen",
@@ -95,6 +96,7 @@ export const UI = {
       "nachvollziehbar, erfordert ein GitHub-Konto; der Button im Explorer füllt es für das " +
       "gewählte Element vor) oder das gemeinsame WG7-TF2-Spreadsheet, ganz ohne Konto.",
     aboutRefsTitle: "Referenzen",
+    sourceLabel: "Quelle:",
   },
   es: {
     title: "Los ocho beneficios",
@@ -141,6 +143,7 @@ export const UI = {
       "trazable, requiere cuenta de GitHub; el botón del explorador lo prellena para el " +
       "elemento seleccionado), o la hoja de cálculo compartida del WG7-TF2, sin cuenta alguna.",
     aboutRefsTitle: "Referencias",
+    sourceLabel: "Fuente:",
   },
 };
 
