@@ -1,8 +1,15 @@
 # Taxonomy of ORI Stakeholders and Benefits (Barcelona Declaration WG7-TF2)
 
-Contribution to Task Force 2 ("Produce a stakeholder map and a taxonomy of benefits") of Working Group 7 of the Barcelona Declaration on Open Research Information. The task force maps who participates in Open Research Information (ORI) and what value it creates, as a basis for advocacy, case study collection, and policy work.
+**A taxonomy of who participates in Open Research Information and what value it creates.**
 
-The framework: eight benefit dimensions (B1-B8) grouped into three axes (Quality & Trust, Collaboration & Innovation, Impact & Relevance), mapped to eleven stakeholder categories through eight functional roles.
+Contribution to Task Force 2 ("Produce a stakeholder map and a taxonomy of benefits") of
+Working Group 7 of the Barcelona Declaration on Open Research Information. The task force maps
+who participates in Open Research Information (ORI) and what value it creates, as a basis for
+advocacy, case study collection, and policy work.
+
+The framework: eight benefit dimensions (B1-B8) grouped into three axes (Quality & Trust,
+Collaboration & Innovation, Impact & Relevance), mapped to eleven stakeholder categories
+through eight functional roles.
 
 ## Structure
 
@@ -31,7 +38,9 @@ _ref/                                     Source material and internal TF2 mater
 
 ## Status (2026-08-13)
 
-TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Zoom); the invitation asks members to review two TF2 working documents ahead of it, so a round of comments and revision is expected. Coordinators: Christian, Ricardo, Bianca, Barbara.
+TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Zoom); the
+invitation asks members to review two TF2 working documents ahead of it, so a round of
+comments and revision is expected. Coordinators: Christian, Ricardo, Bianca, Barbara.
 
 | Milestone | Status |
 | --- | --- |
@@ -44,6 +53,23 @@ TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Z
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
 | Zenodo DOI / publication | Pending |
 
+## Caveats
+
+The taxonomy is a v1.0 awaiting community review by WG7-TF2 (starting with the 1 September
+2026 meeting); dimensions, categories, and mappings may change as a result. It is a
+qualitative framework for mapping and advocacy, not a measurement instrument: it does not
+rank stakeholders, weigh benefits against each other, or support quantitative claims about
+the size of any benefit.
+
 ## Note
 
-Source documents (Barcelona Declaration PDFs in English and Spanish, the TF2 data collection spreadsheet, and TF2 internal documentation with meeting notes) live in `_ref/`, excluded from versioning. Deliverables are licensed CC BY 4.0 and intended for the WG7-TF2 community.
+Source documents (Barcelona Declaration PDFs in English and Spanish, the TF2 data collection
+spreadsheet, and TF2 internal documentation with meeting notes) live in `_ref/`, excluded
+from versioning. Deliverables are intended for the WG7-TF2 community.
+
+## License
+
+All content in this repository (taxonomy, white paper, overview documents, and the benefits
+map) is licensed under [Creative Commons Attribution 4.0 International (CC BY
+4.0)](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE). The repository
+contains prose and diagrams, not code, so a content license applies to the whole of it.
