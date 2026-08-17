@@ -163,7 +163,14 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
   border-radius: var(--r); padding: 22px; margin-top: 20px; box-shadow: var(--shadow); }
 
 /* ── Explorer ── */
-.explorer { display: grid; grid-template-columns: 1.2fr 1fr 1.3fr; gap: 18px; }
+.explorer { display: grid; grid-template-columns: 1.15fr 0.95fr 1.25fr; gap: 56px; position: relative; }
+.col { position: relative; z-index: 1; }
+
+/* the drawn map: S->R and R->B connections in the gutters */
+.wires { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.wires path { fill: none; stroke: var(--ink-2); stroke-opacity: 0.16; stroke-width: 1; }
+.has-selection .wires path { stroke-opacity: 0.05; }
+.wires path.wire-lit { stroke: var(--brand); stroke-opacity: 0.85; stroke-width: 1.8; }
 .col-title { font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase;
   letter-spacing: 0.12em; color: var(--ink-2); margin: 0 0 8px; }
 .nodes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
@@ -233,7 +240,8 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
   .nav-label, .nav-item, .rail-foot { display: none; }
   .cmdbar { padding: 11px 16px; }
   .content { padding: 20px 16px 48px; }
-  .explorer { grid-template-columns: 1fr; }
+  .explorer { grid-template-columns: 1fr; gap: 18px; }
+  .wires { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .node { transition: none; }

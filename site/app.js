@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=2";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=3";
 
 const state = { lang: detectLocale(), selected: null, data: null };
 
@@ -184,6 +184,48 @@ function renderDetail() {
   detail.replaceChildren(...parts);
 }
 
+// the drawn map: one path per S->R and R->B connection, laid in the gutters
+function edgeList() {
+  const d = state.data;
+  const edges = [];
+  for (const s of d.stakeholders) for (const r of s.roles) edges.push([s.id, r]);
+  for (const r of d.roles) for (const b of r.primaryBenefits) edges.push([r.id, b]);
+  return edges;
+}
+
+function drawWires() {
+  const svg = $(".wires");
+  const box = $(".explorer");
+  if (!state.data) return;
+  const ref = box.getBoundingClientRect();
+  svg.setAttribute("viewBox", `0 0 ${ref.width} ${ref.height}`);
+  const anchor = (id) => {
+    const el = document.querySelector(`.node[data-id="${id}"]`);
+    const r = el.getBoundingClientRect();
+    return { left: r.left - ref.left, right: r.right - ref.left, y: r.top - ref.top + r.height / 2 };
+  };
+  svg.replaceChildren(
+    ...edgeList().map(([from, to]) => {
+      const a = anchor(from);
+      const b = anchor(to);
+      const midX = (a.right + b.left) / 2;
+      const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      p.setAttribute("d", `M ${a.right} ${a.y} C ${midX} ${a.y}, ${midX} ${b.y}, ${b.left} ${b.y}`);
+      p.dataset.from = from;
+      p.dataset.to = to;
+      return p;
+    })
+  );
+  litWires();
+}
+
+function litWires() {
+  const lit = state.selected ? connections(state.selected) : new Set();
+  document.querySelectorAll(".wires path").forEach((p) => {
+    p.classList.toggle("wire-lit", lit.has(p.dataset.from) && lit.has(p.dataset.to));
+  });
+}
+
 function renderSelection() {
   const explorer = $(".explorer");
   explorer.classList.toggle("has-selection", !!state.selected);
@@ -194,6 +236,7 @@ function renderSelection() {
     btn.classList.toggle("lit", lit.has(id) && id !== state.selected);
     btn.setAttribute("aria-pressed", String(id === state.selected));
   });
+  litWires();
   renderDetail();
 }
 
@@ -220,10 +263,11 @@ function render() {
   renderChrome();
   renderLists();
   renderSelection();
+  drawWires();
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=2");
+  const res = await fetch("data/taxonomy.json?v=3");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
@@ -248,6 +292,8 @@ async function init() {
   });
 
   render();
+  new ResizeObserver(() => drawWires()).observe($(".explorer"));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawWires());
 }
 
 init();
