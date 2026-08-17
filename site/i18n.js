@@ -58,6 +58,11 @@ export const UI = {
       "Concrete examples feed the case study collection. Everything arrives as a public, versioned " +
       "record: each suggestion keeps its link, and the exported CSV in the repository is the " +
       "working dataset of the review.",
+    aboutCreditsTitle: "Credits",
+    aboutCredits:
+      "Built and maintained by Ricardo Hartley (@rijdho) for the WG7-TF2 coordination team: " +
+      "Christian, Ricardo, Bianca, Barbara. Suggestions from the community are credited in " +
+      "their own issues and in the suggestions dataset.",
     aboutRefsTitle: "References",
     sourceLabel: "Source:",
   },
@@ -115,6 +120,11 @@ export const UI = {
       "Community-Review validiert und verfeinert. Konkrete Beispiele speisen die " +
       "Fallstudiensammlung. Alles ist öffentlich und versioniert: jeder Vorschlag behält seinen " +
       "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review.",
+    aboutCreditsTitle: "Credits",
+    aboutCredits:
+      "Erstellt und betreut von Ricardo Hartley (@rijdho) für das WG7-TF2-Koordinationsteam: " +
+      "Christian, Ricardo, Bianca, Barbara. Beiträge aus der Community werden in ihren eigenen " +
+      "Issues und im Vorschlagsdatensatz ausgewiesen.",
     aboutRefsTitle: "Referenzen",
     sourceLabel: "Quelle:",
   },
@@ -172,6 +182,11 @@ export const UI = {
       "revisión comunitaria. Los ejemplos concretos alimentan la colección de casos de estudio. " +
       "Todo queda como registro público y versionado: cada sugerencia conserva su enlace, y el CSV " +
       "exportado en el repositorio es el conjunto de datos de trabajo de la revisión.",
+    aboutCreditsTitle: "Créditos",
+    aboutCredits:
+      "Construido y mantenido por Ricardo Hartley (@rijdho) para el equipo coordinador del " +
+      "WG7-TF2: Christian, Ricardo, Bianca, Barbara. Las sugerencias de la comunidad quedan " +
+      "acreditadas en sus propios issues y en el conjunto de datos de sugerencias.",
     aboutRefsTitle: "Referencias",
     sourceLabel: "Fuente:",
   },
