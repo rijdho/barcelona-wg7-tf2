@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ORI Stakeholders & Benefits Explorer · Barcelona Declaration WG7-TF2</title>
+  <meta name="description" content="Interactive explorer of the Taxonomy of Open Research Information stakeholders and benefits (Barcelona Declaration WG7 Task Force 2)." />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("wg7tf2-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow" data-i18n="eyebrow"></p>
+        <h1 data-i18n="title"></h1>
+        <p class="lede" data-i18n="lede"></p>
+      </div>
+      <div class="controls">
+        <label class="ctl">
+          <span data-i18n="langLabel"></span>
+          <select id="lang-select" autocomplete="off">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+        <label class="ctl">
+          <span data-i18n="themeLabel"></span>
+          <select id="theme-select" autocomplete="off">
+            <option value="auto" data-i18n="themeAuto"></option>
+            <option value="light" data-i18n="themeLight"></option>
+            <option value="dark" data-i18n="themeDark"></option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="explorer" aria-label="Taxonomy explorer">
+      <div class="col" id="col-stakeholders">
+        <h2 class="col-title" data-i18n="colStakeholders"></h2>
+        <ul class="nodes" id="list-stakeholders"></ul>
+      </div>
+      <div class="col" id="col-roles">
+        <h2 class="col-title" data-i18n="colRoles"></h2>
+        <ul class="nodes" id="list-roles"></ul>
+      </div>
+      <div class="col" id="col-benefits">
+        <h2 class="col-title" data-i18n="colBenefits"></h2>
+        <div id="list-benefits"></div>
+      </div>
+    </section>
+
+    <section class="detail-bar">
+      <div class="detail-card" id="detail">
+        <p class="hint" data-i18n="hint"></p>
+      </div>
+      <div class="detail-actions">
+        <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
+        <button id="btn-share" class="btn" data-i18n="share" hidden></button>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2 class="eyebrow" data-i18n="aboutTitle"></h2>
+      <p id="about-body"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Barcelona Declaration WG7-TF2
+      · <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>
+      · <a href="https://github.com/rijdho/barcelona-wg7-tf2" id="source-link" data-i18n="footerSource"></a>
+    </p>
+  </footer>
+
+  <script type="module" src="app.js?v=1"></script>
+</body>
+</html>

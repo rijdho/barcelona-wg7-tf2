@@ -1,0 +1,11 @@
+{
+  "name": "barcelona-wg7-tf2",
+  "private": true,
+  "type": "module",
+  "description": "Taxonomy of ORI stakeholders and benefits (Barcelona Declaration WG7-TF2) with an interactive explorer",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "diagram": "node scripts/generate-diagram.mjs"
+  }
+}
