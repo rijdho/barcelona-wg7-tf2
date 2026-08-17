@@ -1,18 +1,20 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=1";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=2";
 
 const state = { lang: detectLocale(), selected: null, data: null };
 
 const $ = (sel) => document.querySelector(sel);
 const t = (key) => UI[state.lang][key];
 
-function applyTheme(value) {
-  if (value === "light" || value === "dark") {
-    document.documentElement.dataset.theme = value;
-    localStorage.setItem("wg7tf2-theme", value);
-  } else {
-    delete document.documentElement.dataset.theme;
-    localStorage.removeItem("wg7tf2-theme");
-  }
+function effectiveTheme() {
+  const set = document.documentElement.dataset.theme;
+  if (set === "light" || set === "dark") return set;
+  return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function toggleTheme() {
+  const next = effectiveTheme() === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem("wg7tf2-theme", next);
 }
 
 // selection graph: which ids light up for a given selection
@@ -105,14 +107,28 @@ function chipList(ids) {
   return ul;
 }
 
-function rel(labelKey, ids) {
+function rel(labelKey, content) {
   const div = document.createElement("div");
   div.className = "rel";
   const label = document.createElement("span");
   label.className = "rel-label";
   label.textContent = t(labelKey);
-  div.append(label, chipList(ids));
+  div.append(label, content);
   return div;
+}
+
+function plainChips(items) {
+  const ul = document.createElement("ul");
+  ul.className = "chips";
+  ul.append(
+    ...items.map((text) => {
+      const li = document.createElement("li");
+      li.className = "chip";
+      li.textContent = text;
+      return li;
+    })
+  );
+  return ul;
 }
 
 function renderDetail() {
@@ -126,7 +142,7 @@ function renderDetail() {
 
   if (!id) {
     const hint = document.createElement("p");
-    hint.className = "hint";
+    hint.className = "hint muted";
     hint.textContent = t("hint");
     detail.replaceChildren(hint);
     return;
@@ -143,30 +159,18 @@ function renderDetail() {
     kind.textContent = `${t("colStakeholders")} · ${id}`;
     h.textContent = s.name[L];
     body.textContent = s.description[L];
-    const exDiv = document.createElement("div");
-    exDiv.className = "rel";
-    const exLabel = document.createElement("span");
-    exLabel.className = "rel-label";
-    exLabel.textContent = t("detailExamples");
-    const exList = document.createElement("ul");
-    exList.className = "chips";
-    exList.append(
-      ...s.examples[L].map((e) => {
-        const li = document.createElement("li");
-        li.className = "chip";
-        li.textContent = e;
-        return li;
-      })
+    parts.push(
+      rel("detailExamples", plainChips(s.examples[L])),
+      rel("detailRoles", chipList(s.roles)),
+      rel("detailBenefits", chipList(s.primaryBenefits))
     );
-    exDiv.append(exLabel, exList);
-    parts.push(exDiv, rel("detailRoles", s.roles), rel("detailBenefits", s.primaryBenefits));
   } else if (id.startsWith("R")) {
     const r = d.roles.find((x) => x.id === id);
     kind.textContent = `${t("colRoles")} · ${id}`;
     h.textContent = r.name[L];
     body.textContent = r.definition[L];
     const holders = d.stakeholders.filter((s) => s.roles.includes(id)).map((s) => s.id);
-    parts.push(rel("detailBenefits", r.primaryBenefits), rel("detailStakeholders", holders));
+    parts.push(rel("detailBenefits", chipList(r.primaryBenefits)), rel("detailStakeholders", chipList(holders)));
   } else {
     const b = d.benefits.find((x) => x.id === id);
     const axis = d.axes.find((a) => a.id === b.axis);
@@ -175,7 +179,7 @@ function renderDetail() {
     body.textContent = b.definition[L];
     const roles = d.roles.filter((r) => r.primaryBenefits.includes(id)).map((r) => r.id);
     const holders = d.stakeholders.filter((s) => s.primaryBenefits.includes(id)).map((s) => s.id);
-    parts.push(rel("detailRolesDelivering", roles), rel("detailStakeholders", holders));
+    parts.push(rel("detailRolesDelivering", chipList(roles)), rel("detailStakeholders", chipList(holders)));
   }
   detail.replaceChildren(...parts);
 }
@@ -205,8 +209,11 @@ function renderChrome() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     el.textContent = UI[L][el.dataset.i18n];
   });
+  $("#lede").textContent = t("lede");
   $("#about-body").textContent = t("aboutBody").replace("{version}", state.data.version);
-  $("#lang-select").value = L;
+  document.querySelectorAll(".langs button").forEach((b) => {
+    b.setAttribute("aria-current", String(b.dataset.lang === L));
+  });
 }
 
 function render() {
@@ -216,23 +223,22 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=1");
+  const res = await fetch("data/taxonomy.json?v=2");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
   if (/^[SRB]\d+$/.test(hash)) state.selected = hash;
 
-  $("#lang-select").addEventListener("change", (e) => {
-    if (!LOCALES.includes(e.target.value)) return;
-    state.lang = e.target.value;
-    localStorage.setItem("wg7tf2-lang", state.lang);
-    render();
+  document.querySelectorAll(".langs button").forEach((b) => {
+    b.addEventListener("click", () => {
+      if (!LOCALES.includes(b.dataset.lang)) return;
+      state.lang = b.dataset.lang;
+      localStorage.setItem("wg7tf2-lang", state.lang);
+      render();
+    });
   });
 
-  const themeSel = $("#theme-select");
-  themeSel.value = localStorage.getItem("wg7tf2-theme") || "auto";
-  themeSel.addEventListener("change", (e) => applyTheme(e.target.value));
-
+  $("#theme-toggle").addEventListener("click", toggleTheme);
   $("#btn-clear").addEventListener("click", () => select(null));
   $("#btn-share").addEventListener("click", async () => {
     await navigator.clipboard.writeText(location.href);

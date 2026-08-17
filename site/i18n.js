@@ -6,12 +6,15 @@ export const LOCALES = ["en", "de", "es"];
 
 export const UI = {
   en: {
-    eyebrow: "Barcelona Declaration · WG7 · Task Force 2",
-    title: "ORI Stakeholders & Benefits Explorer",
+    title: "Stakeholders & Benefits",
+    eyebrow: "A stakeholder map and a taxonomy of benefits for open research information",
     lede:
-      "Who participates in Open Research Information, and what value it creates. " +
-      "Eight benefit dimensions in three axes, reached by eleven stakeholder categories " +
-      "through eight functional roles. Select any item to trace its connections.",
+      "Who participates in Open Research Information, and what value it creates: " +
+      "eight benefit dimensions in three axes, reached by eleven stakeholder categories " +
+      "through eight functional roles. Select any item to trace its connections. " +
+      "Everything runs in your browser; nothing is tracked or sent anywhere.",
+    navView: "View",
+    navExplorer: "Explorer",
     colStakeholders: "Stakeholder categories",
     colRoles: "Functional roles",
     colBenefits: "Benefit dimensions",
@@ -29,22 +32,18 @@ export const UI = {
     aboutBody:
       "This explorer renders version {version} of the Taxonomy of ORI Stakeholders and Benefits, " +
       "a working document of Task Force 2 of Working Group 7 of the Barcelona Declaration on Open " +
-      "Research Information. It runs entirely in your browser: nothing is tracked, nothing is sent anywhere.",
-    footerLicense: "CC BY 4.0",
-    footerSource: "Source",
-    langLabel: "Language",
-    themeLabel: "Theme",
-    themeAuto: "Auto",
-    themeLight: "Light",
-    themeDark: "Dark",
+      "Research Information. Content is licensed CC BY 4.0; the English text is the authoritative wording.",
   },
   de: {
-    eyebrow: "Barcelona Declaration · WG7 · Task Force 2",
-    title: "ORI-Stakeholder- & Nutzen-Explorer",
+    title: "Stakeholder & Nutzen",
+    eyebrow: "Eine Stakeholder-Karte und eine Nutzen-Taxonomie für offene Forschungsinformation",
     lede:
-      "Wer an Open Research Information teilnimmt und welchen Wert sie schafft. " +
-      "Acht Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
-      "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu verfolgen.",
+      "Wer an Open Research Information teilnimmt und welchen Wert sie schafft: " +
+      "acht Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
+      "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu verfolgen. " +
+      "Alles läuft im Browser; nichts wird erfasst oder gesendet.",
+    navView: "Ansicht",
+    navExplorer: "Explorer",
     colStakeholders: "Stakeholder-Kategorien",
     colRoles: "Funktionale Rollen",
     colBenefits: "Nutzendimensionen",
@@ -62,22 +61,18 @@ export const UI = {
     aboutBody:
       "Dieser Explorer zeigt Version {version} der Taxonomie der ORI-Stakeholder und -Nutzen, " +
       "ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona Declaration on Open " +
-      "Research Information. Er läuft vollständig im Browser: nichts wird erfasst, nichts wird gesendet.",
-    footerLicense: "CC BY 4.0",
-    footerSource: "Quellcode",
-    langLabel: "Sprache",
-    themeLabel: "Design",
-    themeAuto: "Auto",
-    themeLight: "Hell",
-    themeDark: "Dunkel",
+      "Research Information. Inhalte stehen unter CC BY 4.0; der englische Text ist maßgeblich.",
   },
   es: {
-    eyebrow: "Barcelona Declaration · WG7 · Task Force 2",
-    title: "Explorador de stakeholders y beneficios de ORI",
+    title: "Stakeholders y beneficios",
+    eyebrow: "Un mapa de stakeholders y una taxonomía de beneficios para la información abierta sobre investigación",
     lede:
-      "Quién participa en la información abierta sobre investigación y qué valor crea. " +
-      "Ocho dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
-      "a través de ocho roles funcionales. Selecciona un elemento para trazar sus conexiones.",
+      "Quién participa en la información abierta sobre investigación y qué valor crea: " +
+      "ocho dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
+      "a través de ocho roles funcionales. Selecciona un elemento para trazar sus conexiones. " +
+      "Todo funciona en tu navegador; no se rastrea ni se envía nada.",
+    navView: "Vista",
+    navExplorer: "Explorador",
     colStakeholders: "Categorías de stakeholders",
     colRoles: "Roles funcionales",
     colBenefits: "Dimensiones de beneficio",
@@ -95,14 +90,7 @@ export const UI = {
     aboutBody:
       "Este explorador muestra la versión {version} de la Taxonomía de stakeholders y beneficios de ORI, " +
       "un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona Declaration on Open " +
-      "Research Information. Funciona por completo en tu navegador: no se rastrea ni se envía nada.",
-    footerLicense: "CC BY 4.0",
-    footerSource: "Código fuente",
-    langLabel: "Idioma",
-    themeLabel: "Tema",
-    themeAuto: "Auto",
-    themeLight: "Claro",
-    themeDark: "Oscuro",
+      "Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es la redacción autorizada.",
   },
 };
 
