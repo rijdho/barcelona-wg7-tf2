@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=6";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=8";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -6,6 +6,7 @@ const SUGGEST = {
   enabled: true,
   repo: "rijdho/barcelona-wg7-tf2",
   template: "suggest-change.yml",
+  sheet: "https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit",
 };
 
 const state = { lang: detectLocale(), selected: null, view: "explorer", data: null };
@@ -59,6 +60,48 @@ function connections(id) {
   return lit;
 }
 
+function tooltipText(id) {
+  const d = state.data;
+  const L = state.lang;
+  if (id.startsWith("B")) {
+    const b = d.benefits.find((x) => x.id === id);
+    return b.description[L].split(". ")[0] + ".";
+  }
+  if (id.startsWith("A") || id.startsWith("O")) {
+    const n = nodeById(id);
+    return n.benefits
+      .map((bId) => `${bId} · ${d.benefits.find((x) => x.id === bId).name[L]}`)
+      .join("   ·   ");
+  }
+  return d.outcomes.map((o) => o.name[L]).join("   ·   ");
+}
+
+function showTooltip(btn) {
+  const tip = $("#tooltip");
+  tip.textContent = tooltipText(btn.dataset.id);
+  tip.hidden = false;
+  const r = btn.getBoundingClientRect();
+  const tr = tip.getBoundingClientRect();
+  let x = r.left;
+  if (x + tr.width > window.innerWidth - 12) x = window.innerWidth - tr.width - 12;
+  let y = r.bottom + 8;
+  if (y + tr.height > window.innerHeight - 8) y = r.top - tr.height - 8;
+  tip.style.left = `${Math.max(8, x)}px`;
+  tip.style.top = `${y}px`;
+}
+
+function hideTooltip() {
+  $("#tooltip").hidden = true;
+}
+
+function previewWires(id) {
+  if (state.selected) return; // an explicit selection owns the highlight
+  const lit = id ? connections(id) : new Set();
+  document.querySelectorAll(".wires path").forEach((p) => {
+    p.classList.toggle("wire-lit", lit.has(p.dataset.from) && lit.has(p.dataset.to));
+  });
+}
+
 function nodeButton(id, label) {
   const li = document.createElement("li");
   const btn = document.createElement("button");
@@ -70,6 +113,10 @@ function nodeButton(id, label) {
   idSpan.textContent = id;
   btn.append(idSpan, document.createTextNode(label));
   btn.addEventListener("click", () => select(state.selected === id ? null : id));
+  btn.addEventListener("mouseenter", () => { showTooltip(btn); previewWires(id); });
+  btn.addEventListener("mouseleave", () => { hideTooltip(); previewWires(null); });
+  btn.addEventListener("focus", () => showTooltip(btn));
+  btn.addEventListener("blur", hideTooltip);
   li.appendChild(btn);
   return li;
 }
@@ -166,6 +213,7 @@ function renderDetail() {
   $("#btn-share").hidden = !id;
   const suggest = $("#btn-suggest");
   suggest.hidden = !id || !SUGGEST.enabled;
+  $("#btn-sheet").hidden = !id || !SUGGEST.sheet;
   if (id && SUGGEST.enabled) {
     const value = `${id} · ${nodeById(id).name.en} (brief v${d.version})`;
     suggest.href =
@@ -312,7 +360,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=6");
+  const res = await fetch("data/taxonomy.json?v=8");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");

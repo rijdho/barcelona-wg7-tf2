@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Value of Open Research Information · Barcelona Declaration WG7-TF2</title>
   <meta name="description" content="Interactive explorer of the eight transformative benefits of Open Research Information (Barcelona Declaration WG7 Task Force 2)." />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=8" />
   <script>
     (function () {
       var t = localStorage.getItem("wg7tf2-theme");
@@ -78,6 +78,7 @@
                 <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
                 <button id="btn-share" class="btn" data-i18n="share" hidden></button>
                 <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener" hidden></a>
+                <a id="btn-sheet" class="btn ghost" data-i18n="suggestSheet" href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" target="_blank" rel="noopener" hidden></a>
               </div>
             </section>
           </div>
@@ -88,6 +89,12 @@
               <p id="about-body"></p>
               <h3 class="col-title about-h" data-i18n="aboutHowTitle"></h3>
               <p id="about-how-body"></p>
+              <h3 class="col-title about-h" data-i18n="aboutSuggestTitle"></h3>
+              <p data-i18n="aboutSuggestBody"></p>
+              <ul class="refs">
+                <li><a href="https://github.com/rijdho/barcelona-wg7-tf2/issues/new?template=suggest-change.yml" data-i18n="suggest"></a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" data-i18n="suggestSheet"></a></li>
+              </ul>
               <h3 class="col-title about-h" data-i18n="aboutRefsTitle"></h3>
               <ul class="refs">
                 <li>Barcelona Declaration on Open Research Information (2024).
@@ -115,6 +122,8 @@
     </div>
   </div>
 
-  <script type="module" src="app.js?v=7"></script>
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+  <script type="module" src="app.js?v=8"></script>
 </body>
 </html>

@@ -27,6 +27,7 @@ export const UI = {
     hint: "Nothing selected. Click an axis, benefit, or outcome to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
     suggest: "Suggest a change",
+    suggestSheet: "Suggest in the shared spreadsheet",
     shared: "Link copied",
     aboutTitle: "About",
     aboutBody:
@@ -42,6 +43,11 @@ export const UI = {
       "Those commitments unlock the eight benefits shown here, each read as: what traditional " +
       "metrics miss, what ORI makes possible, and who benefits. This page is a static site; the " +
       "data behind it is a single JSON file in the repository, and every change to it is versioned.",
+    aboutSuggestTitle: "Suggest changes",
+    aboutSuggestBody:
+      "Two channels, pick whichever suits you: a structured GitHub issue (public and traceable, " +
+      "needs a GitHub account; the explorer's button pre-fills it for the selected item), or the " +
+      "shared WG7-TF2 spreadsheet, which needs no account at all.",
     aboutRefsTitle: "References",
   },
   de: {
@@ -66,6 +72,7 @@ export const UI = {
     hint: "Nichts ausgewählt. Achse, Nutzen oder Ergebnis anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
     suggest: "Änderung vorschlagen",
+    suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
     aboutBody:
@@ -82,6 +89,11 @@ export const UI = {
       "Nutzen, jeweils gelesen als: was traditionelle Metriken übersehen, was ORI möglich macht und " +
       "wer profitiert. Diese Seite ist statisch; die Daten dahinter sind eine einzige JSON-Datei im " +
       "Repository, und jede Änderung daran ist versioniert.",
+    aboutSuggestTitle: "Änderungen vorschlagen",
+    aboutSuggestBody:
+      "Zwei Wege, je nachdem, was passt: ein strukturiertes GitHub-Issue (öffentlich und " +
+      "nachvollziehbar, erfordert ein GitHub-Konto; der Button im Explorer füllt es für das " +
+      "gewählte Element vor) oder das gemeinsame WG7-TF2-Spreadsheet, ganz ohne Konto.",
     aboutRefsTitle: "Referenzen",
   },
   es: {
@@ -106,6 +118,7 @@ export const UI = {
     hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
     suggest: "Sugerir un cambio",
+    suggestSheet: "Sugerir en la hoja compartida",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
     aboutBody:
@@ -122,6 +135,11 @@ export const UI = {
       "como: qué pasan por alto las métricas tradicionales, qué hace posible ORI y quién se beneficia. " +
       "Esta página es estática; los datos detrás son un único archivo JSON en el repositorio, y cada " +
       "cambio queda versionado.",
+    aboutSuggestTitle: "Sugerir cambios",
+    aboutSuggestBody:
+      "Dos canales, elige el que te acomode: un issue estructurado de GitHub (público y " +
+      "trazable, requiere cuenta de GitHub; el botón del explorador lo prellena para el " +
+      "elemento seleccionado), o la hoja de cálculo compartida del WG7-TF2, sin cuenta alguna.",
     aboutRefsTitle: "Referencias",
   },
 };
