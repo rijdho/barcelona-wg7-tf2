@@ -29,7 +29,7 @@ export const UI = {
     hint: "Nothing selected. Click an axis, benefit, or outcome to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
     suggest: "Suggest a change (GitHub issue)",
-    suggestSheet: "Suggest in the shared spreadsheet",
+    suggestSheet: "Suggest in the shared spreadsheet (Google Sheets)",
     shared: "Link copied",
     aboutTitle: "About",
     aboutBody:
@@ -88,7 +88,7 @@ export const UI = {
     hint: "Nichts ausgewählt. Achse, Nutzen oder Ergebnis anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
     suggest: "Änderung vorschlagen (GitHub-Issue)",
-    suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen",
+    suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen (Google Sheets)",
     shared: "Link kopiert",
     aboutTitle: "Über",
     aboutBody:
@@ -148,7 +148,7 @@ export const UI = {
     hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
     suggest: "Sugerir un cambio (issue de GitHub)",
-    suggestSheet: "Sugerir en la hoja compartida",
+    suggestSheet: "Sugerir en la hoja compartida (Google Sheets)",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
     aboutBody:
