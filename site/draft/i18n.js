@@ -7,7 +7,7 @@ export const LOCALES = ["en", "de", "es"];
 export const UI = {
   en: {
     title: "Stakeholders & Benefits",
-    draftLabel: "Draft · working example",
+    draftLabel: "Draft · working example (created by @rijdho)",
     draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the eight-benefits brief.",
     navBack: "Benefits map",
     navDraftSelf: "Draft: full taxonomy",
@@ -41,7 +41,7 @@ export const UI = {
   },
   de: {
     title: "Stakeholder & Nutzen",
-    draftLabel: "Entwurf · Arbeitsbeispiel",
+    draftLabel: "Entwurf · Arbeitsbeispiel (erstellt von @rijdho)",
     draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Acht-Nutzen-Brief.",
     navBack: "Nutzen-Karte",
     navDraftSelf: "Entwurf: vollständige Taxonomie",
@@ -75,7 +75,7 @@ export const UI = {
   },
   es: {
     title: "Stakeholders y beneficios",
-    draftLabel: "Borrador · ejemplo de trabajo",
+    draftLabel: "Borrador · ejemplo de trabajo (creado por @rijdho)",
     draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de ocho beneficios.",
     navBack: "Mapa de beneficios",
     navDraftSelf: "Borrador: taxonomía completa",
