@@ -227,7 +227,7 @@ function edgeList() {
 function drawWires() {
   const svg = $(".wires");
   const box = $(".explorer");
-  if (!state.data || state.view !== "explorer") return;
+  if (!state.data || state.view !== "explorer" || !document.querySelector(".node")) return;
   const ref = box.getBoundingClientRect();
   svg.setAttribute("viewBox", `0 0 ${ref.width} ${ref.height}`);
   const anchor = (id) => {
@@ -339,8 +339,8 @@ async function init() {
     setTimeout(() => (btn.textContent = t("share")), 1600);
   });
 
-  setView(state.view);
   render();
+  setView(state.view);
   new ResizeObserver(() => drawWires()).observe($(".explorer"));
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawWires());
 }
