@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Value of Open Research Information · Barcelona Declaration WG7-TF2</title>
   <meta name="description" content="Interactive explorer of the eight transformative benefits of Open Research Information (Barcelona Declaration WG7 Task Force 2)." />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
   <script>
     (function () {
       var t = localStorage.getItem("wg7tf2-theme");
@@ -24,9 +24,9 @@
         </div>
       </div>
       <p class="nav-label" data-i18n="navView"></p>
-      <a class="nav-item active" href="#" id="nav-explorer"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
+      <a class="nav-item active" href="./"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
       <a class="nav-item" href="draft/"><span class="nav-step">02</span><span data-i18n="navDraft"></span></a>
-      <a class="nav-item" href="#about" id="nav-about"><span class="nav-step">03</span><span data-i18n="aboutTitle"></span></a>
+      <a class="nav-item" href="about/"><span class="nav-step">03</span><span data-i18n="aboutTitle"></span></a>
       <div class="rail-foot">
         Barcelona Declaration WG7-TF2<br />
         maintained by <a href="https://github.com/rijdho">@rijdho</a><br />
@@ -52,7 +52,6 @@
 
       <main class="content">
         <div class="content-inner">
-          <div id="view-explorer">
             <p class="eyebrow" data-i18n="eyebrow"></p>
             <p class="lede" id="lede"></p>
 
@@ -84,52 +83,15 @@
               <div class="detail-actions">
                 <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
                 <button id="btn-share" class="btn" data-i18n="share" hidden></button>
-                <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener" hidden></a>
-                <a id="btn-sheet" class="btn ghost" data-i18n="suggestSheet" href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" target="_blank" rel="noopener" hidden></a>
+                <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener"></a>
+                <a id="btn-sheet" class="btn ghost" data-i18n="suggestSheet" href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" target="_blank" rel="noopener"></a>
+              </div>
+              <div class="suggest-note muted">
+                <p data-i18n="aboutSuggestBody"></p>
+                <p data-i18n="contribUseBody"></p>
               </div>
             </section>
-            <section class="panel active about-panel">
-              <h3 class="col-title about-h" data-i18n="aboutSuggestTitle"></h3>
-              <p data-i18n="aboutSuggestBody"></p>
-              <ul class="refs">
-                <li><a href="https://github.com/rijdho/barcelona-wg7-tf2/issues/new?template=suggest-change.yml" data-i18n="suggest"></a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" data-i18n="suggestSheet"></a></li>
-              </ul>
-              <h3 class="col-title about-h" data-i18n="contribUseTitle"></h3>
-              <p data-i18n="contribUseBody"></p>
-            </section>
-          </div>
 
-          <div id="view-about" hidden><!-- about view -->
-            <p class="eyebrow" data-i18n="aboutTitle"></p>
-            <section class="panel active about-panel">
-              <p id="about-body"></p>
-              <h3 class="col-title about-h" data-i18n="aboutHowTitle"></h3>
-              <p id="about-how-body"></p>
-              <h3 class="col-title about-h" data-i18n="aboutCreditsTitle"></h3>
-              <p data-i18n="aboutCredits"></p>
-              <h3 class="col-title about-h" data-i18n="aboutRefsTitle"></h3>
-              <ul class="refs">
-                <li>Barcelona Declaration on Open Research Information (2024).
-                  <a href="https://barcelona-declaration.org/">barcelona-declaration.org</a></li>
-                <li>Barcelona Declaration WG7-TF2 (2026). The Value of Open Research Information:
-                  Eight Transformative Benefits, v1.0 (brief).
-                  <a href="https://github.com/rijdho/barcelona-wg7-tf2/blob/main/deliverables/ORI_Benefits_Overview_brief.md">deliverables/ORI_Benefits_Overview_brief.md</a></li>
-                <li>Paris Conference on Open Research Information, report (2024).
-                  <a href="https://doi.org/10.5281/zenodo.14054244">doi:10.5281/zenodo.14054244</a></li>
-                <li>Bologna Meeting on Open Research Information, report (2025).
-                  <a href="https://doi.org/10.5281/zenodo.15730917">doi:10.5281/zenodo.15730917</a></li>
-                <li>UNESCO Recommendation on Open Science (2021).
-                  <a href="https://www.unesco.org/en/open-science">unesco.org/en/open-science</a></li>
-                <li>FAIR Principles.
-                  <a href="https://www.go-fair.org/fair-principles/">go-fair.org/fair-principles</a></li>
-                <li>San Francisco Declaration on Research Assessment, DORA (2012).
-                  <a href="https://sfdora.org/">sfdora.org</a></li>
-                <li>Leiden Manifesto for Research Metrics (2015).
-                  <a href="https://www.leidenmanifesto.org/">leidenmanifesto.org</a></li>
-              </ul>
-            </section>
-          </div>
         </div>
       </main>
     </div>
@@ -137,6 +99,6 @@
 
   <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 
-  <script type="module" src="app.js?v=12"></script>
+  <script type="module" src="app.js?v=13"></script>
 </body>
 </html>

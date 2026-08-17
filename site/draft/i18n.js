@@ -10,6 +10,7 @@ export const UI = {
     draftLabel: "Draft · working example",
     draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the eight-benefits brief.",
     navBack: "Benefits map",
+    navDraftSelf: "Draft: full taxonomy",
     eyebrow: "A stakeholder map and a taxonomy of benefits for open research information",
     lede:
       "Who participates in Open Research Information, and what value it creates: " +
@@ -43,6 +44,7 @@ export const UI = {
     draftLabel: "Entwurf · Arbeitsbeispiel",
     draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Acht-Nutzen-Brief.",
     navBack: "Nutzen-Karte",
+    navDraftSelf: "Entwurf: vollständige Taxonomie",
     eyebrow: "Eine Stakeholder-Karte und eine Nutzen-Taxonomie für offene Forschungsinformation",
     lede:
       "Wer an Open Research Information teilnimmt und welchen Wert sie schafft: " +
@@ -76,6 +78,7 @@ export const UI = {
     draftLabel: "Borrador · ejemplo de trabajo",
     draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de ocho beneficios.",
     navBack: "Mapa de beneficios",
+    navDraftSelf: "Borrador: taxonomía completa",
     eyebrow: "Un mapa de stakeholders y una taxonomía de beneficios para la información abierta sobre investigación",
     lede:
       "Quién participa en la información abierta sobre investigación y qué valor crea: " +

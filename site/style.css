@@ -82,6 +82,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
@@ -193,14 +194,14 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 .axis-A1 .axis-label { color: var(--axis-A1); }
 .axis-A2 .axis-label { color: var(--axis-A2); }
 .axis-A3 .axis-label { color: var(--axis-A3); }
-.axis-A1 .node { border-left: 3px solid var(--axis-A1); background: var(--axis-A1-soft); }
-.axis-A2 .node { border-left: 3px solid var(--axis-A2); background: var(--axis-A2-soft); }
-.axis-A3 .node { border-left: 3px solid var(--axis-A3); background: var(--axis-A3-soft); }
+.axis-A1 .node { border: 1px solid var(--axis-A1); background: var(--axis-A1-soft); }
+.axis-A2 .node { border: 1px solid var(--axis-A2); background: var(--axis-A2-soft); }
+.axis-A3 .node { border: 1px solid var(--axis-A3); background: var(--axis-A3-soft); }
 
 /* axis nodes and outcome nodes carry their axis color; the vision card is chrome */
-.node-A1, .node-ax-A1 { border-left: 3px solid var(--axis-A1); background: var(--axis-A1-soft); }
-.node-A2, .node-ax-A2 { border-left: 3px solid var(--axis-A2); background: var(--axis-A2-soft); }
-.node-A3, .node-ax-A3 { border-left: 3px solid var(--axis-A3); background: var(--axis-A3-soft); }
+.node-A1, .node-ax-A1 { border: 1px solid var(--axis-A1); background: var(--axis-A1-soft); }
+.node-A2, .node-ax-A2 { border: 1px solid var(--axis-A2); background: var(--axis-A2-soft); }
+.node-A3, .node-ax-A3 { border: 1px solid var(--axis-A3); background: var(--axis-A3-soft); }
 .node-vision { margin-top: 14px; background: var(--brand-soft); font-weight: 600; }
 .node-vision .id { background: var(--brand); color: #fff; }
 
@@ -223,11 +224,14 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 .chips { display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 0; list-style: none; }
 .chip { font-family: var(--mono); font-size: 0.76rem; color: var(--ink);
   border: 1px solid var(--hairline); border-radius: 7px; padding: 4px 10px; background: none; }
-.chip.ax-A1 { border-left: 3px solid var(--axis-A1); }
-.chip.ax-A2 { border-left: 3px solid var(--axis-A2); }
-.chip.ax-A3 { border-left: 3px solid var(--axis-A3); }
+.chip.ax-A1 { border: 1px solid var(--axis-A1); }
+.chip.ax-A2 { border: 1px solid var(--axis-A2); }
+.chip.ax-A3 { border: 1px solid var(--axis-A3); }
 
-.detail-actions { display: flex; gap: 8px; margin-top: 16px; }
+.detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.suggest-note { margin-top: 14px; border-top: 1px solid var(--hairline); padding-top: 12px;
+  max-width: 75ch; }
+.suggest-note p { margin: 0 0 8px; font-size: 0.85rem; }
 .btn { font-family: var(--mono); background: var(--brand); color: var(--accent-ink); border: none;
   border-radius: var(--r-sm); padding: 9px 18px; font-weight: 600; cursor: pointer; font-size: 0.82rem;
   letter-spacing: 0.02em; text-decoration: none; display: inline-block; }

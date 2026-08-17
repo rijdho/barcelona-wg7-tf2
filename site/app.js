@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=12";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=13";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -9,7 +9,7 @@ const SUGGEST = {
   sheet: "https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit",
 };
 
-const state = { lang: detectLocale(), selected: null, view: "explorer", data: null };
+const state = { lang: detectLocale(), selected: null, data: null };
 
 const $ = (sel) => document.querySelector(sel);
 const t = (key) => UI[state.lang][key];
@@ -212,13 +212,13 @@ function renderDetail() {
   $("#btn-clear").hidden = !id;
   $("#btn-share").hidden = !id;
   const suggest = $("#btn-suggest");
-  suggest.hidden = !id || !SUGGEST.enabled;
-  $("#btn-sheet").hidden = !id || !SUGGEST.sheet;
-  if (id && SUGGEST.enabled) {
+  suggest.hidden = !SUGGEST.enabled;
+  const base = `https://github.com/${SUGGEST.repo}/issues/new?template=${SUGGEST.template}`;
+  if (id) {
     const value = `${id} · ${nodeById(id).name.en} (brief v${d.version})`;
-    suggest.href =
-      `https://github.com/${SUGGEST.repo}/issues/new?template=${SUGGEST.template}` +
-      `&title=${encodeURIComponent(`[Suggestion] ${value}`)}&node=${encodeURIComponent(value)}`;
+    suggest.href = `${base}&title=${encodeURIComponent(`[Suggestion] ${value}`)}&node=${encodeURIComponent(value)}`;
+  } else {
+    suggest.href = base;
   }
 
   if (!id) {
@@ -275,7 +275,7 @@ function edgeList() {
 function drawWires() {
   const svg = $(".wires");
   const box = $(".explorer");
-  if (!state.data || state.view !== "explorer" || !document.querySelector(".node")) return;
+  if (!state.data || !document.querySelector(".node")) return;
   const ref = box.getBoundingClientRect();
   svg.setAttribute("viewBox", `0 0 ${ref.width} ${ref.height}`);
   const anchor = (id) => {
@@ -327,22 +327,6 @@ function select(id) {
   renderSelection();
 }
 
-const VIEWS = ["explorer", "about"];
-
-function setView(view) {
-  state.view = view;
-  for (const v of VIEWS) {
-    $(`#view-${v}`).hidden = v !== view;
-    $(`#nav-${v}`).classList.toggle("active", v === view);
-  }
-  if (view === "explorer") {
-    history.replaceState(null, "", state.selected ? `#${state.selected}` : location.pathname + location.search);
-    drawWires();
-  } else {
-    history.replaceState(null, "", `#${view}`);
-  }
-}
-
 function renderChrome() {
   const L = state.lang;
   document.documentElement.lang = L;
@@ -350,8 +334,6 @@ function renderChrome() {
     el.textContent = UI[L][el.dataset.i18n];
   });
   $("#lede").textContent = t("lede");
-  $("#about-body").textContent = t("aboutBody").replace("{version}", state.data.version);
-  $("#about-how-body").textContent = t("aboutHowBody");
   document.querySelectorAll(".langs button").forEach((b) => {
     b.setAttribute("aria-current", String(b.dataset.lang === L));
   });
@@ -365,12 +347,11 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=12");
+  const res = await fetch("data/taxonomy.json?v=13");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
   if (/^([AO]\d|B\d|V1)$/.test(hash)) state.selected = hash;
-  if (hash === "about") state.view = "about";
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {
@@ -382,9 +363,6 @@ async function init() {
   });
 
   $("#theme-toggle").addEventListener("click", toggleTheme);
-  for (const v of VIEWS) {
-    $(`#nav-${v}`).addEventListener("click", (e) => { e.preventDefault(); setView(v); });
-  }
   $("#btn-clear").addEventListener("click", () => select(null));
   $("#btn-share").addEventListener("click", async () => {
     await navigator.clipboard.writeText(location.href);
@@ -394,7 +372,6 @@ async function init() {
   });
 
   render();
-  setView(state.view);
   new ResizeObserver(() => drawWires()).observe($(".explorer"));
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawWires());
 }
