@@ -197,6 +197,13 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 .axis-A2 .node { border-left: 3px solid var(--axis-A2); background: var(--axis-A2-soft); }
 .axis-A3 .node { border-left: 3px solid var(--axis-A3); background: var(--axis-A3-soft); }
 
+/* axis nodes and outcome nodes carry their axis color; the vision card is chrome */
+.node-A1, .node-ax-A1 { border-left: 3px solid var(--axis-A1); background: var(--axis-A1-soft); }
+.node-A2, .node-ax-A2 { border-left: 3px solid var(--axis-A2); background: var(--axis-A2-soft); }
+.node-A3, .node-ax-A3 { border-left: 3px solid var(--axis-A3); background: var(--axis-A3-soft); }
+.node-vision { margin-top: 14px; background: var(--brand-soft); font-weight: 600; }
+.node-vision .id { background: var(--brand); color: #fff; }
+
 /* selection states */
 .has-selection .node { opacity: 0.35; }
 .has-selection .node.lit, .has-selection .node.selected { opacity: 1; }
@@ -228,9 +235,13 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 .btn.ghost { background: none; border: 1px solid var(--hairline); color: var(--ink); }
 .btn.ghost:hover { border-color: var(--brand); color: var(--brand); filter: none; }
 
-.about { margin-top: 34px; border-top: 1px solid var(--hairline); padding-top: 18px; max-width: 62ch; }
-.about p { font-size: 0.88rem; }
-.about .eyebrow { margin-bottom: 4px; }
+/* ── About view ── */
+.about-panel { max-width: 70ch; }
+.about-panel p { margin: 0 0 10px; color: var(--ink-2); font-size: 0.92rem; }
+.about-h { margin: 18px 0 8px; }
+.refs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.refs li { font-size: 0.86rem; color: var(--ink-2); border-left: 2px solid var(--hairline); padding-left: 10px; }
+.refs a { font-family: var(--mono); font-size: 0.8rem; }
 
 @media (max-width: 940px) {
   .app { grid-template-columns: 1fr; }

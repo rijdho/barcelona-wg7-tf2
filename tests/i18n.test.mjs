@@ -1,7 +1,6 @@
 // i18n parity for the explorer: UI dictionary key parity and placeholder
 // parity across en/de/es, and full locale coverage of every translatable
-// field in taxonomy.json, with example-array lengths pinned (index-aligned
-// lists are the most fragile thing in a repo).
+// field in taxonomy.json.
 
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -42,29 +41,13 @@ function assertLocalized(obj, path) {
   }
 }
 
-test("every translatable taxonomy field carries all three locales", () => {
+test("every translatable field carries all three locales", () => {
+  assertLocalized(data.vision.name, "vision.name");
   for (const a of data.axes) assertLocalized(a.name, `${a.id}.name`);
+  for (const o of data.outcomes) assertLocalized(o.name, `${o.id}.name`);
   for (const b of data.benefits) {
     assertLocalized(b.name, `${b.id}.name`);
-    assertLocalized(b.definition, `${b.id}.definition`);
-  }
-  for (const r of data.roles) {
-    assertLocalized(r.name, `${r.id}.name`);
-    assertLocalized(r.definition, `${r.id}.definition`);
-  }
-  for (const s of data.stakeholders) {
-    assertLocalized(s.name, `${s.id}.name`);
-    assertLocalized(s.description, `${s.id}.description`);
-  }
-});
-
-test("example arrays are index-aligned across locales", () => {
-  for (const s of data.stakeholders) {
-    assert.deepEqual(Object.keys(s.examples).sort(), ["de", "en", "es"], `${s.id}.examples locales`);
-    const len = s.examples.en.length;
-    assert.ok(len > 0, `${s.id} has examples`);
-    for (const loc of LOCALES) {
-      assert.equal(s.examples[loc].length, len, `${s.id}.examples.${loc} length`);
-    }
+    assertLocalized(b.description, `${b.id}.description`);
+    assertLocalized(b.whoBenefits, `${b.id}.whoBenefits`);
   }
 });

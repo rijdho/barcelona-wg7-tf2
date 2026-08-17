@@ -1,99 +1,128 @@
-// UI strings for the taxonomy explorer. Taxonomy content (names, definitions,
-// examples) lives in data/taxonomy.json with its own en/de/es fields.
+// UI strings for the ORI benefits explorer. Content (names, descriptions,
+// who-benefits texts) lives in data/taxonomy.json with its own en/de/es fields.
 // tests/i18n.test.mjs pins key parity across locales; keep all three in sync.
 
 export const LOCALES = ["en", "de", "es"];
 
 export const UI = {
   en: {
-    title: "Stakeholders & Benefits",
-    eyebrow: "A stakeholder map and a taxonomy of benefits for open research information",
+    title: "The Eight Benefits",
+    eyebrow: "The value of open research information",
     lede:
-      "Who participates in Open Research Information, and what value it creates: " +
-      "eight benefit dimensions in three axes, reached by eleven stakeholder categories " +
-      "through eight functional roles. Select any item to trace its connections. " +
+      "What research systems gain when information about research is open: " +
+      "eight transformative benefits in three axes, flowing into trustworthy research, " +
+      "sustainable innovation, and societal impact. Select any item to trace its connections. " +
       "Everything runs in your browser; nothing is tracked or sent anywhere.",
     navView: "View",
     navExplorer: "Explorer",
-    colStakeholders: "Stakeholder categories",
-    colRoles: "Functional roles",
+    colAxes: "Axes",
     colBenefits: "Benefit dimensions",
-    detailExamples: "Examples",
-    detailRoles: "Typical roles",
-    detailBenefits: "Primary benefits",
-    detailStakeholders: "Who receives it",
-    detailRolesDelivering: "Delivered through",
+    colOutcomes: "Outcomes",
+    detailWho: "Who benefits",
+    detailBenefitsIn: "Benefit dimensions",
+    detailOutcome: "Outcome",
+    detailVision: "Leads to",
     detailAxis: "Axis",
     clearSelection: "Clear selection",
-    hint: "Nothing selected. Click a stakeholder, role, or benefit to highlight its connections; click it again to clear.",
+    hint: "Nothing selected. Click an axis, benefit, or outcome to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
     suggest: "Suggest a change",
     shared: "Link copied",
     aboutTitle: "About",
     aboutBody:
-      "This explorer renders version {version} of the Taxonomy of ORI Stakeholders and Benefits, " +
-      "a working document of Task Force 2 of Working Group 7 of the Barcelona Declaration on Open " +
-      "Research Information. Content is licensed CC BY 4.0; the English text is the authoritative wording.",
+      "This explorer renders \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "(brief, v{version}), a working document of Task Force 2 of Working Group 7 of the Barcelona " +
+      "Declaration on Open Research Information. Content is licensed CC BY 4.0; the English text is " +
+      "the authoritative wording. A full stakeholder and benefits taxonomy is under community review " +
+      "and will be published through the WG7 process.",
+    aboutHowTitle: "How it works",
+    aboutHowBody:
+      "The Barcelona Declaration commits signatories to making openness the default, working with " +
+      "open systems, supporting infrastructure sustainability, and enabling collective action. " +
+      "Those commitments unlock the eight benefits shown here, each read as: what traditional " +
+      "metrics miss, what ORI makes possible, and who benefits. This page is a static site; the " +
+      "data behind it is a single JSON file in the repository, and every change to it is versioned.",
+    aboutRefsTitle: "References",
   },
   de: {
-    title: "Stakeholder & Nutzen",
-    eyebrow: "Eine Stakeholder-Karte und eine Nutzen-Taxonomie für offene Forschungsinformation",
+    title: "Die acht Nutzen",
+    eyebrow: "Der Wert offener Forschungsinformation",
     lede:
-      "Wer an Open Research Information teilnimmt und welchen Wert sie schafft: " +
-      "acht Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
-      "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu verfolgen. " +
-      "Alles läuft im Browser; nichts wird erfasst oder gesendet.",
+      "Was Forschungssysteme gewinnen, wenn Informationen über Forschung offen sind: " +
+      "acht transformative Nutzen in drei Achsen, die in vertrauenswürdige Forschung, " +
+      "nachhaltige Innovation und gesellschaftliche Wirkung münden. Element auswählen, um seine " +
+      "Verbindungen zu verfolgen. Alles läuft im Browser; nichts wird erfasst oder gesendet.",
     navView: "Ansicht",
     navExplorer: "Explorer",
-    colStakeholders: "Stakeholder-Kategorien",
-    colRoles: "Funktionale Rollen",
+    colAxes: "Achsen",
     colBenefits: "Nutzendimensionen",
-    detailExamples: "Beispiele",
-    detailRoles: "Typische Rollen",
-    detailBenefits: "Primärer Nutzen",
-    detailStakeholders: "Wer profitiert",
-    detailRolesDelivering: "Vermittelt über",
+    colOutcomes: "Ergebnisse",
+    detailWho: "Wer profitiert",
+    detailBenefitsIn: "Nutzendimensionen",
+    detailOutcome: "Ergebnis",
+    detailVision: "Führt zu",
     detailAxis: "Achse",
     clearSelection: "Auswahl aufheben",
-    hint: "Nichts ausgewählt. Stakeholder, Rolle oder Nutzen anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
+    hint: "Nichts ausgewählt. Achse, Nutzen oder Ergebnis anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
     suggest: "Änderung vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
     aboutBody:
-      "Dieser Explorer zeigt Version {version} der Taxonomie der ORI-Stakeholder und -Nutzen, " +
-      "ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona Declaration on Open " +
-      "Research Information. Inhalte stehen unter CC BY 4.0; der englische Text ist maßgeblich.",
+      "Dieser Explorer zeigt \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "(Brief, v{version}), ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona " +
+      "Declaration on Open Research Information. Inhalte stehen unter CC BY 4.0; der englische Text " +
+      "ist maßgeblich. Eine vollständige Stakeholder- und Nutzen-Taxonomie befindet sich in der " +
+      "Community-Review und wird über den WG7-Prozess veröffentlicht.",
+    aboutHowTitle: "Wie es funktioniert",
+    aboutHowBody:
+      "Die Barcelona Declaration verpflichtet ihre Unterzeichner, Offenheit zum Standard zu machen, " +
+      "mit offenen Systemen zu arbeiten, die Nachhaltigkeit der Infrastruktur zu unterstützen und " +
+      "kollektives Handeln zu ermöglichen. Diese Verpflichtungen erschließen die acht hier gezeigten " +
+      "Nutzen, jeweils gelesen als: was traditionelle Metriken übersehen, was ORI möglich macht und " +
+      "wer profitiert. Diese Seite ist statisch; die Daten dahinter sind eine einzige JSON-Datei im " +
+      "Repository, und jede Änderung daran ist versioniert.",
+    aboutRefsTitle: "Referenzen",
   },
   es: {
-    title: "Stakeholders y beneficios",
-    eyebrow: "Un mapa de stakeholders y una taxonomía de beneficios para la información abierta sobre investigación",
+    title: "Los ocho beneficios",
+    eyebrow: "El valor de la información abierta sobre investigación",
     lede:
-      "Quién participa en la información abierta sobre investigación y qué valor crea: " +
-      "ocho dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
-      "a través de ocho roles funcionales. Selecciona un elemento para trazar sus conexiones. " +
-      "Todo funciona en tu navegador; no se rastrea ni se envía nada.",
+      "Lo que ganan los sistemas de investigación cuando la información sobre la investigación es " +
+      "abierta: ocho beneficios transformadores en tres ejes, que desembocan en investigación " +
+      "confiable, innovación sostenible e impacto social. Selecciona un elemento para trazar sus " +
+      "conexiones. Todo funciona en tu navegador; no se rastrea ni se envía nada.",
     navView: "Vista",
     navExplorer: "Explorador",
-    colStakeholders: "Categorías de stakeholders",
-    colRoles: "Roles funcionales",
+    colAxes: "Ejes",
     colBenefits: "Dimensiones de beneficio",
-    detailExamples: "Ejemplos",
-    detailRoles: "Roles típicos",
-    detailBenefits: "Beneficios primarios",
-    detailStakeholders: "Quién lo recibe",
-    detailRolesDelivering: "Se entrega a través de",
+    colOutcomes: "Resultados",
+    detailWho: "Quién se beneficia",
+    detailBenefitsIn: "Dimensiones de beneficio",
+    detailOutcome: "Resultado",
+    detailVision: "Conduce a",
     detailAxis: "Eje",
     clearSelection: "Limpiar selección",
-    hint: "Nada seleccionado. Haz clic en un stakeholder, rol o beneficio para resaltar sus conexiones; clic de nuevo para limpiar.",
+    hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
     suggest: "Sugerir un cambio",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
     aboutBody:
-      "Este explorador muestra la versión {version} de la Taxonomía de stakeholders y beneficios de ORI, " +
-      "un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona Declaration on Open " +
-      "Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es la redacción autorizada.",
+      "Este explorador muestra \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "(brief, v{version}), un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona " +
+      "Declaration on Open Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es " +
+      "la redacción autorizada. Una taxonomía completa de stakeholders y beneficios está en revisión " +
+      "comunitaria y se publicará a través del proceso del WG7.",
+    aboutHowTitle: "Cómo funciona",
+    aboutHowBody:
+      "La Barcelona Declaration compromete a sus firmantes a hacer de la apertura el estándar, trabajar " +
+      "con sistemas abiertos, apoyar la sostenibilidad de la infraestructura y habilitar la acción " +
+      "colectiva. Esos compromisos desbloquean los ocho beneficios que se muestran aquí, cada uno leído " +
+      "como: qué pasan por alto las métricas tradicionales, qué hace posible ORI y quién se beneficia. " +
+      "Esta página es estática; los datos detrás son un único archivo JSON en el repositorio, y cada " +
+      "cambio queda versionado.",
+    aboutRefsTitle: "Referencias",
   },
 };
 

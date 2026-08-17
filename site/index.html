@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ORI Stakeholders & Benefits · Barcelona Declaration WG7-TF2</title>
-  <meta name="description" content="Interactive explorer of the Taxonomy of Open Research Information stakeholders and benefits (Barcelona Declaration WG7 Task Force 2)." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <title>The Value of Open Research Information · Barcelona Declaration WG7-TF2</title>
+  <meta name="description" content="Interactive explorer of the eight transformative benefits of Open Research Information (Barcelona Declaration WG7 Task Force 2)." />
+  <link rel="stylesheet" href="style.css?v=6" />
   <script>
     (function () {
       var t = localStorage.getItem("wg7tf2-theme");
@@ -20,12 +20,12 @@
         <div class="brand-glyph" aria-hidden="true"></div>
         <div>
           <p class="brand-name">barcelona-wg7-tf2</p>
-          <p class="brand-sub">ORI taxonomy explorer</p>
+          <p class="brand-sub">ORI benefits explorer</p>
         </div>
       </div>
       <p class="nav-label" data-i18n="navView"></p>
-      <a class="nav-item active" href="#"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
-      <a class="nav-item" href="#about"><span class="nav-step">02</span><span data-i18n="aboutTitle"></span></a>
+      <a class="nav-item active" href="#" id="nav-explorer"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
+      <a class="nav-item" href="#about" id="nav-about"><span class="nav-step">02</span><span data-i18n="aboutTitle"></span></a>
       <div class="rail-foot">
         Barcelona Declaration WG7-TF2<br />
         <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>
@@ -50,45 +50,71 @@
 
       <main class="content">
         <div class="content-inner">
-          <p class="eyebrow" data-i18n="eyebrow"></p>
-          <p class="lede" id="lede"></p>
+          <div id="view-explorer">
+            <p class="eyebrow" data-i18n="eyebrow"></p>
+            <p class="lede" id="lede"></p>
 
-          <section class="panel active explorer-panel" aria-label="Taxonomy explorer">
-            <div class="explorer">
-              <svg class="wires" aria-hidden="true"></svg>
-              <div class="col">
-                <h2 class="col-title" data-i18n="colStakeholders"></h2>
-                <ul class="nodes" id="list-stakeholders"></ul>
+            <section class="panel active explorer-panel" aria-label="Benefits explorer">
+              <div class="explorer">
+                <svg class="wires" aria-hidden="true"></svg>
+                <div class="col">
+                  <h2 class="col-title" data-i18n="colAxes"></h2>
+                  <ul class="nodes" id="list-axes"></ul>
+                </div>
+                <div class="col">
+                  <h2 class="col-title" data-i18n="colBenefits"></h2>
+                  <div id="list-benefits"></div>
+                </div>
+                <div class="col">
+                  <h2 class="col-title" data-i18n="colOutcomes"></h2>
+                  <ul class="nodes" id="list-outcomes"></ul>
+                </div>
               </div>
-              <div class="col">
-                <h2 class="col-title" data-i18n="colRoles"></h2>
-                <ul class="nodes" id="list-roles"></ul>
-              </div>
-              <div class="col">
-                <h2 class="col-title" data-i18n="colBenefits"></h2>
-                <div id="list-benefits"></div>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="panel active detail-panel">
-            <div id="detail"><p class="hint muted" data-i18n="hint"></p></div>
-            <div class="detail-actions">
-              <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
-              <button id="btn-share" class="btn" data-i18n="share" hidden></button>
-              <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener" hidden></a>
-            </div>
-          </section>
+            <section class="panel active detail-panel">
+              <div id="detail"><p class="hint muted" data-i18n="hint"></p></div>
+              <div class="detail-actions">
+                <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
+                <button id="btn-share" class="btn" data-i18n="share" hidden></button>
+                <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener" hidden></a>
+              </div>
+            </section>
+          </div>
 
-          <section class="about" id="about">
+          <div id="view-about" hidden>
             <p class="eyebrow" data-i18n="aboutTitle"></p>
-            <p class="muted" id="about-body"></p>
-          </section>
+            <section class="panel active about-panel">
+              <p id="about-body"></p>
+              <h3 class="col-title about-h" data-i18n="aboutHowTitle"></h3>
+              <p id="about-how-body"></p>
+              <h3 class="col-title about-h" data-i18n="aboutRefsTitle"></h3>
+              <ul class="refs">
+                <li>Barcelona Declaration on Open Research Information (2024).
+                  <a href="https://barcelona-declaration.org/">barcelona-declaration.org</a></li>
+                <li>Barcelona Declaration WG7-TF2 (2026). The Value of Open Research Information:
+                  Eight Transformative Benefits, v1.0 (brief).
+                  <a href="https://github.com/rijdho/barcelona-wg7-tf2/blob/main/deliverables/ORI_Benefits_Overview_brief.md">deliverables/ORI_Benefits_Overview_brief.md</a></li>
+                <li>Paris Conference on Open Research Information, report (2024).
+                  <a href="https://doi.org/10.5281/zenodo.14054244">doi:10.5281/zenodo.14054244</a></li>
+                <li>Bologna Meeting on Open Research Information, report (2025).
+                  <a href="https://doi.org/10.5281/zenodo.15730917">doi:10.5281/zenodo.15730917</a></li>
+                <li>UNESCO Recommendation on Open Science (2021).
+                  <a href="https://www.unesco.org/en/open-science">unesco.org/en/open-science</a></li>
+                <li>FAIR Principles.
+                  <a href="https://www.go-fair.org/fair-principles/">go-fair.org/fair-principles</a></li>
+                <li>San Francisco Declaration on Research Assessment, DORA (2012).
+                  <a href="https://sfdora.org/">sfdora.org</a></li>
+                <li>Leiden Manifesto for Research Metrics (2015).
+                  <a href="https://www.leidenmanifesto.org/">leidenmanifesto.org</a></li>
+              </ul>
+            </section>
+          </div>
         </div>
       </main>
     </div>
   </div>
 
-  <script type="module" src="app.js?v=5"></script>
+  <script type="module" src="app.js?v=6"></script>
 </body>
 </html>

@@ -1,7 +1,15 @@
 {
   "version": "1.0",
-  "date": "2026-01",
-  "source": "deliverables/Taxonomy_ORI_Stakeholders_Benefits.md",
+  "date": "2026-02",
+  "source": "deliverables/ORI_Benefits_Overview_brief.md",
+  "vision": {
+    "id": "V1",
+    "name": {
+      "en": "Research that is visible, valued, impactful",
+      "de": "Forschung, die sichtbar, wertgeschätzt und wirksam ist",
+      "es": "Investigación visible, valorada y con impacto"
+    }
+  },
   "axes": [
     {
       "id": "A1",
@@ -19,406 +27,183 @@
       "benefits": ["B5", "B6"]
     }
   ],
+  "outcomes": [
+    {
+      "id": "O1",
+      "name": { "en": "Trustworthy Research", "de": "Vertrauenswürdige Forschung", "es": "Investigación confiable" },
+      "benefits": ["B1", "B2", "B8"]
+    },
+    {
+      "id": "O2",
+      "name": { "en": "Sustainable Innovation", "de": "Nachhaltige Innovation", "es": "Innovación sostenible" },
+      "benefits": ["B3", "B4", "B7"]
+    },
+    {
+      "id": "O3",
+      "name": { "en": "Societal Impact", "de": "Gesellschaftliche Wirkung", "es": "Impacto social" },
+      "benefits": ["B5", "B6"]
+    }
+  ],
   "benefits": [
     {
       "id": "B1",
       "axis": "A1",
+      "outcome": "O1",
       "name": {
         "en": "Research Output Quality & Traceability",
         "de": "Qualität und Nachvollziehbarkeit von Forschungsergebnissen",
         "es": "Calidad y trazabilidad de los productos de investigación"
       },
-      "definition": {
-        "en": "Enhances the visibility, credibility, and traceability of research products throughout their lifecycle.",
-        "de": "Erhöht die Sichtbarkeit, Glaubwürdigkeit und Nachvollziehbarkeit von Forschungsprodukten über ihren gesamten Lebenszyklus.",
-        "es": "Mejora la visibilidad, credibilidad y trazabilidad de los productos de investigación a lo largo de su ciclo de vida."
+      "description": {
+        "en": "Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle.",
+        "de": "Traditionelle Metriken zählen Publikationen, erfassen aber nicht den Forschungsprozess. ORI unterstützt reproduzierbare Forschung, indem Daten, Methoden, Versionen und Beziehungen zwischen Forschungsobjekten über den gesamten Lebenszyklus explizit werden.",
+        "es": "Las métricas tradicionales cuentan publicaciones pero no capturan el proceso de investigación. ORI apoya la investigación reproducible al hacer explícitos los datos, métodos, versiones y relaciones entre objetos de investigación a lo largo del ciclo de vida."
+      },
+      "whoBenefits": {
+        "en": "Researchers can verify and build on each other's work; institutions demonstrate quality beyond citations; funders track outputs systematically.",
+        "de": "Forschende können die Arbeit anderer prüfen und darauf aufbauen; Institutionen zeigen Qualität jenseits von Zitationen; Förderer verfolgen Ergebnisse systematisch.",
+        "es": "Los investigadores pueden verificar y construir sobre el trabajo de otros; las instituciones demuestran calidad más allá de las citas; los financiadores hacen seguimiento sistemático de los productos."
       }
     },
     {
       "id": "B2",
       "axis": "A1",
+      "outcome": "O1",
       "name": {
         "en": "Governance, Ethics & Compliance",
         "de": "Governance, Ethik & Compliance",
         "es": "Gobernanza, ética y cumplimiento"
       },
-      "definition": {
-        "en": "Enhances internal policies, ethical standards, and compliance with open and responsible research norms.",
-        "de": "Stärkt interne Richtlinien, ethische Standards und die Einhaltung von Normen offener und verantwortungsvoller Forschung.",
-        "es": "Fortalece las políticas internas, los estándares éticos y el cumplimiento de las normas de investigación abierta y responsable."
-      }
-    },
-    {
-      "id": "B3",
-      "axis": "A2",
-      "name": {
-        "en": "Capacity Building & Inclusive Training",
-        "de": "Kompetenzaufbau & inklusive Ausbildung",
-        "es": "Desarrollo de capacidades y formación inclusiva"
+      "description": {
+        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, and institutional accountability, following \"as open as possible, as closed as necessary\".",
+        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes und institutionelle Rechenschaft, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
+        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos y la rendición de cuentas institucional, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
       },
-      "definition": {
-        "en": "Builds inclusive skills, literacy, and institutional capabilities, especially supporting underrepresented actors.",
-        "de": "Baut inklusive Kompetenzen und institutionelle Fähigkeiten auf und unterstützt insbesondere unterrepräsentierte Akteure.",
-        "es": "Construye habilidades inclusivas y capacidades institucionales, apoyando especialmente a los actores subrepresentados."
-      }
-    },
-    {
-      "id": "B4",
-      "axis": "A2",
-      "name": {
-        "en": "Interoperability & Metadata Quality",
-        "de": "Interoperabilität & Metadatenqualität",
-        "es": "Interoperabilidad y calidad de metadatos"
-      },
-      "definition": {
-        "en": "Strengthens data interoperability, metadata completeness, and standard adoption.",
-        "de": "Stärkt die Interoperabilität von Daten, die Vollständigkeit von Metadaten und die Übernahme von Standards.",
-        "es": "Refuerza la interoperabilidad de los datos, la completitud de los metadatos y la adopción de estándares."
-      }
-    },
-    {
-      "id": "B5",
-      "axis": "A3",
-      "name": {
-        "en": "Evaluation for Learning & Responsibility",
-        "de": "Evaluation für Lernen & Verantwortung",
-        "es": "Evaluación para el aprendizaje y la responsabilidad"
-      },
-      "definition": {
-        "en": "Informs institutional, national, and global evaluation processes that support learning, equity, and accountability.",
-        "de": "Unterstützt institutionelle, nationale und globale Evaluationsprozesse, die Lernen, Gerechtigkeit und Rechenschaft fördern.",
-        "es": "Informa procesos de evaluación institucionales, nacionales y globales que apoyan el aprendizaje, la equidad y la rendición de cuentas."
-      }
-    },
-    {
-      "id": "B6",
-      "axis": "A3",
-      "name": {
-        "en": "Visibility, Equity & Societal Relevance",
-        "de": "Sichtbarkeit, Gerechtigkeit & gesellschaftliche Relevanz",
-        "es": "Visibilidad, equidad y relevancia social"
-      },
-      "definition": {
-        "en": "Increases equitable access, civic engagement, and alignment with societal needs and the SDGs.",
-        "de": "Erhöht den gerechten Zugang, die zivilgesellschaftliche Beteiligung und die Ausrichtung an gesellschaftlichen Bedürfnissen und den SDGs.",
-        "es": "Aumenta el acceso equitativo, la participación ciudadana y la alineación con las necesidades sociales y los ODS."
-      }
-    },
-    {
-      "id": "B7",
-      "axis": "A2",
-      "name": {
-        "en": "Infrastructure & Technical Enablement",
-        "de": "Infrastruktur & technische Befähigung",
-        "es": "Infraestructura y habilitación técnica"
-      },
-      "definition": {
-        "en": "Supports or enhances the platforms and services that enable open research.",
-        "de": "Unterstützt oder verbessert die Plattformen und Dienste, die offene Forschung ermöglichen.",
-        "es": "Apoya o mejora las plataformas y servicios que hacen posible la investigación abierta."
+      "whoBenefits": {
+        "en": "Research institutions demonstrate responsible practices; funders verify ethical alignment; policymakers ensure regulatory compliance.",
+        "de": "Forschungseinrichtungen zeigen verantwortungsvolle Praxis; Förderer prüfen die ethische Ausrichtung; Politikgestalter sichern die Einhaltung von Vorgaben.",
+        "es": "Las instituciones de investigación demuestran prácticas responsables; los financiadores verifican la alineación ética; los responsables de políticas aseguran el cumplimiento normativo."
       }
     },
     {
       "id": "B8",
       "axis": "A1",
+      "outcome": "O1",
       "name": {
         "en": "Integrity & Accountability",
         "de": "Integrität & Rechenschaftspflicht",
         "es": "Integridad y rendición de cuentas"
       },
-      "definition": {
-        "en": "Fosters transparency, accountability, and ethical conduct throughout the research lifecycle.",
-        "de": "Fördert Transparenz, Rechenschaft und ethisches Verhalten über den gesamten Forschungszyklus.",
-        "es": "Fomenta la transparencia, la rendición de cuentas y la conducta ética a lo largo del ciclo de investigación."
+      "description": {
+        "en": "Traditional metrics cannot reveal ethical issues or conflicts of interest. ORI provides research misconduct detection and prevention, transparent funding disclosure, comprehensive audit trails, and public accountability mechanisms.",
+        "de": "Traditionelle Metriken können ethische Probleme oder Interessenkonflikte nicht aufdecken. ORI bietet Erkennung und Prävention von Fehlverhalten, transparente Offenlegung der Finanzierung, umfassende Prüfpfade und öffentliche Rechenschaftsmechanismen.",
+        "es": "Las métricas tradicionales no pueden revelar problemas éticos ni conflictos de interés. ORI provee detección y prevención de mala conducta, divulgación transparente del financiamiento, trazas de auditoría completas y mecanismos de rendición de cuentas pública."
+      },
+      "whoBenefits": {
+        "en": "Research communities build trust through visible practices; evaluators detect integrity issues early; civil society monitors research accountability.",
+        "de": "Forschungsgemeinschaften bauen Vertrauen durch sichtbare Praxis auf; Evaluatoren erkennen Integritätsprobleme früh; die Zivilgesellschaft beobachtet die Rechenschaft der Forschung.",
+        "es": "Las comunidades de investigación construyen confianza mediante prácticas visibles; los evaluadores detectan problemas de integridad temprano; la sociedad civil monitorea la rendición de cuentas."
       }
-    }
-  ],
-  "roles": [
-    {
-      "id": "R1",
-      "name": { "en": "Producer", "de": "Produzent", "es": "Productor" },
-      "definition": {
-        "en": "Creates or contributes directly to research outputs, data, or metadata.",
-        "de": "Erstellt Forschungsergebnisse, Daten oder Metadaten oder trägt direkt dazu bei.",
-        "es": "Crea o contribuye directamente a productos de investigación, datos o metadatos."
-      },
-      "primaryBenefits": ["B1", "B2", "B3"]
     },
     {
-      "id": "R2",
-      "name": { "en": "Evaluator", "de": "Evaluator", "es": "Evaluador" },
-      "definition": {
-        "en": "Assesses the quality, impact, or compliance of research and institutions.",
-        "de": "Bewertet die Qualität, Wirkung oder Regelkonformität von Forschung und Institutionen.",
-        "es": "Evalúa la calidad, el impacto o el cumplimiento de la investigación y las instituciones."
-      },
-      "primaryBenefits": ["B1", "B3", "B5"]
-    },
-    {
-      "id": "R3",
-      "name": { "en": "Enabler", "de": "Ermöglicher", "es": "Habilitador" },
-      "definition": {
-        "en": "Provides platforms, infrastructure, or services that make open research possible.",
-        "de": "Stellt Plattformen, Infrastruktur oder Dienste bereit, die offene Forschung möglich machen.",
-        "es": "Proporciona plataformas, infraestructura o servicios que hacen posible la investigación abierta."
-      },
-      "primaryBenefits": ["B1", "B4", "B7"]
-    },
-    {
-      "id": "R4",
-      "name": { "en": "Policy Maker", "de": "Politikgestalter", "es": "Responsable de políticas" },
-      "definition": {
-        "en": "Defines, mandates, or influences strategies and frameworks for governance.",
-        "de": "Definiert, verordnet oder beeinflusst Strategien und Rahmenwerke für Governance.",
-        "es": "Define, mandata o influye en estrategias y marcos de gobernanza."
-      },
-      "primaryBenefits": ["B2", "B5", "B8"]
-    },
-    {
-      "id": "R5",
-      "name": { "en": "Support & Stewardship", "de": "Unterstützung & Stewardship", "es": "Apoyo y custodia" },
-      "definition": {
-        "en": "Maintains metadata, provides training, and ensures quality and alignment.",
-        "de": "Pflegt Metadaten, bietet Schulungen an und sichert Qualität und Ausrichtung.",
-        "es": "Mantiene los metadatos, ofrece formación y asegura la calidad y la alineación."
-      },
-      "primaryBenefits": ["B1", "B2"]
-    },
-    {
-      "id": "R6",
-      "name": { "en": "Advocate / Civil Actor", "de": "Fürsprecher / zivilgesellschaftlicher Akteur", "es": "Promotor / actor civil" },
-      "definition": {
-        "en": "Promotes accessibility, inclusion, and societal relevance of research.",
-        "de": "Fördert Zugänglichkeit, Inklusion und gesellschaftliche Relevanz von Forschung.",
-        "es": "Promueve la accesibilidad, la inclusión y la relevancia social de la investigación."
-      },
-      "primaryBenefits": ["B1", "B6", "B8"]
-    },
-    {
-      "id": "R7",
-      "name": { "en": "Coordinator / Facilitator", "de": "Koordinator / Facilitator", "es": "Coordinador / facilitador" },
-      "definition": {
-        "en": "Connects actors, aligns practices, and enables interoperability at scale.",
-        "de": "Verbindet Akteure, harmonisiert Praktiken und ermöglicht Interoperabilität in großem Maßstab.",
-        "es": "Conecta actores, alinea prácticas y habilita la interoperabilidad a gran escala."
-      },
-      "primaryBenefits": ["B4", "B6", "B8"]
-    },
-    {
-      "id": "R8",
-      "name": { "en": "Data Analyst", "de": "Datenanalyst", "es": "Analista de datos" },
-      "definition": {
-        "en": "Analyzes research information to generate insights and inform decisions.",
-        "de": "Analysiert Forschungsinformationen, um Erkenntnisse zu gewinnen und Entscheidungen zu unterstützen.",
-        "es": "Analiza información de investigación para generar conocimiento e informar decisiones."
-      },
-      "primaryBenefits": ["B5", "B7"]
-    }
-  ],
-  "stakeholders": [
-    {
-      "id": "S1",
+      "id": "B3",
+      "axis": "A2",
+      "outcome": "O2",
       "name": {
-        "en": "Research-Performing Institutions",
-        "de": "Forschungseinrichtungen",
-        "es": "Instituciones que realizan investigación"
+        "en": "Capacity Building & Inclusive Training",
+        "de": "Kompetenzaufbau & inklusive Ausbildung",
+        "es": "Desarrollo de capacidades y formación inclusiva"
       },
       "description": {
-        "en": "Organizations that conduct research as a core function.",
-        "de": "Organisationen, deren Kernaufgabe die Durchführung von Forschung ist.",
-        "es": "Organizaciones cuya función central es realizar investigación."
+        "en": "Learning processes and skill development are absent from traditional metrics. ORI makes visible skills development in open research practices, metadata literacy programs, support for diverse researchers, FAIR data training, and institutional capacity strengthening.",
+        "de": "Lernprozesse und Kompetenzentwicklung fehlen in traditionellen Metriken. ORI macht Kompetenzaufbau in offenen Forschungspraktiken, Metadaten-Schulungen, Unterstützung vielfältiger Forschender, FAIR-Data-Training und institutionelle Kapazitätsstärkung sichtbar.",
+        "es": "Los procesos de aprendizaje y el desarrollo de habilidades están ausentes de las métricas tradicionales. ORI hace visibles el desarrollo de habilidades en prácticas abiertas, los programas de alfabetización en metadatos, el apoyo a investigadores diversos, la formación en datos FAIR y el fortalecimiento institucional."
       },
-      "examples": {
-        "en": ["Universities", "Independent research centers", "Academic departments", "Private sector research divisions", "Hospital-based research units"],
-        "de": ["Universitäten", "Unabhängige Forschungszentren", "Akademische Fachbereiche", "Forschungsabteilungen der Privatwirtschaft", "Klinische Forschungseinheiten"],
-        "es": ["Universidades", "Centros de investigación independientes", "Departamentos académicos", "Divisiones de investigación del sector privado", "Unidades de investigación hospitalarias"]
-      },
-      "roles": ["R1", "R5", "R2"],
-      "primaryBenefits": ["B1", "B2", "B3", "B5"]
+      "whoBenefits": {
+        "en": "Early-career researchers gain recognition for growing expertise; underrepresented communities receive targeted support; institutions build sustainable open science capabilities.",
+        "de": "Nachwuchsforschende erhalten Anerkennung für wachsende Expertise; unterrepräsentierte Gemeinschaften erhalten gezielte Unterstützung; Institutionen bauen nachhaltige Open-Science-Fähigkeiten auf.",
+        "es": "Los investigadores en etapa temprana obtienen reconocimiento por su creciente experiencia; las comunidades subrepresentadas reciben apoyo dirigido; las instituciones construyen capacidades sostenibles de ciencia abierta."
+      }
     },
     {
-      "id": "S2",
+      "id": "B4",
+      "axis": "A2",
+      "outcome": "O2",
       "name": {
-        "en": "Individual Researchers",
-        "de": "Einzelne Forschende",
-        "es": "Investigadores individuales"
+        "en": "Interoperability & Metadata Quality",
+        "de": "Interoperabilität & Metadatenqualität",
+        "es": "Interoperabilidad y calidad de metadatos"
       },
       "description": {
-        "en": "Persons directly engaged in research activities.",
-        "de": "Personen, die unmittelbar in Forschungsaktivitäten eingebunden sind.",
-        "es": "Personas directamente involucradas en actividades de investigación."
+        "en": "Infrastructure enabling research connectivity is invisible in traditional metrics. ORI promotes harmonized metadata schemas, persistent identifier (PID) adoption, standardized vocabularies, system integration and APIs, and cross-platform data exchange.",
+        "de": "Die Infrastruktur, die Forschung vernetzt, ist in traditionellen Metriken unsichtbar. ORI fördert harmonisierte Metadatenschemata, die Übernahme persistenter Identifikatoren (PIDs), standardisierte Vokabulare, Systemintegration und APIs sowie plattformübergreifenden Datenaustausch.",
+        "es": "La infraestructura que conecta la investigación es invisible en las métricas tradicionales. ORI promueve esquemas de metadatos armonizados, la adopción de identificadores persistentes (PID), vocabularios estandarizados, integración de sistemas y APIs, e intercambio de datos entre plataformas."
       },
-      "examples": {
-        "en": ["Early-career researchers", "Senior researchers", "Principal investigators", "Interdisciplinary teams", "Citizen scientists"],
-        "de": ["Nachwuchsforschende", "Erfahrene Forschende", "Projektleitende", "Interdisziplinäre Teams", "Citizen Scientists"],
-        "es": ["Investigadores en etapa temprana", "Investigadores sénior", "Investigadores principales", "Equipos interdisciplinarios", "Científicos ciudadanos"]
-      },
-      "roles": ["R1"],
-      "primaryBenefits": ["B1", "B2", "B3"]
+      "whoBenefits": {
+        "en": "Infrastructure providers ensure system interoperability; researchers access data across institutional boundaries; libraries and data stewards maintain high-quality metadata.",
+        "de": "Infrastrukturanbieter sichern die Interoperabilität der Systeme; Forschende greifen über institutionelle Grenzen hinweg auf Daten zu; Bibliotheken und Data Stewards pflegen hochwertige Metadaten.",
+        "es": "Los proveedores de infraestructura aseguran la interoperabilidad; los investigadores acceden a datos a través de fronteras institucionales; las bibliotecas y custodios de datos mantienen metadatos de alta calidad."
+      }
     },
     {
-      "id": "S3",
-      "name": { "en": "Funders", "de": "Förderorganisationen", "es": "Financiadores" },
-      "description": {
-        "en": "Organizations that provide financial support for research.",
-        "de": "Organisationen, die Forschung finanziell unterstützen.",
-        "es": "Organizaciones que brindan apoyo financiero a la investigación."
-      },
-      "examples": {
-        "en": ["National research agencies", "International cooperation bodies", "Philanthropic foundations", "Private sector funders", "Crowdfunding platforms"],
-        "de": ["Nationale Forschungsagenturen", "Internationale Kooperationsgremien", "Philanthropische Stiftungen", "Private Förderer", "Crowdfunding-Plattformen"],
-        "es": ["Agencias nacionales de investigación", "Organismos de cooperación internacional", "Fundaciones filantrópicas", "Financiadores del sector privado", "Plataformas de financiamiento colectivo"]
-      },
-      "roles": ["R4", "R2"],
-      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
-    },
-    {
-      "id": "S4",
+      "id": "B7",
+      "axis": "A2",
+      "outcome": "O2",
       "name": {
-        "en": "Research Infrastructure Providers",
-        "de": "Anbieter von Forschungsinfrastruktur",
-        "es": "Proveedores de infraestructura de investigación"
+        "en": "Infrastructure & Technical Enablement",
+        "de": "Infrastruktur & technische Befähigung",
+        "es": "Infraestructura y habilitación técnica"
       },
       "description": {
-        "en": "Organizations that supply technical platforms and services.",
-        "de": "Organisationen, die technische Plattformen und Dienste bereitstellen.",
-        "es": "Organizaciones que proveen plataformas y servicios técnicos."
+        "en": "Technical foundations enabling research are invisible in traditional output metrics. ORI supports sustainable infrastructure development, technical standards implementation, service interoperability, platform reliability, and innovation in research tools.",
+        "de": "Die technischen Grundlagen der Forschung sind in traditionellen Output-Metriken unsichtbar. ORI unterstützt nachhaltige Infrastrukturentwicklung, Umsetzung technischer Standards, Interoperabilität von Diensten, Plattformzuverlässigkeit und Innovation bei Forschungswerkzeugen.",
+        "es": "Los cimientos técnicos que habilitan la investigación son invisibles en las métricas tradicionales. ORI apoya el desarrollo sostenible de infraestructura, la implementación de estándares técnicos, la interoperabilidad de servicios, la confiabilidad de plataformas y la innovación en herramientas."
       },
-      "examples": {
-        "en": ["Repositories (data, publications, software)", "PID infrastructure providers (DOI, ORCID, ROR)", "Metadata and indexing services", "Information service providers", "CRIS providers"],
-        "de": ["Repositorien (Daten, Publikationen, Software)", "PID-Infrastrukturanbieter (DOI, ORCID, ROR)", "Metadaten- und Indexierungsdienste", "Informationsdienstleister", "CRIS-Anbieter"],
-        "es": ["Repositorios (datos, publicaciones, software)", "Proveedores de infraestructura PID (DOI, ORCID, ROR)", "Servicios de metadatos e indexación", "Proveedores de servicios de información", "Proveedores de CRIS"]
-      },
-      "roles": ["R3", "R5"],
-      "primaryBenefits": ["B1", "B4", "B7", "B2"]
+      "whoBenefits": {
+        "en": "Technology providers develop sustainable platforms; research infrastructure organizations gain recognition for essential work; institutions justify infrastructure investments.",
+        "de": "Technologieanbieter entwickeln nachhaltige Plattformen; Infrastrukturorganisationen erhalten Anerkennung für essenzielle Arbeit; Institutionen begründen Infrastrukturinvestitionen.",
+        "es": "Los proveedores de tecnología desarrollan plataformas sostenibles; las organizaciones de infraestructura obtienen reconocimiento por su trabajo esencial; las instituciones justifican sus inversiones."
+      }
     },
     {
-      "id": "S5",
+      "id": "B5",
+      "axis": "A3",
+      "outcome": "O3",
       "name": {
-        "en": "Policy Makers and Evaluators",
-        "de": "Politikgestaltung und Evaluation",
-        "es": "Responsables de políticas y evaluadores"
+        "en": "Evaluation for Learning & Responsibility",
+        "de": "Evaluation für Lernen & Verantwortung",
+        "es": "Evaluación para el aprendizaje y la responsabilidad"
       },
       "description": {
-        "en": "Organizations that set policy or conduct assessment.",
-        "de": "Organisationen, die Politik gestalten oder Bewertungen durchführen.",
-        "es": "Organizaciones que definen políticas o realizan evaluaciones."
+        "en": "Traditional metrics drive competitive ranking rather than learning. ORI enables formative assessment approaches, multi-dimensional impact evaluation, equity-focused evaluation frameworks, organizational learning mechanisms, and responsible research assessment practices.",
+        "de": "Traditionelle Metriken treiben kompetitives Ranking statt Lernen. ORI ermöglicht formative Bewertungsansätze, mehrdimensionale Wirkungsevaluation, gerechtigkeitsorientierte Bewertungsrahmen, organisationales Lernen und verantwortungsvolle Forschungsbewertung.",
+        "es": "Las métricas tradicionales impulsan el ranking competitivo en vez del aprendizaje. ORI habilita enfoques de evaluación formativa, evaluación multidimensional del impacto, marcos centrados en la equidad, mecanismos de aprendizaje organizacional y prácticas responsables de evaluación."
       },
-      "examples": {
-        "en": ["Government ministries", "Research assessment agencies", "Accreditation bodies", "Think tanks", "Policy advisory groups"],
-        "de": ["Ministerien", "Forschungsbewertungsagenturen", "Akkreditierungsstellen", "Think Tanks", "Politikberatungsgremien"],
-        "es": ["Ministerios", "Agencias de evaluación de la investigación", "Organismos de acreditación", "Think tanks", "Grupos asesores de políticas"]
-      },
-      "roles": ["R4", "R2"],
-      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
+      "whoBenefits": {
+        "en": "Evaluators assess research quality beyond output counts; institutions learn what works and why; researchers receive developmental feedback rather than just judgment.",
+        "de": "Evaluatoren bewerten Forschungsqualität jenseits von Output-Zahlen; Institutionen lernen, was funktioniert und warum; Forschende erhalten entwicklungsorientiertes Feedback statt bloßer Beurteilung.",
+        "es": "Los evaluadores valoran la calidad más allá de los conteos; las instituciones aprenden qué funciona y por qué; los investigadores reciben retroalimentación formativa en vez de solo juicio."
+      }
     },
     {
-      "id": "S6",
-      "name": { "en": "Civil Society and NGOs", "de": "Zivilgesellschaft und NGOs", "es": "Sociedad civil y ONG" },
-      "description": {
-        "en": "Non-governmental organizations representing public interests.",
-        "de": "Nichtregierungsorganisationen, die öffentliche Interessen vertreten.",
-        "es": "Organizaciones no gubernamentales que representan intereses públicos."
-      },
-      "examples": {
-        "en": ["Patient associations", "Citizen science organizations", "Open knowledge networks", "Special interest groups", "Community-based organizations"],
-        "de": ["Patientenvereinigungen", "Citizen-Science-Organisationen", "Open-Knowledge-Netzwerke", "Interessengruppen", "Gemeinschaftsbasierte Organisationen"],
-        "es": ["Asociaciones de pacientes", "Organizaciones de ciencia ciudadana", "Redes de conocimiento abierto", "Grupos de interés", "Organizaciones comunitarias"]
-      },
-      "roles": ["R6", "R7"],
-      "primaryBenefits": ["B1", "B6", "B8", "B4"]
-    },
-    {
-      "id": "S7",
+      "id": "B6",
+      "axis": "A3",
+      "outcome": "O3",
       "name": {
-        "en": "Libraries and Research Managers",
-        "de": "Bibliotheken und Forschungsmanagement",
-        "es": "Bibliotecas y gestores de investigación"
+        "en": "Visibility, Equity & Societal Relevance",
+        "de": "Sichtbarkeit, Gerechtigkeit & gesellschaftliche Relevanz",
+        "es": "Visibilidad, equidad y relevancia social"
       },
       "description": {
-        "en": "Professionals supporting research administration and information management.",
-        "de": "Fachleute, die Forschungsadministration und Informationsmanagement unterstützen.",
-        "es": "Profesionales que apoyan la administración de la investigación y la gestión de la información."
+        "en": "Societal impact and public engagement are undervalued in traditional metrics. ORI enhances research accessibility for non-academic audiences, citizen science enablement, geographic and linguistic equity, SDG alignment tracking, and public engagement.",
+        "de": "Gesellschaftliche Wirkung und öffentliches Engagement werden in traditionellen Metriken unterbewertet. ORI verbessert die Zugänglichkeit von Forschung für nicht-akademische Zielgruppen, ermöglicht Citizen Science, fördert geografische und sprachliche Gerechtigkeit, SDG-Ausrichtung und öffentliche Beteiligung.",
+        "es": "El impacto social y la participación pública están subvalorados en las métricas tradicionales. ORI mejora la accesibilidad de la investigación para audiencias no académicas, habilita la ciencia ciudadana, promueve la equidad geográfica y lingüística, el seguimiento de la alineación con los ODS y la participación pública."
       },
-      "examples": {
-        "en": ["University libraries", "Data stewards", "CRIS managers", "Research support officers", "Information specialists"],
-        "de": ["Universitätsbibliotheken", "Data Stewards", "CRIS-Manager", "Forschungsreferenten", "Informationsspezialisten"],
-        "es": ["Bibliotecas universitarias", "Custodios de datos", "Gestores de CRIS", "Oficiales de apoyo a la investigación", "Especialistas en información"]
-      },
-      "roles": ["R5", "R3"],
-      "primaryBenefits": ["B1", "B2", "B4", "B7"]
-    },
-    {
-      "id": "S8",
-      "name": { "en": "Publishers and Journals", "de": "Verlage und Zeitschriften", "es": "Editoriales y revistas" },
-      "description": {
-        "en": "Organizations disseminating research outputs.",
-        "de": "Organisationen, die Forschungsergebnisse verbreiten.",
-        "es": "Organizaciones que difunden los productos de investigación."
-      },
-      "examples": {
-        "en": ["Commercial publishers", "Society-led journals", "Institutional journals", "Diamond open access publishers", "Preprint servers"],
-        "de": ["Kommerzielle Verlage", "Fachgesellschaftszeitschriften", "Institutionelle Zeitschriften", "Diamond-Open-Access-Verlage", "Preprint-Server"],
-        "es": ["Editoriales comerciales", "Revistas de sociedades científicas", "Revistas institucionales", "Editoriales de acceso abierto diamante", "Servidores de preprints"]
-      },
-      "roles": ["R3"],
-      "primaryBenefits": ["B1", "B4", "B7"]
-    },
-    {
-      "id": "S9",
-      "name": {
-        "en": "Technology and Service Providers",
-        "de": "Technologie- und Dienstleistungsanbieter",
-        "es": "Proveedores de tecnología y servicios"
-      },
-      "description": {
-        "en": "Companies and organizations providing technical solutions.",
-        "de": "Unternehmen und Organisationen, die technische Lösungen anbieten.",
-        "es": "Empresas y organizaciones que ofrecen soluciones técnicas."
-      },
-      "examples": {
-        "en": ["Platform developers", "API and integration service providers", "Data analytics companies", "Software vendors", "Cloud service providers"],
-        "de": ["Plattformentwickler", "API- und Integrationsdienstleister", "Datenanalyseunternehmen", "Softwareanbieter", "Cloud-Dienstleister"],
-        "es": ["Desarrolladores de plataformas", "Proveedores de servicios de API e integración", "Empresas de analítica de datos", "Proveedores de software", "Proveedores de servicios en la nube"]
-      },
-      "roles": ["R3", "R8"],
-      "primaryBenefits": ["B1", "B4", "B7", "B5"]
-    },
-    {
-      "id": "S10",
-      "name": {
-        "en": "Intergovernmental Organizations",
-        "de": "Zwischenstaatliche Organisationen",
-        "es": "Organizaciones intergubernamentales"
-      },
-      "description": {
-        "en": "Global bodies coordinating international research efforts.",
-        "de": "Globale Gremien, die internationale Forschungsanstrengungen koordinieren.",
-        "es": "Organismos globales que coordinan esfuerzos internacionales de investigación."
-      },
-      "examples": {
-        "en": ["UNESCO", "OECD", "EOSC (European Open Science Cloud)", "World Health Organization", "World Bank research divisions"],
-        "de": ["UNESCO", "OECD", "EOSC (European Open Science Cloud)", "Weltgesundheitsorganisation", "Forschungsabteilungen der Weltbank"],
-        "es": ["UNESCO", "OCDE", "EOSC (European Open Science Cloud)", "Organización Mundial de la Salud", "Divisiones de investigación del Banco Mundial"]
-      },
-      "roles": ["R7", "R4", "R3"],
-      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7"]
-    },
-    {
-      "id": "S11",
-      "name": { "en": "Networks and Alliances", "de": "Netzwerke und Allianzen", "es": "Redes y alianzas" },
-      "description": {
-        "en": "Collaborative organizations promoting open research practices.",
-        "de": "Kollaborative Organisationen, die offene Forschungspraktiken fördern.",
-        "es": "Organizaciones colaborativas que promueven prácticas de investigación abierta."
-      },
-      "examples": {
-        "en": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Regional scholarly communication networks"],
-        "de": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Regionale Netzwerke wissenschaftlicher Kommunikation"],
-        "es": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Redes regionales de comunicación académica"]
-      },
-      "roles": ["R7", "R3", "R5"],
-      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7"]
+      "whoBenefits": {
+        "en": "Civil society organizations access relevant research; citizen scientists contribute meaningfully; policymakers connect research to societal priorities; communities worldwide participate in research.",
+        "de": "Zivilgesellschaftliche Organisationen greifen auf relevante Forschung zu; Citizen Scientists leisten sinnvolle Beiträge; Politikgestalter verbinden Forschung mit gesellschaftlichen Prioritäten; Gemeinschaften weltweit nehmen an Forschung teil.",
+        "es": "Las organizaciones de la sociedad civil acceden a investigación relevante; los científicos ciudadanos contribuyen de forma significativa; los responsables de políticas conectan la investigación con las prioridades sociales; las comunidades de todo el mundo participan."
+      }
     }
   ]
 }

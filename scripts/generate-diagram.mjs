@@ -10,45 +10,36 @@ import { dirname, join } from "node:path";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "site", "data", "taxonomy.json"), "utf8"));
 
-const axisName = (id) => data.axes.find((a) => a.id === id).name.en;
 const lines = [];
-
-lines.push("# Stakeholder and Benefits Map");
+lines.push("# The Eight Benefits of Open Research Information");
 lines.push("");
 lines.push(
-  `Generated from \`site/data/taxonomy.json\` (taxonomy v${data.version}) by`,
+  `Generated from \`site/data/taxonomy.json\` (brief v${data.version}) by`,
   "`scripts/generate-diagram.mjs`. Do not edit by hand; edit the JSON and regenerate.",
   ""
 );
 lines.push("```mermaid");
-lines.push("flowchart LR");
-lines.push("  accTitle: ORI stakeholder and benefits map");
+lines.push("flowchart TB");
+lines.push("  accTitle: The eight benefits of open research information");
 lines.push(
-  "  accDescr: Eleven stakeholder categories connect through eight functional roles to eight benefit dimensions grouped into three axes: Quality and Trust, Collaboration and Innovation, Impact and Relevance."
+  "  accDescr: The Barcelona Declaration commitments unlock Open Research Information, which delivers eight benefits in three axes; the benefits flow into trustworthy research, sustainable innovation, and societal impact, leading to research that is visible, valued, and impactful."
 );
-lines.push('  subgraph SH["Stakeholder categories"]');
-for (const s of data.stakeholders) lines.push(`    ${s.id}["${s.name.en}"]`);
-lines.push("  end");
-lines.push('  subgraph RO["Functional roles"]');
-for (const r of data.roles) lines.push(`    ${r.id}["${r.name.en}"]`);
-lines.push("  end");
-for (const a of data.axes) {
-  lines.push(`  subgraph ${a.id}["${axisName(a.id)}"]`);
-  for (const bId of a.benefits) {
-    const b = data.benefits.find((x) => x.id === bId);
-    lines.push(`    ${b.id}["${b.id}: ${b.name.en}"]`);
-  }
-  lines.push("  end");
+lines.push('  START["Barcelona Declaration<br/>4 commitments"] --> ORI["Open Research Information<br/>structured · open · machine-readable"]');
+for (const a of data.axes) lines.push(`  ORI --> ${a.id}["${a.name.en}"]`);
+for (const b of data.benefits) lines.push(`  ${b.axis} --> ${b.id}["${b.id}: ${b.name.en}"]`);
+for (const o of data.outcomes) {
+  lines.push(`  ${o.id}["${o.name.en}"]`);
+  for (const bId of o.benefits) lines.push(`  ${bId} --> ${o.id}`);
 }
-for (const s of data.stakeholders) for (const r of s.roles) lines.push(`  ${s.id} --> ${r}`);
-for (const r of data.roles) for (const b of r.primaryBenefits) lines.push(`  ${r.id} --> ${b}`);
+lines.push(`  VISION["${data.vision.name.en}"]`);
+for (const o of data.outcomes) lines.push(`  ${o.id} --> VISION`);
 lines.push("```");
 lines.push("");
 lines.push(
-  "Edges read left to right: a stakeholder category acts through its typical functional",
-  "roles, and each role primarily delivers the benefit dimensions it points to. The full",
-  "per-stakeholder benefit list (including secondary mappings) is in section 5 of",
-  "`Taxonomy_ORI_Stakeholders_Benefits.md`.",
+  "Read top to bottom: the Declaration's commitments unlock ORI; ORI delivers the eight",
+  "benefit dimensions grouped in three axes; the benefits flow into three outcomes and,",
+  "together, into the vision. Definitions and who benefits from each dimension are in",
+  "`ORI_Benefits_Overview_brief.md`.",
   ""
 );
 

@@ -1,16 +1,14 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=4";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=6";
 
-// Suggestion channel: a prefilled GitHub issue form. Issues need the repo to
-// be public, so the button stays hidden until `enabled` flips on flip day.
-// A GitHub Action then exports all taxonomy-suggestion issues to
-// suggestions/suggestions.csv in the repo.
+// Suggestion channel: a prefilled GitHub issue form. An Action exports all
+// taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
 const SUGGEST = {
   enabled: true,
   repo: "rijdho/barcelona-wg7-tf2",
   template: "suggest-change.yml",
 };
 
-const state = { lang: detectLocale(), selected: null, data: null };
+const state = { lang: detectLocale(), selected: null, view: "explorer", data: null };
 
 const $ = (sel) => document.querySelector(sel);
 const t = (key) => UI[state.lang][key];
@@ -27,21 +25,36 @@ function toggleTheme() {
   localStorage.setItem("wg7tf2-theme", next);
 }
 
+function nodeById(id) {
+  const d = state.data;
+  if (id === "V1") return d.vision;
+  return (
+    d.axes.find((x) => x.id === id) ||
+    d.outcomes.find((x) => x.id === id) ||
+    d.benefits.find((x) => x.id === id)
+  );
+}
+
 // selection graph: which ids light up for a given selection
 function connections(id) {
   const d = state.data;
   const lit = new Set([id]);
-  if (id.startsWith("S")) {
-    const s = d.stakeholders.find((x) => x.id === id);
-    s.roles.forEach((r) => lit.add(r));
-    s.primaryBenefits.forEach((b) => lit.add(b));
-  } else if (id.startsWith("R")) {
-    const r = d.roles.find((x) => x.id === id);
-    r.primaryBenefits.forEach((b) => lit.add(b));
-    d.stakeholders.filter((s) => s.roles.includes(id)).forEach((s) => lit.add(s.id));
+  if (id.startsWith("A")) {
+    const a = d.axes.find((x) => x.id === id);
+    a.benefits.forEach((b) => lit.add(b));
+    a.benefits.forEach((b) => lit.add(d.benefits.find((x) => x.id === b).outcome));
   } else if (id.startsWith("B")) {
-    d.roles.filter((r) => r.primaryBenefits.includes(id)).forEach((r) => lit.add(r.id));
-    d.stakeholders.filter((s) => s.primaryBenefits.includes(id)).forEach((s) => lit.add(s.id));
+    const b = d.benefits.find((x) => x.id === id);
+    lit.add(b.axis);
+    lit.add(b.outcome);
+    lit.add("V1");
+  } else if (id.startsWith("O")) {
+    const o = d.outcomes.find((x) => x.id === id);
+    o.benefits.forEach((b) => lit.add(b));
+    o.benefits.forEach((b) => lit.add(d.benefits.find((x) => x.id === b).axis));
+    lit.add("V1");
+  } else if (id === "V1") {
+    d.outcomes.forEach((o) => lit.add(o.id));
   }
   return lit;
 }
@@ -65,11 +78,14 @@ function renderLists() {
   const d = state.data;
   const L = state.lang;
 
-  const sList = $("#list-stakeholders");
-  sList.replaceChildren(...d.stakeholders.map((s) => nodeButton(s.id, s.name[L])));
-
-  const rList = $("#list-roles");
-  rList.replaceChildren(...d.roles.map((r) => nodeButton(r.id, r.name[L])));
+  const aList = $("#list-axes");
+  aList.replaceChildren(
+    ...d.axes.map((a) => {
+      const li = nodeButton(a.id, a.name[L]);
+      li.querySelector(".node").classList.add(`node-${a.id}`);
+      return li;
+    })
+  );
 
   const bWrap = $("#list-benefits");
   bWrap.replaceChildren(
@@ -91,6 +107,17 @@ function renderLists() {
       return group;
     })
   );
+
+  const oList = $("#list-outcomes");
+  const items = d.outcomes.map((o) => {
+    const li = nodeButton(o.id, o.name[L]);
+    const axisOfFirst = d.benefits.find((x) => x.id === o.benefits[0]).axis;
+    li.querySelector(".node").classList.add(`node-ax-${axisOfFirst}`);
+    return li;
+  });
+  const visionLi = nodeButton("V1", d.vision.name[L]);
+  visionLi.querySelector(".node").classList.add("node-vision");
+  oList.replaceChildren(...items, visionLi);
 }
 
 function chipList(ids) {
@@ -101,17 +128,13 @@ function chipList(ids) {
   for (const id of ids) {
     const li = document.createElement("li");
     li.className = "chip";
-    let name;
+    const n = nodeById(id);
     if (id.startsWith("B")) {
-      const b = d.benefits.find((x) => x.id === id);
-      name = `${id} · ${b.name[L]}`;
-      li.classList.add(`ax-${b.axis}`);
-    } else if (id.startsWith("R")) {
-      name = d.roles.find((x) => x.id === id).name[L];
+      li.classList.add(`ax-${n.axis}`);
+      li.textContent = `${id} · ${n.name[L]}`;
     } else {
-      name = d.stakeholders.find((x) => x.id === id).name[L];
+      li.textContent = n.name[L];
     }
-    li.textContent = name;
     ul.appendChild(li);
   }
   return ul;
@@ -127,18 +150,10 @@ function rel(labelKey, content) {
   return div;
 }
 
-function plainChips(items) {
-  const ul = document.createElement("ul");
-  ul.className = "chips";
-  ul.append(
-    ...items.map((text) => {
-      const li = document.createElement("li");
-      li.className = "chip";
-      li.textContent = text;
-      return li;
-    })
-  );
-  return ul;
+function prose(text) {
+  const p = document.createElement("p");
+  p.textContent = text;
+  return p;
 }
 
 function renderDetail() {
@@ -152,9 +167,7 @@ function renderDetail() {
   const suggest = $("#btn-suggest");
   suggest.hidden = !id || !SUGGEST.enabled;
   if (id && SUGGEST.enabled) {
-    const en = (d.benefits.find((x) => x.id === id) || d.roles.find((x) => x.id === id) ||
-      d.stakeholders.find((x) => x.id === id)).name.en;
-    const value = `${id} · ${en} (taxonomy v${d.version})`;
+    const value = `${id} · ${nodeById(id).name.en} (brief v${d.version})`;
     suggest.href =
       `https://github.com/${SUGGEST.repo}/issues/new?template=${SUGGEST.template}` +
       `&title=${encodeURIComponent(`[Suggestion] ${value}`)}&node=${encodeURIComponent(value)}`;
@@ -171,52 +184,50 @@ function renderDetail() {
   const kind = document.createElement("p");
   kind.className = "kind";
   const h = document.createElement("h3");
-  const body = document.createElement("p");
-  const parts = [kind, h, body];
+  const parts = [kind, h];
 
-  if (id.startsWith("S")) {
-    const s = d.stakeholders.find((x) => x.id === id);
-    kind.textContent = `${t("colStakeholders")} · ${id}`;
-    h.textContent = s.name[L];
-    body.textContent = s.description[L];
-    parts.push(
-      rel("detailExamples", plainChips(s.examples[L])),
-      rel("detailRoles", chipList(s.roles)),
-      rel("detailBenefits", chipList(s.primaryBenefits))
-    );
-  } else if (id.startsWith("R")) {
-    const r = d.roles.find((x) => x.id === id);
-    kind.textContent = `${t("colRoles")} · ${id}`;
-    h.textContent = r.name[L];
-    body.textContent = r.definition[L];
-    const holders = d.stakeholders.filter((s) => s.roles.includes(id)).map((s) => s.id);
-    parts.push(rel("detailBenefits", chipList(r.primaryBenefits)), rel("detailStakeholders", chipList(holders)));
-  } else {
+  if (id.startsWith("B")) {
     const b = d.benefits.find((x) => x.id === id);
     const axis = d.axes.find((a) => a.id === b.axis);
     kind.textContent = `${t("colBenefits")} · ${id} · ${t("detailAxis")}: ${axis.name[L]}`;
     h.textContent = b.name[L];
-    body.textContent = b.definition[L];
-    const roles = d.roles.filter((r) => r.primaryBenefits.includes(id)).map((r) => r.id);
-    const holders = d.stakeholders.filter((s) => s.primaryBenefits.includes(id)).map((s) => s.id);
-    parts.push(rel("detailRolesDelivering", chipList(roles)), rel("detailStakeholders", chipList(holders)));
+    parts.push(
+      prose(b.description[L]),
+      rel("detailWho", prose(b.whoBenefits[L])),
+      rel("detailOutcome", chipList([b.outcome]))
+    );
+  } else if (id.startsWith("A")) {
+    const a = d.axes.find((x) => x.id === id);
+    kind.textContent = `${t("colAxes")} · ${id}`;
+    h.textContent = a.name[L];
+    parts.push(rel("detailBenefitsIn", chipList(a.benefits)));
+  } else if (id.startsWith("O")) {
+    const o = d.outcomes.find((x) => x.id === id);
+    kind.textContent = `${t("colOutcomes")} · ${id}`;
+    h.textContent = o.name[L];
+    parts.push(rel("detailBenefitsIn", chipList(o.benefits)), rel("detailVision", chipList(["V1"])));
+  } else {
+    kind.textContent = t("colOutcomes");
+    h.textContent = d.vision.name[L];
+    parts.push(rel("detailBenefitsIn", chipList(d.outcomes.map((o) => o.id))));
   }
   detail.replaceChildren(...parts);
 }
 
-// the drawn map: one path per S->R and R->B connection, laid in the gutters
+// the drawn map: axis->benefit, benefit->outcome, outcome->vision wires
 function edgeList() {
   const d = state.data;
   const edges = [];
-  for (const s of d.stakeholders) for (const r of s.roles) edges.push([s.id, r]);
-  for (const r of d.roles) for (const b of r.primaryBenefits) edges.push([r.id, b]);
+  for (const b of d.benefits) edges.push([b.axis, b.id]);
+  for (const b of d.benefits) edges.push([b.id, b.outcome]);
+  for (const o of d.outcomes) edges.push([o.id, "V1"]);
   return edges;
 }
 
 function drawWires() {
   const svg = $(".wires");
   const box = $(".explorer");
-  if (!state.data) return;
+  if (!state.data || state.view !== "explorer") return;
   const ref = box.getBoundingClientRect();
   svg.setAttribute("viewBox", `0 0 ${ref.width} ${ref.height}`);
   const anchor = (id) => {
@@ -228,9 +239,11 @@ function drawWires() {
     ...edgeList().map(([from, to]) => {
       const a = anchor(from);
       const b = anchor(to);
-      const midX = (a.right + b.left) / 2;
+      // outcome->vision edges run inside one column; route them by x-position
+      const [x1, x2] = a.right <= b.left ? [a.right, b.left] : [a.left, b.left];
+      const midX = (x1 + x2) / 2;
       const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      p.setAttribute("d", `M ${a.right} ${a.y} C ${midX} ${a.y}, ${midX} ${b.y}, ${b.left} ${b.y}`);
+      p.setAttribute("d", `M ${x1} ${a.y} C ${midX} ${a.y}, ${midX} ${b.y}, ${x2} ${b.y}`);
       p.dataset.from = from;
       p.dataset.to = to;
       return p;
@@ -266,6 +279,17 @@ function select(id) {
   renderSelection();
 }
 
+function setView(view) {
+  state.view = view;
+  $("#view-explorer").hidden = view !== "explorer";
+  $("#view-about").hidden = view !== "about";
+  $("#nav-explorer").classList.toggle("active", view === "explorer");
+  $("#nav-about").classList.toggle("active", view === "about");
+  if (view === "about") history.replaceState(null, "", "#about");
+  else history.replaceState(null, "", state.selected ? `#${state.selected}` : location.pathname + location.search);
+  if (view === "explorer") drawWires();
+}
+
 function renderChrome() {
   const L = state.lang;
   document.documentElement.lang = L;
@@ -274,6 +298,7 @@ function renderChrome() {
   });
   $("#lede").textContent = t("lede");
   $("#about-body").textContent = t("aboutBody").replace("{version}", state.data.version);
+  $("#about-how-body").textContent = t("aboutHowBody");
   document.querySelectorAll(".langs button").forEach((b) => {
     b.setAttribute("aria-current", String(b.dataset.lang === L));
   });
@@ -287,11 +312,12 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=4");
+  const res = await fetch("data/taxonomy.json?v=6");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
-  if (/^[SRB]\d+$/.test(hash)) state.selected = hash;
+  if (/^([AO]\d|B\d|V1)$/.test(hash)) state.selected = hash;
+  if (hash === "about") state.view = "about";
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {
@@ -303,6 +329,8 @@ async function init() {
   });
 
   $("#theme-toggle").addEventListener("click", toggleTheme);
+  $("#nav-explorer").addEventListener("click", (e) => { e.preventDefault(); setView("explorer"); });
+  $("#nav-about").addEventListener("click", (e) => { e.preventDefault(); setView("about"); });
   $("#btn-clear").addEventListener("click", () => select(null));
   $("#btn-share").addEventListener("click", async () => {
     await navigator.clipboard.writeText(location.href);
@@ -311,6 +339,7 @@ async function init() {
     setTimeout(() => (btn.textContent = t("share")), 1600);
   });
 
+  setView(state.view);
   render();
   new ResizeObserver(() => drawWires()).observe($(".explorer"));
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawWires());
