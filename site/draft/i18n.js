@@ -7,8 +7,8 @@ export const LOCALES = ["en", "de", "es"];
 export const UI = {
   en: {
     title: "Stakeholders & Benefits",
-    draftLabel: "Draft · working example (created by @rijdho)",
-    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the eight-benefits brief.",
+    draftLabel: "Draft v{version} · working example (created by @rijdho)",
+    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the eight-benefits brief. The English text is the authoritative wording.",
     navBack: "Benefits map",
     navDraftSelf: "Draft: full taxonomy",
     eyebrow: "A stakeholder map and a taxonomy of benefits for open research information",
@@ -34,15 +34,11 @@ export const UI = {
     suggest: "Suggest a change",
     shared: "Link copied",
     aboutTitle: "About",
-    aboutBody:
-      "This explorer renders version {version} of the Taxonomy of ORI Stakeholders and Benefits, " +
-      "a working document of Task Force 2 of Working Group 7 of the Barcelona Declaration on Open " +
-      "Research Information. Content is licensed CC BY 4.0; the English text is the authoritative wording.",
   },
   de: {
     title: "Stakeholder & Nutzen",
-    draftLabel: "Entwurf · Arbeitsbeispiel (erstellt von @rijdho)",
-    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Acht-Nutzen-Brief.",
+    draftLabel: "Entwurf v{version} · Arbeitsbeispiel (erstellt von @rijdho)",
+    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Acht-Nutzen-Brief. Der englische Text ist maßgeblich.",
     navBack: "Nutzen-Karte",
     navDraftSelf: "Entwurf: vollständige Taxonomie",
     eyebrow: "Eine Stakeholder-Karte und eine Nutzen-Taxonomie für offene Forschungsinformation",
@@ -68,15 +64,11 @@ export const UI = {
     suggest: "Änderung vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
-    aboutBody:
-      "Dieser Explorer zeigt Version {version} der Taxonomie der ORI-Stakeholder und -Nutzen, " +
-      "ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona Declaration on Open " +
-      "Research Information. Inhalte stehen unter CC BY 4.0; der englische Text ist maßgeblich.",
   },
   es: {
     title: "Stakeholders y beneficios",
-    draftLabel: "Borrador · ejemplo de trabajo (creado por @rijdho)",
-    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de ocho beneficios.",
+    draftLabel: "Borrador v{version} · ejemplo de trabajo (creado por @rijdho)",
+    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de ocho beneficios. El texto en inglés es la redacción autorizada.",
     navBack: "Mapa de beneficios",
     navDraftSelf: "Borrador: taxonomía completa",
     eyebrow: "Un mapa de stakeholders y una taxonomía de beneficios para la información abierta sobre investigación",
@@ -102,10 +94,6 @@ export const UI = {
     suggest: "Sugerir un cambio",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
-    aboutBody:
-      "Este explorador muestra la versión {version} de la Taxonomía de stakeholders y beneficios de ORI, " +
-      "un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona Declaration on Open " +
-      "Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es la redacción autorizada.",
   },
 };
 

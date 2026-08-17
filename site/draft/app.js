@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=4";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=5";
 
 // Suggestion channel: a prefilled GitHub issue form. Issues need the repo to
 // be public, so the button stays hidden until `enabled` flips on flip day.
@@ -270,10 +270,9 @@ function renderChrome() {
   const L = state.lang;
   document.documentElement.lang = L;
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    el.textContent = UI[L][el.dataset.i18n];
+    el.textContent = UI[L][el.dataset.i18n].replace("{version}", state.data.version);
   });
   $("#lede").textContent = t("lede");
-  $("#about-body").textContent = t("aboutBody").replace("{version}", state.data.version);
   document.querySelectorAll(".langs button").forEach((b) => {
     b.setAttribute("aria-current", String(b.dataset.lang === L));
   });
