@@ -27,6 +27,7 @@ export const UI = {
     clearSelection: "Clear selection",
     hint: "Nothing selected. Click a stakeholder, role, or benefit to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
+    suggest: "Suggest a change",
     shared: "Link copied",
     aboutTitle: "About",
     aboutBody:
@@ -56,6 +57,7 @@ export const UI = {
     clearSelection: "Auswahl aufheben",
     hint: "Nichts ausgewählt. Stakeholder, Rolle oder Nutzen anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
+    suggest: "Änderung vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
     aboutBody:
@@ -85,6 +87,7 @@ export const UI = {
     clearSelection: "Limpiar selección",
     hint: "Nada seleccionado. Haz clic en un stakeholder, rol o beneficio para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
+    suggest: "Sugerir un cambio",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
     aboutBody:

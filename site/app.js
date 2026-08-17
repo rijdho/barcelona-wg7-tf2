@@ -1,4 +1,9 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=3";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=4";
+
+// Suggestion channel: a Google Form with a "Node" short-answer question.
+// Fill in from the Form's "Get pre-filled link" (url = the /viewform base,
+// entry = the entry.<id> of the Node question). Empty url hides the button.
+const SUGGEST_FORM = { url: "", entry: "" };
 
 const state = { lang: detectLocale(), selected: null, data: null };
 
@@ -139,6 +144,14 @@ function renderDetail() {
 
   $("#btn-clear").hidden = !id;
   $("#btn-share").hidden = !id;
+  const suggest = $("#btn-suggest");
+  suggest.hidden = !id || !SUGGEST_FORM.url;
+  if (id && SUGGEST_FORM.url) {
+    const en = (d.benefits.find((x) => x.id === id) || d.roles.find((x) => x.id === id) ||
+      d.stakeholders.find((x) => x.id === id)).name.en;
+    const value = `${id} · ${en} (taxonomy v${d.version})`;
+    suggest.href = `${SUGGEST_FORM.url}?usp=pp_url&entry.${SUGGEST_FORM.entry}=${encodeURIComponent(value)}`;
+  }
 
   if (!id) {
     const hint = document.createElement("p");
@@ -267,7 +280,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=3");
+  const res = await fetch("data/taxonomy.json?v=4");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");

@@ -223,7 +223,7 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 .detail-actions { display: flex; gap: 8px; margin-top: 16px; }
 .btn { font-family: var(--mono); background: var(--brand); color: var(--accent-ink); border: none;
   border-radius: var(--r-sm); padding: 9px 18px; font-weight: 600; cursor: pointer; font-size: 0.82rem;
-  letter-spacing: 0.02em; }
+  letter-spacing: 0.02em; text-decoration: none; display: inline-block; }
 .btn:hover { filter: brightness(1.07); }
 .btn.ghost { background: none; border: 1px solid var(--hairline); color: var(--ink); }
 .btn.ghost:hover { border-color: var(--brand); color: var(--brand); filter: none; }
