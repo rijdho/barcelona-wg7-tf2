@@ -45,6 +45,32 @@ body:
       description: The reasoning, evidence, or use case behind the suggestion.
     validations:
       required: false
+  - type: dropdown
+    id: perspective
+    attributes:
+      label: Your perspective
+      description: From which role are you speaking? This helps map who says what about each benefit.
+      options:
+        - Researcher
+        - Research institution
+        - Funder
+        - Library / research management
+        - Infrastructure provider
+        - Publisher / journal
+        - Technology / service provider
+        - Civil society / citizen
+        - Policy maker / evaluator
+        - Intergovernmental organization / network
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: example
+    attributes:
+      label: A concrete example (optional)
+      description: A real situation where this benefit (or its absence) showed up. Examples feed the task force's case study collection.
+    validations:
+      required: false
   - type: input
     id: affiliation
     attributes:

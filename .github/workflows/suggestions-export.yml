@@ -37,11 +37,11 @@ jobs:
             const section = (body, label) => {
               const m = (body || "").match(new RegExp(`### ${label}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`));
               const v = m ? m[1].trim() : "";
-              return v === "_No response_" ? "" : v;
+              return v === "_No response_" || v === "None" ? "" : v;
             };
             const esc = (v) => `"${String(v).replace(/"/g, '""')}"`;
             const header = ["issue", "state", "created", "author", "node", "type_of_change",
-              "suggestion", "why", "name_affiliation", "url"];
+              "suggestion", "why", "perspective", "example", "name_affiliation", "url"];
             const rows = issues
               .filter((i) => !i.pull_request)
               .sort((a, b) => a.number - b.number)
@@ -54,6 +54,8 @@ jobs:
                 section(i.body, "Type of change"),
                 section(i.body, "Your suggestion"),
                 section(i.body, "Why"),
+                section(i.body, "Your perspective"),
+                section(i.body, "A concrete example \\(optional\\)"),
                 section(i.body, "Name / affiliation \\(optional\\)"),
                 i.html_url,
               ]);
