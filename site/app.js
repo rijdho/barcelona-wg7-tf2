@@ -5,7 +5,7 @@ import { UI, LOCALES, detectLocale } from "./i18n.js?v=4";
 // A GitHub Action then exports all taxonomy-suggestion issues to
 // suggestions/suggestions.csv in the repo.
 const SUGGEST = {
-  enabled: false,
+  enabled: true,
   repo: "rijdho/barcelona-wg7-tf2",
   template: "suggest-change.yml",
 };

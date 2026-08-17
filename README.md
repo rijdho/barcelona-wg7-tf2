@@ -11,10 +11,12 @@ The framework: eight benefit dimensions (B1-B8) grouped into three axes (Quality
 Collaboration & Innovation, Impact & Relevance), mapped to eleven stakeholder categories
 through eight functional roles.
 
-An interactive explorer of the taxonomy lives in `site/` and will be served on GitHub Pages
-when the repository goes public. It is available in **English, German and Spanish**
-(auto-detected, switchable) and runs entirely in the browser: nothing is tracked, nothing is
-sent anywhere.
+🔗 **Live:** https://rijdho.github.io/barcelona-wg7-tf2/
+
+The interactive explorer is available in **English, German and Spanish** (auto-detected,
+switchable) and runs entirely in the browser: nothing is tracked, nothing is sent anywhere.
+Its "Suggest a change" button opens a pre-filled GitHub issue form; suggestions are
+exported automatically to `suggestions/suggestions.csv`.
 
 ## Structure
 
@@ -74,7 +76,7 @@ comments and revision is expected. Coordinators: Christian, Ricardo, Bianca, Bar
 | White paper v1.0 | Done, verified |
 | Benefits overview + brief | Done (Feb 2026); circulating to WG7 as "brief v0.1" |
 | Benefits map (visual) | Regenerable Mermaid map from taxonomy.json (2026-08-17); replaced an outdated PNG that showed a pre-v1.0 benefit set |
-| Interactive explorer | Built (2026-08-17); goes live on Pages when the repo goes public |
+| Interactive explorer | Live on GitHub Pages (2026-08-17), with prefilled issue-form suggestions and automatic CSV export |
 | TF2 Concept Note (scope, activities, outputs) | Draft on Drive; the 4 comments from 2026-03-03 are deliberately left open for the group to see; "Expected outputs 2026-2027" left for task force brainstorm |
 | WG7 meeting invitation | Draft by Barbara; approved by Ricardo 2026-08-13, awaiting Christian and Bianca |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |

@@ -1,13 +1,10 @@
-# Deploys site/ to GitHub Pages via Actions (verbatim upload, no Jekyll).
-# While the repository is private, Pages is unavailable on the free plan, so
-# the workflow runs on manual dispatch only. On the day the repo goes public:
-#   1. Settings -> Pages -> Source: GitHub Actions
-#   2. Add a push trigger here:
-#        push:
-#          branches: [main]
+# Deploys site/ to GitHub Pages via Actions (verbatim upload, no Jekyll)
+# on every push to main. Tests gate the deploy.
 name: Deploy site to GitHub Pages
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
