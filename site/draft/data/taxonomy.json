@@ -1,0 +1,424 @@
+{
+  "version": "1.0",
+  "date": "2026-01",
+  "source": "deliverables/Taxonomy_ORI_Stakeholders_Benefits.md",
+  "axes": [
+    {
+      "id": "A1",
+      "name": { "en": "Quality & Trust", "de": "Qualität & Vertrauen", "es": "Calidad y confianza" },
+      "benefits": ["B1", "B2", "B8"]
+    },
+    {
+      "id": "A2",
+      "name": { "en": "Collaboration & Innovation", "de": "Zusammenarbeit & Innovation", "es": "Colaboración e innovación" },
+      "benefits": ["B3", "B4", "B7"]
+    },
+    {
+      "id": "A3",
+      "name": { "en": "Impact & Relevance", "de": "Wirkung & Relevanz", "es": "Impacto y relevancia" },
+      "benefits": ["B5", "B6"]
+    }
+  ],
+  "benefits": [
+    {
+      "id": "B1",
+      "axis": "A1",
+      "name": {
+        "en": "Research Output Quality & Traceability",
+        "de": "Qualität und Nachvollziehbarkeit von Forschungsergebnissen",
+        "es": "Calidad y trazabilidad de los productos de investigación"
+      },
+      "definition": {
+        "en": "Enhances the visibility, credibility, and traceability of research products throughout their lifecycle.",
+        "de": "Erhöht die Sichtbarkeit, Glaubwürdigkeit und Nachvollziehbarkeit von Forschungsprodukten über ihren gesamten Lebenszyklus.",
+        "es": "Mejora la visibilidad, credibilidad y trazabilidad de los productos de investigación a lo largo de su ciclo de vida."
+      }
+    },
+    {
+      "id": "B2",
+      "axis": "A1",
+      "name": {
+        "en": "Governance, Ethics & Compliance",
+        "de": "Governance, Ethik & Compliance",
+        "es": "Gobernanza, ética y cumplimiento"
+      },
+      "definition": {
+        "en": "Enhances internal policies, ethical standards, and compliance with open and responsible research norms.",
+        "de": "Stärkt interne Richtlinien, ethische Standards und die Einhaltung von Normen offener und verantwortungsvoller Forschung.",
+        "es": "Fortalece las políticas internas, los estándares éticos y el cumplimiento de las normas de investigación abierta y responsable."
+      }
+    },
+    {
+      "id": "B3",
+      "axis": "A2",
+      "name": {
+        "en": "Capacity Building & Inclusive Training",
+        "de": "Kompetenzaufbau & inklusive Ausbildung",
+        "es": "Desarrollo de capacidades y formación inclusiva"
+      },
+      "definition": {
+        "en": "Builds inclusive skills, literacy, and institutional capabilities, especially supporting underrepresented actors.",
+        "de": "Baut inklusive Kompetenzen und institutionelle Fähigkeiten auf und unterstützt insbesondere unterrepräsentierte Akteure.",
+        "es": "Construye habilidades inclusivas y capacidades institucionales, apoyando especialmente a los actores subrepresentados."
+      }
+    },
+    {
+      "id": "B4",
+      "axis": "A2",
+      "name": {
+        "en": "Interoperability & Metadata Quality",
+        "de": "Interoperabilität & Metadatenqualität",
+        "es": "Interoperabilidad y calidad de metadatos"
+      },
+      "definition": {
+        "en": "Strengthens data interoperability, metadata completeness, and standard adoption.",
+        "de": "Stärkt die Interoperabilität von Daten, die Vollständigkeit von Metadaten und die Übernahme von Standards.",
+        "es": "Refuerza la interoperabilidad de los datos, la completitud de los metadatos y la adopción de estándares."
+      }
+    },
+    {
+      "id": "B5",
+      "axis": "A3",
+      "name": {
+        "en": "Evaluation for Learning & Responsibility",
+        "de": "Evaluation für Lernen & Verantwortung",
+        "es": "Evaluación para el aprendizaje y la responsabilidad"
+      },
+      "definition": {
+        "en": "Informs institutional, national, and global evaluation processes that support learning, equity, and accountability.",
+        "de": "Unterstützt institutionelle, nationale und globale Evaluationsprozesse, die Lernen, Gerechtigkeit und Rechenschaft fördern.",
+        "es": "Informa procesos de evaluación institucionales, nacionales y globales que apoyan el aprendizaje, la equidad y la rendición de cuentas."
+      }
+    },
+    {
+      "id": "B6",
+      "axis": "A3",
+      "name": {
+        "en": "Visibility, Equity & Societal Relevance",
+        "de": "Sichtbarkeit, Gerechtigkeit & gesellschaftliche Relevanz",
+        "es": "Visibilidad, equidad y relevancia social"
+      },
+      "definition": {
+        "en": "Increases equitable access, civic engagement, and alignment with societal needs and the SDGs.",
+        "de": "Erhöht den gerechten Zugang, die zivilgesellschaftliche Beteiligung und die Ausrichtung an gesellschaftlichen Bedürfnissen und den SDGs.",
+        "es": "Aumenta el acceso equitativo, la participación ciudadana y la alineación con las necesidades sociales y los ODS."
+      }
+    },
+    {
+      "id": "B7",
+      "axis": "A2",
+      "name": {
+        "en": "Infrastructure & Technical Enablement",
+        "de": "Infrastruktur & technische Befähigung",
+        "es": "Infraestructura y habilitación técnica"
+      },
+      "definition": {
+        "en": "Supports or enhances the platforms and services that enable open research.",
+        "de": "Unterstützt oder verbessert die Plattformen und Dienste, die offene Forschung ermöglichen.",
+        "es": "Apoya o mejora las plataformas y servicios que hacen posible la investigación abierta."
+      }
+    },
+    {
+      "id": "B8",
+      "axis": "A1",
+      "name": {
+        "en": "Integrity & Accountability",
+        "de": "Integrität & Rechenschaftspflicht",
+        "es": "Integridad y rendición de cuentas"
+      },
+      "definition": {
+        "en": "Fosters transparency, accountability, and ethical conduct throughout the research lifecycle.",
+        "de": "Fördert Transparenz, Rechenschaft und ethisches Verhalten über den gesamten Forschungszyklus.",
+        "es": "Fomenta la transparencia, la rendición de cuentas y la conducta ética a lo largo del ciclo de investigación."
+      }
+    }
+  ],
+  "roles": [
+    {
+      "id": "R1",
+      "name": { "en": "Producer", "de": "Produzent", "es": "Productor" },
+      "definition": {
+        "en": "Creates or contributes directly to research outputs, data, or metadata.",
+        "de": "Erstellt Forschungsergebnisse, Daten oder Metadaten oder trägt direkt dazu bei.",
+        "es": "Crea o contribuye directamente a productos de investigación, datos o metadatos."
+      },
+      "primaryBenefits": ["B1", "B2", "B3"]
+    },
+    {
+      "id": "R2",
+      "name": { "en": "Evaluator", "de": "Evaluator", "es": "Evaluador" },
+      "definition": {
+        "en": "Assesses the quality, impact, or compliance of research and institutions.",
+        "de": "Bewertet die Qualität, Wirkung oder Regelkonformität von Forschung und Institutionen.",
+        "es": "Evalúa la calidad, el impacto o el cumplimiento de la investigación y las instituciones."
+      },
+      "primaryBenefits": ["B1", "B3", "B5"]
+    },
+    {
+      "id": "R3",
+      "name": { "en": "Enabler", "de": "Ermöglicher", "es": "Habilitador" },
+      "definition": {
+        "en": "Provides platforms, infrastructure, or services that make open research possible.",
+        "de": "Stellt Plattformen, Infrastruktur oder Dienste bereit, die offene Forschung möglich machen.",
+        "es": "Proporciona plataformas, infraestructura o servicios que hacen posible la investigación abierta."
+      },
+      "primaryBenefits": ["B1", "B4", "B7"]
+    },
+    {
+      "id": "R4",
+      "name": { "en": "Policy Maker", "de": "Politikgestalter", "es": "Responsable de políticas" },
+      "definition": {
+        "en": "Defines, mandates, or influences strategies and frameworks for governance.",
+        "de": "Definiert, verordnet oder beeinflusst Strategien und Rahmenwerke für Governance.",
+        "es": "Define, mandata o influye en estrategias y marcos de gobernanza."
+      },
+      "primaryBenefits": ["B2", "B5", "B8"]
+    },
+    {
+      "id": "R5",
+      "name": { "en": "Support & Stewardship", "de": "Unterstützung & Stewardship", "es": "Apoyo y custodia" },
+      "definition": {
+        "en": "Maintains metadata, provides training, and ensures quality and alignment.",
+        "de": "Pflegt Metadaten, bietet Schulungen an und sichert Qualität und Ausrichtung.",
+        "es": "Mantiene los metadatos, ofrece formación y asegura la calidad y la alineación."
+      },
+      "primaryBenefits": ["B1", "B2"]
+    },
+    {
+      "id": "R6",
+      "name": { "en": "Advocate / Civil Actor", "de": "Fürsprecher / zivilgesellschaftlicher Akteur", "es": "Promotor / actor civil" },
+      "definition": {
+        "en": "Promotes accessibility, inclusion, and societal relevance of research.",
+        "de": "Fördert Zugänglichkeit, Inklusion und gesellschaftliche Relevanz von Forschung.",
+        "es": "Promueve la accesibilidad, la inclusión y la relevancia social de la investigación."
+      },
+      "primaryBenefits": ["B1", "B6", "B8"]
+    },
+    {
+      "id": "R7",
+      "name": { "en": "Coordinator / Facilitator", "de": "Koordinator / Facilitator", "es": "Coordinador / facilitador" },
+      "definition": {
+        "en": "Connects actors, aligns practices, and enables interoperability at scale.",
+        "de": "Verbindet Akteure, harmonisiert Praktiken und ermöglicht Interoperabilität in großem Maßstab.",
+        "es": "Conecta actores, alinea prácticas y habilita la interoperabilidad a gran escala."
+      },
+      "primaryBenefits": ["B4", "B6", "B8"]
+    },
+    {
+      "id": "R8",
+      "name": { "en": "Data Analyst", "de": "Datenanalyst", "es": "Analista de datos" },
+      "definition": {
+        "en": "Analyzes research information to generate insights and inform decisions.",
+        "de": "Analysiert Forschungsinformationen, um Erkenntnisse zu gewinnen und Entscheidungen zu unterstützen.",
+        "es": "Analiza información de investigación para generar conocimiento e informar decisiones."
+      },
+      "primaryBenefits": ["B5", "B7"]
+    }
+  ],
+  "stakeholders": [
+    {
+      "id": "S1",
+      "name": {
+        "en": "Research-Performing Institutions",
+        "de": "Forschungseinrichtungen",
+        "es": "Instituciones que realizan investigación"
+      },
+      "description": {
+        "en": "Organizations that conduct research as a core function.",
+        "de": "Organisationen, deren Kernaufgabe die Durchführung von Forschung ist.",
+        "es": "Organizaciones cuya función central es realizar investigación."
+      },
+      "examples": {
+        "en": ["Universities", "Independent research centers", "Academic departments", "Private sector research divisions", "Hospital-based research units"],
+        "de": ["Universitäten", "Unabhängige Forschungszentren", "Akademische Fachbereiche", "Forschungsabteilungen der Privatwirtschaft", "Klinische Forschungseinheiten"],
+        "es": ["Universidades", "Centros de investigación independientes", "Departamentos académicos", "Divisiones de investigación del sector privado", "Unidades de investigación hospitalarias"]
+      },
+      "roles": ["R1", "R5", "R2"],
+      "primaryBenefits": ["B1", "B2", "B3", "B5"]
+    },
+    {
+      "id": "S2",
+      "name": {
+        "en": "Individual Researchers",
+        "de": "Einzelne Forschende",
+        "es": "Investigadores individuales"
+      },
+      "description": {
+        "en": "Persons directly engaged in research activities.",
+        "de": "Personen, die unmittelbar in Forschungsaktivitäten eingebunden sind.",
+        "es": "Personas directamente involucradas en actividades de investigación."
+      },
+      "examples": {
+        "en": ["Early-career researchers", "Senior researchers", "Principal investigators", "Interdisciplinary teams", "Citizen scientists"],
+        "de": ["Nachwuchsforschende", "Erfahrene Forschende", "Projektleitende", "Interdisziplinäre Teams", "Citizen Scientists"],
+        "es": ["Investigadores en etapa temprana", "Investigadores sénior", "Investigadores principales", "Equipos interdisciplinarios", "Científicos ciudadanos"]
+      },
+      "roles": ["R1"],
+      "primaryBenefits": ["B1", "B2", "B3"]
+    },
+    {
+      "id": "S3",
+      "name": { "en": "Funders", "de": "Förderorganisationen", "es": "Financiadores" },
+      "description": {
+        "en": "Organizations that provide financial support for research.",
+        "de": "Organisationen, die Forschung finanziell unterstützen.",
+        "es": "Organizaciones que brindan apoyo financiero a la investigación."
+      },
+      "examples": {
+        "en": ["National research agencies", "International cooperation bodies", "Philanthropic foundations", "Private sector funders", "Crowdfunding platforms"],
+        "de": ["Nationale Forschungsagenturen", "Internationale Kooperationsgremien", "Philanthropische Stiftungen", "Private Förderer", "Crowdfunding-Plattformen"],
+        "es": ["Agencias nacionales de investigación", "Organismos de cooperación internacional", "Fundaciones filantrópicas", "Financiadores del sector privado", "Plataformas de financiamiento colectivo"]
+      },
+      "roles": ["R4", "R2"],
+      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
+    },
+    {
+      "id": "S4",
+      "name": {
+        "en": "Research Infrastructure Providers",
+        "de": "Anbieter von Forschungsinfrastruktur",
+        "es": "Proveedores de infraestructura de investigación"
+      },
+      "description": {
+        "en": "Organizations that supply technical platforms and services.",
+        "de": "Organisationen, die technische Plattformen und Dienste bereitstellen.",
+        "es": "Organizaciones que proveen plataformas y servicios técnicos."
+      },
+      "examples": {
+        "en": ["Repositories (data, publications, software)", "PID infrastructure providers (DOI, ORCID, ROR)", "Metadata and indexing services", "Information service providers", "CRIS providers"],
+        "de": ["Repositorien (Daten, Publikationen, Software)", "PID-Infrastrukturanbieter (DOI, ORCID, ROR)", "Metadaten- und Indexierungsdienste", "Informationsdienstleister", "CRIS-Anbieter"],
+        "es": ["Repositorios (datos, publicaciones, software)", "Proveedores de infraestructura PID (DOI, ORCID, ROR)", "Servicios de metadatos e indexación", "Proveedores de servicios de información", "Proveedores de CRIS"]
+      },
+      "roles": ["R3", "R5"],
+      "primaryBenefits": ["B1", "B4", "B7", "B2"]
+    },
+    {
+      "id": "S5",
+      "name": {
+        "en": "Policy Makers and Evaluators",
+        "de": "Politikgestaltung und Evaluation",
+        "es": "Responsables de políticas y evaluadores"
+      },
+      "description": {
+        "en": "Organizations that set policy or conduct assessment.",
+        "de": "Organisationen, die Politik gestalten oder Bewertungen durchführen.",
+        "es": "Organizaciones que definen políticas o realizan evaluaciones."
+      },
+      "examples": {
+        "en": ["Government ministries", "Research assessment agencies", "Accreditation bodies", "Think tanks", "Policy advisory groups"],
+        "de": ["Ministerien", "Forschungsbewertungsagenturen", "Akkreditierungsstellen", "Think Tanks", "Politikberatungsgremien"],
+        "es": ["Ministerios", "Agencias de evaluación de la investigación", "Organismos de acreditación", "Think tanks", "Grupos asesores de políticas"]
+      },
+      "roles": ["R4", "R2"],
+      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
+    },
+    {
+      "id": "S6",
+      "name": { "en": "Civil Society and NGOs", "de": "Zivilgesellschaft und NGOs", "es": "Sociedad civil y ONG" },
+      "description": {
+        "en": "Non-governmental organizations representing public interests.",
+        "de": "Nichtregierungsorganisationen, die öffentliche Interessen vertreten.",
+        "es": "Organizaciones no gubernamentales que representan intereses públicos."
+      },
+      "examples": {
+        "en": ["Patient associations", "Citizen science organizations", "Open knowledge networks", "Special interest groups", "Community-based organizations"],
+        "de": ["Patientenvereinigungen", "Citizen-Science-Organisationen", "Open-Knowledge-Netzwerke", "Interessengruppen", "Gemeinschaftsbasierte Organisationen"],
+        "es": ["Asociaciones de pacientes", "Organizaciones de ciencia ciudadana", "Redes de conocimiento abierto", "Grupos de interés", "Organizaciones comunitarias"]
+      },
+      "roles": ["R6", "R7"],
+      "primaryBenefits": ["B1", "B6", "B8", "B4"]
+    },
+    {
+      "id": "S7",
+      "name": {
+        "en": "Libraries and Research Managers",
+        "de": "Bibliotheken und Forschungsmanagement",
+        "es": "Bibliotecas y gestores de investigación"
+      },
+      "description": {
+        "en": "Professionals supporting research administration and information management.",
+        "de": "Fachleute, die Forschungsadministration und Informationsmanagement unterstützen.",
+        "es": "Profesionales que apoyan la administración de la investigación y la gestión de la información."
+      },
+      "examples": {
+        "en": ["University libraries", "Data stewards", "CRIS managers", "Research support officers", "Information specialists"],
+        "de": ["Universitätsbibliotheken", "Data Stewards", "CRIS-Manager", "Forschungsreferenten", "Informationsspezialisten"],
+        "es": ["Bibliotecas universitarias", "Custodios de datos", "Gestores de CRIS", "Oficiales de apoyo a la investigación", "Especialistas en información"]
+      },
+      "roles": ["R5", "R3"],
+      "primaryBenefits": ["B1", "B2", "B4", "B7"]
+    },
+    {
+      "id": "S8",
+      "name": { "en": "Publishers and Journals", "de": "Verlage und Zeitschriften", "es": "Editoriales y revistas" },
+      "description": {
+        "en": "Organizations disseminating research outputs.",
+        "de": "Organisationen, die Forschungsergebnisse verbreiten.",
+        "es": "Organizaciones que difunden los productos de investigación."
+      },
+      "examples": {
+        "en": ["Commercial publishers", "Society-led journals", "Institutional journals", "Diamond open access publishers", "Preprint servers"],
+        "de": ["Kommerzielle Verlage", "Fachgesellschaftszeitschriften", "Institutionelle Zeitschriften", "Diamond-Open-Access-Verlage", "Preprint-Server"],
+        "es": ["Editoriales comerciales", "Revistas de sociedades científicas", "Revistas institucionales", "Editoriales de acceso abierto diamante", "Servidores de preprints"]
+      },
+      "roles": ["R3"],
+      "primaryBenefits": ["B1", "B4", "B7"]
+    },
+    {
+      "id": "S9",
+      "name": {
+        "en": "Technology and Service Providers",
+        "de": "Technologie- und Dienstleistungsanbieter",
+        "es": "Proveedores de tecnología y servicios"
+      },
+      "description": {
+        "en": "Companies and organizations providing technical solutions.",
+        "de": "Unternehmen und Organisationen, die technische Lösungen anbieten.",
+        "es": "Empresas y organizaciones que ofrecen soluciones técnicas."
+      },
+      "examples": {
+        "en": ["Platform developers", "API and integration service providers", "Data analytics companies", "Software vendors", "Cloud service providers"],
+        "de": ["Plattformentwickler", "API- und Integrationsdienstleister", "Datenanalyseunternehmen", "Softwareanbieter", "Cloud-Dienstleister"],
+        "es": ["Desarrolladores de plataformas", "Proveedores de servicios de API e integración", "Empresas de analítica de datos", "Proveedores de software", "Proveedores de servicios en la nube"]
+      },
+      "roles": ["R3", "R8"],
+      "primaryBenefits": ["B1", "B4", "B7", "B5"]
+    },
+    {
+      "id": "S10",
+      "name": {
+        "en": "Intergovernmental Organizations",
+        "de": "Zwischenstaatliche Organisationen",
+        "es": "Organizaciones intergubernamentales"
+      },
+      "description": {
+        "en": "Global bodies coordinating international research efforts.",
+        "de": "Globale Gremien, die internationale Forschungsanstrengungen koordinieren.",
+        "es": "Organismos globales que coordinan esfuerzos internacionales de investigación."
+      },
+      "examples": {
+        "en": ["UNESCO", "OECD", "EOSC (European Open Science Cloud)", "World Health Organization", "World Bank research divisions"],
+        "de": ["UNESCO", "OECD", "EOSC (European Open Science Cloud)", "Weltgesundheitsorganisation", "Forschungsabteilungen der Weltbank"],
+        "es": ["UNESCO", "OCDE", "EOSC (European Open Science Cloud)", "Organización Mundial de la Salud", "Divisiones de investigación del Banco Mundial"]
+      },
+      "roles": ["R7", "R4", "R3"],
+      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7"]
+    },
+    {
+      "id": "S11",
+      "name": { "en": "Networks and Alliances", "de": "Netzwerke und Allianzen", "es": "Redes y alianzas" },
+      "description": {
+        "en": "Collaborative organizations promoting open research practices.",
+        "de": "Kollaborative Organisationen, die offene Forschungspraktiken fördern.",
+        "es": "Organizaciones colaborativas que promueven prácticas de investigación abierta."
+      },
+      "examples": {
+        "en": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Regional scholarly communication networks"],
+        "de": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Regionale Netzwerke wissenschaftlicher Kommunikation"],
+        "es": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Redes regionales de comunicación académica"]
+      },
+      "roles": ["R7", "R3", "R5"],
+      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7"]
+    }
+  ]
+}

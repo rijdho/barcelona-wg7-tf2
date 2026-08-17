@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draft · ORI Stakeholders & Benefits · Barcelona Declaration WG7-TF2</title>
+  <meta name="description" content="Interactive explorer of the Taxonomy of Open Research Information stakeholders and benefits (Barcelona Declaration WG7 Task Force 2)." />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("wg7tf2-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <div class="brand-mark">
+        <div class="brand-glyph" aria-hidden="true"></div>
+        <div>
+          <p class="brand-name">barcelona-wg7-tf2</p>
+          <p class="brand-sub">ORI taxonomy explorer</p>
+        </div>
+      </div>
+      <p class="nav-label" data-i18n="navView"></p>
+      <a class="nav-item" href="../"><span class="nav-step">&#8592;</span><span data-i18n="navBack"></span></a>
+      <a class="nav-item active" href="#"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
+      <a class="nav-item" href="#about"><span class="nav-step">02</span><span data-i18n="aboutTitle"></span></a>
+      <div class="rail-foot">
+        Barcelona Declaration WG7-TF2<br />
+        <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>
+        · <a href="https://github.com/rijdho/barcelona-wg7-tf2">github</a>
+      </div>
+    </aside>
+
+    <div class="main-col">
+      <div class="cmdbar">
+        <h1 class="cmd-title" data-i18n="title"></h1>
+        <div class="cmd-spacer"></div>
+        <nav class="langs" aria-label="Language">
+          <button data-lang="en" aria-current="true">EN</button>
+          <button data-lang="de" aria-current="false">DE</button>
+          <button data-lang="es" aria-current="false">ES</button>
+        </nav>
+        <a class="ghost-btn" href="https://github.com/rijdho/barcelona-wg7-tf2" id="source-link">source&nbsp;&#8599;</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="Theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8Z" /></svg>
+        </button>
+      </div>
+
+      <main class="content">
+        <div class="content-inner">
+          <div class="draft-banner"><span class="eyebrow" data-i18n="draftLabel"></span><span data-i18n="draftBanner"></span></div>
+          <p class="eyebrow" data-i18n="eyebrow"></p>
+          <p class="lede" id="lede"></p>
+
+          <section class="panel active explorer-panel" aria-label="Taxonomy explorer">
+            <div class="explorer">
+              <svg class="wires" aria-hidden="true"></svg>
+              <div class="col">
+                <h2 class="col-title" data-i18n="colStakeholders"></h2>
+                <ul class="nodes" id="list-stakeholders"></ul>
+              </div>
+              <div class="col">
+                <h2 class="col-title" data-i18n="colRoles"></h2>
+                <ul class="nodes" id="list-roles"></ul>
+              </div>
+              <div class="col">
+                <h2 class="col-title" data-i18n="colBenefits"></h2>
+                <div id="list-benefits"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel active detail-panel">
+            <div id="detail"><p class="hint muted" data-i18n="hint"></p></div>
+            <div class="detail-actions">
+              <button id="btn-clear" class="btn ghost" data-i18n="clearSelection" hidden></button>
+              <button id="btn-share" class="btn" data-i18n="share" hidden></button>
+              <a id="btn-suggest" class="btn ghost" data-i18n="suggest" target="_blank" rel="noopener" hidden></a>
+            </div>
+          </section>
+
+          <section class="about" id="about">
+            <p class="eyebrow" data-i18n="aboutTitle"></p>
+            <p class="muted" id="about-body"></p>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="app.js?v=5"></script>
+</body>
+</html>

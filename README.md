@@ -28,6 +28,9 @@ site/
   index.html, style.css, app.js, i18n.js  Interactive explorer (EN/DE/ES, light/dark,
                                           shareable deep links, About view with
                                           references)
+  draft/                                  Full stakeholder taxonomy explorer,
+                                          published as an explicitly labeled draft
+                                          exercise (not reviewed by WG7-TF2)
   data/taxonomy.json                      Machine-readable brief: the single source
                                           of truth for explorer and map
   fonts/                                  Self-hosted Inter variable woff2
@@ -58,7 +61,7 @@ Christian, Ricardo, Bianca, Barbara.
 | --- | --- |
 | Benefits overview brief v1.0 | Done (Feb 2026); circulating to WG7 as "brief v0.1" |
 | Interactive explorer + benefits map | Live on GitHub Pages (2026-08-17) |
-| Full stakeholder and benefits taxonomy | In community review through the WG7 process; unpublished |
+| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); community review runs through the WG7 process |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
 | Zenodo DOI / publication | Pending |
 
