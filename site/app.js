@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=11";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=12";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -327,7 +327,7 @@ function select(id) {
   renderSelection();
 }
 
-const VIEWS = ["explorer", "contribute", "about"];
+const VIEWS = ["explorer", "about"];
 
 function setView(view) {
   state.view = view;
@@ -365,12 +365,12 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=11");
+  const res = await fetch("data/taxonomy.json?v=12");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
   if (/^([AO]\d|B\d|V1)$/.test(hash)) state.selected = hash;
-  if (hash === "about" || hash === "contribute") state.view = hash;
+  if (hash === "about") state.view = "about";
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {

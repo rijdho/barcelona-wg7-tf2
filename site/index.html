@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Value of Open Research Information · Barcelona Declaration WG7-TF2</title>
   <meta name="description" content="Interactive explorer of the eight transformative benefits of Open Research Information (Barcelona Declaration WG7 Task Force 2)." />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
   <script>
     (function () {
       var t = localStorage.getItem("wg7tf2-theme");
@@ -25,8 +25,7 @@
       </div>
       <p class="nav-label" data-i18n="navView"></p>
       <a class="nav-item active" href="#" id="nav-explorer"><span class="nav-step">01</span><span data-i18n="navExplorer"></span></a>
-      <a class="nav-item" href="#contribute" id="nav-contribute"><span class="nav-step">02</span><span data-i18n="navContribute"></span></a>
-      <a class="nav-item" href="#about" id="nav-about"><span class="nav-step">03</span><span data-i18n="aboutTitle"></span></a>
+      <a class="nav-item" href="#about" id="nav-about"><span class="nav-step">02</span><span data-i18n="aboutTitle"></span></a>
       <div class="rail-foot">
         Barcelona Declaration WG7-TF2<br />
         maintained by <a href="https://github.com/rijdho">@rijdho</a><br />
@@ -88,10 +87,6 @@
                 <a id="btn-sheet" class="btn ghost" data-i18n="suggestSheet" href="https://docs.google.com/spreadsheets/d/1J0mUM43U_qRdr67BOf5pl5TBoYkIBoBuE6OJcBwpccY/edit" target="_blank" rel="noopener" hidden></a>
               </div>
             </section>
-          </div>
-
-          <div id="view-contribute" hidden>
-            <p class="eyebrow" data-i18n="navContribute"></p>
             <section class="panel active about-panel">
               <h3 class="col-title about-h" data-i18n="aboutSuggestTitle"></h3>
               <p data-i18n="aboutSuggestBody"></p>
@@ -104,7 +99,7 @@
             </section>
           </div>
 
-          <div id="view-about" hidden>
+          <div id="view-about" hidden><!-- about view -->
             <p class="eyebrow" data-i18n="aboutTitle"></p>
             <section class="panel active about-panel">
               <p id="about-body"></p>
@@ -141,6 +136,6 @@
 
   <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
 
-  <script type="module" src="app.js?v=11"></script>
+  <script type="module" src="app.js?v=12"></script>
 </body>
 </html>
