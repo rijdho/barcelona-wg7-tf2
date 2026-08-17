@@ -1,0 +1,13 @@
+# Local-only working material (source PDFs, internal TF2 docs, correspondence)
+_ref/
+
+# Claude Code session files
+.claude/
+
+# OS noise
+.DS_Store
+
+# Build/tooling (none yet, kept per house convention)
+node_modules/
+dist/
+.wrangler/
