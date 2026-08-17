@@ -14,7 +14,8 @@ export const UI = {
       "sustainable innovation, and societal impact. Select any item to trace its connections. " +
       "Everything runs in your browser; nothing is tracked or sent anywhere.",
     navView: "View",
-    navExplorer: "Explorer",
+    navExplorer: "Benefits map",
+    navContribute: "Contribute",
     colAxes: "Axes",
     colBenefits: "Benefit dimensions",
     colOutcomes: "Outcomes",
@@ -48,6 +49,15 @@ export const UI = {
       "Two channels, pick whichever suits you: a structured GitHub issue (public and traceable, " +
       "needs a GitHub account; the explorer's button pre-fills it for the selected item), or the " +
       "shared WG7-TF2 spreadsheet, which needs no account at all.",
+    contribUseTitle: "How your input is used",
+    contribUseBody:
+      "Every suggestion is tied to a specific element of the framework, so nothing lands in a " +
+      "general inbox. Wording feedback flows into the next version of the brief. Your perspective " +
+      "records which kind of actor says what about which benefit, evidence the task force uses to " +
+      "validate and refine the fuller stakeholder and benefits taxonomy under community review. " +
+      "Concrete examples feed the case study collection. Everything arrives as a public, versioned " +
+      "record: each suggestion keeps its link, and the exported CSV in the repository is the " +
+      "working dataset of the review.",
     aboutRefsTitle: "References",
     sourceLabel: "Source:",
   },
@@ -60,7 +70,8 @@ export const UI = {
       "nachhaltige Innovation und gesellschaftliche Wirkung münden. Element auswählen, um seine " +
       "Verbindungen zu verfolgen. Alles läuft im Browser; nichts wird erfasst oder gesendet.",
     navView: "Ansicht",
-    navExplorer: "Explorer",
+    navExplorer: "Nutzen-Karte",
+    navContribute: "Mitwirken",
     colAxes: "Achsen",
     colBenefits: "Nutzendimensionen",
     colOutcomes: "Ergebnisse",
@@ -95,6 +106,15 @@ export const UI = {
       "Zwei Wege, je nachdem, was passt: ein strukturiertes GitHub-Issue (öffentlich und " +
       "nachvollziehbar, erfordert ein GitHub-Konto; der Button im Explorer füllt es für das " +
       "gewählte Element vor) oder das gemeinsame WG7-TF2-Spreadsheet, ganz ohne Konto.",
+    contribUseTitle: "Wie Ihr Beitrag genutzt wird",
+    contribUseBody:
+      "Jeder Vorschlag ist an ein konkretes Element des Rahmens gebunden, nichts landet in einem " +
+      "allgemeinen Posteingang. Formulierungsfeedback fließt in die nächste Version des Briefs ein. " +
+      "Ihre Perspektive erfasst, welche Art von Akteur was über welchen Nutzen sagt, Evidenz, mit " +
+      "der die Task Force die umfassendere Stakeholder- und Nutzen-Taxonomie in der " +
+      "Community-Review validiert und verfeinert. Konkrete Beispiele speisen die " +
+      "Fallstudiensammlung. Alles ist öffentlich und versioniert: jeder Vorschlag behält seinen " +
+      "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review.",
     aboutRefsTitle: "Referenzen",
     sourceLabel: "Quelle:",
   },
@@ -107,7 +127,8 @@ export const UI = {
       "confiable, innovación sostenible e impacto social. Selecciona un elemento para trazar sus " +
       "conexiones. Todo funciona en tu navegador; no se rastrea ni se envía nada.",
     navView: "Vista",
-    navExplorer: "Explorador",
+    navExplorer: "Mapa de beneficios",
+    navContribute: "Contribuir",
     colAxes: "Ejes",
     colBenefits: "Dimensiones de beneficio",
     colOutcomes: "Resultados",
@@ -142,6 +163,15 @@ export const UI = {
       "Dos canales, elige el que te acomode: un issue estructurado de GitHub (público y " +
       "trazable, requiere cuenta de GitHub; el botón del explorador lo prellena para el " +
       "elemento seleccionado), o la hoja de cálculo compartida del WG7-TF2, sin cuenta alguna.",
+    contribUseTitle: "Cómo se usa tu aporte",
+    contribUseBody:
+      "Cada sugerencia queda atada a un elemento concreto del marco, nada cae en un buzón " +
+      "genérico. Los comentarios de redacción fluyen a la próxima versión del brief. Tu " +
+      "perspectiva registra qué tipo de actor dice qué sobre qué beneficio, evidencia que el task " +
+      "force usa para validar y refinar la taxonomía más completa de stakeholders y beneficios en " +
+      "revisión comunitaria. Los ejemplos concretos alimentan la colección de casos de estudio. " +
+      "Todo queda como registro público y versionado: cada sugerencia conserva su enlace, y el CSV " +
+      "exportado en el repositorio es el conjunto de datos de trabajo de la revisión.",
     aboutRefsTitle: "Referencias",
     sourceLabel: "Fuente:",
   },

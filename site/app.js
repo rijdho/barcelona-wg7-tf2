@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=9";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=10";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -327,15 +327,20 @@ function select(id) {
   renderSelection();
 }
 
+const VIEWS = ["explorer", "contribute", "about"];
+
 function setView(view) {
   state.view = view;
-  $("#view-explorer").hidden = view !== "explorer";
-  $("#view-about").hidden = view !== "about";
-  $("#nav-explorer").classList.toggle("active", view === "explorer");
-  $("#nav-about").classList.toggle("active", view === "about");
-  if (view === "about") history.replaceState(null, "", "#about");
-  else history.replaceState(null, "", state.selected ? `#${state.selected}` : location.pathname + location.search);
-  if (view === "explorer") drawWires();
+  for (const v of VIEWS) {
+    $(`#view-${v}`).hidden = v !== view;
+    $(`#nav-${v}`).classList.toggle("active", v === view);
+  }
+  if (view === "explorer") {
+    history.replaceState(null, "", state.selected ? `#${state.selected}` : location.pathname + location.search);
+    drawWires();
+  } else {
+    history.replaceState(null, "", `#${view}`);
+  }
 }
 
 function renderChrome() {
@@ -360,12 +365,12 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=9");
+  const res = await fetch("data/taxonomy.json?v=10");
   state.data = await res.json();
 
   const hash = location.hash.replace("#", "");
   if (/^([AO]\d|B\d|V1)$/.test(hash)) state.selected = hash;
-  if (hash === "about") state.view = "about";
+  if (hash === "about" || hash === "contribute") state.view = hash;
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {
@@ -377,8 +382,9 @@ async function init() {
   });
 
   $("#theme-toggle").addEventListener("click", toggleTheme);
-  $("#nav-explorer").addEventListener("click", (e) => { e.preventDefault(); setView("explorer"); });
-  $("#nav-about").addEventListener("click", (e) => { e.preventDefault(); setView("about"); });
+  for (const v of VIEWS) {
+    $(`#nav-${v}`).addEventListener("click", (e) => { e.preventDefault(); setView(v); });
+  }
   $("#btn-clear").addEventListener("click", () => select(null));
   $("#btn-share").addEventListener("click", async () => {
     await navigator.clipboard.writeText(location.href);
