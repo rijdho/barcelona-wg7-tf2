@@ -28,7 +28,7 @@ export const UI = {
     clearSelection: "Clear selection",
     hint: "Nothing selected. Click an axis, benefit, or outcome to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
-    suggest: "Suggest a change",
+    suggest: "Suggest a change (GitHub issue)",
     suggestSheet: "Suggest in the shared spreadsheet",
     shared: "Link copied",
     aboutTitle: "About",
@@ -60,10 +60,7 @@ export const UI = {
       "record: each suggestion keeps its link, and the exported CSV in the repository is the " +
       "working dataset of the review.",
     aboutCreditsTitle: "Credits",
-    aboutCredits:
-      "Built and maintained by Ricardo Hartley (@rijdho) for the WG7-TF2 coordination team: " +
-      "Christian, Ricardo, Bianca, Barbara. Suggestions from the community are credited in " +
-      "their own issues and in the suggestions dataset.",
+    aboutCredits: "Still to be filled.",
     aboutRefsTitle: "References",
     sourceLabel: "Source:",
   },
@@ -90,7 +87,7 @@ export const UI = {
     clearSelection: "Auswahl aufheben",
     hint: "Nichts ausgewählt. Achse, Nutzen oder Ergebnis anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
-    suggest: "Änderung vorschlagen",
+    suggest: "Änderung vorschlagen (GitHub-Issue)",
     suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
@@ -123,10 +120,7 @@ export const UI = {
       "Fallstudiensammlung. Alles ist öffentlich und versioniert: jeder Vorschlag behält seinen " +
       "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review.",
     aboutCreditsTitle: "Credits",
-    aboutCredits:
-      "Erstellt und betreut von Ricardo Hartley (@rijdho) für das WG7-TF2-Koordinationsteam: " +
-      "Christian, Ricardo, Bianca, Barbara. Beiträge aus der Community werden in ihren eigenen " +
-      "Issues und im Vorschlagsdatensatz ausgewiesen.",
+    aboutCredits: "Noch zu ergänzen.",
     aboutRefsTitle: "Referenzen",
     sourceLabel: "Quelle:",
   },
@@ -153,7 +147,7 @@ export const UI = {
     clearSelection: "Limpiar selección",
     hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
-    suggest: "Sugerir un cambio",
+    suggest: "Sugerir un cambio (issue de GitHub)",
     suggestSheet: "Sugerir en la hoja compartida",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
@@ -186,10 +180,7 @@ export const UI = {
       "Todo queda como registro público y versionado: cada sugerencia conserva su enlace, y el CSV " +
       "exportado en el repositorio es el conjunto de datos de trabajo de la revisión.",
     aboutCreditsTitle: "Créditos",
-    aboutCredits:
-      "Construido y mantenido por Ricardo Hartley (@rijdho) para el equipo coordinador del " +
-      "WG7-TF2: Christian, Ricardo, Bianca, Barbara. Las sugerencias de la comunidad quedan " +
-      "acreditadas en sus propios issues y en el conjunto de datos de sugerencias.",
+    aboutCredits: "Aún por completar.",
     aboutRefsTitle: "Referencias",
     sourceLabel: "Fuente:",
   },

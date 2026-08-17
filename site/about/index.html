@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About · The Value of Open Research Information</title>
   <meta name="description" content="About the ORI benefits explorer of Barcelona Declaration WG7 Task Force 2: what it renders, how it works, credits, and references." />
-  <link rel="stylesheet" href="../style.css?v=13" />
+  <link rel="stylesheet" href="../style.css?v=14" />
   <script>
     (function () {
       var t = localStorage.getItem("wg7tf2-theme");
@@ -29,7 +29,6 @@
       <a class="nav-item active" href="./"><span class="nav-step">03</span><span data-i18n="aboutTitle"></span></a>
       <div class="rail-foot">
         Barcelona Declaration WG7-TF2<br />
-        maintained by <a href="https://github.com/rijdho">@rijdho</a><br />
         <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>
         · <a href="https://github.com/rijdho/barcelona-wg7-tf2">github</a>
       </div>
@@ -65,7 +64,7 @@
                 <a href="https://barcelona-declaration.org/">barcelona-declaration.org</a></li>
               <li>Barcelona Declaration WG7-TF2 (2026). The Value of Open Research Information:
                 Eight Transformative Benefits, v1.0 (brief).
-                <a href="https://github.com/rijdho/barcelona-wg7-tf2/blob/main/deliverables/ORI_Benefits_Overview_brief.md">deliverables/ORI_Benefits_Overview_brief.md</a></li>
+                <a href="https://docs.google.com/document/d/14gLDIGrtlsrSUw67n1HImU2uWl2kwJSib57jZRBDp0o/edit">Google Doc (working draft)</a></li>
               <li>Paris Conference on Open Research Information, report (2024).
                 <a href="https://doi.org/10.5281/zenodo.14054244">doi:10.5281/zenodo.14054244</a></li>
               <li>Bologna Meeting on Open Research Information, report (2025).
@@ -86,7 +85,7 @@
   </div>
 
   <script type="module">
-    import { UI, LOCALES, detectLocale } from "../i18n.js?v=13";
+    import { UI, LOCALES, detectLocale } from "../i18n.js?v=14";
     let lang = detectLocale();
     function render(version) {
       document.documentElement.lang = lang;
@@ -100,7 +99,7 @@
         b.setAttribute("aria-current", String(b.dataset.lang === lang));
       });
     }
-    fetch("../data/taxonomy.json?v=13").then((r) => r.json()).then((d) => {
+    fetch("../data/taxonomy.json?v=14").then((r) => r.json()).then((d) => {
       render(d.version);
       document.querySelectorAll(".langs button").forEach((b) => {
         b.addEventListener("click", () => {
