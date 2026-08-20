@@ -7,9 +7,9 @@ body:
     attributes:
       value: |
         Thanks for helping improve the taxonomy. Suggestions are reviewed by the
-        WG7-TF2 coordinators and discussed openly here. If you prefer not to use
-        GitHub, the explorer's "Suggest a change" button offers a form that needs
-        no account.
+        WG7-TF2 coordinators and discussed openly here. This form is the GitHub
+        channel; if you prefer not to use GitHub, the explorer's other button
+        opens the shared WG7-TF2 spreadsheet instead.
   - type: input
     id: node
     attributes:

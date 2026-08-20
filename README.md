@@ -26,8 +26,9 @@ deliverables/
                                           site/data/taxonomy.json
 site/
   index.html, style.css, app.js, i18n.js  Interactive explorer (EN/DE/ES, light/dark,
-                                          shareable deep links, About view with
-                                          references)
+                                          shareable deep links)
+  about/                                  What it is, how it works, credits and
+                                          references, as its own page
   draft/                                  Full stakeholder taxonomy explorer,
                                           published as an explicitly labeled draft
                                           exercise (not reviewed by WG7-TF2)
@@ -41,6 +42,11 @@ tests/
   data.test.mjs                           Counts, referential integrity, exact match
                                           with the brief's groupings
   i18n.test.mjs                           Locale parity across en/de/es
+  draft.test.mjs                          The draft taxonomy: integrity, locale
+                                          parity, and agreement with the brief
+  site.test.mjs                           Page invariants: hidden state, small-screen
+                                          navigation and credit line, link targets,
+                                          asset versioning
 suggestions/
   suggestions.csv                         Automatic export of the suggestion issues
 .github/ISSUE_TEMPLATE/suggest-change.yml Structured issue form for proposing edits;
@@ -71,11 +77,24 @@ Christian, Ricardo, Bianca, Barbara.
 npm test
 ```
 
-Node's built-in runner, no dependencies. Two layers: framework counts and referential
-integrity of `site/data/taxonomy.json` (axis and outcome groupings must match the brief
-exactly), and i18n parity (identical key sets, matching placeholders, full locale coverage
-of every translatable field). The suite was proven non-vacuous by injecting a dangling
-outcome reference and a missing locale: both were caught.
+Node's built-in runner, no dependencies. Four layers:
+
+1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
+   and outcome groupings must match the brief exactly.
+2. **i18n**: identical key sets, matching placeholders, full locale coverage of every
+   translatable field, and array lengths pinned where locale overlays align by index.
+3. **The draft taxonomy**: its own integrity, plus the contract that it may extend the
+   brief but not contradict it (same benefit ids, same axes, same English names).
+4. **Page invariants**: the failures that still render. Every stylesheet neutralizes the
+   `hidden` attribute; the collapsed rail keeps navigation and the credit line; relative
+   links resolve; local asset links carry a `?v=` so a redeploy reaches cached browsers.
+
+The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
+locale were caught when the first two files were written; the draft and page layers were
+checked the same way, with six further defects: a removed `[hidden]` rule, a small-screen
+rule that hides navigation and the credit line again, a broken relative link, an
+unversioned stylesheet link, a draft benefit moved to another axis, and an example dropped
+from one language. Every injected defect failed the suite.
 
 ## Run locally
 
