@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=16";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=17";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -348,7 +348,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=16");
+  const res = await fetch("data/taxonomy.json?v=17");
   state.data = await res.json();
 
   // validate against the data, not against a shape: a well-formed id that does

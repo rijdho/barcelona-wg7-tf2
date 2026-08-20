@@ -1,6 +1,6 @@
 # The Eight Benefits of Open Research Information
 
-Generated from `site/data/taxonomy.json` (brief v1.0) by
+Generated from `site/data/taxonomy.json` (brief v0.1) by
 `scripts/generate-diagram.mjs`. Do not edit by hand; edit the JSON and regenerate.
 
 ```mermaid

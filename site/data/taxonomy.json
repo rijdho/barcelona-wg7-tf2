@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "0.1",
   "date": "2026-02",
   "source": "deliverables/ORI_Benefits_Overview_brief.md",
   "vision": {
@@ -55,9 +55,9 @@
         "es": "Calidad y trazabilidad de los productos de investigación"
       },
       "description": {
-        "en": "Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle.",
-        "de": "Traditionelle Metriken zählen Publikationen, erfassen aber nicht den Forschungsprozess. ORI unterstützt reproduzierbare Forschung, indem Daten, Methoden, Versionen und Beziehungen zwischen Forschungsobjekten über den gesamten Lebenszyklus explizit werden.",
-        "es": "Las métricas tradicionales cuentan publicaciones pero no capturan el proceso de investigación. ORI apoya la investigación reproducible al hacer explícitos los datos, métodos, versiones y relaciones entre objetos de investigación a lo largo del ciclo de vida."
+        "en": "Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle, enabling verification and trust.",
+        "de": "Traditionelle Metriken zählen Publikationen, erfassen aber nicht den Forschungsprozess. ORI unterstützt reproduzierbare Forschung, indem Daten, Methoden, Versionen und Beziehungen zwischen Forschungsobjekten über den gesamten Lebenszyklus explizit werden und so Verifikation und Vertrauen ermöglicht.",
+        "es": "Las métricas tradicionales cuentan publicaciones pero no capturan el proceso de investigación. ORI apoya la investigación reproducible al hacer explícitos los datos, métodos, versiones y relaciones entre objetos de investigación a lo largo del ciclo de vida, lo que permite la verificación y la confianza."
       },
       "whoBenefits": {
         "en": "Researchers can verify and build on each other's work; institutions demonstrate quality beyond citations; funders track outputs systematically.",
@@ -75,9 +75,9 @@
         "es": "Gobernanza, ética y cumplimiento"
       },
       "description": {
-        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, and institutional accountability, following \"as open as possible, as closed as necessary\".",
-        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes und institutionelle Rechenschaft, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
-        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos y la rendición de cuentas institucional, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
+        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, open science policy implementation, and institutional accountability, following \"as open as possible, as closed as necessary\".",
+        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes, Umsetzung von Open-Science-Policies und institutionelle Rechenschaft, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
+        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos, la implementación de políticas de ciencia abierta y la rendición de cuentas institucional, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
       },
       "whoBenefits": {
         "en": "Research institutions demonstrate responsible practices; funders verify ethical alignment; policymakers ensure regulatory compliance.",

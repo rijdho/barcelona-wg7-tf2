@@ -21,7 +21,7 @@ automatically to `suggestions/suggestions.csv`.
 ```
 deliverables/
   ORI_Benefits_Overview_brief.md          The brief: eight benefits in three axes,
-                                          with who benefits from each (v1.0, Feb 2026)
+                                          with who benefits from each (v0.1, Feb 2026)
   Benefits_map.md                         Flow map (Mermaid), generated from
                                           site/data/taxonomy.json
 site/
@@ -65,7 +65,7 @@ Christian, Ricardo, Bianca, Barbara.
 
 | Milestone | Status |
 | --- | --- |
-| Benefits overview brief v1.0 | Done (Feb 2026); circulating to WG7 as "brief v0.1" |
+| Benefits overview brief v0.1 | Done (Feb 2026); circulating to WG7 |
 | Interactive explorer + benefits map | Live on GitHub Pages (2026-08-17) |
 | Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); community review runs through the WG7 process |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
@@ -117,12 +117,12 @@ upload, no Jekyll) on every push to main, with the test suite as a gate.
 
 ## Caveats
 
-The brief is a v1.0 working document awaiting community review by WG7-TF2 (starting with
+The brief is a v0.1 working document awaiting community review by WG7-TF2 (starting with
 the 1 September 2026 meeting); wording and groupings may change as a result. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
-translations of the English v1.0, which remains the authoritative wording.
+translations of the English v0.1, which remains the authoritative wording.
 
 ## Note
 

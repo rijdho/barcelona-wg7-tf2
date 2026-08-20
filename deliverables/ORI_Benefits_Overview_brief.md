@@ -1,6 +1,6 @@
 # The Value of Open Research Information: Eight Transformative Benefits
 
-**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 1.0 (Brief) **Date:** February 2026
+**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 0.1 (Brief) **Date:** February 2026
 
 **Open Research Information (ORI)** offers a solution: structured, machine-readable metadata about research actors, activities, inputs, outputs, and impacts, made openly available through open infrastructures using standard protocols and identifiers.
 
@@ -14,7 +14,7 @@ The Barcelona Declaration commits signatories to: (1) **making openness the defa
 
 #### **B1: Research Output Quality & Traceability**
 
-Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle.  
+Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle, enabling verification and trust.  
 **Who benefits:** Researchers can verify and build on each other’s work; institutions demonstrate quality beyond citations; funders track outputs systematically.
 
 #### **B2: Governance, Ethics & Compliance**
