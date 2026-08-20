@@ -263,10 +263,17 @@ h1, h2, h3 { font-family: var(--disp); font-weight: 800; letter-spacing: -0.02em
 
 @media (max-width: 940px) {
   .app { grid-template-columns: 1fr; }
-  .rail { position: static; height: auto; flex-direction: row; align-items: center;
+  .rail { position: static; height: auto; flex-direction: row; flex-wrap: wrap;
+    align-items: center; gap: 6px;
     border-right: none; border-bottom: 1px solid var(--hairline); padding: 10px 16px; }
-  .brand-mark { padding: 0; }
-  .nav-label, .nav-item, .rail-foot { display: none; }
+  .brand-mark { padding: 0; width: 100%; }
+  .nav-label { display: none; }
+  /* the rail collapses to a bar, but navigation and the credit line stay:
+     they are the only route to the other views and the only attribution */
+  .nav-item { width: auto; padding: 6px 9px; font-size: 12.5px; gap: 7px; }
+  .nav-item .nav-step { width: 20px; height: 18px; font-size: 9px; }
+  .rail-foot { margin-top: 4px; width: 100%; padding: 8px 0 2px;
+    border-top: 1px solid var(--hairline); }
   .cmdbar { padding: 11px 16px; }
   .content { padding: 20px 16px 48px; }
   .explorer { grid-template-columns: 1fr; gap: 18px; }

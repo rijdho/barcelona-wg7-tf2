@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=15";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=16";
 
 // Suggestion channel: a prefilled GitHub issue form. An Action exports all
 // taxonomy-suggestion issues to suggestions/suggestions.csv in the repo.
@@ -334,6 +334,7 @@ function renderChrome() {
     el.textContent = UI[L][el.dataset.i18n];
   });
   $("#lede").textContent = t("lede");
+  $("#theme-toggle").setAttribute("aria-label", t("themeLabel"));
   document.querySelectorAll(".langs button").forEach((b) => {
     b.setAttribute("aria-current", String(b.dataset.lang === L));
   });
@@ -347,11 +348,13 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=15");
+  const res = await fetch("data/taxonomy.json?v=16");
   state.data = await res.json();
 
+  // validate against the data, not against a shape: a well-formed id that does
+  // not exist (#A9) would throw in connections() and leave the map unbuilt
   const hash = location.hash.replace("#", "");
-  if (/^([AO]\d|B\d|V1)$/.test(hash)) state.selected = hash;
+  if (hash && nodeById(hash)) state.selected = hash;
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {

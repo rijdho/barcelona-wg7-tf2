@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=5";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=6";
 
 // Suggestion channel: a prefilled GitHub issue form. Issues need the repo to
 // be public, so the button stays hidden until `enabled` flips on flip day.
@@ -25,6 +25,15 @@ function toggleTheme() {
   const next = effectiveTheme() === "dark" ? "light" : "dark";
   document.documentElement.dataset.theme = next;
   localStorage.setItem("wg7tf2-theme", next);
+}
+
+function nodeById(id) {
+  const d = state.data;
+  return (
+    d.stakeholders.find((x) => x.id === id) ||
+    d.roles.find((x) => x.id === id) ||
+    d.benefits.find((x) => x.id === id)
+  );
 }
 
 // selection graph: which ids light up for a given selection
@@ -152,8 +161,7 @@ function renderDetail() {
   const suggest = $("#btn-suggest");
   suggest.hidden = !id || !SUGGEST.enabled;
   if (id && SUGGEST.enabled) {
-    const en = (d.benefits.find((x) => x.id === id) || d.roles.find((x) => x.id === id) ||
-      d.stakeholders.find((x) => x.id === id)).name.en;
+    const en = nodeById(id).name.en;
     const value = `${id} · ${en} (taxonomy v${d.version})`;
     suggest.href =
       `https://github.com/${SUGGEST.repo}/issues/new?template=${SUGGEST.template}` +
@@ -273,6 +281,7 @@ function renderChrome() {
     el.textContent = UI[L][el.dataset.i18n].replace("{version}", state.data.version);
   });
   $("#lede").textContent = t("lede");
+  $("#theme-toggle").setAttribute("aria-label", t("themeLabel"));
   document.querySelectorAll(".langs button").forEach((b) => {
     b.setAttribute("aria-current", String(b.dataset.lang === L));
   });
@@ -289,8 +298,10 @@ async function init() {
   const res = await fetch("data/taxonomy.json?v=4");
   state.data = await res.json();
 
+  // validate against the data, not against a shape: a well-formed id that does
+  // not exist (#S99) would throw in connections() and leave the map unbuilt
   const hash = location.hash.replace("#", "");
-  if (/^[SRB]\d+$/.test(hash)) state.selected = hash;
+  if (hash && nodeById(hash)) state.selected = hash;
 
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {
