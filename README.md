@@ -13,8 +13,9 @@ and societal impact.
 
 The explorer is available in **English, German and Spanish** (auto-detected, switchable)
 and runs entirely in the browser: nothing is tracked, nothing is sent anywhere. Its
-"Suggest a change" button opens a pre-filled GitHub issue form; suggestions are exported
-automatically to `suggestions/suggestions.csv`.
+"Suggest a change or example" button opens a pre-filled GitHub issue form, which takes a
+proposed change, an example of the element as it stands, or both; contributions are
+exported automatically to `suggestions/suggestions.csv`.
 
 ## Structure
 
@@ -110,7 +111,9 @@ Node's built-in runner, no dependencies. Six layers:
    labels verbatim, so every label it reads must exist in the form and every question the
    form asks must reach the CSV. This is the layer with no visible symptom at all: a
    renamed label exports an empty string for every issue from then on, and the file still
-   parses, still opens in Excel and still looks complete.
+   parses, still opens in Excel and still looks complete. The same layer pins which fields
+   are required, because a form that demands a change proposal turns away everyone who
+   came to share an example and still looks like it works.
 
 The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
 locale were caught when the first two files were written; the draft and page layers were
@@ -123,8 +126,10 @@ label format changed on its own, an acknowledgement turned optional, a notice ha
 to a different licence than the checkbox agrees to, and the licence sentence dropped from
 the Spanish text. The export layer was checked with four: a form label renamed while the
 exporter kept the old one, a new field nobody exports, an absent acknowledgement recorded
-as a refusal, and a row value with no header column above it. Every injected defect failed
-the suite.
+as a refusal, and a row value with no header column above it. The reframed form was
+checked with three: the change proposal made required again, the new field left out of the
+export, and the contribution list hand-edited away from the vocabulary. Every injected
+defect failed the suite.
 
 ## Run locally
 

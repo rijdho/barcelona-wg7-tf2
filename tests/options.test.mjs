@@ -87,6 +87,27 @@ test("the type-of-change list comes from the process vocabulary", () => {
   assert.deepEqual(formOptions("kind"), [...vocab.typeOfChange, vocab.otherOption]);
 });
 
+test("the contribution list comes from the process vocabulary", () => {
+  assert.deepEqual(formOptions("contribution"), vocab.contributionType);
+});
+
+// The form exists to collect two different things, and an example on its own is
+// one of them. Making the change proposal required again would still render, and
+// would still look like a working form; it would just turn everyone who came to
+// share an example away, or make them invent a change they do not want.
+test("an example can be contributed without proposing a change", () => {
+  const fields = [...form.matchAll(/^ {4}id: (\w+)\n(?: {4}attributes:\n)?[\s\S]*?(?=^ {2}- type:|\Z)/gm)];
+  const required = (id) => {
+    const block = fields.find((f) => f[1] === id);
+    assert.ok(block, `the form has a field called ${id}`);
+    return /validations:\s*\n\s*required: true/.test(block[0]);
+  };
+  assert.ok(required("node"), "the node is always required: a suggestion must be about something");
+  assert.ok(required("contribution"), "and so is saying what you are contributing");
+  assert.ok(!required("proposal"), "the change proposal is optional");
+  assert.ok(!required("kind"), "so is the type of change, which an example does not have");
+});
+
 // Contribution terms. The silent failure here is legal rather than visual: a
 // notice that renders while the acknowledgement is optional, or a checkbox that
 // agrees to something the notice never said, both look fine and record nothing

@@ -27,7 +27,7 @@ export const UI = {
     clearSelection: "Clear selection",
     hint: "Nothing selected. Click an axis, benefit, or outcome to highlight its connections; click it again to clear.",
     share: "Copy link to this view",
-    suggest: "Suggest a change (GitHub issue)",
+    suggest: "Suggest a change or example (GitHub issue)",
     suggestSheet: "Suggest in the shared spreadsheet (Google Sheets)",
     shared: "Link copied",
     aboutTitle: "About",
@@ -49,8 +49,9 @@ export const UI = {
       "needs a GitHub account; the explorer's button pre-fills it for the selected item), or the " +
       "shared WG7-TF2 spreadsheet, which needs no account at all.",
     contribUseBody:
-      "Every suggestion is tied to a specific element of the framework, so nothing lands in a " +
-      "general inbox. Wording feedback flows into the next version of the brief. Your perspective " +
+      "Every contribution is tied to a specific element of the framework, so nothing lands in a " +
+      "general inbox. You can propose a change, share an example of the element as it stands, or " +
+      "both. Wording feedback flows into the next version of the brief. Your perspective " +
       "records which kind of actor says what about which benefit, evidence the task force uses to " +
       "validate and refine the fuller stakeholder and benefits taxonomy under community review. " +
       "Concrete examples feed the case study collection. Everything arrives as a public, versioned " +
@@ -90,7 +91,7 @@ export const UI = {
     clearSelection: "Auswahl aufheben",
     hint: "Nichts ausgewählt. Achse, Nutzen oder Ergebnis anklicken, um Verbindungen hervorzuheben; erneut klicken zum Aufheben.",
     share: "Link zu dieser Ansicht kopieren",
-    suggest: "Änderung vorschlagen (GitHub-Issue)",
+    suggest: "Änderung oder Beispiel vorschlagen (GitHub-Issue)",
     suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen (Google Sheets)",
     shared: "Link kopiert",
     aboutTitle: "Über",
@@ -114,8 +115,10 @@ export const UI = {
       "nachvollziehbar, erfordert ein GitHub-Konto; der Button im Explorer füllt es für das " +
       "gewählte Element vor) oder das gemeinsame WG7-TF2-Spreadsheet, ganz ohne Konto.",
     contribUseBody:
-      "Jeder Vorschlag ist an ein konkretes Element des Rahmens gebunden, nichts landet in einem " +
-      "allgemeinen Posteingang. Formulierungsfeedback fließt in die nächste Version des Briefs ein. " +
+      "Jeder Beitrag ist an ein konkretes Element des Rahmens gebunden, nichts landet in einem " +
+      "allgemeinen Posteingang. Sie können eine Änderung vorschlagen, ein Beispiel für das Element " +
+      "in seiner jetzigen Form teilen oder beides. Formulierungsfeedback fließt in die nächste " +
+      "Version des Briefs ein. " +
       "Ihre Perspektive erfasst, welche Art von Akteur was über welchen Nutzen sagt, Evidenz, mit " +
       "der die Task Force die umfassendere Stakeholder- und Nutzen-Taxonomie in der " +
       "Community-Review validiert und verfeinert. Konkrete Beispiele speisen die " +
@@ -156,7 +159,7 @@ export const UI = {
     clearSelection: "Limpiar selección",
     hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
     share: "Copiar enlace a esta vista",
-    suggest: "Sugerir un cambio (issue de GitHub)",
+    suggest: "Sugerir un cambio o ejemplo (issue de GitHub)",
     suggestSheet: "Sugerir en la hoja compartida (Google Sheets)",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
@@ -180,8 +183,9 @@ export const UI = {
       "trazable, requiere cuenta de GitHub; el botón del explorador lo prellena para el " +
       "elemento seleccionado), o la hoja de cálculo compartida del WG7-TF2, sin cuenta alguna.",
     contribUseBody:
-      "Cada sugerencia queda atada a un elemento concreto del marco, nada cae en un buzón " +
-      "genérico. Los comentarios de redacción fluyen a la próxima versión del brief. Tu " +
+      "Cada aportación queda atada a un elemento concreto del marco, nada cae en un buzón " +
+      "genérico. Puedes proponer un cambio, compartir un ejemplo del elemento tal como está, o " +
+      "ambas cosas. Los comentarios de redacción fluyen a la próxima versión del brief. Tu " +
       "perspectiva registra qué tipo de actor dice qué sobre qué beneficio, evidencia que el task " +
       "force usa para validar y refinar la taxonomía más completa de stakeholders y beneficios en " +
       "revisión comunitaria. Los ejemplos concretos alimentan la colección de casos de estudio. " +

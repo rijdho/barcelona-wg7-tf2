@@ -8,6 +8,11 @@
     "Remove or merge",
     "Translation (German or Spanish text)"
   ],
+  "contributionType": [
+    "A suggested change",
+    "An example",
+    "Both a suggested change and an example"
+  ],
   "contributionTerms": {
     "licence": "CC BY 4.0",
     "url": "https://creativecommons.org/licenses/by/4.0/",

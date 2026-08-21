@@ -52,9 +52,9 @@ jobs:
               if (!v) return "";
               return /^\s*[-*]\s*\[[xX]\]/m.test(v) ? "yes" : "no";
             };
-            const header = ["issue", "state", "created", "author", "node", "type_of_change",
-              "suggestion", "why", "perspective", "example", "name_affiliation",
-              "terms_agreed", "url"];
+            const header = ["issue", "state", "created", "author", "node", "contribution",
+              "type_of_change", "suggestion", "why", "perspective", "example",
+              "name_affiliation", "terms_agreed", "url"];
             const rows = issues
               .filter((i) => !i.pull_request)
               .sort((a, b) => a.number - b.number)
@@ -64,6 +64,7 @@ jobs:
                 i.created_at,
                 i.user ? i.user.login : "",
                 section(i.body, "Node"),
+                section(i.body, "What are you contributing\\?"),
                 section(i.body, "Type of change"),
                 section(i.body, "Your suggestion"),
                 section(i.body, "Why"),

@@ -57,6 +57,12 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
 
 ### Changed
 
+- The suggestion form was framed around proposing a change while its example field already
+  asked about the element as it stands, so it invited two things and permitted one: anyone
+  who came only to share an example had to invent a change proposal first. It is now
+  "Suggest a change or share an example", it asks what you are contributing before
+  anything else, and the change proposal and its type are optional. The explorer's button
+  and contribute text say so in all three languages. Raised by Bianca in review, 2026-08-21.
 - The brief is labeled v0.1 everywhere, matching the Google Doc that circulates to WG7.
   The repository previously carried it as v1.0 while the document itself said 0.1, so the
   explorer cited a version its own source did not use.

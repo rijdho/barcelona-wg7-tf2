@@ -1,15 +1,17 @@
-name: Suggest a change
-description: Propose an edit to a benefit dimension, axis, outcome, or its wording.
+name: Suggest a change or share an example
+description: Propose an edit to a benefit dimension, axis, outcome or its wording, or show where it shows up in practice.
 title: "[Suggestion] "
 labels: ["taxonomy-suggestion"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve the taxonomy. Suggestions are reviewed by the
-        WG7-TF2 coordinators and discussed openly here. This form is the GitHub
-        channel; if you prefer not to use GitHub, the explorer's other button
-        opens the shared WG7-TF2 spreadsheet instead.
+        Thanks for helping improve the taxonomy. You can propose a change, share
+        an example of the element as it stands, or both; only the first question
+        below is required either way. Contributions are reviewed by the WG7-TF2
+        coordinators and discussed openly here. This form is the GitHub channel;
+        if you prefer not to use GitHub, the explorer's other button opens the
+        shared WG7-TF2 spreadsheet instead.
 
         <!-- <generated:terms-notice> -->
         What you submit here is public and is contributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). That lets WG7-TF2 reuse it, with attribution to you, in the taxonomy, the brief, the case study collection and other task force outputs. Please do not paste anything confidential, and only submit material you are free to share.
@@ -23,9 +25,24 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: contribution
+    attributes:
+      label: What are you contributing?
+      description: An example on its own is as welcome as a proposed change.
+      options:
+        # <generated:contribution>
+        # from site/data/vocabularies.json by scripts/generate-options.mjs; do not edit by hand
+        - A suggested change
+        - An example
+        - Both a suggested change and an example
+        # </generated>
+    validations:
+      required: true
+  - type: dropdown
     id: kind
     attributes:
       label: Type of change
+      description: Only if you are proposing a change; leave it if you are sharing an example.
       options:
         # <generated:kind>
         # from site/data/vocabularies.json by scripts/generate-options.mjs; do not edit by hand
@@ -37,14 +54,14 @@ body:
         - Other
         # </generated>
     validations:
-      required: true
+      required: false
   - type: textarea
     id: proposal
     attributes:
       label: Your suggestion
-      description: What should change, and to what? Concrete wording is most helpful.
+      description: What should change, and to what? Concrete wording is most helpful. Leave empty if you are only sharing an example.
     validations:
-      required: true
+      required: false
   - type: textarea
     id: rationale
     attributes:

@@ -65,6 +65,10 @@ const perspectives = [
 
 const typesOfChange = [...vocab.typeOfChange, vocab.otherOption];
 
+// What the contributor is bringing. Asked first, because the form allows an
+// example on its own and everything after it is optional in that case.
+const contributionTypes = [...vocab.contributionType];
+
 const terms = vocab.contributionTerms;
 
 // --- the issue form -------------------------------------------------------
@@ -88,6 +92,10 @@ function replaceBlock(text, marker, lines, { indent = "        ", html = false }
 const provenance = (source) =>
   `${source} by scripts/generate-options.mjs; do not edit by hand`;
 
+form = replaceBlock(form, "contribution", [
+  `        # from ${provenance("site/data/vocabularies.json")}`,
+  ...contributionTypes.map((o) => `        - ${o}`),
+]);
 form = replaceBlock(form, "kind", [
   `        # from ${provenance("site/data/vocabularies.json")}`,
   ...typesOfChange.map((o) => `        - ${o}`),
@@ -119,6 +127,7 @@ writeFileSync(formPath, form);
 const columns = [
   ["node_brief", briefNodes],
   ["node_draft", draftNodes],
+  ["contribution", contributionTypes],
   ["type_of_change", typesOfChange],
   ["perspective", perspectives],
 ];
@@ -156,7 +165,8 @@ writeFileSync(
 );
 
 console.log(
-  `Wrote .github/ISSUE_TEMPLATE/suggest-change.yml (${typesOfChange.length} types, ` +
+  `Wrote .github/ISSUE_TEMPLATE/suggest-change.yml (${contributionTypes.length} ` +
+    `contribution types, ${typesOfChange.length} types of change, ` +
     `${perspectives.length} perspectives, terms), suggestions/options.csv ` +
     `(${briefNodes.length} brief nodes, ${draftNodes.length} draft nodes) ` +
     `and suggestions/contribution-terms.md`
