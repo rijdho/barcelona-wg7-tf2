@@ -113,7 +113,10 @@ Node's built-in runner, no dependencies. Six layers:
    renamed label exports an empty string for every issue from then on, and the file still
    parses, still opens in Excel and still looks complete. The same layer pins which fields
    are required, because a form that demands a change proposal turns away everyone who
-   came to share an example and still looks like it works.
+   came to share an example and still looks like it works. It also pins the committed CSV
+   to the exporter's columns: that file is only rebuilt when an issue event fires, so a
+   new column otherwise leaves the checkout a column short until somebody happens to file
+   one.
 
 The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
 locale were caught when the first two files were written; the draft and page layers were
@@ -128,8 +131,9 @@ the Spanish text. The export layer was checked with four: a form label renamed w
 exporter kept the old one, a new field nobody exports, an absent acknowledgement recorded
 as a refusal, and a row value with no header column above it. The reframed form was
 checked with three: the change proposal made required again, the new field left out of the
-export, and the contribution list hand-edited away from the vocabulary. Every injected
-defect failed the suite.
+export, and the contribution list hand-edited away from the vocabulary. The CSV-shape
+check was added after it caught a real one: a column added to the exporter while the
+committed file kept the old header. Every injected defect failed the suite.
 
 ## Run locally
 

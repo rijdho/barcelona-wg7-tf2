@@ -18,6 +18,13 @@ const text = (...p) => readFileSync(join(root, ...p), "utf8");
 
 const form = text(".github", "ISSUE_TEMPLATE", "suggest-change.yml");
 const workflow = text(".github", "workflows", "suggestions-export.yml");
+const csv = text("suggestions", "suggestions.csv");
+
+const declaredHeader = () => {
+  const m = workflow.match(/const header = \[([\s\S]*?)\];/);
+  assert.ok(m, "the exporter declares a header");
+  return [...m[1].matchAll(/"([^"]+)"/g)].map((x) => x[1]);
+};
 
 // Field labels sit at six spaces; a checkbox option's label is deeper and
 // prefixed with "- ", so it cannot be mistaken for one.
@@ -60,9 +67,7 @@ test("every question the form asks reaches the CSV", () => {
 });
 
 test("the CSV header has a column for every value the exporter emits", () => {
-  const header = workflow.match(/const header = \[([\s\S]*?)\];/);
-  assert.ok(header, "the exporter declares a header");
-  const columns = [...header[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]);
+  const columns = declaredHeader();
   const row = workflow.match(/\.map\(\(i\) => \[([\s\S]*?)\]\);/);
   assert.ok(row, "the exporter builds a row");
   const values = row[1]
@@ -73,6 +78,22 @@ test("the CSV header has a column for every value the exporter emits", () => {
     values.length,
     columns.length,
     "a row with more values than headers shifts every later column by one"
+  );
+});
+
+// The committed CSV is a build product of a workflow that only runs on issue
+// events, so adding a column to the exporter leaves the file in the repository
+// a column short until somebody happens to file an issue. Until then anyone
+// reading it from the checkout, or diffing it, sees the old shape, and nothing
+// says the two disagree.
+test("the committed CSV has the columns the exporter now emits", () => {
+  const header = csv.replace(/^\uFEFF/, "").split(/\r?\n/)[0];
+  const columns = [...header.matchAll(/"([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(
+    columns,
+    declaredHeader(),
+    "regenerate suggestions/suggestions.csv, or run the export workflow, after changing " +
+      "the exporter's columns"
   );
 });
 

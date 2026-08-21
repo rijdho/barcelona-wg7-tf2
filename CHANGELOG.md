@@ -16,6 +16,10 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
   meant going back to the issue to check whether its author had agreed. The export now
   carries `terms_agreed`. Issues filed before the field existed stay empty rather than
   recording a "no" nobody was asked.
+- `suggestions.csv` is rebuilt only when an issue event fires, so adding a column to the
+  exporter left the committed file a column short until somebody happened to file an
+  issue. It happened once, and the workflow corrected it on the next run rather than
+  anything noticing. The committed header is now pinned to the exporter's columns.
 - The exporter found its columns by matching the issue form's labels, written out a second
   time in the workflow with nothing pinning the two together. Renaming a label in the form
   would have exported an empty string for that column for every issue from then on, while
