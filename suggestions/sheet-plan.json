@@ -1,0 +1,107 @@
+{
+  "generatedBy": "scripts/generate-sheet.mjs",
+  "generatedFrom": [
+    "site/data/taxonomy.json",
+    "site/draft/data/taxonomy.json",
+    "site/data/vocabularies.json"
+  ],
+  "sheetName": "Suggestions (brief)",
+  "listsSheetName": "Lists (generated)",
+  "notice": "What you submit here is public and is contributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). That lets WG7-TF2 reuse it, with attribution to you, in the taxonomy, the brief, the case study collection and other task force outputs. Please do not paste anything confidential, and only submit material you are free to share.",
+  "acknowledgement": "I agree that my contribution, including any example, may be reused by WG7-TF2 under CC BY 4.0 with attribution.",
+  "columns": [
+    {
+      "header": "Date",
+      "list": null
+    },
+    {
+      "header": "Name / affiliation",
+      "list": null
+    },
+    {
+      "header": "Node",
+      "list": "Node"
+    },
+    {
+      "header": "What are you contributing?",
+      "list": "Contribution"
+    },
+    {
+      "header": "Type of change",
+      "list": "TypeOfChange"
+    },
+    {
+      "header": "Suggestion",
+      "list": null
+    },
+    {
+      "header": "Why",
+      "list": null
+    },
+    {
+      "header": "Perspective",
+      "list": "Perspective"
+    },
+    {
+      "header": "Example",
+      "list": null
+    },
+    {
+      "header": "I agree to the terms",
+      "list": "Agreement"
+    },
+    {
+      "header": "Status (coordinators)",
+      "list": null
+    }
+  ],
+  "lists": {
+    "Node": [
+      "V1 · Research that is visible, valued, impactful (brief v0.1)",
+      "A1 · Quality & Trust (brief v0.1)",
+      "A2 · Collaboration & Innovation (brief v0.1)",
+      "A3 · Impact & Relevance (brief v0.1)",
+      "B1 · Research Output Quality & Traceability (brief v0.1)",
+      "B2 · Governance, Ethics & Compliance (brief v0.1)",
+      "B8 · Integrity & Accountability (brief v0.1)",
+      "B3 · Capacity Building & Inclusive Training (brief v0.1)",
+      "B4 · Interoperability & Metadata Quality (brief v0.1)",
+      "B7 · Infrastructure & Technical Enablement (brief v0.1)",
+      "B5 · Evaluation for Learning & Responsibility (brief v0.1)",
+      "B6 · Visibility, Equity & Societal Relevance (brief v0.1)",
+      "O1 · Trustworthy Research (brief v0.1)",
+      "O2 · Sustainable Innovation (brief v0.1)",
+      "O3 · Societal Impact (brief v0.1)"
+    ],
+    "Contribution": [
+      "A suggested change",
+      "An example",
+      "Both a suggested change and an example"
+    ],
+    "TypeOfChange": [
+      "Wording (name or description)",
+      "Grouping (axis or outcome it belongs to)",
+      "Add something missing",
+      "Remove or merge",
+      "Translation (German or Spanish text)",
+      "Other"
+    ],
+    "Perspective": [
+      "S1 · Research-Performing Institutions",
+      "S2 · Individual Researchers",
+      "S3 · Funders",
+      "S4 · Research Infrastructure Providers",
+      "S5 · Policy Makers and Evaluators",
+      "S6 · Civil Society and NGOs",
+      "S7 · Libraries and Research Managers",
+      "S8 · Publishers and Journals",
+      "S9 · Technology and Service Providers",
+      "S10 · Intergovernmental Organizations",
+      "S11 · Networks and Alliances",
+      "Other"
+    ],
+    "Agreement": [
+      "Yes"
+    ]
+  }
+}

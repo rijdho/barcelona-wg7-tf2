@@ -25,6 +25,14 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
   would have exported an empty string for that column for every issue from then on, while
   the CSV still parsed, still opened in Excel and still looked complete. The contract is
   now a test.
+- The spreadsheet, the channel that needs no account, asked none of what the issue form
+  asks: node was free text hinted "e.g. B6", no column recorded what was being
+  contributed, no column carried consent, and no column had any data validation at all, so
+  answers arrived as prose that could not be matched with the taxonomy or with the
+  suggestions filed through GitHub. `scripts/generate-sheet.mjs` and
+  `scripts/build-sheet.py` now derive that channel from the same sources as the form, and
+  `suggestions/WG7TF2-suggestions-sheet.xlsx` carries the columns, the validated lists and
+  the terms, ready to import.
 - The suggestion channels never stated their contribution terms. The repository is CC BY
   4.0, but that covers what the task force publishes, not what a contributor submits, and
   a licence cannot be left implied by a footer on another page. Every channel now states
@@ -96,6 +104,9 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
   contract that the draft may extend the brief but not contradict it.
 - `tests/site.test.mjs`: page invariants for hidden state, small-screen navigation and
   credit line, relative link targets, and asset versioning.
+- `tests/sheet.test.mjs`: the spreadsheet channel's plan carries the same closed lists as
+  the issue form, the same terms, node as a closed list rather than free text, and a
+  perspective list whose every entry resolves to a stakeholder.
 - `tests/export.test.mjs`: the form-to-CSV contract. Every label the exporter reads exists
   in the form, every question the form asks reaches the CSV or is recorded as a deliberate
   omission, the header has a column for every value a row emits, and consent travels with

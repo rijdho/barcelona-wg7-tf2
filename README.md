@@ -43,6 +43,11 @@ scripts/
                                           from the JSON (npm run diagram)
   generate-options.mjs                    Regenerates the option lists shared by
                                           both suggestion channels (npm run options)
+  generate-sheet.mjs                      Describes the spreadsheet channel from the
+                                          same sources (npm run sheet)
+  build-sheet.py                          Turns that description into an xlsx with
+                                          real data validation, to import into the
+                                          shared WG7-TF2 spreadsheet
 tests/
   data.test.mjs                           Counts, referential integrity, exact match
                                           with the brief's groupings
@@ -57,12 +62,17 @@ tests/
                                           carries an id that resolves
   export.test.mjs                         The contract between the issue form and the
                                           CSV exporter: every question reaches the data
+  sheet.test.mjs                          The spreadsheet channel asks the same
+                                          questions and states the same terms
 suggestions/
   suggestions.csv                         Automatic export of the suggestion issues
   options.csv                             Generated: the closed lists to paste into
                                           the shared spreadsheet as validation ranges
   contribution-terms.md                   Generated: the terms every channel states,
                                           in the words the issue form uses
+  sheet-plan.json                         Generated: the spreadsheet channel's columns,
+                                          closed lists and terms
+  WG7TF2-suggestions-sheet.xlsx           Generated: that plan as an importable sheet
 .github/ISSUE_TEMPLATE/suggest-change.yml Structured issue form for proposing edits;
                                           the explorer's button opens it pre-filled
 .github/workflows/pages.yml               Pages deploy on push (tests gate it)
@@ -91,7 +101,7 @@ Christian, Ricardo, Bianca, Barbara.
 npm test
 ```
 
-Node's built-in runner, no dependencies. Six layers:
+Node's built-in runner, no dependencies. Seven layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
    and outcome groupings must match the brief exactly.
@@ -117,6 +127,11 @@ Node's built-in runner, no dependencies. Six layers:
    to the exporter's columns: that file is only rebuilt when an issue event fires, so a
    new column otherwise leaves the checkout a column short until somebody happens to file
    one.
+7. **The spreadsheet channel**: the sheet needs no account, which also means nobody runs
+   a test when they edit it. What can be pinned is the plan it is built from: the same
+   closed lists as the issue form, node labelled as the explorer labels it, the question
+   about what is being contributed, an agreement column, and the terms verbatim with the
+   licence URL spelled out, since a cell cannot render a link.
 
 The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
 locale were caught when the first two files were written; the draft and page layers were
@@ -133,7 +148,9 @@ as a refusal, and a row value with no header column above it. The reframed form 
 checked with three: the change proposal made required again, the new field left out of the
 export, and the contribution list hand-edited away from the vocabulary. The CSV-shape
 check was added after it caught a real one: a column added to the exporter while the
-committed file kept the old header. Every injected defect failed the suite.
+committed file kept the old header. The spreadsheet layer was checked with four: the
+agreement column removed, node returned to free text, the perspective list drifting from
+the form, and the notice losing the licence URL. Every injected defect failed the suite.
 
 ## Run locally
 
@@ -153,6 +170,13 @@ To regenerate the option lists after editing any taxonomy or the process vocabul
 
 ```
 npm run options
+```
+
+To regenerate the spreadsheet channel's plan, and then the importable sheet:
+
+```
+npm run sheet
+python3 scripts/build-sheet.py     # needs openpyxl; the built .xlsx is committed
 ```
 
 That rewrites the dropdowns in the issue form and `suggestions/options.csv`, which holds
