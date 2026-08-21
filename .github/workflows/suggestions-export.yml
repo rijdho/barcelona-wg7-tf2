@@ -33,15 +33,28 @@ jobs:
               state: "all",
               per_page: 100,
             });
-            // Issue-form bodies render as "### <Label>\n\n<value>" sections.
+            // Issue-form bodies render as "### <Label>\n\n<value>" sections. The
+            // labels below are the form's, verbatim: tests/export.test.mjs pins
+            // them against .github/ISSUE_TEMPLATE/suggest-change.yml, because a
+            // renamed label empties its column in silence and the CSV still
+            // renders perfectly.
             const section = (body, label) => {
               const m = (body || "").match(new RegExp(`### ${label}\\s*\\n+([\\s\\S]*?)(?=\\n### |$)`));
               const v = m ? m[1].trim() : "";
               return v === "_No response_" || v === "None" ? "" : v;
             };
             const esc = (v) => `"${String(v).replace(/"/g, '""')}"`;
+            // A checkbox section renders as "- [X] <label>". Absent means the
+            // issue predates the field, which is not the same as declining:
+            // leave it empty rather than recording a "no" nobody was asked.
+            const checked = (body, label) => {
+              const v = section(body, label);
+              if (!v) return "";
+              return /^\s*[-*]\s*\[[xX]\]/m.test(v) ? "yes" : "no";
+            };
             const header = ["issue", "state", "created", "author", "node", "type_of_change",
-              "suggestion", "why", "perspective", "example", "name_affiliation", "url"];
+              "suggestion", "why", "perspective", "example", "name_affiliation",
+              "terms_agreed", "url"];
             const rows = issues
               .filter((i) => !i.pull_request)
               .sort((a, b) => a.number - b.number)
@@ -57,6 +70,7 @@ jobs:
                 section(i.body, "Your perspective"),
                 section(i.body, "A concrete example \\(optional\\)"),
                 section(i.body, "Name / affiliation \\(optional\\)"),
+                checked(i.body, "Contribution terms"),
                 i.html_url,
               ]);
             const csv = "\uFEFF" + [header, ...rows].map((r) => r.map(esc).join(",")).join("\r\n") + "\r\n";

@@ -10,6 +10,10 @@ body:
         WG7-TF2 coordinators and discussed openly here. This form is the GitHub
         channel; if you prefer not to use GitHub, the explorer's other button
         opens the shared WG7-TF2 spreadsheet instead.
+
+        <!-- <generated:terms-notice> -->
+        What you submit here is public and is contributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). That lets WG7-TF2 reuse it, with attribution to you, in the taxonomy, the brief, the case study collection and other task force outputs. Please do not paste anything confidential, and only submit material you are free to share.
+        <!-- </generated> -->
   - type: input
     id: node
     attributes:
@@ -23,12 +27,15 @@ body:
     attributes:
       label: Type of change
       options:
+        # <generated:kind>
+        # from site/data/vocabularies.json by scripts/generate-options.mjs; do not edit by hand
         - Wording (name or description)
         - Grouping (axis or outcome it belongs to)
         - Add something missing
         - Remove or merge
         - Translation (German or Spanish text)
         - Other
+        # </generated>
     validations:
       required: true
   - type: textarea
@@ -51,17 +58,21 @@ body:
       label: Your perspective
       description: From which role are you speaking? This helps map who says what about each benefit.
       options:
-        - Researcher
-        - Research institution
-        - Funder
-        - Library / research management
-        - Infrastructure provider
-        - Publisher / journal
-        - Technology / service provider
-        - Civil society / citizen
-        - Policy maker / evaluator
-        - Intergovernmental organization / network
+        # <generated:perspective>
+        # from site/draft/data/taxonomy.json by scripts/generate-options.mjs; do not edit by hand
+        - S1 · Research-Performing Institutions
+        - S2 · Individual Researchers
+        - S3 · Funders
+        - S4 · Research Infrastructure Providers
+        - S5 · Policy Makers and Evaluators
+        - S6 · Civil Society and NGOs
+        - S7 · Libraries and Research Managers
+        - S8 · Publishers and Journals
+        - S9 · Technology and Service Providers
+        - S10 · Intergovernmental Organizations
+        - S11 · Networks and Alliances
         - Other
+        # </generated>
     validations:
       required: false
   - type: textarea
@@ -78,3 +89,13 @@ body:
       description: Helps the coordinators follow up; leave empty to stay with your GitHub handle.
     validations:
       required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        # <generated:terms-ack>
+        # from site/data/vocabularies.json by scripts/generate-options.mjs; do not edit by hand
+        - label: I agree that my contribution, including any example, may be reused by WG7-TF2 under CC BY 4.0 with attribution.
+          required: true
+        # </generated>

@@ -34,10 +34,14 @@ site/
                                           exercise (not reviewed by WG7-TF2)
   data/taxonomy.json                      Machine-readable brief: the single source
                                           of truth for explorer and map
+  data/vocabularies.json                  Controlled lists that describe the
+                                          suggestion process, not the framework
   fonts/                                  Self-hosted Inter variable woff2
 scripts/
   generate-diagram.mjs                    Regenerates deliverables/Benefits_map.md
                                           from the JSON (npm run diagram)
+  generate-options.mjs                    Regenerates the option lists shared by
+                                          both suggestion channels (npm run options)
 tests/
   data.test.mjs                           Counts, referential integrity, exact match
                                           with the brief's groupings
@@ -47,8 +51,17 @@ tests/
   site.test.mjs                           Page invariants: hidden state, small-screen
                                           navigation and credit line, link targets,
                                           asset versioning
+  options.test.mjs                        The shared option lists: both channels offer
+                                          the same closed vocabularies, every option
+                                          carries an id that resolves
+  export.test.mjs                         The contract between the issue form and the
+                                          CSV exporter: every question reaches the data
 suggestions/
   suggestions.csv                         Automatic export of the suggestion issues
+  options.csv                             Generated: the closed lists to paste into
+                                          the shared spreadsheet as validation ranges
+  contribution-terms.md                   Generated: the terms every channel states,
+                                          in the words the issue form uses
 .github/ISSUE_TEMPLATE/suggest-change.yml Structured issue form for proposing edits;
                                           the explorer's button opens it pre-filled
 .github/workflows/pages.yml               Pages deploy on push (tests gate it)
@@ -77,7 +90,7 @@ Christian, Ricardo, Bianca, Barbara.
 npm test
 ```
 
-Node's built-in runner, no dependencies. Four layers:
+Node's built-in runner, no dependencies. Six layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
    and outcome groupings must match the brief exactly.
@@ -88,13 +101,30 @@ Node's built-in runner, no dependencies. Four layers:
 4. **Page invariants**: the failures that still render. Every stylesheet neutralizes the
    `hidden` attribute; the collapsed rail keeps navigation and the credit line; relative
    links resolve; local asset links carry a `?v=` so a redeploy reaches cached browsers.
+5. **The shared option lists and the contribution terms**: both suggestion channels offer
+   the same closed vocabularies, every option carries an id that resolves back to the
+   taxonomy, no two stakeholders share an option, and the node labels still match what the
+   explorers prefill. The terms are stated verbatim wherever they appear, agreement is
+   required rather than optional, and all three locales name the licence.
+6. **The form-to-CSV contract**: the exporter finds its columns by matching the form's
+   labels verbatim, so every label it reads must exist in the form and every question the
+   form asks must reach the CSV. This is the layer with no visible symptom at all: a
+   renamed label exports an empty string for every issue from then on, and the file still
+   parses, still opens in Excel and still looks complete.
 
 The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
 locale were caught when the first two files were written; the draft and page layers were
 checked the same way, with six further defects: a removed `[hidden]` rule, a small-screen
 rule that hides navigation and the credit line again, a broken relative link, an
 unversioned stylesheet link, a draft benefit moved to another axis, and an example dropped
-from one language. Every injected defect failed the suite.
+from one language. The option and terms layer was checked with six more: two stakeholders
+collapsed back into one option, a benefit renamed without regenerating, the explorer's
+label format changed on its own, an acknowledgement turned optional, a notice hand-edited
+to a different licence than the checkbox agrees to, and the licence sentence dropped from
+the Spanish text. The export layer was checked with four: a form label renamed while the
+exporter kept the old one, a new field nobody exports, an absent acknowledgement recorded
+as a refusal, and a row value with no header column above it. Every injected defect failed
+the suite.
 
 ## Run locally
 
@@ -109,6 +139,17 @@ To regenerate the benefits map after editing `site/data/taxonomy.json`:
 ```
 npm run diagram
 ```
+
+To regenerate the option lists after editing any taxonomy or the process vocabulary:
+
+```
+npm run options
+```
+
+That rewrites the dropdowns in the issue form and `suggestions/options.csv`, which holds
+the same closed lists as columns, ready to paste into the shared spreadsheet as
+data-validation ranges. Both channels record the same strings, so the two sets of
+suggestions merge without a hand-kept mapping table.
 
 ## Deploy
 
@@ -135,3 +176,10 @@ collection spreadsheet, and TF2 internal documentation with meeting notes) live 
 All content in this repository (the brief, the benefits map, and the explorer) is licensed
 under [Creative Commons Attribution 4.0 International (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE).
+
+That covers what the repository publishes, not what a contributor submits, so the
+suggestion channels state their own terms rather than leaving them implied: contributions,
+including examples, are made under CC BY 4.0 with attribution, and the issue form asks for
+that agreement explicitly before a suggestion can be filed. The wording lives in
+`site/data/vocabularies.json` and is generated into every channel, so no channel can state
+different terms from the others; see `suggestions/contribution-terms.md`.

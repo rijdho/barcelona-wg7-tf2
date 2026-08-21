@@ -55,7 +55,8 @@ export const UI = {
       "validate and refine the fuller stakeholder and benefits taxonomy under community review. " +
       "Concrete examples feed the case study collection. Everything arrives as a public, versioned " +
       "record: each suggestion keeps its link, and the exported CSV in the repository is the " +
-      "working dataset of the review.",
+      "working dataset of the review. What you submit is contributed under CC BY 4.0, so the "
+      + "task force can reuse it with attribution to you; the form asks you to confirm this.",
     aboutCreditsTitle: "Credits",
     aboutCredits:
       "Built and maintained by Ricardo Hartley (@rijdho) as a contribution to Task Force 2 of " +
@@ -119,7 +120,9 @@ export const UI = {
       "der die Task Force die umfassendere Stakeholder- und Nutzen-Taxonomie in der " +
       "Community-Review validiert und verfeinert. Konkrete Beispiele speisen die " +
       "Fallstudiensammlung. Alles ist öffentlich und versioniert: jeder Vorschlag behält seinen " +
-      "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review.",
+      "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review. Was Sie "
+      + "einreichen, wird unter CC BY 4.0 beigetragen, damit die Task Force es mit Namensnennung "
+      + "weiterverwenden kann; das Formular bittet Sie, dem zuzustimmen.",
     aboutCreditsTitle: "Credits",
     aboutCredits:
       "Erstellt und gepflegt von Ricardo Hartley (@rijdho) als Beitrag zur Task Force 2 der " +
@@ -183,7 +186,9 @@ export const UI = {
       "force usa para validar y refinar la taxonomía más completa de stakeholders y beneficios en " +
       "revisión comunitaria. Los ejemplos concretos alimentan la colección de casos de estudio. " +
       "Todo queda como registro público y versionado: cada sugerencia conserva su enlace, y el CSV " +
-      "exportado en el repositorio es el conjunto de datos de trabajo de la revisión.",
+      "exportado en el repositorio es el conjunto de datos de trabajo de la revisión. Lo que "
+      + "envías se aporta bajo CC BY 4.0, de modo que el grupo de trabajo pueda reutilizarlo "
+      + "citándote; el formulario te pide confirmarlo.",
     aboutCreditsTitle: "Créditos",
     aboutCredits:
       "Creado y mantenido por Ricardo Hartley (@rijdho) como contribución al Task Force 2 del " +
