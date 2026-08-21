@@ -52,11 +52,19 @@ jobs:
               if (!v) return "";
               return /^\s*[-*]\s*\[[xX]\]/m.test(v) ? "yes" : "no";
             };
+            // Frozen order, mirrored in suggestions/export-columns.json: the shared
+            // spreadsheet imports this file by position. Append only.
             const header = ["issue", "state", "created", "author", "node", "contribution",
               "type_of_change", "suggestion", "why", "perspective", "example",
               "name_affiliation", "terms_agreed", "url"];
+            // Issues labelled pipeline-test exercised the export end to end. They
+            // stay on GitHub as the record that it was tested; they do not belong
+            // in the dataset the coordinators read, where they are the first thing
+            // anyone opening the shared spreadsheet sees.
+            const labelled = (i, name) =>
+              (i.labels || []).some((l) => (typeof l === "string" ? l : l.name) === name);
             const rows = issues
-              .filter((i) => !i.pull_request)
+              .filter((i) => !i.pull_request && !labelled(i, "pipeline-test"))
               .sort((a, b) => a.number - b.number)
               .map((i) => [
                 i.number,

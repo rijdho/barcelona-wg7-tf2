@@ -1,0 +1,19 @@
+{
+  "note": "The frozen column order of suggestions.csv. The shared WG7-TF2 spreadsheet imports that file with IMPORTDATA, which maps by position, so inserting or reordering a column silently shifts every formula, filter and note keyed to a column letter on the other side. New columns are appended, never inserted. tests/export.test.mjs pins this as a prefix, so appending passes and reordering does not.",
+  "columns": [
+    "issue",
+    "state",
+    "created",
+    "author",
+    "node",
+    "contribution",
+    "type_of_change",
+    "suggestion",
+    "why",
+    "perspective",
+    "example",
+    "name_affiliation",
+    "terms_agreed",
+    "url"
+  ]
+}

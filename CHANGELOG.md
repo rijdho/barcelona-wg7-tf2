@@ -25,6 +25,16 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
   would have exported an empty string for that column for every issue from then on, while
   the CSV still parsed, still opened in Excel and still looked complete. The contract is
   now a test.
+- The shared spreadsheet imports `suggestions.csv` with `IMPORTDATA`, which maps by
+  position rather than by name, so inserting a column shifts every formula, filter and
+  note keyed to a column letter on the other side, silently, in a document this repository
+  cannot see. It already happened once, when `contribution` went in at position six. The
+  order is frozen in `suggestions/export-columns.json` and pinned as a prefix, so new
+  columns can only be appended.
+- The export handed the coordinators its own test data: the two issues that exercised the
+  pipeline were the first and only rows anyone opening the shared spreadsheet would see.
+  They keep the `pipeline-test` label as the record that the export was tested end to end,
+  and the exporter leaves them out of the working dataset.
 - The spreadsheet, the channel that needs no account, asked none of what the issue form
   asks: node was free text hinted "e.g. B6", no column recorded what was being
   contributed, no column carried consent, and no column had any data validation at all, so

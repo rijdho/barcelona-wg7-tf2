@@ -19,6 +19,7 @@ const text = (...p) => readFileSync(join(root, ...p), "utf8");
 const form = text(".github", "ISSUE_TEMPLATE", "suggest-change.yml");
 const workflow = text(".github", "workflows", "suggestions-export.yml");
 const csv = text("suggestions", "suggestions.csv");
+const frozen = JSON.parse(text("suggestions", "export-columns.json"));
 
 const declaredHeader = () => {
   const m = workflow.match(/const header = \[([\s\S]*?)\];/);
@@ -94,6 +95,34 @@ test("the committed CSV has the columns the exporter now emits", () => {
     declaredHeader(),
     "regenerate suggestions/suggestions.csv, or run the export workflow, after changing " +
       "the exporter's columns"
+  );
+});
+
+// The shared WG7-TF2 spreadsheet imports suggestions.csv with IMPORTDATA, which
+// maps by position, not by name. Inserting or reordering a column shifts every
+// formula, filter and note keyed to a column letter on the other side, in
+// silence, in a document this repository cannot see. It already happened once,
+// when contribution went in at position six. Appending is the only safe change,
+// so the frozen order is asserted as a prefix: adding at the end passes, moving
+// anything does not.
+test("the export's column order only ever grows at the end", () => {
+  const columns = declaredHeader();
+  assert.deepEqual(
+    columns.slice(0, frozen.columns.length),
+    frozen.columns,
+    "a column was inserted, reordered or removed; the spreadsheet imports this file " +
+      "by position, so append new columns at the end instead"
+  );
+});
+
+// A test issue is still a real issue: it carries the label, so the exporter would
+// hand it to the coordinators as data. Excluding it by label keeps the record on
+// GitHub without putting it in front of everyone who opens the shared sheet.
+test("pipeline tests stay out of the working dataset", () => {
+  assert.match(
+    workflow,
+    /!labelled\(i, "pipeline-test"\)/,
+    "the exporter filters out issues labelled pipeline-test"
   );
 });
 

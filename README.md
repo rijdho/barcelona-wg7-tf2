@@ -72,6 +72,8 @@ suggestions/
                                           in the words the issue form uses
   sheet-plan.json                         Generated: the spreadsheet channel's columns,
                                           closed lists and terms
+  export-columns.json                     The frozen column order of the export; the
+                                          shared sheet imports it by position
   WG7TF2-suggestions-sheet.xlsx           Generated: that plan as an importable sheet
 .github/ISSUE_TEMPLATE/suggest-change.yml Structured issue form for proposing edits;
                                           the explorer's button opens it pre-filled
@@ -123,10 +125,12 @@ Node's built-in runner, no dependencies. Seven layers:
    renamed label exports an empty string for every issue from then on, and the file still
    parses, still opens in Excel and still looks complete. The same layer pins which fields
    are required, because a form that demands a change proposal turns away everyone who
-   came to share an example and still looks like it works. It also pins the committed CSV
-   to the exporter's columns: that file is only rebuilt when an issue event fires, so a
-   new column otherwise leaves the checkout a column short until somebody happens to file
-   one.
+   came to share an example and still looks like it works. It pins the column order as
+   append-only, because the shared spreadsheet imports the file by position, so an
+   inserted column shifts everything after it in a document this repository cannot see.
+   It also pins the committed CSV to the exporter's columns: that file is only rebuilt
+   when an issue event fires, so a new column otherwise leaves the checkout a column short
+   until somebody happens to file one.
 7. **The spreadsheet channel**: the sheet needs no account, which also means nobody runs
    a test when they edit it. What can be pinned is the plan it is built from: the same
    closed lists as the issue form, node labelled as the explorer labels it, the question
@@ -150,7 +154,9 @@ export, and the contribution list hand-edited away from the vocabulary. The CSV-
 check was added after it caught a real one: a column added to the exporter while the
 committed file kept the old header. The spreadsheet layer was checked with four: the
 agreement column removed, node returned to free text, the perspective list drifting from
-the form, and the notice losing the licence URL. Every injected defect failed the suite.
+the form, and the notice losing the licence URL. The column order was checked with three
+more: a column inserted in the middle, two columns swapped, and a column appended, which
+has to pass. Every injected defect failed the suite, and the append passed.
 
 ## Run locally
 
