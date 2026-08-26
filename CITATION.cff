@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this brief, its taxonomy or the explorer, please cite it as below."
+title: "The Value of Open Research Information: Nine Transformative Benefits (Barcelona Declaration WG7-TF2)"
+abstract: >-
+  What research systems gain when information about research is open, as a brief
+  and an interactive explorer: nine benefit dimensions in three axes (Quality &
+  Trust, Collaboration & Innovation, Impact & Relevance) flowing into trustworthy
+  research, sustainable innovation and societal impact. Contribution to Task Force
+  2 of Working Group 7 of the Barcelona Declaration on Open Research Information.
+  This is version 0.2 of a working document. The ninth benefit (B9 Strategic
+  Steering & Institutional Autonomy) and the narrowing of B2 are proposals put to
+  WG7-TF2 at its meeting of 1 September 2026, not decisions the task force has
+  taken. The explorer runs entirely in the browser and is available in English,
+  German and Spanish.
+type: software
+authors:
+  - family-names: "Hartley Belmar"
+    given-names: "Ricardo"
+    alias: rijdho
+    orcid: "https://orcid.org/0000-0001-5058-9309"
+  - name: "Barcelona Declaration on Open Research Information, Working Group 7, Task Force 2"
+repository-code: "https://github.com/rijdho/barcelona-wg7-tf2"
+url: "https://rijdho.github.io/barcelona-wg7-tf2/"
+license: CC-BY-4.0
+version: "0.2.0"
+date-released: "2026-08-26"
+keywords:
+  - open research information
+  - Barcelona Declaration
+  - research assessment
+  - open science
+  - scholarly communication
+  - taxonomy

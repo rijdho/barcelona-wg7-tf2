@@ -4,10 +4,17 @@ All notable changes to this repository are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Nothing has been released or tagged yet: the brief is v0.1 as a working document, the site
-is live, and the WG7-TF2 community review starts with the meeting of 1 September 2026.
+Versions track the brief they publish: the repository is at 0.2.0 because the brief is at
+v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the meeting of
+1 September 2026.
 
 ## [Unreleased]
+
+## [0.2.0]: 2026-08-26
+
+First tagged release, archived on Zenodo. It carries everything built since the site went
+up on 2026-08-17, and the brief it publishes is a working document: B9 and the narrowing of
+B2 are proposals put to the task force, not decisions it has taken.
 
 ### Fixed
 

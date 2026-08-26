@@ -104,7 +104,7 @@ closing section for what changed and why.
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | First case placed against the framework | University of Milan (WG7 case study collection), 2026-08-26; the source of the v0.2 changes |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
-| Zenodo DOI / publication | Pending |
+| Zenodo DOI / publication | v0.2.0, archived on Zenodo (2026-08-26) |
 
 ## Tests
 
@@ -241,3 +241,9 @@ including examples, are made under CC BY 4.0 with attribution, and the issue for
 that agreement explicitly before a suggestion can be filed. The wording lives in
 `site/data/vocabularies.json` and is generated into every channel, so no channel can state
 different terms from the others; see `suggestions/contribution-terms.md`.
+
+## Citation
+
+If you use this brief, its taxonomy or the explorer, please cite it: see
+[`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub. Archived on
+Zenodo; cite the concept DOI, which always resolves to the latest version.
