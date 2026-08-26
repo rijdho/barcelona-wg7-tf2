@@ -12,9 +12,14 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ## [0.2.0]: 2026-08-26
 
-First tagged release, archived on Zenodo. It carries everything built since the site went
-up on 2026-08-17, and the brief it publishes is a working document: B9 and the narrowing of
-B2 are proposals put to the task force, not decisions it has taken.
+First tagged version. It carries everything built since the site went up on 2026-08-17,
+and the brief it publishes is a working document: B9 and the narrowing of B2 are proposals
+put to the task force, not decisions it has taken.
+
+Tagged but deliberately not released, so nothing is archived and no DOI is minted. A Zenodo
+record is permanent, and a proposal that the task force has not yet seen should not become
+citable as though it were settled. Zenodo gets switched on after the meeting of 1 September
+2026, and the release is cut then, on whatever version the group has actually agreed.
 
 ### Fixed
 

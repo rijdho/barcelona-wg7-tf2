@@ -104,7 +104,7 @@ closing section for what changed and why.
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | First case placed against the framework | University of Milan (WG7 case study collection), 2026-08-26; the source of the v0.2 changes |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
-| Zenodo DOI / publication | v0.2.0, archived on Zenodo (2026-08-26) |
+| Zenodo DOI / publication | Deliberately held until after the 1 September 2026 meeting |
 
 ## Tests
 
@@ -245,5 +245,9 @@ different terms from the others; see `suggestions/contribution-terms.md`.
 ## Citation
 
 If you use this brief, its taxonomy or the explorer, please cite it: see
-[`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub. Archived on
-Zenodo; cite the concept DOI, which always resolves to the latest version.
+[`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub.
+
+There is no DOI yet, and that is a decision rather than an omission. A Zenodo record cannot
+be unpublished, and archiving a nine-benefit version six days before WG7-TF2 first discusses
+the ninth would make a proposal permanently citable as though it were settled. The archive
+waits for the meeting of 1 September 2026. Until then, cite the repository and the tag.
