@@ -2,7 +2,7 @@
   "name": "barcelona-wg7-tf2",
   "private": true,
   "type": "module",
-  "description": "The eight transformative benefits of Open Research Information (Barcelona Declaration WG7-TF2), as an interactive explorer",
+  "description": "The nine transformative benefits of Open Research Information (Barcelona Declaration WG7-TF2), as an interactive explorer",
   "license": "CC-BY-4.0",
   "scripts": {
     "test": "node --test tests/*.test.mjs",

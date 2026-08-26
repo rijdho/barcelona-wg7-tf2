@@ -6,11 +6,11 @@ export const LOCALES = ["en", "de", "es"];
 
 export const UI = {
   en: {
-    title: "The Eight Benefits",
+    title: "The Nine Benefits",
     eyebrow: "The value of open research information",
     lede:
       "What research systems gain when information about research is open: " +
-      "eight transformative benefits in three axes, flowing into trustworthy research, " +
+      "nine transformative benefits in three axes, flowing into trustworthy research, " +
       "sustainable innovation, and societal impact. Select any item to trace its connections. " +
       "Everything runs in your browser; nothing is tracked or sent anywhere.",
     navView: "View",
@@ -32,7 +32,7 @@ export const UI = {
     shared: "Link copied",
     aboutTitle: "About",
     aboutBody:
-      "This explorer renders \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "This explorer renders \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(brief, v{version}), a working document of Task Force 2 of Working Group 7 of the Barcelona " +
       "Declaration on Open Research Information. Content is licensed CC BY 4.0; the English text is " +
       "the authoritative wording. A fuller stakeholder and benefits taxonomy is published here as an " +
@@ -41,7 +41,7 @@ export const UI = {
     aboutHowBody:
       "The Barcelona Declaration commits signatories to making openness the default, working with " +
       "open systems, supporting infrastructure sustainability, and enabling collective action. " +
-      "Those commitments unlock the eight benefits shown here, each read as: what traditional " +
+      "Those commitments unlock the nine benefits shown here, each read as: what traditional " +
       "metrics miss, what ORI makes possible, and who benefits. This page is a static site; the " +
       "data behind it is a single JSON file in the repository, and every change to it is versioned.",
     aboutSuggestBody:
@@ -70,11 +70,11 @@ export const UI = {
     themeLabel: "Switch light / dark theme",
   },
   de: {
-    title: "Die acht Nutzen",
+    title: "Die neun Nutzen",
     eyebrow: "Der Wert offener Forschungsinformation",
     lede:
       "Was Forschungssysteme gewinnen, wenn Informationen über Forschung offen sind: " +
-      "acht transformative Nutzen in drei Achsen, die in vertrauenswürdige Forschung, " +
+      "neun transformative Nutzen in drei Achsen, die in vertrauenswürdige Forschung, " +
       "nachhaltige Innovation und gesellschaftliche Wirkung münden. Element auswählen, um seine " +
       "Verbindungen zu verfolgen. Alles läuft im Browser; nichts wird erfasst oder gesendet.",
     navView: "Ansicht",
@@ -96,7 +96,7 @@ export const UI = {
     shared: "Link kopiert",
     aboutTitle: "Über",
     aboutBody:
-      "Dieser Explorer zeigt \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "Dieser Explorer zeigt \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(Brief, v{version}), ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona " +
       "Declaration on Open Research Information. Inhalte stehen unter CC BY 4.0; der englische Text " +
       "ist maßgeblich. Eine umfassendere Stakeholder- und Nutzen-Taxonomie ist hier als ausdrücklich " +
@@ -106,7 +106,7 @@ export const UI = {
     aboutHowBody:
       "Die Barcelona Declaration verpflichtet ihre Unterzeichner, Offenheit zum Standard zu machen, " +
       "mit offenen Systemen zu arbeiten, die Nachhaltigkeit der Infrastruktur zu unterstützen und " +
-      "kollektives Handeln zu ermöglichen. Diese Verpflichtungen erschließen die acht hier gezeigten " +
+      "kollektives Handeln zu ermöglichen. Diese Verpflichtungen erschließen die neun hier gezeigten " +
       "Nutzen, jeweils gelesen als: was traditionelle Metriken übersehen, was ORI möglich macht und " +
       "wer profitiert. Diese Seite ist statisch; die Daten dahinter sind eine einzige JSON-Datei im " +
       "Repository, und jede Änderung daran ist versioniert.",
@@ -138,11 +138,11 @@ export const UI = {
     themeLabel: "Hell / dunkel umschalten",
   },
   es: {
-    title: "Los ocho beneficios",
+    title: "Los nueve beneficios",
     eyebrow: "El valor de la información abierta sobre investigación",
     lede:
       "Lo que ganan los sistemas de investigación cuando la información sobre la investigación es " +
-      "abierta: ocho beneficios transformadores en tres ejes, que desembocan en investigación " +
+      "abierta: nueve beneficios transformadores en tres ejes, que desembocan en investigación " +
       "confiable, innovación sostenible e impacto social. Selecciona un elemento para trazar sus " +
       "conexiones. Todo funciona en tu navegador; no se rastrea ni se envía nada.",
     navView: "Vista",
@@ -164,7 +164,7 @@ export const UI = {
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
     aboutBody:
-      "Este explorador muestra \"The Value of Open Research Information: Eight Transformative Benefits\" " +
+      "Este explorador muestra \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(brief, v{version}), un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona " +
       "Declaration on Open Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es " +
       "la redacción autorizada. Una taxonomía más completa de stakeholders y beneficios está publicada " +
@@ -174,7 +174,7 @@ export const UI = {
     aboutHowBody:
       "La Barcelona Declaration compromete a sus firmantes a hacer de la apertura el estándar, trabajar " +
       "con sistemas abiertos, apoyar la sostenibilidad de la infraestructura y habilitar la acción " +
-      "colectiva. Esos compromisos desbloquean los ocho beneficios que se muestran aquí, cada uno leído " +
+      "colectiva. Esos compromisos desbloquean los nueve beneficios que se muestran aquí, cada uno leído " +
       "como: qué pasan por alto las métricas tradicionales, qué hace posible ORI y quién se beneficia. " +
       "Esta página es estática; los datos detrás son un único archivo JSON en el repositorio, y cada " +
       "cambio queda versionado.",

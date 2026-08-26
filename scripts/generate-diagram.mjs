@@ -11,7 +11,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "site", "data", "taxonomy.json"), "utf8"));
 
 const lines = [];
-lines.push("# The Eight Benefits of Open Research Information");
+lines.push("# The Nine Benefits of Open Research Information");
 lines.push("");
 lines.push(
   `Generated from \`site/data/taxonomy.json\` (brief v${data.version}) by`,
@@ -20,9 +20,9 @@ lines.push(
 );
 lines.push("```mermaid");
 lines.push("flowchart TB");
-lines.push("  accTitle: The eight benefits of open research information");
+lines.push("  accTitle: The nine benefits of open research information");
 lines.push(
-  "  accDescr: The Barcelona Declaration commitments unlock Open Research Information, which delivers eight benefits in three axes; the benefits flow into trustworthy research, sustainable innovation, and societal impact, leading to research that is visible, valued, and impactful."
+  "  accDescr: The Barcelona Declaration commitments unlock Open Research Information, which delivers nine benefits in three axes; the benefits flow into trustworthy research, sustainable innovation, and societal impact, leading to research that is visible, valued, and impactful."
 );
 lines.push('  START["Barcelona Declaration<br/>4 commitments"] --> ORI["Open Research Information<br/>structured · open · machine-readable"]');
 for (const a of data.axes) lines.push(`  ORI --> ${a.id}["${a.name.en}"]`);
@@ -36,7 +36,7 @@ for (const o of data.outcomes) lines.push(`  ${o.id} --> VISION`);
 lines.push("```");
 lines.push("");
 lines.push(
-  "Read top to bottom: the Declaration's commitments unlock ORI; ORI delivers the eight",
+  "Read top to bottom: the Declaration's commitments unlock ORI; ORI delivers the nine",
   "benefit dimensions grouped in three axes; the benefits flow into three outcomes and,",
   "together, into the vision. Definitions and who benefits from each dimension are in",
   "`ORI_Benefits_Overview_brief.md`.",

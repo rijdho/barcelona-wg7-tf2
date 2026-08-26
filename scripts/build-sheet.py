@@ -25,7 +25,9 @@ except ImportError:
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 plan = json.loads((ROOT / "suggestions" / "sheet-plan.json").read_text())
 
-ROWS = 300  # rows of the input sheet that carry validation
+ROWS = 300  # last row of the input sheet that carries validation
+HEADER_ROW = 3  # row 1 is the terms notice, row 2 says a comment is also a way in
+FIRST_ROW = HEADER_ROW + 1
 BRAND = "6D4AFF"
 
 wb = Workbook()
@@ -61,14 +63,23 @@ ws["A1"].font = Font(size=10)
 ws.merge_cells(f"A1:{last_col}1")
 ws.row_dimensions[1].height = 46
 
+# Eleven columns of dropdowns read as "a row or nothing". The comment thread is
+# already there on every cell; it just has to be said, or the members who will
+# not fill a row say nothing at all.
+ws["A2"] = plan["commentsNote"]
+ws["A2"].alignment = Alignment(wrap_text=True, vertical="top")
+ws["A2"].font = Font(size=10, italic=True)
+ws.merge_cells(f"A2:{last_col}2")
+ws.row_dimensions[2].height = 32
+
 for i, c in enumerate(columns, start=1):
-    cell = ws.cell(row=2, column=i, value=c["header"])
+    cell = ws.cell(row=HEADER_ROW, column=i, value=c["header"])
     cell.font = Font(bold=True, color="FFFFFF")
     cell.fill = PatternFill("solid", fgColor=BRAND)
     cell.alignment = Alignment(wrap_text=True, vertical="center")
     ws.column_dimensions[get_column_letter(i)].width = 20 if c["list"] is None else 34
-ws.row_dimensions[2].height = 30
-ws.freeze_panes = "A3"
+ws.row_dimensions[HEADER_ROW].height = 30
+ws.freeze_panes = f"A{FIRST_ROW}"
 
 for i, c in enumerate(columns, start=1):
     if not c["list"]:
@@ -87,7 +98,7 @@ for i, c in enumerate(columns, start=1):
         ),
     )
     ws.add_data_validation(dv)
-    dv.add(f"{col}3:{col}{ROWS}")
+    dv.add(f"{col}{FIRST_ROW}:{col}{ROWS}")
 
 out = ROOT / "suggestions" / "WG7TF2-suggestions-sheet.xlsx"
 wb.save(out)

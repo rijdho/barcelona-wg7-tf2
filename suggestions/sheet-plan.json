@@ -8,6 +8,7 @@
   "sheetName": "Suggestions (brief)",
   "listsSheetName": "Lists (generated)",
   "notice": "What you submit here is public and is contributed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). That lets WG7-TF2 reuse it, with attribution to you, in the taxonomy, the brief, the case study collection and other task force outputs. Please do not paste anything confidential, and only submit material you are free to share.",
+  "commentsNote": "You do not have to fill in a row to say something. You can also leave a comment on any cell (Insert > Comment), or reply to someone else's, and the coordinators read those alongside the rows. The same contribution terms apply to anything you leave in a comment.",
   "acknowledgement": "I agree that my contribution, including any example, may be reused by WG7-TF2 under CC BY 4.0 with attribution.",
   "columns": [
     {
@@ -57,21 +58,22 @@
   ],
   "lists": {
     "Node": [
-      "V1 · Research that is visible, valued, impactful (brief v0.1)",
-      "A1 · Quality & Trust (brief v0.1)",
-      "A2 · Collaboration & Innovation (brief v0.1)",
-      "A3 · Impact & Relevance (brief v0.1)",
-      "B1 · Research Output Quality & Traceability (brief v0.1)",
-      "B2 · Governance, Ethics & Compliance (brief v0.1)",
-      "B8 · Integrity & Accountability (brief v0.1)",
-      "B3 · Capacity Building & Inclusive Training (brief v0.1)",
-      "B4 · Interoperability & Metadata Quality (brief v0.1)",
-      "B7 · Infrastructure & Technical Enablement (brief v0.1)",
-      "B5 · Evaluation for Learning & Responsibility (brief v0.1)",
-      "B6 · Visibility, Equity & Societal Relevance (brief v0.1)",
-      "O1 · Trustworthy Research (brief v0.1)",
-      "O2 · Sustainable Innovation (brief v0.1)",
-      "O3 · Societal Impact (brief v0.1)"
+      "V1 · Research that is visible, valued, impactful (brief v0.2)",
+      "A1 · Quality & Trust (brief v0.2)",
+      "A2 · Collaboration & Innovation (brief v0.2)",
+      "A3 · Impact & Relevance (brief v0.2)",
+      "B1 · Research Output Quality & Traceability (brief v0.2)",
+      "B2 · Governance, Ethics & Compliance (brief v0.2)",
+      "B8 · Integrity & Accountability (brief v0.2)",
+      "B3 · Capacity Building & Inclusive Training (brief v0.2)",
+      "B4 · Interoperability & Metadata Quality (brief v0.2)",
+      "B7 · Infrastructure & Technical Enablement (brief v0.2)",
+      "B9 · Strategic Steering & Institutional Autonomy (brief v0.2)",
+      "B5 · Evaluation for Learning & Responsibility (brief v0.2)",
+      "B6 · Visibility, Equity & Societal Relevance (brief v0.2)",
+      "O1 · Trustworthy Research (brief v0.2)",
+      "O2 · Sustainable Innovation (brief v0.2)",
+      "O3 · Societal Impact (brief v0.2)"
     ],
     "Contribution": [
       "A suggested change",

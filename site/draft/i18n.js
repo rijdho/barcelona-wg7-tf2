@@ -8,7 +8,7 @@ export const UI = {
   en: {
     title: "Stakeholders & Benefits",
     draftLabel: "Draft v{version} · working example",
-    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the eight-benefits brief. The English text is the authoritative wording.",
+    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the nine-benefits brief. The English text is the authoritative wording.",
     navBack: "Benefits map",
     navDraftSelf: "Draft: full taxonomy",
     sourceLink: "source\u00a0\u2197",
@@ -16,7 +16,7 @@ export const UI = {
     eyebrow: "A stakeholder map and a taxonomy of benefits for open research information",
     lede:
       "Who participates in Open Research Information, and what value it creates: " +
-      "eight benefit dimensions in three axes, reached by eleven stakeholder categories " +
+      "nine benefit dimensions in three axes, reached by eleven stakeholder categories " +
       "through eight functional roles. Select any item to trace its connections. " +
       "Everything runs in your browser; nothing is tracked or sent anywhere.",
     navView: "View",
@@ -40,7 +40,7 @@ export const UI = {
   de: {
     title: "Stakeholder & Nutzen",
     draftLabel: "Entwurf v{version} · Arbeitsbeispiel",
-    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Acht-Nutzen-Brief. Der englische Text ist maßgeblich.",
+    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Neun-Nutzen-Brief. Der englische Text ist maßgeblich.",
     navBack: "Nutzen-Karte",
     navDraftSelf: "Entwurf: vollständige Taxonomie",
     sourceLink: "Quelle\u00a0\u2197",
@@ -48,7 +48,7 @@ export const UI = {
     eyebrow: "Eine Stakeholder-Karte und eine Nutzen-Taxonomie für offene Forschungsinformation",
     lede:
       "Wer an Open Research Information teilnimmt und welchen Wert sie schafft: " +
-      "acht Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
+      "neun Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
       "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu verfolgen. " +
       "Alles läuft im Browser; nichts wird erfasst oder gesendet.",
     navView: "Ansicht",
@@ -72,7 +72,7 @@ export const UI = {
   es: {
     title: "Stakeholders y beneficios",
     draftLabel: "Borrador v{version} · ejemplo de trabajo",
-    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de ocho beneficios. El texto en inglés es la redacción autorizada.",
+    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de nueve beneficios. El texto en inglés es la redacción autorizada.",
     navBack: "Mapa de beneficios",
     navDraftSelf: "Borrador: taxonomía completa",
     sourceLink: "fuente\u00a0\u2197",
@@ -80,7 +80,7 @@ export const UI = {
     eyebrow: "Un mapa de stakeholders y una taxonomía de beneficios para la información abierta sobre investigación",
     lede:
       "Quién participa en la información abierta sobre investigación y qué valor crea: " +
-      "ocho dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
+      "nueve dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
       "a través de ocho roles funcionales. Selecciona un elemento para trazar sus conexiones. " +
       "Todo funciona en tu navegador; no se rastrea ni se envía nada.",
     navView: "Vista",

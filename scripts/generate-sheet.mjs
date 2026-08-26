@@ -65,6 +65,11 @@ const notice = terms.notice.replace(
   (_, text, url) => `${text} (${url})`
 );
 
+// The sheet is the only channel with a comment thread on every cell, and the
+// columns below make it look like a row is the only way in. Saying so is worth
+// a line: a member who will not fill eleven fields will still leave a comment.
+const commentsNote = vocab.channelNotes.spreadsheetComments;
+
 writeFileSync(
   join(root, "suggestions", "sheet-plan.json"),
   JSON.stringify(
@@ -78,6 +83,7 @@ writeFileSync(
       sheetName: "Suggestions (brief)",
       listsSheetName: "Lists (generated)",
       notice,
+      commentsNote,
       acknowledgement: terms.acknowledgement,
       columns,
       lists,

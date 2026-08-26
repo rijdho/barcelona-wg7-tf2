@@ -21,7 +21,7 @@ body:
     attributes:
       label: Node
       description: Which element is this about? Pre-filled if you came from the explorer.
-      placeholder: "B6 · Visibility, Equity & Societal Relevance (brief v0.1)"
+      placeholder: "B6 · Visibility, Equity & Societal Relevance (brief v0.2)"
     validations:
       required: true
   - type: dropdown

@@ -1,11 +1,11 @@
 # The Value of Open Research Information (Barcelona Declaration WG7-TF2)
 
-**The eight transformative benefits of Open Research Information, as an interactive
+**The nine transformative benefits of Open Research Information, as an interactive
 explorer.**
 
 Contribution to Task Force 2 of Working Group 7 of the Barcelona Declaration on Open
 Research Information. The brief maps what research systems gain when information about
-research is open: eight benefit dimensions in three axes (Quality & Trust, Collaboration &
+research is open: nine benefit dimensions in three axes (Quality & Trust, Collaboration &
 Innovation, Impact & Relevance), flowing into trustworthy research, sustainable innovation,
 and societal impact.
 
@@ -21,8 +21,8 @@ exported automatically to `suggestions/suggestions.csv`.
 
 ```
 deliverables/
-  ORI_Benefits_Overview_brief.md          The brief: eight benefits in three axes,
-                                          with who benefits from each (v0.1, Feb 2026)
+  ORI_Benefits_Overview_brief.md          The brief: nine benefits in three axes,
+                                          with who benefits from each (v0.2, Aug 2026)
   Benefits_map.md                         Flow map (Mermaid), generated from
                                           site/data/taxonomy.json
 site/
@@ -83,17 +83,26 @@ _ref/                                     Source material and internal TF2 mater
                                           (private, not versioned)
 ```
 
-## Status (2026-08-17)
+## Status (2026-08-26)
 
 TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Zoom); the
 invitation asks members to review the TF2 working documents ahead of it. Coordinators:
 Christian, Ricardo, Bianca, Barbara.
 
+The brief moved to **v0.2** on 2026-08-26: a ninth benefit, **B9 Strategic Steering &
+Institutional Autonomy**, joins Axis II, and B2 gives up the clause that made it absorb
+every institutional case. Both changes came out of placing a real TF1 case study against
+the framework rather than out of rereading the definitions, and both are proposals put to
+the task force at the September meeting, not decisions it has taken. See the brief's
+closing section for what changed and why.
+
 | Milestone | Status |
 | --- | --- |
-| Benefits overview brief v0.1 | Done (Feb 2026); circulating to WG7 |
-| Interactive explorer + benefits map | Live on GitHub Pages (2026-08-17) |
-| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); community review runs through the WG7 process |
+| Benefits overview brief | v0.2 (2026-08-26); v0.1 circulated Feb 2026 |
+| Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.2 |
+| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 to keep its parity contract with the brief |
+| Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
+| First case placed against the framework | University of Milan (WG7 case study collection), 2026-08-26; the source of the v0.2 changes |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
 | Zenodo DOI / publication | Pending |
 
@@ -106,7 +115,10 @@ npm test
 Node's built-in runner, no dependencies. Seven layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
-   and outcome groupings must match the brief exactly.
+   and outcome groupings must match the brief exactly. Since v0.2 it also pins the pair of
+   changes that only work together: B2 may not, in any of the three languages, reclaim the
+   "policy implementation" clause that B9 was added to hold, or the two compete for the
+   same cases again with nothing on screen looking different.
 2. **i18n**: identical key sets, matching placeholders, full locale coverage of every
    translatable field, and array lengths pinned where locale overlays align by index.
 3. **The draft taxonomy**: its own integrity, plus the contract that it may extend the
@@ -135,7 +147,9 @@ Node's built-in runner, no dependencies. Seven layers:
    a test when they edit it. What can be pinned is the plan it is built from: the same
    closed lists as the issue form, node labelled as the explorer labels it, the question
    about what is being contributed, an agreement column, and the terms verbatim with the
-   licence URL spelled out, since a cell cannot render a link.
+   licence URL spelled out, since a cell cannot render a link. It also pins the line that
+   says a comment on any cell counts as a contribution, and that the terms still apply to
+   one, so the cheapest way in does not become the way around the licence.
 
 The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
 locale were caught when the first two files were written; the draft and page layers were
@@ -156,7 +170,10 @@ committed file kept the old header. The spreadsheet layer was checked with four:
 agreement column removed, node returned to free text, the perspective list drifting from
 the form, and the notice losing the licence URL. The column order was checked with three
 more: a column inserted in the middle, two columns swapped, and a column appended, which
-has to pass. Every injected defect failed the suite, and the append passed.
+has to pass. The comment line was checked with three: the sentence hand-edited away from
+the vocabulary, its clause about the terms dropped, and the line removed altogether. The
+B2/B9 pairing was checked with three more: the clause restored to B2's English text, the
+same restored only in Spanish, and B9 moved to another axis. Every injected defect failed the suite, and the append passed.
 
 ## Run locally
 
@@ -197,12 +214,14 @@ upload, no Jekyll) on every push to main, with the test suite as a gate.
 
 ## Caveats
 
-The brief is a v0.1 working document awaiting community review by WG7-TF2 (starting with
-the 1 September 2026 meeting); wording and groupings may change as a result. It is a
+The brief is a v0.2 working document awaiting community review by WG7-TF2 (starting with
+the 1 September 2026 meeting); wording and groupings may change as a result. B9 and the
+narrowing of B2 are the proposals of one coordinator on the evidence of one case, which is
+enough to show that a gap exists and not enough to fix its wording. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
-translations of the English v0.1, which remains the authoritative wording.
+translations of the English v0.2, which remains the authoritative wording.
 
 ## Note
 

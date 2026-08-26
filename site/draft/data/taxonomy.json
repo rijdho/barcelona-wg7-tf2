@@ -11,7 +11,7 @@
     {
       "id": "A2",
       "name": { "en": "Collaboration & Innovation", "de": "Zusammenarbeit & Innovation", "es": "Colaboración e innovación" },
-      "benefits": ["B3", "B4", "B7"]
+      "benefits": ["B3", "B4", "B7", "B9"]
     },
     {
       "id": "A3",
@@ -131,6 +131,20 @@
         "de": "Fördert Transparenz, Rechenschaft und ethisches Verhalten über den gesamten Forschungszyklus.",
         "es": "Fomenta la transparencia, la rendición de cuentas y la conducta ética a lo largo del ciclo de investigación."
       }
+    },
+    {
+      "id": "B9",
+      "axis": "A2",
+      "name": {
+        "en": "Strategic Steering & Institutional Autonomy",
+        "de": "Strategische Steuerung & institutionelle Autonomie",
+        "es": "Dirección estratégica y autonomía institucional"
+      },
+      "definition": {
+        "en": "Makes the scholarly communication system itself observable, so institutions can steer resources and reduce dependency on proprietary sources.",
+        "de": "Macht das Publikationssystem selbst beobachtbar, sodass Institutionen Mittel steuern und die Abhängigkeit von proprietären Quellen verringern können.",
+        "es": "Hace observable el propio sistema de comunicación académica, de modo que las instituciones puedan dirigir recursos y reducir la dependencia de fuentes propietarias."
+      }
     }
   ],
   "roles": [
@@ -172,7 +186,7 @@
         "de": "Definiert, verordnet oder beeinflusst Strategien und Rahmenwerke für Governance.",
         "es": "Define, mandata o influye en estrategias y marcos de gobernanza."
       },
-      "primaryBenefits": ["B2", "B5", "B8"]
+      "primaryBenefits": ["B2", "B5", "B8", "B9"]
     },
     {
       "id": "R5",
@@ -182,7 +196,7 @@
         "de": "Pflegt Metadaten, bietet Schulungen an und sichert Qualität und Ausrichtung.",
         "es": "Mantiene los metadatos, ofrece formación y asegura la calidad y la alineación."
       },
-      "primaryBenefits": ["B1", "B2"]
+      "primaryBenefits": ["B1", "B2", "B9"]
     },
     {
       "id": "R6",
@@ -234,7 +248,7 @@
         "es": ["Universidades", "Centros de investigación independientes", "Departamentos académicos", "Divisiones de investigación del sector privado", "Unidades de investigación hospitalarias"]
       },
       "roles": ["R1", "R5", "R2"],
-      "primaryBenefits": ["B1", "B2", "B3", "B5"]
+      "primaryBenefits": ["B1", "B2", "B3", "B5", "B9"]
     },
     {
       "id": "S2",
@@ -270,7 +284,7 @@
         "es": ["Agencias nacionales de investigación", "Organismos de cooperación internacional", "Fundaciones filantrópicas", "Financiadores del sector privado", "Plataformas de financiamiento colectivo"]
       },
       "roles": ["R4", "R2"],
-      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
+      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3", "B9"]
     },
     {
       "id": "S4",
@@ -290,7 +304,7 @@
         "es": ["Repositorios (datos, publicaciones, software)", "Proveedores de infraestructura PID (DOI, ORCID, ROR)", "Servicios de metadatos e indexación", "Proveedores de servicios de información", "Proveedores de CRIS"]
       },
       "roles": ["R3", "R5"],
-      "primaryBenefits": ["B1", "B4", "B7", "B2"]
+      "primaryBenefits": ["B1", "B4", "B7", "B2", "B9"]
     },
     {
       "id": "S5",
@@ -310,7 +324,7 @@
         "es": ["Ministerios", "Agencias de evaluación de la investigación", "Organismos de acreditación", "Think tanks", "Grupos asesores de políticas"]
       },
       "roles": ["R4", "R2"],
-      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3"]
+      "primaryBenefits": ["B2", "B5", "B8", "B1", "B3", "B9"]
     },
     {
       "id": "S6",
@@ -346,7 +360,7 @@
         "es": ["Bibliotecas universitarias", "Custodios de datos", "Gestores de CRIS", "Oficiales de apoyo a la investigación", "Especialistas en información"]
       },
       "roles": ["R5", "R3"],
-      "primaryBenefits": ["B1", "B2", "B4", "B7"]
+      "primaryBenefits": ["B1", "B2", "B4", "B7", "B9"]
     },
     {
       "id": "S8",
@@ -402,7 +416,7 @@
         "es": ["UNESCO", "OCDE", "EOSC (European Open Science Cloud)", "Organización Mundial de la Salud", "Divisiones de investigación del Banco Mundial"]
       },
       "roles": ["R7", "R4", "R3"],
-      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7"]
+      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7", "B9"]
     },
     {
       "id": "S11",
@@ -418,7 +432,7 @@
         "es": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Redes regionales de comunicación académica"]
       },
       "roles": ["R7", "R3", "R5"],
-      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7"]
+      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7", "B9"]
     }
   ]
 }

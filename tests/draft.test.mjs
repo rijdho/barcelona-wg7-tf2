@@ -1,7 +1,7 @@
 // Integrity of the draft explorer (site/draft/): the full stakeholder and
 // benefits taxonomy, its own UI dictionary, and the parity contract with the
 // published brief. The draft is a proposal, but it may not silently
-// contradict the eight benefits it extends.
+// contradict the nine benefits it extends.
 
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -21,7 +21,7 @@ const roleIds = new Set(draft.roles.map((r) => r.id));
 test("draft counts match the published draft framework", () => {
   assert.equal(draft.stakeholders.length, 11, "eleven stakeholder categories");
   assert.equal(draft.roles.length, 8, "eight functional roles");
-  assert.equal(draft.benefits.length, 8, "eight benefit dimensions");
+  assert.equal(draft.benefits.length, 9, "nine benefit dimensions");
   assert.equal(draft.axes.length, 3, "three axes");
 });
 

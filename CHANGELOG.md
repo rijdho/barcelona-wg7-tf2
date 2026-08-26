@@ -79,6 +79,20 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
 
 ### Changed
 
+- **B2 gives up "open science policy implementation."** That clause absorbed almost any
+  institutional case, because almost every institutional case is a policy being
+  implemented: in the trial coding of the Milan case, B2 took the primary slot by default
+  rather than by fit. A benefit that codes most cases carries no information, and a
+  B2-heavy frequency table would have been read as a finding about open research
+  information when it was an artefact of one clause. B2 keeps research conduct monitoring,
+  ethics approvals, data protection and institutional accountability for how research is
+  conducted. The change only makes sense alongside B9, and a test now refuses to let the
+  clause come back while B9 exists, in all three languages.
+
+- The brief's embedded flow diagram, an image carrying the eight-benefit v0.1 map, is
+  replaced by a pointer to `deliverables/Benefits_map.md`, which is generated from the
+  taxonomy. A picture is the one thing that survives every text check unchanged.
+
 - The suggestion form was framed around proposing a change while its example field already
   asked about the element as it stands, so it invited two things and permitted one: anyone
   who came only to share an example had to invent a change proposal first. It is now
@@ -94,6 +108,32 @@ is live, and the WG7-TF2 community review starts with the meeting of 1 September
 - The theme toggle and the source link are translated instead of English-only.
 
 ### Added
+
+- **A ninth benefit: B9, Strategic Steering & Institutional Autonomy** (Axis II
+  Collaboration & Innovation, outcome O2 Sustainable Innovation). The brief did not contain
+  the word "strategy" once, in any of its three languages, and its only economic term was
+  "institutions justify infrastructure investments" inside B7. The eight benefits described
+  what open information makes visible *about research*; nothing held information about the
+  *system that publishes research* (its costs, its suppliers, its venues), and nothing held
+  an institution acting on it. B9 covers cost and terms of publishing, the conduct and
+  performance of venues, dependency on proprietary sources, and the reallocation of
+  resources towards community-led and Diamond infrastructure. The brief goes to v0.2, the
+  draft taxonomy gains B9 to keep its parity contract, and roles R4 (Policy Maker) and R5
+  (Support & Stewardship) carry it, which reaches seven of the eleven stakeholders.
+
+  It came from placing a real case rather than from rereading definitions. The University
+  of Milan response in the WG7 case study collection, nine years of APC monitoring and the
+  funding decisions it drove, left five things with no benefit to land on: cost
+  transparency, divestment from proprietary sources, publisher and journal conduct, support
+  for venue choice, and budget moved to Diamond. One gap seen from five sides.
+
+- The spreadsheet now says that a comment is also a way in. Eleven columns of dropdowns
+  read as "a row or nothing", and the one thing that channel has which the issue form does
+  not is a comment thread on every cell. A member who will not fill eleven fields will
+  still leave a comment, and until now nothing invited it. The sentence is generated from
+  `site/data/vocabularies.json` like the terms are, so the channel cannot end up saying it
+  in words nobody agreed, and it restates that the contribution terms cover a comment too:
+  the cheaper way in must not become the way around the licence. Pinned by a test.
 
 - `scripts/generate-options.mjs` and `npm run options`: one generator for the controlled
   lists both suggestion channels share. It rewrites the issue form's dropdowns and writes

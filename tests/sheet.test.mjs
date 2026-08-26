@@ -70,6 +70,25 @@ test("the sheet states the same terms as every other channel", () => {
   assert.ok(!plan.notice.includes("]("), "with no markdown syntax left in the cell");
 });
 
+// Eleven columns of dropdowns read as "a row or nothing", and the one thing
+// this channel has that the issue form does not is a comment thread on every
+// cell. A member who will not fill eleven fields will still leave a comment, so
+// the sheet has to say the comment counts. It is generated like everything else,
+// because a hand-typed version would be the one place that forgets the terms.
+test("the sheet says a comment is also a way in, and that the terms still apply", () => {
+  assert.equal(
+    plan.commentsNote,
+    vocab.channelNotes.spreadsheetComments,
+    "verbatim from the process vocabulary"
+  );
+  assert.match(plan.commentsNote, /comment/i, "the comment channel is named");
+  assert.match(
+    plan.commentsNote,
+    /terms apply/i,
+    "a comment is not a way around the contribution terms"
+  );
+});
+
 test("every perspective on the sheet resolves to a stakeholder", () => {
   const ids = new Set(draft.stakeholders.map((s) => s.id));
   for (const option of plan.lists.Perspective) {

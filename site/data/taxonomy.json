@@ -1,6 +1,6 @@
 {
-  "version": "0.1",
-  "date": "2026-02",
+  "version": "0.2",
+  "date": "2026-08",
   "source": "deliverables/ORI_Benefits_Overview_brief.md",
   "vision": {
     "id": "V1",
@@ -19,7 +19,7 @@
     {
       "id": "A2",
       "name": { "en": "Collaboration & Innovation", "de": "Zusammenarbeit & Innovation", "es": "Colaboración e innovación" },
-      "benefits": ["B3", "B4", "B7"]
+      "benefits": ["B3", "B4", "B7", "B9"]
     },
     {
       "id": "A3",
@@ -36,7 +36,7 @@
     {
       "id": "O2",
       "name": { "en": "Sustainable Innovation", "de": "Nachhaltige Innovation", "es": "Innovación sostenible" },
-      "benefits": ["B3", "B4", "B7"]
+      "benefits": ["B3", "B4", "B7", "B9"]
     },
     {
       "id": "O3",
@@ -75,9 +75,9 @@
         "es": "Gobernanza, ética y cumplimiento"
       },
       "description": {
-        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, open science policy implementation, and institutional accountability, following \"as open as possible, as closed as necessary\".",
-        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes, Umsetzung von Open-Science-Policies und institutionelle Rechenschaft, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
-        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos, la implementación de políticas de ciencia abierta y la rendición de cuentas institucional, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
+        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, and institutional accountability for how research is conducted, following \"as open as possible, as closed as necessary\".",
+        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes und institutionelle Rechenschaft für die Durchführung von Forschung, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
+        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos y la rendición de cuentas institucional sobre cómo se hace la investigación, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
       },
       "whoBenefits": {
         "en": "Research institutions demonstrate responsible practices; funders verify ethical alignment; policymakers ensure regulatory compliance.",
@@ -163,6 +163,26 @@
         "en": "Technology providers develop sustainable platforms; research infrastructure organizations gain recognition for essential work; institutions justify infrastructure investments.",
         "de": "Technologieanbieter entwickeln nachhaltige Plattformen; Infrastrukturorganisationen erhalten Anerkennung für essenzielle Arbeit; Institutionen begründen Infrastrukturinvestitionen.",
         "es": "Los proveedores de tecnología desarrollan plataformas sostenibles; las organizaciones de infraestructura obtienen reconocimiento por su trabajo esencial; las instituciones justifican sus inversiones."
+      }
+    },
+    {
+      "id": "B9",
+      "axis": "A2",
+      "outcome": "O2",
+      "name": {
+        "en": "Strategic Steering & Institutional Autonomy",
+        "de": "Strategische Steuerung & institutionelle Autonomie",
+        "es": "Dirección estratégica y autonomía institucional"
+      },
+      "description": {
+        "en": "Traditional metrics say nothing about what research costs or about who supplies the information used to decide. ORI makes the scholarly communication system itself observable: the costs and terms of publishing, the conduct and performance of venues, and dependency on proprietary data sources. That lets institutions steer rather than merely comply, reallocating resources towards community-led and Diamond infrastructure, reducing supplier lock-in, and supporting informed publishing choices.",
+        "de": "Traditionelle Metriken sagen nichts darüber, was Forschung kostet oder wer die Informationen liefert, auf deren Grundlage entschieden wird. ORI macht das Publikationssystem selbst beobachtbar: Kosten und Bedingungen des Publizierens, Verhalten und Leistung der Publikationsorte sowie die Abhängigkeit von proprietären Datenquellen. Das erlaubt Institutionen zu steuern statt nur zu erfüllen: Mittel in gemeinschaftlich getragene und Diamond-Infrastruktur umzuwidmen, Anbieterabhängigkeit zu verringern und informierte Publikationsentscheidungen zu unterstützen.",
+        "es": "Las métricas tradicionales no dicen nada sobre lo que cuesta la investigación ni sobre quién suministra la información con la que se decide. La ORI hace observable el propio sistema de comunicación académica: los costos y condiciones de publicación, la conducta y el desempeño de los vehículos de publicación, y la dependencia de fuentes de datos propietarias. Eso permite a las instituciones dirigir en vez de solo cumplir: reasignar recursos hacia infraestructura comunitaria y Diamond, reducir la dependencia de proveedores y apoyar decisiones de publicación informadas."
+      },
+      "whoBenefits": {
+        "en": "Institutions decide where to invest on their own evidence rather than a supplier's; libraries and research managers can justify a budget shift; community-led and Diamond infrastructures become fundable on visible grounds; researchers choose venues on transparent terms; funders and policy makers see the real economics of scholarly communication.",
+        "de": "Institutionen entscheiden über Investitionen auf Basis eigener Evidenz statt der eines Anbieters; Bibliotheken und Forschungsmanagement können Budgetverschiebungen begründen; gemeinschaftlich getragene und Diamond-Infrastrukturen werden auf sichtbarer Grundlage förderfähig; Forschende wählen Publikationsorte zu transparenten Bedingungen; Förderer und Politikgestalter sehen die tatsächliche Ökonomie des Publikationswesens.",
+        "es": "Las instituciones deciden dónde invertir con evidencia propia y no la de un proveedor; las bibliotecas y la gestión de investigación pueden justificar un cambio presupuestario; las infraestructuras comunitarias y Diamond se vuelven financiables sobre bases visibles; los investigadores eligen dónde publicar en condiciones transparentes; financiadores y responsables de políticas ven la economía real de la comunicación académica."
       }
     },
     {
