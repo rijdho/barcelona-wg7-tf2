@@ -28,8 +28,12 @@ deliverables/
 site/
   index.html, style.css, app.js, i18n.js  Interactive explorer (EN/DE/ES, light/dark,
                                           shareable deep links)
+  theme.js                                Applies the stored theme before first
+                                          paint; its own file so the CSP needs no
+                                          'unsafe-inline'
   about/                                  What it is, how it works, credits and
                                           references, as its own page
+                                          (index.html + about.js)
   draft/                                  Full stakeholder taxonomy explorer,
                                           published as an explicitly labeled draft
                                           exercise (not reviewed by WG7-TF2)
@@ -56,7 +60,7 @@ tests/
                                           parity, and agreement with the brief
   site.test.mjs                           Page invariants: hidden state, small-screen
                                           navigation and credit line, link targets,
-                                          asset versioning
+                                          asset versioning, the security policy
   options.test.mjs                        The shared option lists: both channels offer
                                           the same closed vocabularies, every option
                                           carries an id that resolves
@@ -125,7 +129,13 @@ Node's built-in runner, no dependencies. Seven layers:
    brief but not contradict it (same benefit ids, same axes, same English names).
 4. **Page invariants**: the failures that still render. Every stylesheet neutralizes the
    `hidden` attribute; the collapsed rail keeps navigation and the credit line; relative
-   links resolve; local asset links carry a `?v=` so a redeploy reaches cached browsers.
+   links and script sources resolve; local asset links carry a `?v=` so a redeploy reaches
+   cached browsers, and every one of them carries the *same* `?v=`, because a module graph
+   is cached per resolved URL: a stale `i18n.js` against a fresh `app.js` aborts the graph
+   with no visible error and the page comes up blank while looking deployed. Every page
+   also carries a Content-Security-Policy that starts from `default-src 'none'` and admits
+   no `unsafe-inline`, and no page carries an inline script or style, which is the thing
+   that would force the policy to loosen.
 5. **The shared option lists and the contribution terms**: both suggestion channels offer
    the same closed vocabularies, every option carries an id that resolves back to the
    taxonomy, no two stakeholders share an option, and the node labels still match what the
@@ -173,7 +183,13 @@ more: a column inserted in the middle, two columns swapped, and a column appende
 has to pass. The comment line was checked with three: the sentence hand-edited away from
 the vocabulary, its clause about the terms dropped, and the line removed altogether. The
 B2/B9 pairing was checked with three more: the clause restored to B2's English text, the
-same restored only in Spanish, and B9 moved to another axis. Every injected defect failed the suite, and the append passed.
+same restored only in Spanish, and B9 moved to another axis. The security policy and the
+single asset version were checked with eight: the policy removed from one page,
+`'unsafe-inline'` added to `script-src`, `connect-src` dropped so the taxonomy fetch would
+fail, one import left behind at the previous version, a stylesheet left behind the same
+way, an inline script added back to a page, a `style` attribute added to a page, and
+`theme.js` referenced but missing. Every injected defect failed the suite, and the append
+passed.
 
 ## Run locally
 
@@ -211,6 +227,22 @@ suggestions merge without a hand-kept mapping table.
 
 `.github/workflows/pages.yml` deploys `site/` to GitHub Pages via Actions (verbatim
 upload, no Jekyll) on every push to main, with the test suite as a gate.
+
+GitHub Pages sends no security headers, so each page declares its own
+Content-Security-Policy in a `<meta http-equiv>`, starting from `default-src 'none'` and
+naming only what the page needs: `'self'` for scripts, styles, fonts and the taxonomy
+fetch, with `base-uri`, `form-action` and `object-src` at `'none'`. Nothing is loaded from
+another origin, so no directive names one; the outbound links in the text are navigation,
+not a fetch, and the `element.style` writes in `app.js` are CSSOM, which CSP does not
+govern. `frame-ancestors` is missing because it only works as a response header, which
+Pages cannot send, so clickjacking stays uncovered. The policy is verified by breaching
+it in a browser rather than by reading it: an off-origin `fetch`, a Google Fonts
+stylesheet and a CDN script are all refused while the page still works.
+
+Editing anything under `site/` means bumping the `?v=` on every asset link in the same
+commit, all to the same number. The stylesheet, the modules and `data/taxonomy.json` share
+one version for a reason: bumping them separately is what lets a browser mix a fresh module
+with a cached one.
 
 ## Caveats
 

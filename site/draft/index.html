@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Draft · ORI Stakeholders & Benefits · Barcelona Declaration WG7-TF2</title>
   <meta name="description" content="Interactive explorer of the Taxonomy of Open Research Information stakeholders and benefits (Barcelona Declaration WG7 Task Force 2)." />
-  <link rel="stylesheet" href="style.css?v=5" />
-  <script>
-    (function () {
-      var t = localStorage.getItem("wg7tf2-theme");
-      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
-    })();
-  </script>
+  <link rel="stylesheet" href="style.css?v=18" />
+  <script src="../theme.js?v=18"></script>
 </head>
 <body>
   <div class="app">
@@ -88,6 +84,6 @@
     </div>
   </div>
 
-  <script type="module" src="app.js?v=7"></script>
+  <script type="module" src="app.js?v=18"></script>
 </body>
 </html>

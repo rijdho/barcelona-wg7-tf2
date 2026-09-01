@@ -10,7 +10,66 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ## [Unreleased]
 
-## [0.2.0]: 2026-08-26
+### Added
+
+- **Every page ships a Content-Security-Policy.** GitHub Pages sends no security headers
+  at all, so a `<meta http-equiv>` is the only policy the site can carry, and it starts
+  from `default-src 'none'` and names only what the page needs: `'self'` for scripts,
+  styles, fonts and the taxonomy fetch, with `base-uri`, `form-action` and `object-src` at
+  `'none'`. Nothing here loads from another origin, so no directive names one. It is worth
+  the effort on pages that escape everything correctly today because it is the only defence
+  that survives a mistake, and because it makes the promise these pages already print, that
+  nothing is tracked and nothing is sent anywhere, something the browser enforces rather
+  than something the reader has to trust. Verified by breaching it in a browser rather than
+  by reading it: an off-origin `fetch`, a Google Fonts stylesheet and a CDN script are all
+  refused while all three pages still render and switch language and theme.
+
+  `frame-ancestors` is absent and clickjacking therefore stays uncovered, because that
+  directive only works as a response header and Pages cannot send one.
+
+- Two tests that keep the policy enforceable rather than decorative: every page declares it
+  before the first subresource, starts from `default-src 'none'` and admits no unsafe
+  source; and no page carries an inline script, an inline `<style>` or a `style` attribute,
+  since any of those would force the policy to loosen. Proven by injection, eight defects.
+
+### Changed
+
+- The theme bootstrap moved from an inline `<script>` in all three page heads to
+  `site/theme.js`, and the About page's inline module to `site/about/about.js`. An inline
+  script forces the policy to either allow `'unsafe-inline'`, which gives most of it away,
+  or pin a hash to its bytes, which then has to be recomputed on every edit. A plain,
+  non-module script in the head is still render-blocking, so the theme still beats first
+  paint and a dark-theme visitor still sees no white flash.
+
+### Fixed
+
+- **The v0.2 commit changed four cache-versioned assets and bumped no `?v=`.** `site/i18n.js`,
+  `site/data/taxonomy.json`, `site/draft/i18n.js` and `site/draft/data/taxonomy.json` all
+  changed content on 2026-08-26 while their URLs stayed the same, so returning visitors were
+  served the eight-benefit files against the new page. Pages sends `max-age=600`, so the
+  window was ten minutes rather than permanent, and the deployed site has been correct ever
+  since; the defect is in the discipline, not in what is served. The previous release fixed
+  exactly this for the draft stylesheet and stopped there, which is the familiar shape of a
+  rule written for the instance rather than for the class.
+
+- Every asset reference across the site now carries the same version, `?v=18`. The draft
+  explorer had been running four different numbers at once (`style.css` 5, `app.js` 7,
+  `i18n.js` 6, `taxonomy.json` 4) against the main explorer's uniform 17. A module graph is
+  cached per resolved URL, so mismatched numbers let a browser serve a stale `i18n.js`
+  against a fresh `app.js` that imports a symbol the cached copy does not export: the graph
+  aborts with no visible error and the page comes up blank while looking deployed. A test
+  now pins one version across the whole site, which makes that state impossible to express.
+  It cannot catch the other half, a file edited while its number stays put, because nothing
+  a test reads tells that apart from no edit at all.
+
+- The relative-link test only checked `href`, so a `src` pointing at a file that does not
+  exist would have passed. It now checks both, which is what proves the two newly extracted
+  scripts are actually where the pages say they are.
+
+- CHANGELOG: the 0.2.0 heading used `## [0.2.0]: date` where Keep a Changelog uses
+  `## [0.2.0] - date`.
+
+## [0.2.0] - 2026-08-26
 
 First tagged version. It carries everything built since the site went up on 2026-08-17,
 and the brief it publishes is a working document: B9 and the narrowing of B2 are proposals
