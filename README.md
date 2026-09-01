@@ -161,35 +161,15 @@ Node's built-in runner, no dependencies. Seven layers:
    says a comment on any cell counts as a contribution, and that the terms still apply to
    one, so the cheapest way in does not become the way around the licence.
 
-The suite is proven non-vacuous by injection. A dangling outcome reference and a missing
-locale were caught when the first two files were written; the draft and page layers were
-checked the same way, with six further defects: a removed `[hidden]` rule, a small-screen
-rule that hides navigation and the credit line again, a broken relative link, an
-unversioned stylesheet link, a draft benefit moved to another axis, and an example dropped
-from one language. The option and terms layer was checked with six more: two stakeholders
-collapsed back into one option, a benefit renamed without regenerating, the explorer's
-label format changed on its own, an acknowledgement turned optional, a notice hand-edited
-to a different licence than the checkbox agrees to, and the licence sentence dropped from
-the Spanish text. The export layer was checked with four: a form label renamed while the
-exporter kept the old one, a new field nobody exports, an absent acknowledgement recorded
-as a refusal, and a row value with no header column above it. The reframed form was
-checked with three: the change proposal made required again, the new field left out of the
-export, and the contribution list hand-edited away from the vocabulary. The CSV-shape
-check was added after it caught a real one: a column added to the exporter while the
-committed file kept the old header. The spreadsheet layer was checked with four: the
-agreement column removed, node returned to free text, the perspective list drifting from
-the form, and the notice losing the licence URL. The column order was checked with three
-more: a column inserted in the middle, two columns swapped, and a column appended, which
-has to pass. The comment line was checked with three: the sentence hand-edited away from
-the vocabulary, its clause about the terms dropped, and the line removed altogether. The
-B2/B9 pairing was checked with three more: the clause restored to B2's English text, the
-same restored only in Spanish, and B9 moved to another axis. The security policy and the
-single asset version were checked with eight: the policy removed from one page,
-`'unsafe-inline'` added to `script-src`, `connect-src` dropped so the taxonomy fetch would
-fail, one import left behind at the previous version, a stylesheet left behind the same
-way, an inline script added back to a page, a `style` attribute added to a page, and
-`theme.js` referenced but missing. Every injected defect failed the suite, and the append
-passed.
+Every check here was written by injecting the defect it is meant to catch, confirming the
+suite goes red, and reverting. A test that passes on first write has not been shown to test
+anything. The injections worth naming are the ones whose defect has no visible symptom: a
+form label renamed while the exporter kept the old one, which exports an empty column for
+every issue from then on while the CSV still parses, still opens in Excel and still looks
+complete; a column inserted in the middle of the export, which shifts every formula and
+filter in a shared spreadsheet this repository cannot see; and one asset left behind at the
+previous `?v=`, which serves a browser a stale module against a fresh one and brings the
+page up blank while looking deployed.
 
 ## Run locally
 
