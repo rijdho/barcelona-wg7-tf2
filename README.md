@@ -28,9 +28,7 @@ deliverables/
 site/
   index.html, style.css, app.js, i18n.js  Interactive explorer (EN/DE/ES, light/dark,
                                           shareable deep links)
-  theme.js                                Applies the stored theme before first
-                                          paint; its own file so the CSP needs no
-                                          'unsafe-inline'
+  theme.js                                Applies the stored theme before first paint
   about/                                  What it is, how it works, credits and
                                           references, as its own page
                                           (index.html + about.js)
@@ -119,57 +117,29 @@ npm test
 Node's built-in runner, no dependencies. Seven layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
-   and outcome groupings must match the brief exactly. Since v0.2 it also pins the pair of
-   changes that only work together: B2 may not, in any of the three languages, reclaim the
-   "policy implementation" clause that B9 was added to hold, or the two compete for the
-   same cases again with nothing on screen looking different.
-2. **i18n**: identical key sets, matching placeholders, full locale coverage of every
-   translatable field, and array lengths pinned where locale overlays align by index.
-3. **The draft taxonomy**: its own integrity, plus the contract that it may extend the
-   brief but not contradict it (same benefit ids, same axes, same English names).
-4. **Page invariants**: the failures that still render. Every stylesheet neutralizes the
-   `hidden` attribute; the collapsed rail keeps navigation and the credit line; relative
-   links and script sources resolve; local asset links carry a `?v=` so a redeploy reaches
-   cached browsers, and every one of them carries the *same* `?v=`, because a module graph
-   is cached per resolved URL: a stale `i18n.js` against a fresh `app.js` aborts the graph
-   with no visible error and the page comes up blank while looking deployed. Every page
-   also carries a Content-Security-Policy that starts from `default-src 'none'` and admits
-   no `unsafe-inline`, and no page carries an inline script or style, which is the thing
-   that would force the policy to loosen.
-5. **The shared option lists and the contribution terms**: both suggestion channels offer
-   the same closed vocabularies, every option carries an id that resolves back to the
-   taxonomy, no two stakeholders share an option, and the node labels still match what the
-   explorers prefill. The terms are stated verbatim wherever they appear, agreement is
-   required rather than optional, and all three locales name the licence.
-6. **The form-to-CSV contract**: the exporter finds its columns by matching the form's
-   labels verbatim, so every label it reads must exist in the form and every question the
-   form asks must reach the CSV. This is the layer with no visible symptom at all: a
-   renamed label exports an empty string for every issue from then on, and the file still
-   parses, still opens in Excel and still looks complete. The same layer pins which fields
-   are required, because a form that demands a change proposal turns away everyone who
-   came to share an example and still looks like it works. It pins the column order as
-   append-only, because the shared spreadsheet imports the file by position, so an
-   inserted column shifts everything after it in a document this repository cannot see.
-   It also pins the committed CSV to the exporter's columns: that file is only rebuilt
-   when an issue event fires, so a new column otherwise leaves the checkout a column short
-   until somebody happens to file one.
-7. **The spreadsheet channel**: the sheet needs no account, which also means nobody runs
-   a test when they edit it. What can be pinned is the plan it is built from: the same
-   closed lists as the issue form, node labelled as the explorer labels it, the question
-   about what is being contributed, an agreement column, and the terms verbatim with the
-   licence URL spelled out, since a cell cannot render a link. It also pins the line that
-   says a comment on any cell counts as a contribution, and that the terms still apply to
-   one, so the cheapest way in does not become the way around the licence.
+   and outcome groupings must match the brief. It also refuses to let B2 reclaim the
+   "policy implementation" clause B9 holds, in any of the three languages.
+2. **i18n**: identical key sets, matching placeholders, full locale coverage, and array
+   lengths pinned where overlays align by index.
+3. **The draft taxonomy**: its own integrity, and that it may extend the brief without
+   contradicting it.
+4. **Page invariants**: every stylesheet neutralizes `hidden`; the collapsed rail keeps
+   navigation and the credit line; relative links and script sources resolve; every local
+   asset link carries the same `?v=`; every page carries a strict Content-Security-Policy
+   and no inline script or style.
+5. **The option lists and the contribution terms**: both channels offer the same closed
+   vocabularies, every option resolves to a taxonomy id, and all three locales name the
+   licence.
+6. **The form-to-CSV contract**: every label the exporter reads exists in the form, every
+   question reaches the CSV, the required fields are pinned, and the column order is
+   append-only, since the shared spreadsheet imports by position.
+7. **The spreadsheet channel**: its plan carries the same closed lists as the form, an
+   agreement column, and the terms verbatim with the licence URL spelled out.
 
-Every check here was written by injecting the defect it is meant to catch, confirming the
-suite goes red, and reverting. A test that passes on first write has not been shown to test
-anything. The injections worth naming are the ones whose defect has no visible symptom: a
-form label renamed while the exporter kept the old one, which exports an empty column for
-every issue from then on while the CSV still parses, still opens in Excel and still looks
-complete; a column inserted in the middle of the export, which shifts every formula and
-filter in a shared spreadsheet this repository cannot see; and one asset left behind at the
-previous `?v=`, which serves a browser a stale module against a fresh one and brings the
-page up blank while looking deployed.
+Every check was written by injecting the defect it catches, confirming the suite goes red,
+and reverting. These are failures that leave nothing to see: a renamed form label exports
+an empty column while the CSV still opens in Excel, and an asset left at the previous `?v=`
+brings the page up blank while looking deployed.
 
 ## Run locally
 
@@ -208,21 +178,13 @@ suggestions merge without a hand-kept mapping table.
 `.github/workflows/pages.yml` deploys `site/` to GitHub Pages via Actions (verbatim
 upload, no Jekyll) on every push to main, with the test suite as a gate.
 
-GitHub Pages sends no security headers, so each page declares its own
-Content-Security-Policy in a `<meta http-equiv>`, starting from `default-src 'none'` and
-naming only what the page needs: `'self'` for scripts, styles, fonts and the taxonomy
-fetch, with `base-uri`, `form-action` and `object-src` at `'none'`. Nothing is loaded from
-another origin, so no directive names one; the outbound links in the text are navigation,
-not a fetch, and the `element.style` writes in `app.js` are CSSOM, which CSP does not
-govern. `frame-ancestors` is missing because it only works as a response header, which
-Pages cannot send, so clickjacking stays uncovered. The policy is verified by breaching
-it in a browser rather than by reading it: an off-origin `fetch`, a Google Fonts
-stylesheet and a CDN script are all refused while the page still works.
+GitHub Pages sends no security headers, so each page declares a Content-Security-Policy in
+a `<meta http-equiv>`: `default-src 'none'`, then `'self'` for scripts, styles, fonts and
+the taxonomy fetch. Nothing loads from another origin. `frame-ancestors` needs a response
+header Pages cannot send, so clickjacking is not covered.
 
-Editing anything under `site/` means bumping the `?v=` on every asset link in the same
-commit, all to the same number. The stylesheet, the modules and `data/taxonomy.json` share
-one version for a reason: bumping them separately is what lets a browser mix a fresh module
-with a cached one.
+Editing anything under `site/` means bumping the `?v=` on every asset link, all to the same
+number.
 
 ## Caveats
 
@@ -247,19 +209,18 @@ All content in this repository (the brief, the benefits map, and the explorer) i
 under [Creative Commons Attribution 4.0 International (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/); see [LICENSE](LICENSE).
 
-That covers what the repository publishes, not what a contributor submits, so the
-suggestion channels state their own terms rather than leaving them implied: contributions,
-including examples, are made under CC BY 4.0 with attribution, and the issue form asks for
-that agreement explicitly before a suggestion can be filed. The wording lives in
-`site/data/vocabularies.json` and is generated into every channel, so no channel can state
-different terms from the others; see `suggestions/contribution-terms.md`.
+That covers what the repository publishes, not what a contributor submits. The suggestion
+channels state their own terms: contributions, including examples, are made under CC BY 4.0
+with attribution, and the issue form asks for that agreement before a suggestion can be
+filed. The wording lives in `site/data/vocabularies.json` and is generated into every
+channel; see `suggestions/contribution-terms.md`.
 
 ## Citation
 
 If you use this brief, its taxonomy or the explorer, please cite it: see
 [`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub.
 
-There is no DOI yet, and that is a decision rather than an omission. A Zenodo record cannot
-be unpublished, and archiving a nine-benefit version six days before WG7-TF2 first discusses
-the ninth would make a proposal permanently citable as though it were settled. The archive
-waits for the meeting of 1 September 2026. Until then, cite the repository and the tag.
+There is no DOI yet, deliberately. A Zenodo record cannot be unpublished, and archiving a
+nine-benefit version before WG7-TF2 has discussed the ninth would make a proposal
+permanently citable. The Zenodo integration is connected and mints on a GitHub release; the
+release is cut once the task force has decided. Until then, cite the repository and the tag.
