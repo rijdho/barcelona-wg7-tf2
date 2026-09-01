@@ -85,7 +85,7 @@ _ref/                                     Source material and internal TF2 mater
                                           (private, not versioned)
 ```
 
-## Status (2026-08-26)
+## Status (2026-09-01)
 
 TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Zoom); the
 invitation asks members to review the TF2 working documents ahead of it. Coordinators:
@@ -104,9 +104,9 @@ closing section for what changed and why.
 | Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.2 |
 | Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 to keep its parity contract with the brief |
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
-| First case placed against the framework | University of Milan (WG7 case study collection), 2026-08-26; the source of the v0.2 changes |
+| Cases placed against the framework | Two, both 2026-08-26: University of Milan (WG7 case study collection), the source of the v0.2 changes, and a second chosen to test whether B9 over-reaches |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
-| Zenodo DOI / publication | Deliberately held until after the 1 September 2026 meeting |
+| Zenodo DOI / publication | Integration connected; it mints on a release, and none is cut until the task force has decided |
 
 ## Tests
 
@@ -190,8 +190,9 @@ number.
 
 The brief is a v0.2 working document awaiting community review by WG7-TF2 (starting with
 the 1 September 2026 meeting); wording and groupings may change as a result. B9 and the
-narrowing of B2 are the proposals of one coordinator on the evidence of one case, which is
-enough to show that a gap exists and not enough to fix its wording. It is a
+narrowing of B2 are the proposals of one coordinator on the evidence of two cases: one that
+showed the gap, and a second chosen to test whether B9 over-reaches, which it does not take.
+That is enough to show a gap exists and not enough to fix its wording. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
