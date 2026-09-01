@@ -1,7 +1,7 @@
 // The About page's own script. It was an inline module until the pages took a
 // Content-Security-Policy: an inline module needs either 'unsafe-inline' or a
 // hash pinned to its bytes, and a file needs neither.
-import { UI, LOCALES, detectLocale } from "../i18n.js?v=18";
+import { UI, LOCALES, detectLocale } from "../i18n.js?v=19";
 
 let lang = detectLocale();
 
@@ -19,7 +19,7 @@ function render(version) {
   });
 }
 
-fetch("../data/taxonomy.json?v=18").then((r) => r.json()).then((d) => {
+fetch("../data/taxonomy.json?v=19").then((r) => r.json()).then((d) => {
   render(d.version);
   document.querySelectorAll(".langs button").forEach((b) => {
     b.addEventListener("click", () => {

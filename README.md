@@ -1,5 +1,7 @@
 # The Value of Open Research Information (Barcelona Declaration WG7-TF2)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22231440.svg)](https://doi.org/10.5281/zenodo.22231440)
+
 **The nine transformative benefits of Open Research Information, as an interactive
 explorer.**
 
@@ -106,7 +108,7 @@ closing section for what changed and why.
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | Cases placed against the framework | Two, both 2026-08-26: University of Milan (WG7 case study collection), the source of the v0.2 changes, and a second chosen to test whether B9 over-reaches |
 | Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
-| Zenodo DOI / publication | Integration connected; it mints on a release, and none is cut until the task force has decided |
+| Zenodo DOI / publication | Archived at v0.2.0 (2026-09-01), concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440); archived as a working document, not as an agreed framework |
 
 ## Tests
 
@@ -219,9 +221,15 @@ channel; see `suggestions/contribution-terms.md`.
 ## Citation
 
 If you use this brief, its taxonomy or the explorer, please cite it: see
-[`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub.
+[`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub. Archived on
+Zenodo: concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440),
+which always resolves to the latest version. Cite that one; the version DOI
+([10.5281/zenodo.22231441](https://doi.org/10.5281/zenodo.22231441) for v0.2.0) is only for
+pinning a specific snapshot.
 
-There is no DOI yet, deliberately. A Zenodo record cannot be unpublished, and archiving a
-nine-benefit version before WG7-TF2 has discussed the ninth would make a proposal
-permanently citable. The Zenodo integration is connected and mints on a GitHub release; the
-release is cut once the task force has decided. Until then, cite the repository and the tag.
+**What the record archives is a working document, and it says so.** A Zenodo record cannot
+be unpublished, so the version that carries a DOI has to be honest about its own standing:
+v0.2 is numbered below 1.0 because WG7-TF2 has not reviewed it, and B9 together with the
+narrowing of B2 are proposals put to the task force, not decisions it has taken. That is
+written into the record's own abstract, not only here. Whatever the group agrees becomes a
+later version under the same concept DOI.

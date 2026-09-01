@@ -72,6 +72,34 @@ test("every page credits author, license and source", () => {
   }
 });
 
+// A reader writing a methods section should be able to cite the work from the
+// page, without going to the repository to find the number. The concept DOI is
+// the one to show: it resolves to the latest version, where a version DOI pins
+// a snapshot that will silently go stale at the next release.
+const CONCEPT_DOI = "10.5281/zenodo.22231440";
+const VERSION_DOI = "10.5281/zenodo.22231441";
+
+test("every page shows the concept DOI, and not a version DOI", () => {
+  for (const page of PAGES) {
+    const html = read(page);
+    const foot = html.slice(html.indexOf('class="rail-foot"'));
+    assert.match(foot, new RegExp(`doi\\.org/${CONCEPT_DOI.replace(".", "\\.")}`),
+      `${page} links the concept DOI`);
+    assert.ok(!foot.includes(VERSION_DOI),
+      `${page} shows the concept DOI, not the version DOI that goes stale`);
+  }
+});
+
+test("the citation file agrees with the page about which DOI is the concept", () => {
+  const cff = readFileSync(join(root, "CITATION.cff"), "utf8");
+  // A duplicated top-level doi: key silently breaks GitHub's citation widget.
+  const topLevel = cff.match(/^doi:\s*(\S+)\s*$/gm) ?? [];
+  assert.equal(topLevel.length, 1, "CITATION.cff carries exactly one top-level doi:");
+  assert.match(topLevel[0], new RegExp(CONCEPT_DOI.replace(".", "\\.")),
+    "the top-level doi: is the concept DOI");
+  assert.ok(cff.includes(VERSION_DOI), "the identifiers list carries the current version DOI");
+});
+
 test("relative links resolve to files that exist", () => {
   for (const page of PAGES) {
     const dir = dirname(join(site, page));

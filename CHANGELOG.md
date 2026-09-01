@@ -17,13 +17,24 @@ the brief it publishes is a working document: B9 and the narrowing of B2 are pro
 to the task force, not decisions it has taken.
 
 The tag was cut on 2026-08-26 and moved to 2026-09-01 to take the security policy and the
-brief's orphaned image with it. Nothing referenced the tag: no release, no DOI, no forks.
+brief's orphaned image with it. At the time of the move nothing referenced the tag: no
+release, no DOI, no forks. It has not moved since, and it will not: the release below is
+cut on it.
 
-Tagged but deliberately not released. The Zenodo integration is connected and armed, and it
-mints on a GitHub Release rather than on a tag, so nothing is archived yet. A Zenodo record
-is permanent, and a proposal the task force has not yet seen should not become citable as
-though it were settled. The release is cut after the meeting of 1 September 2026, on
-whatever version the group has actually agreed.
+**Released and archived on 2026-09-01.** Concept DOI
+[10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440), which always resolves
+to the latest version; version DOI for v0.2.0 is
+[10.5281/zenodo.22231441](https://doi.org/10.5281/zenodo.22231441). Zenodo mints on a
+GitHub Release rather than on a tag, which is why the tag alone archived nothing for the
+six days it existed.
+
+A Zenodo record is permanent, so what it archives has to be honest about its own standing.
+It archives a working document and says so in its own abstract: the version stays below
+1.0.0 because WG7-TF2 has not reviewed it, and B9 together with the narrowing of B2 are
+recorded as proposals put to the task force rather than as decisions it has taken. The
+alternative, holding the archive until the group had agreed, would have left the work
+uncitable while it was being discussed. Whatever the task force agrees becomes a later
+version under the same concept DOI.
 
 ### Added
 
