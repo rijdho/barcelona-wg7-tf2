@@ -10,6 +10,21 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-01
+
+First tagged version. It carries everything built since the site went up on 2026-08-17, and
+the brief it publishes is a working document: B9 and the narrowing of B2 are proposals put
+to the task force, not decisions it has taken.
+
+The tag was cut on 2026-08-26 and moved to 2026-09-01 to take the security policy and the
+brief's orphaned image with it. Nothing referenced the tag: no release, no DOI, no forks.
+
+Tagged but deliberately not released. The Zenodo integration is connected and armed, and it
+mints on a GitHub Release rather than on a tag, so nothing is archived yet. A Zenodo record
+is permanent, and a proposal the task force has not yet seen should not become citable as
+though it were settled. The release is cut after the meeting of 1 September 2026, on
+whatever version the group has actually agreed.
+
 ### Added
 
 - **Every page ships a Content-Security-Policy.** GitHub Pages sends no security headers
@@ -32,6 +47,59 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
   source; and no page carries an inline script, an inline `<style>` or a `style` attribute,
   since any of those would force the policy to loosen. Proven by injection, eight defects.
 
+- **A ninth benefit: B9, Strategic Steering & Institutional Autonomy** (Axis II
+  Collaboration & Innovation, outcome O2 Sustainable Innovation). The brief did not contain
+  the word "strategy" once, in any of its three languages, and its only economic term was
+  "institutions justify infrastructure investments" inside B7. The eight benefits described
+  what open information makes visible *about research*; nothing held information about the
+  *system that publishes research* (its costs, its suppliers, its venues), and nothing held
+  an institution acting on it. B9 covers cost and terms of publishing, the conduct and
+  performance of venues, dependency on proprietary sources, and the reallocation of
+  resources towards community-led and Diamond infrastructure. The brief goes to v0.2, the
+  draft taxonomy gains B9 to keep its parity contract, and roles R4 (Policy Maker) and R5
+  (Support & Stewardship) carry it, which reaches seven of the eleven stakeholders.
+
+  It came from placing a real case rather than from rereading definitions. The University
+  of Milan response in the WG7 case study collection, nine years of APC monitoring and the
+  funding decisions it drove, left five things with no benefit to land on: cost
+  transparency, divestment from proprietary sources, publisher and journal conduct, support
+  for venue choice, and budget moved to Diamond. One gap seen from five sides.
+
+- The spreadsheet now says that a comment is also a way in. Eleven columns of dropdowns
+  read as "a row or nothing", and the one thing that channel has which the issue form does
+  not is a comment thread on every cell. A member who will not fill eleven fields will
+  still leave a comment, and until now nothing invited it. The sentence is generated from
+  `site/data/vocabularies.json` like the terms are, so the channel cannot end up saying it
+  in words nobody agreed, and it restates that the contribution terms cover a comment too:
+  the cheaper way in must not become the way around the licence. Pinned by a test.
+
+- `scripts/generate-options.mjs` and `npm run options`: one generator for the controlled
+  lists both suggestion channels share. It rewrites the issue form's dropdowns and writes
+  `suggestions/options.csv`, the same lists as columns for the shared spreadsheet's
+  data-validation ranges. Neither channel constrains the other; both are downstream of the
+  taxonomy, so the two sets of suggestions merge without a mapping table.
+- `site/data/vocabularies.json`: the controlled lists that describe the suggestion process
+  rather than the framework, plus the contribution terms, so neither has to live inside a
+  form template where a second channel cannot reach them.
+- `suggestions/contribution-terms.md`: generated, the terms in the words the issue form
+  uses, for the shared spreadsheet and any later channel.
+- `tests/options.test.mjs`: both channels offer the same closed vocabularies, every option
+  resolves to a real id, each stakeholder gets exactly one option, and the node labels
+  still match what `site/app.js` and `site/draft/app.js` prefill. The terms are pinned the
+  same way: stated verbatim wherever they appear, agreement required rather than optional,
+  and the licence named in every locale.
+- `tests/draft.test.mjs`: integrity and locale parity of the draft taxonomy, plus the
+  contract that the draft may extend the brief but not contradict it.
+- `tests/site.test.mjs`: page invariants for hidden state, small-screen navigation and
+  credit line, relative link targets, and asset versioning.
+- `tests/sheet.test.mjs`: the spreadsheet channel's plan carries the same closed lists as
+  the issue form, the same terms, node as a closed list rather than free text, and a
+  perspective list whose every entry resolves to a stakeholder.
+- `tests/export.test.mjs`: the form-to-CSV contract. Every label the exporter reads exists
+  in the form, every question the form asks reaches the CSV or is recorded as a deliberate
+  omission, the header has a column for every value a row emits, and consent travels with
+  the data.
+
 ### Changed
 
 - The theme bootstrap moved from an inline `<script>` in all three page heads to
@@ -40,6 +108,34 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
   or pin a hash to its bytes, which then has to be recomputed on every edit. A plain,
   non-module script in the head is still render-blocking, so the theme still beats first
   paint and a dark-theme visitor still sees no white flash.
+
+- **B2 gives up "open science policy implementation."** That clause absorbed almost any
+  institutional case, because almost every institutional case is a policy being
+  implemented: in the trial coding of the Milan case, B2 took the primary slot by default
+  rather than by fit. A benefit that codes most cases carries no information, and a
+  B2-heavy frequency table would have been read as a finding about open research
+  information when it was an artefact of one clause. B2 keeps research conduct monitoring,
+  ethics approvals, data protection and institutional accountability for how research is
+  conducted. The change only makes sense alongside B9, and a test now refuses to let the
+  clause come back while B9 exists, in all three languages.
+
+- The brief's embedded flow diagram, an image carrying the eight-benefit v0.1 map, is
+  replaced by a pointer to `deliverables/Benefits_map.md`, which is generated from the
+  taxonomy. A picture is the one thing that survives every text check unchanged.
+
+- The suggestion form was framed around proposing a change while its example field already
+  asked about the element as it stands, so it invited two things and permitted one: anyone
+  who came only to share an example had to invent a change proposal first. It is now
+  "Suggest a change or share an example", it asks what you are contributing before
+  anything else, and the change proposal and its type are optional. The explorer's button
+  and contribute text say so in all three languages. Raised by Bianca in review, 2026-08-21.
+- The brief is labeled v0.1 everywhere, matching the Google Doc that circulates to WG7.
+  The repository previously carried it as v1.0 while the document itself said 0.1, so the
+  explorer cited a version its own source did not use.
+- About: the credits section replaces its "still to be filled" placeholder, and the text
+  now says the fuller taxonomy is published as a labeled draft rather than pending.
+- The draft banner reads "Draft v1.0 · working example" without the author credit.
+- The theme toggle and the source link are translated instead of English-only.
 
 ### Fixed
 
@@ -68,19 +164,6 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 - CHANGELOG: the 0.2.0 heading used `## [0.2.0]: date` where Keep a Changelog uses
   `## [0.2.0] - date`.
-
-## [0.2.0] - 2026-08-26
-
-First tagged version. It carries everything built since the site went up on 2026-08-17,
-and the brief it publishes is a working document: B9 and the narrowing of B2 are proposals
-put to the task force, not decisions it has taken.
-
-Tagged but deliberately not released, so nothing is archived and no DOI is minted. A Zenodo
-record is permanent, and a proposal that the task force has not yet seen should not become
-citable as though it were settled. Zenodo gets switched on after the meeting of 1 September
-2026, and the release is cut then, on whatever version the group has actually agreed.
-
-### Fixed
 
 - The acknowledgement was collected but never left the issue body: `suggestions.csv`, the
   dataset the task force actually works from, had no column for it, so reusing an example
@@ -147,91 +230,6 @@ citable as though it were settled. Zenodo gets switched on after the meeting of 
   markdown brief.
 - The draft stylesheet changed without its `?v=` being bumped, so cached browsers kept
   serving the previous version.
-
-### Changed
-
-- **B2 gives up "open science policy implementation."** That clause absorbed almost any
-  institutional case, because almost every institutional case is a policy being
-  implemented: in the trial coding of the Milan case, B2 took the primary slot by default
-  rather than by fit. A benefit that codes most cases carries no information, and a
-  B2-heavy frequency table would have been read as a finding about open research
-  information when it was an artefact of one clause. B2 keeps research conduct monitoring,
-  ethics approvals, data protection and institutional accountability for how research is
-  conducted. The change only makes sense alongside B9, and a test now refuses to let the
-  clause come back while B9 exists, in all three languages.
-
-- The brief's embedded flow diagram, an image carrying the eight-benefit v0.1 map, is
-  replaced by a pointer to `deliverables/Benefits_map.md`, which is generated from the
-  taxonomy. A picture is the one thing that survives every text check unchanged.
-
-- The suggestion form was framed around proposing a change while its example field already
-  asked about the element as it stands, so it invited two things and permitted one: anyone
-  who came only to share an example had to invent a change proposal first. It is now
-  "Suggest a change or share an example", it asks what you are contributing before
-  anything else, and the change proposal and its type are optional. The explorer's button
-  and contribute text say so in all three languages. Raised by Bianca in review, 2026-08-21.
-- The brief is labeled v0.1 everywhere, matching the Google Doc that circulates to WG7.
-  The repository previously carried it as v1.0 while the document itself said 0.1, so the
-  explorer cited a version its own source did not use.
-- About: the credits section replaces its "still to be filled" placeholder, and the text
-  now says the fuller taxonomy is published as a labeled draft rather than pending.
-- The draft banner reads "Draft v1.0 · working example" without the author credit.
-- The theme toggle and the source link are translated instead of English-only.
-
-### Added
-
-- **A ninth benefit: B9, Strategic Steering & Institutional Autonomy** (Axis II
-  Collaboration & Innovation, outcome O2 Sustainable Innovation). The brief did not contain
-  the word "strategy" once, in any of its three languages, and its only economic term was
-  "institutions justify infrastructure investments" inside B7. The eight benefits described
-  what open information makes visible *about research*; nothing held information about the
-  *system that publishes research* (its costs, its suppliers, its venues), and nothing held
-  an institution acting on it. B9 covers cost and terms of publishing, the conduct and
-  performance of venues, dependency on proprietary sources, and the reallocation of
-  resources towards community-led and Diamond infrastructure. The brief goes to v0.2, the
-  draft taxonomy gains B9 to keep its parity contract, and roles R4 (Policy Maker) and R5
-  (Support & Stewardship) carry it, which reaches seven of the eleven stakeholders.
-
-  It came from placing a real case rather than from rereading definitions. The University
-  of Milan response in the WG7 case study collection, nine years of APC monitoring and the
-  funding decisions it drove, left five things with no benefit to land on: cost
-  transparency, divestment from proprietary sources, publisher and journal conduct, support
-  for venue choice, and budget moved to Diamond. One gap seen from five sides.
-
-- The spreadsheet now says that a comment is also a way in. Eleven columns of dropdowns
-  read as "a row or nothing", and the one thing that channel has which the issue form does
-  not is a comment thread on every cell. A member who will not fill eleven fields will
-  still leave a comment, and until now nothing invited it. The sentence is generated from
-  `site/data/vocabularies.json` like the terms are, so the channel cannot end up saying it
-  in words nobody agreed, and it restates that the contribution terms cover a comment too:
-  the cheaper way in must not become the way around the licence. Pinned by a test.
-
-- `scripts/generate-options.mjs` and `npm run options`: one generator for the controlled
-  lists both suggestion channels share. It rewrites the issue form's dropdowns and writes
-  `suggestions/options.csv`, the same lists as columns for the shared spreadsheet's
-  data-validation ranges. Neither channel constrains the other; both are downstream of the
-  taxonomy, so the two sets of suggestions merge without a mapping table.
-- `site/data/vocabularies.json`: the controlled lists that describe the suggestion process
-  rather than the framework, plus the contribution terms, so neither has to live inside a
-  form template where a second channel cannot reach them.
-- `suggestions/contribution-terms.md`: generated, the terms in the words the issue form
-  uses, for the shared spreadsheet and any later channel.
-- `tests/options.test.mjs`: both channels offer the same closed vocabularies, every option
-  resolves to a real id, each stakeholder gets exactly one option, and the node labels
-  still match what `site/app.js` and `site/draft/app.js` prefill. The terms are pinned the
-  same way: stated verbatim wherever they appear, agreement required rather than optional,
-  and the licence named in every locale.
-- `tests/draft.test.mjs`: integrity and locale parity of the draft taxonomy, plus the
-  contract that the draft may extend the brief but not contradict it.
-- `tests/site.test.mjs`: page invariants for hidden state, small-screen navigation and
-  credit line, relative link targets, and asset versioning.
-- `tests/sheet.test.mjs`: the spreadsheet channel's plan carries the same closed lists as
-  the issue form, the same terms, node as a closed list rather than free text, and a
-  perspective list whose every entry resolves to a stakeholder.
-- `tests/export.test.mjs`: the form-to-CSV contract. Every label the exporter reads exists
-  in the form, every question the form asks reaches the CSV or is recorded as a deliberate
-  omission, the header has a column for every value a row emits, and consent travels with
-  the data.
 
 ### Removed
 
