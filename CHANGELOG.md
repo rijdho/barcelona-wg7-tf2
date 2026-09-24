@@ -12,6 +12,7 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ### Changed
 
+- **"Part of Metaudits" moves up**, under rijdho.github.io in the brand block (house-style 1.0.4), out of the rail credits. The rail shows the explorer's name, Value of Open Research Information, where it showed the repository slug; the icon and the name link to the start page and the site line to rijdho.github.io. Assets move to `?v=21`.
 - **The rail signs off like every other tool in the family**, on all three pages: author, licence,
   source, *Part of Metadata Audits* (linking the front page, rijdho.github.io/metaudits-home), the
   Barcelona Declaration WG7-TF2 line and the concept DOI, one per line, in the interface language.
