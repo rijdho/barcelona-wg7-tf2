@@ -31,6 +31,10 @@ export const UI = {
     suggestSheet: "Suggest in the shared spreadsheet (Google Sheets)",
     shared: "Link copied",
     aboutTitle: "About",
+    railBy: "By",
+    railLicense: "Content under CC BY 4.0",
+    railSource: "Source on GitHub",
+    railFamily: "Part of",
     aboutBody:
       "This explorer renders \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(brief, v{version}), a working document of Task Force 2 of Working Group 7 of the Barcelona " +
@@ -95,6 +99,10 @@ export const UI = {
     suggestSheet: "Im gemeinsamen Spreadsheet vorschlagen (Google Sheets)",
     shared: "Link kopiert",
     aboutTitle: "Über",
+    railBy: "Von",
+    railLicense: "Inhalte unter CC BY 4.0",
+    railSource: "Quellcode auf GitHub",
+    railFamily: "Teil von",
     aboutBody:
       "Dieser Explorer zeigt \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(Brief, v{version}), ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona " +
@@ -163,6 +171,10 @@ export const UI = {
     suggestSheet: "Sugerir en la hoja compartida (Google Sheets)",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
+    railBy: "Por",
+    railLicense: "Contenido bajo CC BY 4.0",
+    railSource: "Código en GitHub",
+    railFamily: "Parte de",
     aboutBody:
       "Este explorador muestra \"The Value of Open Research Information: Nine Transformative Benefits\" " +
       "(brief, v{version}), un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona " +

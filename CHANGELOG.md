@@ -10,6 +10,13 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ## [Unreleased]
 
+### Changed
+
+- **The rail signs off like every other tool in the family**, on all three pages: author, licence,
+  source, *Part of Metadata Audits* (linking the front page, rijdho.github.io/metaudits-home), the
+  Barcelona Declaration WG7-TF2 line and the concept DOI, one per line, in the interface language.
+  Assets move to `?v=20`.
+
 ## [0.2.0] - 2026-09-01
 
 First tagged version. It carries everything built since the site went up on 2026-08-17, and

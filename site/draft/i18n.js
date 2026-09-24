@@ -36,6 +36,10 @@ export const UI = {
     suggest: "Suggest a change",
     shared: "Link copied",
     aboutTitle: "About",
+    railBy: "By",
+    railLicense: "Content under CC BY 4.0",
+    railSource: "Source on GitHub",
+    railFamily: "Part of",
   },
   de: {
     title: "Stakeholder & Nutzen",
@@ -68,6 +72,10 @@ export const UI = {
     suggest: "Änderung vorschlagen",
     shared: "Link kopiert",
     aboutTitle: "Über",
+    railBy: "Von",
+    railLicense: "Inhalte unter CC BY 4.0",
+    railSource: "Quellcode auf GitHub",
+    railFamily: "Teil von",
   },
   es: {
     title: "Stakeholders y beneficios",
@@ -100,6 +108,10 @@ export const UI = {
     suggest: "Sugerir un cambio",
     shared: "Enlace copiado",
     aboutTitle: "Acerca de",
+    railBy: "Por",
+    railLicense: "Contenido bajo CC BY 4.0",
+    railSource: "Código en GitHub",
+    railFamily: "Parte de",
   },
 };
 
