@@ -10,6 +10,11 @@ v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the 
 
 ## [Unreleased]
 
+### Changed
+
+- The abstract in `CITATION.cff` names the address where the tool runs, so the Zenodo record
+  leads to it and not only to the repository.
+
 ## [0.3.0]: 2026-09-24
 
 ### Changed
