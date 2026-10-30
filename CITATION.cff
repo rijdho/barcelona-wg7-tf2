@@ -12,6 +12,7 @@ abstract: >-
   WG7-TF2 at its meeting of 1 September 2026, not decisions the task force has
   taken. The explorer runs entirely in the browser and is available in English,
   German and Spanish.
+  It runs at https://rijdho.github.io/barcelona-wg7-tf2/.
 type: software
 authors:
   - family-names: "Hartley Belmar"
