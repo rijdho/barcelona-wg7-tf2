@@ -1,5 +1,5 @@
-// Integrity of site/data/taxonomy.json against the brief ("Nine
-// Transformative Benefits", v0.2): counts, referential integrity, and
+// Integrity of site/data/taxonomy.json against the brief ("Ten
+// Transformative Benefits", v0.3): counts, referential integrity, and
 // cross-consistency of the axis and outcome groupings. Aimed at silent
 // failures: a mistyped id still renders, it just drops a connection.
 
@@ -17,14 +17,14 @@ const axisIds = new Set(data.axes.map((a) => a.id));
 const outcomeIds = new Set(data.outcomes.map((o) => o.id));
 
 test("framework counts match the brief", () => {
-  assert.equal(data.benefits.length, 9, "nine benefit dimensions");
+  assert.equal(data.benefits.length, 10, "ten benefit dimensions");
   assert.equal(data.axes.length, 3, "three axes");
   assert.equal(data.outcomes.length, 3, "three outcomes");
   assert.equal(data.vision.id, "V1", "one vision node");
   assert.deepEqual(
     [...benefitIds].sort(),
-    ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"],
-    "benefit ids are B1-B9"
+    ["B1", "B10", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9"],
+    "benefit ids are B1-B10"
   );
 });
 
@@ -52,13 +52,13 @@ test("axis and outcome groupings match the brief exactly", () => {
   const axisMap = Object.fromEntries(data.axes.map((a) => [a.id, [...a.benefits].sort()]));
   assert.deepEqual(axisMap, {
     A1: ["B1", "B2", "B8"],
-    A2: ["B3", "B4", "B7", "B9"],
+    A2: ["B10", "B3", "B4", "B7", "B9"],
     A3: ["B5", "B6"],
   });
   const outcomeMap = Object.fromEntries(data.outcomes.map((o) => [o.id, [...o.benefits].sort()]));
   assert.deepEqual(outcomeMap, {
     O1: ["B1", "B2", "B8"],
-    O2: ["B3", "B4", "B7", "B9"],
+    O2: ["B10", "B3", "B4", "B7", "B9"],
     O3: ["B5", "B6"],
   });
 });
@@ -83,4 +83,37 @@ test("B2 does not reclaim what B9 was added to hold", () => {
   }
   assert.equal(b9.axis, "A2", "B9 sits in Collaboration & Innovation");
   assert.equal(b9.outcome, "O2", "and flows into Sustainable Innovation");
+});
+
+// v0.3 took "technical standards implementation" and "service interoperability"
+// out of B7 because they overlapped with B4: in one coder's reading of the six
+// case responses, the three from infrastructures fit both. B4 is the information, B7 the
+// service that holds it. Put either phrase back and the pair collides again.
+test("B7 does not reclaim what B4 holds", () => {
+  const b7 = data.benefits.find((b) => b.id === "B7");
+  for (const loc of ["en", "de", "es"]) {
+    assert.doesNotMatch(
+      b7.description[loc],
+      /interoperab|technical standards|technischer Standards|estándares técnicos/i,
+      `B7 (${loc}) leaves standards and interoperability to B4`
+    );
+  }
+});
+
+// B9 names two parts since v0.3: (a) the publishing system made observable,
+// (b) independence from proprietary sources. A case is coded to one or both,
+// so that a later batch of cases can show whether B9 should be split. A locale
+// that loses a marker hides one part from the readers of that language.
+test("B9 names both of its parts in every locale", () => {
+  const b9 = data.benefits.find((b) => b.id === "B9");
+  for (const loc of ["en", "de", "es"]) {
+    assert.match(b9.description[loc], /\(a\) .+\(b\) /s, `B9 (${loc}) carries (a) and (b)`);
+  }
+});
+
+test("B10 sits beside B9", () => {
+  const b10 = data.benefits.find((b) => b.id === "B10");
+  assert.ok(b10, "B10 exists");
+  assert.equal(b10.axis, "A2", "B10 sits in Collaboration & Innovation");
+  assert.equal(b10.outcome, "O2", "and flows into Sustainable Innovation");
 });

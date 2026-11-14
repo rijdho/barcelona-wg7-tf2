@@ -4,13 +4,30 @@ All notable changes to this repository are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Versions track the brief they publish: the repository is at 0.2.0 because the brief is at
-v0.2. It stays below 1.0.0 until WG7-TF2 has reviewed it, which starts with the meeting of
-1 September 2026.
+Versions tracked the brief up to 0.2.0. Since 0.3.0 the repository has its own number, and
+the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed the brief.
 
 ## [Unreleased]
 
+### Added
+
+- **B10 Reuse & Collective Action**, a tenth benefit in Axis II (brief v0.3). It holds what
+  four of the six responses in the WG7 case study collection describe and no benefit named:
+  one organisation's open information built on by another, practices spreading between
+  peers, infrastructure run by an alliance. The draft taxonomy reaches it from the Enabler
+  and Coordinator roles and from four stakeholder categories.
+- Three tests: B7 may not take back the phrases it gave up, B9 carries both of its parts in
+  every language, and B10 sits in Axis II and flows into Sustainable Innovation.
+
 ### Changed
+
+- **The brief is at v0.3.** B9 names its two parts, (a) the publishing system made
+  observable and (b) independence from proprietary data sources. B7 loses "technical
+  standards implementation" and "service interoperability", which overlapped with B4. The brief's
+  closing section says what each change rests on and what six responses cannot show.
+- The explorer, the benefits map, the option lists, the issue form and the spreadsheet plan
+  are regenerated for ten benefits, in English, German and Spanish. Assets move to `?v=22`.
+- The README's status and caveats describe v0.3.
 
 - The abstract in `CITATION.cff` names the address where the tool runs, so the Zenodo record
   leads to it and not only to the repository.

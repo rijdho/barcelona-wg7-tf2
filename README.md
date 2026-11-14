@@ -2,12 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22231440.svg)](https://doi.org/10.5281/zenodo.22231440)
 
-**The nine transformative benefits of Open Research Information, as an interactive
+**The ten transformative benefits of Open Research Information, as an interactive
 explorer.**
 
 Contribution to Task Force 2 of Working Group 7 of the Barcelona Declaration on Open
 Research Information. The brief maps what research systems gain when information about
-research is open: nine benefit dimensions in three axes (Quality & Trust, Collaboration &
+research is open: ten benefit dimensions in three axes (Quality & Trust, Collaboration &
 Innovation, Impact & Relevance), flowing into trustworthy research, sustainable innovation,
 and societal impact.
 
@@ -23,8 +23,8 @@ exported automatically to `suggestions/suggestions.csv`.
 
 ```
 deliverables/
-  ORI_Benefits_Overview_brief.md          The brief: nine benefits in three axes,
-                                          with who benefits from each (v0.2, Aug 2026)
+  ORI_Benefits_Overview_brief.md          The brief: ten benefits in three axes,
+                                          with who benefits from each (v0.3, Nov 2026)
   Benefits_map.md                         Flow map (Mermaid), generated from
                                           site/data/taxonomy.json
 site/
@@ -87,27 +87,31 @@ _ref/                                     Source material and internal TF2 mater
                                           (private, not versioned)
 ```
 
-## Status (2026-09-01)
+## Status (2026-11-14)
 
-TF2 is being restarted. A WG7 meeting is set for 1 September 2026 (15:00 CEST, Zoom); the
-invitation asks members to review the TF2 working documents ahead of it. Coordinators:
-Christian, Ricardo, Bianca, Barbara.
+WG7-TF2 has not yet reviewed the brief. Coordinators: Christian, Ricardo, Bianca, Barbara.
+
+The brief moved to **v0.3** on 2026-11-14, after the six responses in the WG7 case study
+collection were placed against it: a tenth benefit, **B10 Reuse & Collective Action**, joins
+Axis II; B9 names its two parts, the publishing system made observable and independence
+from proprietary sources; and B7 gives up two phrases that overlapped with B4. These are proposals
+put to the task force, not decisions it has taken. See the brief's closing sections for
+what changed and why.
 
 The brief moved to **v0.2** on 2026-08-26: a ninth benefit, **B9 Strategic Steering &
 Institutional Autonomy**, joins Axis II, and B2 gives up the clause that made it absorb
 every institutional case. Both changes came out of placing a real TF1 case study against
 the framework rather than out of rereading the definitions, and both are proposals put to
-the task force at the September meeting, not decisions it has taken. See the brief's
-closing section for what changed and why.
+the task force, not decisions it has taken.
 
 | Milestone | Status |
 | --- | --- |
-| Benefits overview brief | v0.2 (2026-08-26); v0.1 circulated Feb 2026 |
-| Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.2 |
-| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 to keep its parity contract with the brief |
+| Benefits overview brief | v0.3 (2026-11-14); v0.2 2026-08-26; v0.1 circulated Feb 2026 |
+| Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.3 |
+| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 and B10 to keep its parity contract with the brief |
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
-| Cases placed against the framework | Two, both 2026-08-26: University of Milan (WG7 case study collection), the source of the v0.2 changes, and a second chosen to test whether B9 over-reaches |
-| Community review by WG7-TF2 | Starts with the 1 September 2026 meeting |
+| Cases placed against the framework | Six, the responses in the WG7 case study collection on 2026-11-14, the source of the v0.3 changes. Two of them were placed on 2026-08-26: University of Milan, the source of the v0.2 changes, and a second chosen to test whether B9 over-reaches |
+| Community review by WG7-TF2 | Not yet held |
 | Zenodo DOI / publication | Archived at v0.2.0 (2026-09-01), concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440); archived as a working document, not as an agreed framework |
 
 ## Tests
@@ -120,7 +124,8 @@ Node's built-in runner, no dependencies. Seven layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
    and outcome groupings must match the brief. It also refuses to let B2 reclaim the
-   "policy implementation" clause B9 holds, in any of the three languages.
+   "policy implementation" clause B9 holds, or B7 the standards and interoperability that
+   B4 holds, in any of the three languages, and it checks that B9 names both of its parts.
 2. **i18n**: identical key sets, matching placeholders, full locale coverage, and array
    lengths pinned where overlays align by index.
 3. **The draft taxonomy**: its own integrity, and that it may extend the brief without
@@ -190,15 +195,15 @@ number.
 
 ## Caveats
 
-The brief is a v0.2 working document awaiting community review by WG7-TF2 (starting with
-the 1 September 2026 meeting); wording and groupings may change as a result. B9 and the
-narrowing of B2 are the proposals of one coordinator on the evidence of two cases: one that
-showed the gap, and a second chosen to test whether B9 over-reaches, which it does not take.
-That is enough to show a gap exists and not enough to fix its wording. It is a
+The brief is a v0.3 working document that WG7-TF2 has not reviewed; wording and groupings
+may change as a result. B9, B10 and the narrowing of B2 and B7 are the proposals of one
+coordinator on the evidence of six self-selected case responses (B9 and B2 on the first
+two), read once and without a second coder. That is enough to show where the framework has no place for what a case
+reports, and not enough to fix its wording or to say how often a benefit occurs. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
-translations of the English v0.2, which remains the authoritative wording.
+translations of the English v0.3, which remains the authoritative wording.
 
 ## Note
 

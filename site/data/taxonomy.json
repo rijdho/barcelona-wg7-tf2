@@ -1,6 +1,6 @@
 {
-  "version": "0.2",
-  "date": "2026-08",
+  "version": "0.3",
+  "date": "2026-11",
   "source": "deliverables/ORI_Benefits_Overview_brief.md",
   "vision": {
     "id": "V1",
@@ -19,7 +19,7 @@
     {
       "id": "A2",
       "name": { "en": "Collaboration & Innovation", "de": "Zusammenarbeit & Innovation", "es": "Colaboración e innovación" },
-      "benefits": ["B3", "B4", "B7", "B9"]
+      "benefits": ["B3", "B4", "B7", "B9", "B10"]
     },
     {
       "id": "A3",
@@ -36,7 +36,7 @@
     {
       "id": "O2",
       "name": { "en": "Sustainable Innovation", "de": "Nachhaltige Innovation", "es": "Innovación sostenible" },
-      "benefits": ["B3", "B4", "B7", "B9"]
+      "benefits": ["B3", "B4", "B7", "B9", "B10"]
     },
     {
       "id": "O3",
@@ -155,9 +155,9 @@
         "es": "Infraestructura y habilitación técnica"
       },
       "description": {
-        "en": "Technical foundations enabling research are invisible in traditional output metrics. ORI supports sustainable infrastructure development, technical standards implementation, service interoperability, platform reliability, and innovation in research tools.",
-        "de": "Die technischen Grundlagen der Forschung sind in traditionellen Output-Metriken unsichtbar. ORI unterstützt nachhaltige Infrastrukturentwicklung, Umsetzung technischer Standards, Interoperabilität von Diensten, Plattformzuverlässigkeit und Innovation bei Forschungswerkzeugen.",
-        "es": "Los cimientos técnicos que habilitan la investigación son invisibles en las métricas tradicionales. ORI apoya el desarrollo sostenible de infraestructura, la implementación de estándares técnicos, la interoperabilidad de servicios, la confiabilidad de plataformas y la innovación en herramientas."
+        "en": "Technical foundations enabling research are invisible in traditional output metrics. ORI supports the services and the organisations that run them: sustainable infrastructure development, platform reliability, and innovation in research tools.",
+        "de": "Die technischen Grundlagen der Forschung sind in traditionellen Output-Metriken unsichtbar. ORI unterstützt die Dienste und die Organisationen, die sie betreiben: nachhaltige Infrastrukturentwicklung, Plattformzuverlässigkeit und Innovation bei Forschungswerkzeugen.",
+        "es": "Los cimientos técnicos que habilitan la investigación son invisibles en las métricas tradicionales. ORI apoya los servicios y las organizaciones que los operan: el desarrollo sostenible de infraestructura, la confiabilidad de plataformas y la innovación en herramientas."
       },
       "whoBenefits": {
         "en": "Technology providers develop sustainable platforms; research infrastructure organizations gain recognition for essential work; institutions justify infrastructure investments.",
@@ -175,14 +175,34 @@
         "es": "Dirección estratégica y autonomía institucional"
       },
       "description": {
-        "en": "Traditional metrics say nothing about what research costs or about who supplies the information used to decide. ORI makes the scholarly communication system itself observable: the costs and terms of publishing, the conduct and performance of venues, and dependency on proprietary data sources. That lets institutions steer rather than merely comply, reallocating resources towards community-led and Diamond infrastructure, reducing supplier lock-in, and supporting informed publishing choices.",
-        "de": "Traditionelle Metriken sagen nichts darüber, was Forschung kostet oder wer die Informationen liefert, auf deren Grundlage entschieden wird. ORI macht das Publikationssystem selbst beobachtbar: Kosten und Bedingungen des Publizierens, Verhalten und Leistung der Publikationsorte sowie die Abhängigkeit von proprietären Datenquellen. Das erlaubt Institutionen zu steuern statt nur zu erfüllen: Mittel in gemeinschaftlich getragene und Diamond-Infrastruktur umzuwidmen, Anbieterabhängigkeit zu verringern und informierte Publikationsentscheidungen zu unterstützen.",
-        "es": "Las métricas tradicionales no dicen nada sobre lo que cuesta la investigación ni sobre quién suministra la información con la que se decide. La ORI hace observable el propio sistema de comunicación académica: los costos y condiciones de publicación, la conducta y el desempeño de los vehículos de publicación, y la dependencia de fuentes de datos propietarias. Eso permite a las instituciones dirigir en vez de solo cumplir: reasignar recursos hacia infraestructura comunitaria y Diamond, reducir la dependencia de proveedores y apoyar decisiones de publicación informadas."
+        "en": "Traditional metrics say nothing about what research costs or about who supplies the information used to decide. ORI lets institutions steer rather than merely comply, in two ways. (a) It makes the scholarly communication system itself observable: the costs and terms of publishing and the conduct and performance of venues. Institutions can then reallocate resources towards community-led and Diamond infrastructure, and researchers can choose where to publish on visible terms. (b) It reduces dependency on proprietary data sources and supplier lock-in: institutions build their own analyses, indicators and tools, fitted to their own strategy, instead of taking a supplier's.",
+        "de": "Traditionelle Metriken sagen nichts darüber, was Forschung kostet oder wer die Informationen liefert, auf deren Grundlage entschieden wird. ORI erlaubt Institutionen zu steuern statt nur zu erfüllen, auf zwei Wegen. (a) Sie macht das Publikationssystem selbst beobachtbar: Kosten und Bedingungen des Publizierens sowie Verhalten und Leistung der Publikationsorte. Institutionen können dann Mittel in gemeinschaftlich getragene und Diamond-Infrastruktur umwidmen, und Forschende können Publikationsorte zu sichtbaren Bedingungen wählen. (b) Sie verringert die Abhängigkeit von proprietären Datenquellen und von einzelnen Anbietern: Institutionen bauen eigene Analysen, Indikatoren und Werkzeuge auf, passend zur eigenen Strategie, statt die eines Anbieters zu übernehmen.",
+        "es": "Las métricas tradicionales no dicen nada sobre lo que cuesta la investigación ni sobre quién suministra la información con la que se decide. La ORI permite a las instituciones dirigir en vez de solo cumplir, de dos maneras. (a) Hace observable el propio sistema de comunicación académica: los costos y condiciones de publicación y la conducta y el desempeño de los vehículos de publicación. Las instituciones pueden entonces reasignar recursos hacia infraestructura comunitaria y Diamond, y los investigadores pueden elegir dónde publicar en condiciones visibles. (b) Reduce la dependencia de fuentes de datos propietarias y de proveedores: las instituciones construyen sus propios análisis, indicadores y herramientas, ajustados a su estrategia, en vez de tomar los de un proveedor."
       },
       "whoBenefits": {
-        "en": "Institutions decide where to invest on their own evidence rather than a supplier's; libraries and research managers can justify a budget shift; community-led and Diamond infrastructures become fundable on visible grounds; researchers choose venues on transparent terms; funders and policy makers see the real economics of scholarly communication.",
-        "de": "Institutionen entscheiden über Investitionen auf Basis eigener Evidenz statt der eines Anbieters; Bibliotheken und Forschungsmanagement können Budgetverschiebungen begründen; gemeinschaftlich getragene und Diamond-Infrastrukturen werden auf sichtbarer Grundlage förderfähig; Forschende wählen Publikationsorte zu transparenten Bedingungen; Förderer und Politikgestalter sehen die tatsächliche Ökonomie des Publikationswesens.",
-        "es": "Las instituciones deciden dónde invertir con evidencia propia y no la de un proveedor; las bibliotecas y la gestión de investigación pueden justificar un cambio presupuestario; las infraestructuras comunitarias y Diamond se vuelven financiables sobre bases visibles; los investigadores eligen dónde publicar en condiciones transparentes; financiadores y responsables de políticas ven la economía real de la comunicación académica."
+        "en": "Institutions decide where to invest on their own evidence rather than a supplier's; libraries and research managers can justify a budget shift and work with indicators fitted to their institution; community-led and Diamond infrastructures become fundable on visible grounds; researchers choose venues on transparent terms; funders and policy makers see the real economics of scholarly communication.",
+        "de": "Institutionen entscheiden über Investitionen auf Basis eigener Evidenz statt der eines Anbieters; Bibliotheken und Forschungsmanagement können Budgetverschiebungen begründen und mit Indikatoren arbeiten, die zur eigenen Institution passen; gemeinschaftlich getragene und Diamond-Infrastrukturen werden auf sichtbarer Grundlage förderfähig; Forschende wählen Publikationsorte zu transparenten Bedingungen; Förderer und Politikgestalter sehen die tatsächliche Ökonomie des Publikationswesens.",
+        "es": "Las instituciones deciden dónde invertir con evidencia propia y no la de un proveedor; las bibliotecas y la gestión de investigación pueden justificar un cambio presupuestario y trabajar con indicadores ajustados a su institución; las infraestructuras comunitarias y Diamond se vuelven financiables sobre bases visibles; los investigadores eligen dónde publicar en condiciones transparentes; financiadores y responsables de políticas ven la economía real de la comunicación académica."
+      }
+    },
+    {
+      "id": "B10",
+      "axis": "A2",
+      "outcome": "O2",
+      "name": {
+        "en": "Reuse & Collective Action",
+        "de": "Nachnutzung & gemeinsames Handeln",
+        "es": "Reutilización y acción colectiva"
+      },
+      "description": {
+        "en": "Traditional metrics count what each organisation produces, not what others build with its information. Open research information can be built on by others: one organisation's open data becomes the input of another's service, practices spread between peer institutions, and shared infrastructure can be run by alliances rather than bought separately.",
+        "de": "Traditionelle Metriken zählen, was jede Organisation hervorbringt, nicht, was andere mit ihren Informationen aufbauen. Offene Forschungsinformationen können von anderen weiterverwendet werden: Die offenen Daten einer Organisation werden zur Grundlage des Dienstes einer anderen, Praktiken verbreiten sich zwischen vergleichbaren Institutionen, und gemeinsame Infrastruktur kann von Allianzen betrieben statt einzeln eingekauft werden.",
+        "es": "Las métricas tradicionales cuentan lo que produce cada organización, no lo que otras construyen con su información. La información de investigación abierta puede ser aprovechada por otros: los datos abiertos de una organización se vuelven el insumo del servicio de otra, las prácticas se difunden entre instituciones pares y la infraestructura compartida puede ser operada por alianzas en vez de comprarse por separado."
+      },
+      "whoBenefits": {
+        "en": "Service builders start from existing open data instead of collecting it again; institutions join shared initiatives that others opened; alliances and networks share the cost of running infrastructure.",
+        "de": "Wer Dienste baut, geht von vorhandenen offenen Daten aus, statt sie erneut zu erheben; Institutionen schließen sich gemeinsamen Initiativen an, die andere geöffnet haben; Allianzen und Netzwerke teilen die Kosten für den Betrieb von Infrastruktur.",
+        "es": "Quienes construyen servicios parten de datos abiertos existentes en vez de recopilarlos de nuevo; las instituciones se suman a iniciativas compartidas que otras abrieron; las alianzas y redes comparten el costo de operar infraestructura."
       }
     },
     {

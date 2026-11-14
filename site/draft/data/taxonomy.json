@@ -11,7 +11,7 @@
     {
       "id": "A2",
       "name": { "en": "Collaboration & Innovation", "de": "Zusammenarbeit & Innovation", "es": "Colaboración e innovación" },
-      "benefits": ["B3", "B4", "B7", "B9"]
+      "benefits": ["B3", "B4", "B7", "B9", "B10"]
     },
     {
       "id": "A3",
@@ -141,9 +141,23 @@
         "es": "Dirección estratégica y autonomía institucional"
       },
       "definition": {
-        "en": "Makes the scholarly communication system itself observable, so institutions can steer resources and reduce dependency on proprietary sources.",
-        "de": "Macht das Publikationssystem selbst beobachtbar, sodass Institutionen Mittel steuern und die Abhängigkeit von proprietären Quellen verringern können.",
-        "es": "Hace observable el propio sistema de comunicación académica, de modo que las instituciones puedan dirigir recursos y reducir la dependencia de fuentes propietarias."
+        "en": "Makes the scholarly communication system itself observable and reduces dependency on proprietary sources, so institutions can steer resources and build their own analyses and tools.",
+        "de": "Macht das Publikationssystem selbst beobachtbar und verringert die Abhängigkeit von proprietären Quellen, sodass Institutionen Mittel steuern und eigene Analysen und Werkzeuge aufbauen können.",
+        "es": "Hace observable el propio sistema de comunicación académica y reduce la dependencia de fuentes propietarias, de modo que las instituciones puedan dirigir recursos y construir sus propios análisis y herramientas."
+      }
+    },
+    {
+      "id": "B10",
+      "axis": "A2",
+      "name": {
+        "en": "Reuse & Collective Action",
+        "de": "Nachnutzung & gemeinsames Handeln",
+        "es": "Reutilización y acción colectiva"
+      },
+      "definition": {
+        "en": "Lets others build on open information: reuse across services, practices spreading between peers, and infrastructure run by alliances.",
+        "de": "Lässt andere auf offenen Informationen aufbauen: Nachnutzung über Dienste hinweg, Verbreitung von Praktiken zwischen vergleichbaren Institutionen und von Allianzen betriebene Infrastruktur.",
+        "es": "Permite que otros construyan sobre información abierta: reutilización entre servicios, difusión de prácticas entre pares e infraestructura operada por alianzas."
       }
     }
   ],
@@ -176,7 +190,7 @@
         "de": "Stellt Plattformen, Infrastruktur oder Dienste bereit, die offene Forschung möglich machen.",
         "es": "Proporciona plataformas, infraestructura o servicios que hacen posible la investigación abierta."
       },
-      "primaryBenefits": ["B1", "B4", "B7"]
+      "primaryBenefits": ["B1", "B4", "B7", "B10"]
     },
     {
       "id": "R4",
@@ -216,7 +230,7 @@
         "de": "Verbindet Akteure, harmonisiert Praktiken und ermöglicht Interoperabilität in großem Maßstab.",
         "es": "Conecta actores, alinea prácticas y habilita la interoperabilidad a gran escala."
       },
-      "primaryBenefits": ["B4", "B6", "B8"]
+      "primaryBenefits": ["B4", "B6", "B8", "B10"]
     },
     {
       "id": "R8",
@@ -248,7 +262,7 @@
         "es": ["Universidades", "Centros de investigación independientes", "Departamentos académicos", "Divisiones de investigación del sector privado", "Unidades de investigación hospitalarias"]
       },
       "roles": ["R1", "R5", "R2"],
-      "primaryBenefits": ["B1", "B2", "B3", "B5", "B9"]
+      "primaryBenefits": ["B1", "B2", "B3", "B5", "B9", "B10"]
     },
     {
       "id": "S2",
@@ -304,7 +318,7 @@
         "es": ["Repositorios (datos, publicaciones, software)", "Proveedores de infraestructura PID (DOI, ORCID, ROR)", "Servicios de metadatos e indexación", "Proveedores de servicios de información", "Proveedores de CRIS"]
       },
       "roles": ["R3", "R5"],
-      "primaryBenefits": ["B1", "B4", "B7", "B2", "B9"]
+      "primaryBenefits": ["B1", "B4", "B7", "B2", "B9", "B10"]
     },
     {
       "id": "S5",
@@ -360,7 +374,7 @@
         "es": ["Bibliotecas universitarias", "Custodios de datos", "Gestores de CRIS", "Oficiales de apoyo a la investigación", "Especialistas en información"]
       },
       "roles": ["R5", "R3"],
-      "primaryBenefits": ["B1", "B2", "B4", "B7", "B9"]
+      "primaryBenefits": ["B1", "B2", "B4", "B7", "B9", "B10"]
     },
     {
       "id": "S8",
@@ -432,7 +446,7 @@
         "es": ["GO FAIR", "Research Data Alliance (RDA)", "COAR", "LA Referencia", "Redes regionales de comunicación académica"]
       },
       "roles": ["R7", "R3", "R5"],
-      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7", "B9"]
+      "primaryBenefits": ["B4", "B6", "B8", "B1", "B2", "B7", "B9", "B10"]
     }
   ]
 }
