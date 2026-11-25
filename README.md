@@ -31,7 +31,7 @@ site/
   index.html, style.css, app.js, i18n.js  Interactive explorer (EN/DE/ES, light/dark,
                                           shareable deep links)
   theme.js                                Applies the stored theme before first paint
-  about/                                  What it is, how it works, credits and
+  about/                                  What it is, how it works and
                                           references, as its own page
                                           (index.html + about.js)
   draft/                                  Full stakeholder taxonomy explorer,

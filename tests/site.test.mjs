@@ -62,11 +62,11 @@ test("the collapsed rail keeps navigation and the credit line", () => {
   }
 });
 
-test("every page credits author, license and source", () => {
+test("every page credits the task force, license and source", () => {
   for (const page of PAGES) {
     const html = read(page);
     const foot = html.slice(html.indexOf('class="rail-foot"'));
-    assert.match(foot, /rijdho\.github\.io/, `${page} names the author`);
+    assert.match(foot, /working-groups\.barcelona-declaration\.org\/working_group_7\/">Barcelona Declaration WG7 TF2</, `${page} names the task force`);
     assert.match(foot, /creativecommons\.org\/licenses\/by\/4\.0/, `${page} names the license`);
     assert.match(foot, /github\.com\/rijdho\/barcelona-wg7-tf2/, `${page} links the source`);
   }
