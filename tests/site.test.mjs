@@ -77,7 +77,7 @@ test("every page credits the task force, license and source", () => {
 // the one to show: it resolves to the latest version, where a version DOI pins
 // a snapshot that will silently go stale at the next release.
 const CONCEPT_DOI = "10.5281/zenodo.22231440";
-const VERSION_DOI = "10.5281/zenodo.24527855";
+const VERSION_DOI = "10.5281/zenodo.24529495";
 
 test("every page shows the concept DOI, and not a version DOI", () => {
   for (const page of PAGES) {
