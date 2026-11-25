@@ -26,8 +26,8 @@ identifiers:
     value: 10.5281/zenodo.22231440
     description: "Concept DOI: always resolves to the latest version"
   - type: doi
-    value: 10.5281/zenodo.22231441
-    description: "Version DOI for v0.2.0"
+    value: 10.5281/zenodo.24527291
+    description: "Version DOI for v0.4.0"
 repository-code: "https://github.com/rijdho/barcelona-wg7-tf2"
 url: "https://rijdho.github.io/barcelona-wg7-tf2/"
 license: CC-BY-4.0
