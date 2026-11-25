@@ -242,5 +242,5 @@ Open Research Information, Working Group 7, Task Force 2.
 
 Every archived version is a working document: WG7-TF2 has not reviewed it, and the
 changes since v0.1 are proposals to the task force. The abstract of each Zenodo record
-says so as well. A version that the group agrees will be archived under the same concept
+says that it is a working document and names the changes that are proposals. A version that the group agrees will be archived under the same concept
 DOI.

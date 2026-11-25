@@ -9,6 +9,16 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [Unreleased]
 
+### Fixed
+
+- The draft definition of B2 said that funders and governments check ethical and data
+  protection requirements. The brief says that an institution can show that its research
+  meets them, and that institutions, funders and governments can check their policies; the
+  definition now says the same, in the three languages (2026-11-25). Assets move to `?v=31`.
+- The README said that the abstract of each Zenodo record repeats that the changes since
+  v0.1 are proposals. Each abstract names the changes of its own version; the sentence now
+  says that.
+
 ### Changed
 
 - The brand block of every page shows only the name of the explorer: the line to the
@@ -55,7 +65,7 @@ version with that number was released.
   Credits section (2026-11-25). The authors are named in `CITATION.cff` and in the README.
   Assets move to `?v=26`.
 - The draft taxonomy defines B1, B2 and B8 as the brief does since v0.4 (2026-11-25): its
-  one-line definitions spoke of research itself, and the two views of the page gave two
+  one-line definitions were those from before v0.4, and the two views of the page gave two
   readings of the same benefit. A test holds the three definitions in every language.
   Assets move to `?v=29`.
 - **Every description and every text of the page is reworded** (2026-11-25), in English,
