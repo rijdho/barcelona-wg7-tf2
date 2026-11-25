@@ -44,6 +44,10 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
   Assets move to `?v=26`.
 - **The brief is at v0.5** (2026-11-25). The benefits are those of v0.4; the number moves
   with the change of credits on the page. Assets move to `?v=27`.
+- The draft taxonomy defines B1, B2 and B8 as the brief does since v0.4 (2026-11-25): its
+  one-line definitions spoke of research itself, and the two views of the page gave two
+  readings of the same benefit. A test holds the three definitions in every language.
+  Assets move to `?v=28`.
 - **Every description and every text of the page is reworded** (2026-11-25), in English,
   German and Spanish: the descriptions of B1, B2, B3, B5, B6, B7 and B8 are sentences
   that say who can do what, in place of lists of noun phrases; the summary table of the

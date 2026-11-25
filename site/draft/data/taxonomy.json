@@ -29,9 +29,9 @@
         "es": "Calidad y trazabilidad de los productos de investigación"
       },
       "definition": {
-        "en": "Enhances the visibility, credibility, and traceability of research products throughout their lifecycle.",
-        "de": "Erhöht die Sichtbarkeit, Glaubwürdigkeit und Nachvollziehbarkeit von Forschungsprodukten über ihren gesamten Lebenszyklus.",
-        "es": "Mejora la visibilidad, credibilidad y trazabilidad de los productos de investigación a lo largo de su ciclo de vida."
+        "en": "Shows what a research output rests on, through open metadata on publications, data, software, samples and instruments, so that others can find it, assess it and repeat the work.",
+        "de": "Zeigt über offene Metadaten zu Publikationen, Daten, Software, Proben und Instrumenten, worauf ein Forschungsergebnis beruht, sodass andere es finden, beurteilen und die Arbeit wiederholen können.",
+        "es": "Muestra en qué se apoya un producto de investigación, mediante metadatos abiertos de publicaciones, datos, software, muestras e instrumentos, de modo que otros puedan encontrarlo, valorarlo y repetir el trabajo."
       }
     },
     {
@@ -43,9 +43,9 @@
         "es": "Gobernanza, ética y cumplimiento"
       },
       "definition": {
-        "en": "Enhances internal policies, ethical standards, and compliance with open and responsible research norms.",
-        "de": "Stärkt interne Richtlinien, ethische Standards und die Einhaltung von Normen offener und verantwortungsvoller Forschung.",
-        "es": "Fortalece las políticas internas, los estándares éticos y el cumplimiento de las normas de investigación abierta y responsable."
+        "en": "Lets institutions, funders and governments check whether their policies and ethical and data protection requirements are met, with figures that others can check too; what cannot be shared ethically stays closed.",
+        "de": "Erlaubt Institutionen, Förderern und Regierungen zu prüfen, ob ihre Vorgaben sowie ethische Anforderungen und der Datenschutz eingehalten werden, mit Zahlen, die auch andere prüfen können; was sich ethisch nicht teilen lässt, bleibt geschlossen.",
+        "es": "Permite a instituciones, financiadores y gobiernos comprobar si se cumplen sus políticas y los requisitos éticos y de protección de datos, con cifras que otros también pueden comprobar; lo que no se puede compartir de forma ética se mantiene cerrado."
       }
     },
     {
@@ -127,9 +127,9 @@
         "es": "Integridad y rendición de cuentas"
       },
       "definition": {
-        "en": "Fosters transparency, accountability, and ethical conduct throughout the research lifecycle.",
-        "de": "Fördert Transparenz, Rechenschaft und ethisches Verhalten über den gesamten Forschungszyklus.",
-        "es": "Fomenta la transparencia, la rendición de cuentas y la conducta ética a lo largo del ciclo de investigación."
+        "en": "Lets those who are assessed audit the information used about them, and shows who funded a study and where the information comes from.",
+        "de": "Erlaubt den Bewerteten, die über sie verwendeten Informationen zu überprüfen, und zeigt, wer eine Studie finanziert hat und woher die Informationen stammen.",
+        "es": "Permite a quienes son evaluados auditar la información que se usa sobre ellos, y muestra quién financió un estudio y de dónde viene la información."
       }
     },
     {

@@ -104,3 +104,20 @@ test("every translatable field carries all three locales, arrays aligned", () =>
     assertField(s.examples, `${s.id}.examples`);
   }
 });
+
+// Since brief v0.4, B1, B2 and B8 are written about research information. The draft keeps a
+// one-line definition of each benefit, in its own file, so a change of the brief does not
+// reach it: the two views of the page would then give two readings of one benefit.
+test("the draft defines B1, B2 and B8 as the brief does since v0.4", () => {
+  const need = {
+    B1: { en: /open metadata on publications/, de: /offene Metadaten zu Publikationen/, es: /metadatos abiertos de publicaciones/ },
+    B2: { en: /check whether their policies/, de: /ob ihre Vorgaben/, es: /si se cumplen sus políticas/ },
+    B8: { en: /audit the information used about them/, de: /die über sie verwendeten Informationen/, es: /auditar la información que se usa sobre ellos/ },
+  };
+  for (const [id, locs] of Object.entries(need)) {
+    const b = draft.benefits.find((x) => x.id === id);
+    for (const [loc, re] of Object.entries(locs)) {
+      assert.match(b.definition[loc], re, `draft ${id} (${loc}) follows the brief`);
+    }
+  }
+});
