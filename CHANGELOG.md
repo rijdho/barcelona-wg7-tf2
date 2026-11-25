@@ -9,6 +9,12 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [Unreleased]
 
+### Changed
+
+- The file of the draft taxonomy no longer has the field `source`. The field named
+  `deliverables/Taxonomy_ORI_Stakeholders_Benefits.md`, which is not in the repository.
+  Assets move to `?v=33`.
+
 ## [0.4.2] - 2026-11-25
 
 Archived on Zenodo as [10.5281/zenodo.24529495](https://doi.org/10.5281/zenodo.24529495).
