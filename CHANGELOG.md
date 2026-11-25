@@ -9,6 +9,12 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [Unreleased]
 
+### Changed
+
+- The brand block of every page shows only the name of the explorer: the line to the
+  author's site and the line "Part of Metaudits" are removed (2026-11-25). Assets move to
+  `?v=30`.
+
 ## [0.4.0] - 2026-11-25
 
 Archived on Zenodo as [10.5281/zenodo.24527291](https://doi.org/10.5281/zenodo.24527291).

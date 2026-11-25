@@ -38,7 +38,6 @@ export const UI = {
     aboutTitle: "About",
     railLicense: "Content under CC BY 4.0",
     railSource: "Source on GitHub",
-    railFamily: "Part of",
   },
   de: {
     title: "Stakeholder & Nutzen",
@@ -73,7 +72,6 @@ export const UI = {
     aboutTitle: "Über",
     railLicense: "Inhalte unter CC BY 4.0",
     railSource: "Quellcode auf GitHub",
-    railFamily: "Teil von",
   },
   es: {
     title: "Stakeholders y beneficios",
@@ -108,7 +106,6 @@ export const UI = {
     aboutTitle: "Acerca de",
     railLicense: "Contenido bajo CC BY 4.0",
     railSource: "Código en GitHub",
-    railFamily: "Parte de",
   },
 };
 

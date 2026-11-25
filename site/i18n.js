@@ -30,7 +30,6 @@ export const UI = {
     aboutTitle: "About",
     railLicense: "Content under CC BY 4.0",
     railSource: "Source on GitHub",
-    railFamily: "Part of",
     aboutBody:
       "This explorer shows \"The Value of Open Research Information: Ten Transformative Benefits\" " +
       "(brief, v{version}), a working document of Task Force 2 of Working Group 7 of the Barcelona " +
@@ -74,7 +73,6 @@ export const UI = {
     aboutTitle: "Über",
     railLicense: "Inhalte unter CC BY 4.0",
     railSource: "Quellcode auf GitHub",
-    railFamily: "Teil von",
     aboutBody:
       "Dieser Explorer zeigt \"The Value of Open Research Information: Ten Transformative Benefits\" " +
       "(Brief, v{version}), ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona " +
@@ -119,7 +117,6 @@ export const UI = {
     aboutTitle: "Acerca de",
     railLicense: "Contenido bajo CC BY 4.0",
     railSource: "Código en GitHub",
-    railFamily: "Parte de",
     aboutBody:
       "Este explorador muestra \"The Value of Open Research Information: Ten Transformative Benefits\" " +
       "(brief, v{version}), un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona " +
