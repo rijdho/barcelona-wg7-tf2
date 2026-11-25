@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "date": "2026-01",
+  "version": "1.1",
+  "date": "2026-11",
   "source": "deliverables/Taxonomy_ORI_Stakeholders_Benefits.md",
   "axes": [
     {
@@ -210,7 +210,7 @@
         "de": "Pflegt Metadaten, bietet Schulungen an und sichert Qualität und Ausrichtung.",
         "es": "Mantiene los metadatos, ofrece formación y asegura la calidad y la alineación."
       },
-      "primaryBenefits": ["B1", "B2", "B9"]
+      "primaryBenefits": ["B1", "B2", "B9", "B10"]
     },
     {
       "id": "R6",
@@ -354,7 +354,7 @@
         "es": ["Asociaciones de pacientes", "Organizaciones de ciencia ciudadana", "Redes de conocimiento abierto", "Grupos de interés", "Organizaciones comunitarias"]
       },
       "roles": ["R6", "R7"],
-      "primaryBenefits": ["B1", "B6", "B8", "B4"]
+      "primaryBenefits": ["B1", "B6", "B8", "B4", "B10"]
     },
     {
       "id": "S7",
@@ -390,7 +390,7 @@
         "es": ["Editoriales comerciales", "Revistas de sociedades científicas", "Revistas institucionales", "Editoriales de acceso abierto diamante", "Servidores de preprints"]
       },
       "roles": ["R3"],
-      "primaryBenefits": ["B1", "B4", "B7"]
+      "primaryBenefits": ["B1", "B4", "B7", "B10"]
     },
     {
       "id": "S9",
@@ -410,7 +410,7 @@
         "es": ["Desarrolladores de plataformas", "Proveedores de servicios de API e integración", "Empresas de analítica de datos", "Proveedores de software", "Proveedores de servicios en la nube"]
       },
       "roles": ["R3", "R8"],
-      "primaryBenefits": ["B1", "B4", "B7", "B5"]
+      "primaryBenefits": ["B1", "B4", "B7", "B5", "B10"]
     },
     {
       "id": "S10",
@@ -430,7 +430,7 @@
         "es": ["UNESCO", "OCDE", "EOSC (European Open Science Cloud)", "Organización Mundial de la Salud", "Divisiones de investigación del Banco Mundial"]
       },
       "roles": ["R7", "R4", "R3"],
-      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7", "B9"]
+      "primaryBenefits": ["B4", "B6", "B8", "B2", "B5", "B1", "B7", "B9", "B10"]
     },
     {
       "id": "S11",

@@ -1,4 +1,4 @@
-import { UI, LOCALES, detectLocale } from "./i18n.js?v=31";
+import { UI, LOCALES, detectLocale } from "./i18n.js?v=32";
 
 // Suggestion channel: a prefilled GitHub issue form. Issues need the repo to
 // be public, so the button stays hidden until `enabled` flips on flip day.
@@ -295,7 +295,7 @@ function render() {
 }
 
 async function init() {
-  const res = await fetch("data/taxonomy.json?v=31");
+  const res = await fetch("data/taxonomy.json?v=32");
   state.data = await res.json();
 
   // validate against the data, not against a shape: a well-formed id that does

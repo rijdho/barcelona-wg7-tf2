@@ -8,7 +8,7 @@ export const UI = {
   en: {
     title: "Stakeholders & Benefits",
     draftLabel: "Draft v{version} · working example",
-    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. It has not been reviewed or endorsed by WG7-TF2; the published reference is the ten-benefits brief. The English text is the authoritative wording.",
+    draftBanner: "This full stakeholder taxonomy is an exercise: a proposal for where the framework may go. Version 1.1 is the draft of January 2026 (v1.0) with changes that follow the brief: B9 and B10 are added, and the definitions of B1, B2 and B8 follow brief v0.4. It has not been reviewed or endorsed by WG7-TF2; the published reference is the ten-benefits brief. The English text is the authoritative wording.",
     navBack: "Benefits map",
     navDraftSelf: "Draft: full taxonomy",
     sourceLink: "source\u00a0\u2197",
@@ -19,6 +19,10 @@ export const UI = {
       "ten benefit dimensions in three axes, reached by eleven stakeholder categories " +
       "through eight functional roles. Select an item to see what it connects to. " +
       "The page loads nothing from another server and has no analytics.",
+    roleNote:
+      "A functional role describes how a stakeholder interacts with open research information, " +
+      "independent of its category, and a stakeholder can perform several roles. " +
+      "The primary benefits of a category are those of its roles.",
     navView: "View",
     navExplorer: "Explorer",
     colStakeholders: "Stakeholder categories",
@@ -42,7 +46,7 @@ export const UI = {
   de: {
     title: "Stakeholder & Nutzen",
     draftLabel: "Entwurf v{version} · Arbeitsbeispiel",
-    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Zehn-Nutzen-Brief. Der englische Text ist maßgeblich.",
+    draftBanner: "Diese vollständige Stakeholder-Taxonomie ist eine Übung: ein Vorschlag, wohin sich der Rahmen entwickeln könnte. Version 1.1 ist der Entwurf vom Januar 2026 (v1.0) mit Änderungen, die dem Brief folgen: B9 und B10 kamen hinzu, und die Definitionen von B1, B2 und B8 folgen dem Brief v0.4. Sie wurde von WG7-TF2 weder geprüft noch bestätigt; die veröffentlichte Referenz ist der Zehn-Nutzen-Brief. Der englische Text ist maßgeblich.",
     navBack: "Nutzen-Karte",
     navDraftSelf: "Entwurf: vollständige Taxonomie",
     sourceLink: "Quelle\u00a0\u2197",
@@ -53,6 +57,10 @@ export const UI = {
       "zehn Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
       "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu sehen. " +
       "Die Seite lädt nichts von anderen Servern und hat keine Analyse-Software.",
+    roleNote:
+      "Eine funktionale Rolle beschreibt, wie ein Stakeholder mit offenen Forschungsinformationen umgeht, " +
+      "unabhängig von seiner Kategorie, und ein Stakeholder kann mehrere Rollen ausüben. " +
+      "Der primäre Nutzen einer Kategorie ist der Nutzen ihrer Rollen.",
     navView: "Ansicht",
     navExplorer: "Explorer",
     colStakeholders: "Stakeholder-Kategorien",
@@ -76,7 +84,7 @@ export const UI = {
   es: {
     title: "Stakeholders y beneficios",
     draftLabel: "Borrador v{version} · ejemplo de trabajo",
-    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de diez beneficios. El texto en inglés es la redacción autorizada.",
+    draftBanner: "Esta taxonomía completa de stakeholders es un ejercicio: una propuesta de hacia dónde puede ir el marco. La versión 1.1 es el borrador de enero de 2026 (v1.0) con cambios que siguen al brief: se añadieron B9 y B10, y las definiciones de B1, B2 y B8 siguen al brief v0.4. No ha sido revisada ni respaldada por WG7-TF2; la referencia publicada es el brief de diez beneficios. El texto en inglés es la redacción autorizada.",
     navBack: "Mapa de beneficios",
     navDraftSelf: "Borrador: taxonomía completa",
     sourceLink: "fuente\u00a0\u2197",
@@ -87,6 +95,10 @@ export const UI = {
       "diez dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
       "a través de ocho roles funcionales. Al seleccionar un elemento se ve con qué se conecta. " +
       "La página no carga nada de otros servidores y no tiene analítica.",
+    roleNote:
+      "Un rol funcional describe cómo un stakeholder interactúa con la información abierta sobre investigación, " +
+      "con independencia de su categoría, y un stakeholder puede desempeñar varios roles. " +
+      "Los beneficios primarios de una categoría son los de sus roles.",
     navView: "Vista",
     navExplorer: "Explorador",
     colStakeholders: "Categorías de stakeholders",

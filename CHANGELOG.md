@@ -9,6 +9,28 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-11-25
+
+Brief v0.4, as in 0.4.0. This release corrects the draft taxonomy and sets it at v1.1.
+
+### Fixed
+
+- In the draft taxonomy, B10 was given to two roles (Enabler and Coordinator / Facilitator)
+  and to four stakeholder categories, and the two lists did not agree: Research-Performing
+  Institutions had B10 through none of its roles, and four categories with at least one of
+  the two roles did not have it. The four categories that had B10 are the four with the
+  Support & Stewardship role, so that role now carries B10 as well. Every category now has
+  the benefits of its roles, and B10 reaches eight of the eleven categories. A new test
+  holds that rule for every category.
+
+### Changed
+
+- The draft taxonomy is at v1.1. It was labelled v1.0, of January 2026, while it carried
+  B9 and B10; its notice now says what v1.1 changes from v1.0. `suggestions/options.csv`
+  names the draft nodes with "taxonomy v1.1".
+- The draft page says what a functional role is, and that the primary benefits of a
+  category are those of its roles. Assets move to `?v=32`.
+
 ## [0.4.1] - 2026-11-25
 
 Archived on Zenodo as [10.5281/zenodo.24527855](https://doi.org/10.5281/zenodo.24527855).

@@ -49,6 +49,18 @@ test("no node is stranded: the drawn map reaches everything", () => {
   }
 });
 
+// The page says that the primary benefits of a category are those of its roles.
+// Until draft v1.1 nothing held the two lists together, and B10 was given to two roles and
+// to four categories that did not follow from them.
+test("the primary benefits of a category are those of its roles", () => {
+  const byRole = Object.fromEntries(draft.roles.map((r) => [r.id, r.primaryBenefits]));
+  for (const s of draft.stakeholders) {
+    const fromRoles = [...new Set(s.roles.flatMap((r) => byRole[r]))].sort();
+    assert.deepEqual([...s.primaryBenefits].sort(), fromRoles, `${s.id} follows its roles`);
+    assert.equal(new Set(s.primaryBenefits).size, s.primaryBenefits.length, `${s.id} lists no benefit twice`);
+  }
+});
+
 test("the draft does not contradict the brief", () => {
   const grouping = (d) => Object.fromEntries(d.axes.map((a) => [a.id, [...a.benefits].sort()]));
   assert.deepEqual(grouping(draft), grouping(brief), "same benefits in the same axes");

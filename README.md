@@ -111,7 +111,7 @@ The last three sections of the brief give the reason for each change.
 | --- | --- |
 | Benefits overview brief | v0.4 (2026-11-25); v0.3 2026-11-14; v0.2 2026-08-26; v0.1 circulated Feb 2026 |
 | Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.4 |
-| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 and B10 to keep its parity contract with the brief |
+| Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/), at v1.1: the draft of January 2026 with B9 and B10 added, to keep its parity contract with the brief; every category has the benefits of its roles |
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | Cases read against the benefits | Six, the responses in the WG7 case study collection on 2026-11-14. Two of them were first read on 2026-08-26: the University of Milan response, and a second one chosen because it has no costs in it |
 | Community review by WG7-TF2 | Not yet held |
@@ -132,8 +132,8 @@ Node's built-in runner, no dependencies. Seven layers:
    information against its source.
 2. **i18n**: identical key sets, matching placeholders, full locale coverage, and array
    lengths pinned where overlays align by index.
-3. **The draft taxonomy**: its own integrity, and that it may extend the brief without
-   contradicting it.
+3. **The draft taxonomy**: its own integrity, that every category has the benefits of its
+   roles, and that it may extend the brief without contradicting it.
 4. **Page invariants**: every stylesheet neutralizes `hidden`; the collapsed rail keeps
    navigation and the credit line; relative links and script sources resolve; every local
    asset link carries the same `?v=`; every page carries a strict Content-Security-Policy
