@@ -96,7 +96,7 @@ body:
     id: example
     attributes:
       label: A concrete example (optional)
-      description: A real situation where this benefit (or its absence) showed up. Examples feed the task force's case study collection.
+      description: A real situation in which this benefit was obtained, or was missing. The task force may use examples in its case study collection.
     validations:
       required: false
   - type: input

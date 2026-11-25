@@ -55,14 +55,14 @@
         "es": "Calidad y trazabilidad de los productos de investigación"
       },
       "description": {
-        "en": "Traditional metrics count publications but do not capture the research process. ORI supports reproducible research by making data, methods, versions, and relationships between research objects explicit across the research lifecycle, enabling verification and trust.",
-        "de": "Traditionelle Metriken zählen Publikationen, erfassen aber nicht den Forschungsprozess. ORI unterstützt reproduzierbare Forschung, indem Daten, Methoden, Versionen und Beziehungen zwischen Forschungsobjekten über den gesamten Lebenszyklus explizit werden und so Verifikation und Vertrauen ermöglicht.",
-        "es": "Las métricas tradicionales cuentan publicaciones pero no capturan el proceso de investigación. ORI apoya la investigación reproducible al hacer explícitos los datos, métodos, versiones y relaciones entre objetos de investigación a lo largo del ciclo de vida, lo que permite la verificación y la confianza."
+        "en": "Traditional metrics count publications and say little about how the research was done. When the data, methods and versions behind a result are recorded and linked to it, other researchers can check the result and repeat the work.",
+        "de": "Traditionelle Metriken zählen Publikationen und sagen wenig darüber, wie geforscht wurde. Wenn die Daten, Methoden und Versionen hinter einem Ergebnis festgehalten und mit ihm verknüpft sind, können andere Forschende das Ergebnis prüfen und die Arbeit wiederholen.",
+        "es": "Las métricas tradicionales cuentan publicaciones y dicen poco de cómo se hizo la investigación. Cuando los datos, los métodos y las versiones que sostienen un resultado quedan registrados y enlazados con él, otros investigadores pueden comprobar el resultado y repetir el trabajo."
       },
       "whoBenefits": {
-        "en": "Researchers can verify and build on each other's work; institutions demonstrate quality beyond citations; funders track outputs systematically.",
-        "de": "Forschende können die Arbeit anderer prüfen und darauf aufbauen; Institutionen zeigen Qualität jenseits von Zitationen; Förderer verfolgen Ergebnisse systematisch.",
-        "es": "Los investigadores pueden verificar y construir sobre el trabajo de otros; las instituciones demuestran calidad más allá de las citas; los financiadores hacen seguimiento sistemático de los productos."
+        "en": "Researchers can verify each other's work and build on it; institutions can show quality by more than citations; funders can follow the outputs of what they fund.",
+        "de": "Forschende können die Arbeit anderer prüfen und darauf aufbauen; Institutionen können Qualität an mehr als Zitationen zeigen; Förderer können verfolgen, was aus geförderten Projekten hervorgeht.",
+        "es": "Los investigadores pueden verificar el trabajo de otros y construir sobre él; las instituciones pueden mostrar calidad con algo más que citas; los financiadores pueden seguir los productos de lo que financian."
       }
     },
     {
@@ -75,14 +75,14 @@
         "es": "Gobernanza, ética y cumplimiento"
       },
       "description": {
-        "en": "Ethical practices and compliance are invisible in publication counts. ORI enables transparent research conduct monitoring, ethics approval tracking, data protection verification, and institutional accountability for how research is conducted, following \"as open as possible, as closed as necessary\".",
-        "de": "Ethische Praktiken und Compliance sind in Publikationszahlen unsichtbar. ORI ermöglicht transparentes Monitoring der Forschungspraxis, Nachverfolgung von Ethikvoten, Prüfung des Datenschutzes und institutionelle Rechenschaft für die Durchführung von Forschung, nach dem Prinzip \"so offen wie möglich, so geschlossen wie nötig\".",
-        "es": "Las prácticas éticas y el cumplimiento son invisibles en los conteos de publicaciones. ORI permite el monitoreo transparente de la conducta investigativa, el seguimiento de aprobaciones éticas, la verificación de protección de datos y la rendición de cuentas institucional sobre cómo se hace la investigación, bajo \"tan abierto como sea posible, tan cerrado como sea necesario\"."
+        "en": "Publication counts do not show whether research was conducted ethically and within the rules. With open research information, an institution can show which ethics approvals a project holds, how it protects personal data, and who answers for the way the research is conducted. The principle is \"as open as possible, as closed as necessary\".",
+        "de": "Publikationszahlen zeigen nicht, ob ethisch und regelkonform geforscht wurde. Mit offenen Forschungsinformationen kann eine Institution zeigen, welche Ethikvoten ein Projekt hat, wie es personenbezogene Daten schützt und wer für die Durchführung der Forschung verantwortlich ist. Es gilt der Grundsatz \"so offen wie möglich, so geschlossen wie nötig\".",
+        "es": "Los conteos de publicaciones no muestran si la investigación se hizo de forma ética y dentro de las normas. Con información abierta sobre investigación, una institución puede mostrar qué aprobaciones éticas tiene un proyecto, cómo protege los datos personales y quién responde por la forma en que se investiga. El principio es \"tan abierto como sea posible, tan cerrado como sea necesario\"."
       },
       "whoBenefits": {
-        "en": "Research institutions demonstrate responsible practices; funders verify ethical alignment; policymakers ensure regulatory compliance.",
-        "de": "Forschungseinrichtungen zeigen verantwortungsvolle Praxis; Förderer prüfen die ethische Ausrichtung; Politikgestalter sichern die Einhaltung von Vorgaben.",
-        "es": "Las instituciones de investigación demuestran prácticas responsables; los financiadores verifican la alineación ética; los responsables de políticas aseguran el cumplimiento normativo."
+        "en": "Research institutions can show that they work responsibly; funders can check that the work they fund meets their ethical requirements; policymakers can see whether regulations are followed.",
+        "de": "Forschungseinrichtungen können zeigen, dass sie verantwortungsvoll arbeiten; Förderer können prüfen, ob geförderte Arbeiten ihre ethischen Anforderungen erfüllen; Politikgestalter können sehen, ob Vorgaben eingehalten werden.",
+        "es": "Las instituciones de investigación pueden mostrar que trabajan de forma responsable; los financiadores pueden comprobar que lo que financian cumple sus requisitos éticos; los responsables de políticas pueden ver si las normas se cumplen."
       }
     },
     {
@@ -95,14 +95,14 @@
         "es": "Integridad y rendición de cuentas"
       },
       "description": {
-        "en": "Traditional metrics cannot reveal ethical issues or conflicts of interest. ORI provides research misconduct detection and prevention, transparent funding disclosure, comprehensive audit trails, and public accountability mechanisms.",
-        "de": "Traditionelle Metriken können ethische Probleme oder Interessenkonflikte nicht aufdecken. ORI bietet Erkennung und Prävention von Fehlverhalten, transparente Offenlegung der Finanzierung, umfassende Prüfpfade und öffentliche Rechenschaftsmechanismen.",
-        "es": "Las métricas tradicionales no pueden revelar problemas éticos ni conflictos de interés. ORI provee detección y prevención de mala conducta, divulgación transparente del financiamiento, trazas de auditoría completas y mecanismos de rendición de cuentas pública."
+        "en": "Traditional metrics do not reveal misconduct or conflicts of interest. Open research information helps to detect and prevent misconduct: it discloses who funded a study, keeps a record of what was done and what was changed, and lets the public hold research to account.",
+        "de": "Traditionelle Metriken zeigen weder Fehlverhalten noch Interessenkonflikte. Offene Forschungsinformationen helfen, Fehlverhalten zu erkennen und ihm vorzubeugen: Sie legen offen, wer eine Studie finanziert hat, halten fest, was getan und was geändert wurde, und erlauben der Öffentlichkeit, von der Forschung Rechenschaft zu verlangen.",
+        "es": "Las métricas tradicionales no muestran la mala conducta ni los conflictos de interés. La información abierta sobre investigación ayuda a detectar y prevenir la mala conducta: da a conocer quién financió un estudio, deja registro de lo que se hizo y de lo que se cambió, y permite que el público pida cuentas a la investigación."
       },
       "whoBenefits": {
-        "en": "Research communities build trust through visible practices; evaluators detect integrity issues early; civil society monitors research accountability.",
-        "de": "Forschungsgemeinschaften bauen Vertrauen durch sichtbare Praxis auf; Evaluatoren erkennen Integritätsprobleme früh; die Zivilgesellschaft beobachtet die Rechenschaft der Forschung.",
-        "es": "Las comunidades de investigación construyen confianza mediante prácticas visibles; los evaluadores detectan problemas de integridad temprano; la sociedad civil monitorea la rendición de cuentas."
+        "en": "Research communities earn trust by working in the open; evaluators can find integrity problems early; civil society can see how research is held to account.",
+        "de": "Forschungsgemeinschaften gewinnen Vertrauen, indem sie offen arbeiten; Evaluatoren können Integritätsprobleme früh erkennen; die Zivilgesellschaft kann sehen, wie Forschung Rechenschaft ablegt.",
+        "es": "Las comunidades de investigación ganan confianza al trabajar de forma abierta; los evaluadores pueden detectar pronto los problemas de integridad; la sociedad civil puede ver cómo rinde cuentas la investigación."
       }
     },
     {
@@ -115,14 +115,14 @@
         "es": "Desarrollo de capacidades y formación inclusiva"
       },
       "description": {
-        "en": "Learning processes and skill development are absent from traditional metrics. ORI makes visible skills development in open research practices, metadata literacy programs, support for diverse researchers, FAIR data training, and institutional capacity strengthening.",
-        "de": "Lernprozesse und Kompetenzentwicklung fehlen in traditionellen Metriken. ORI macht Kompetenzaufbau in offenen Forschungspraktiken, Metadaten-Schulungen, Unterstützung vielfältiger Forschender, FAIR-Data-Training und institutionelle Kapazitätsstärkung sichtbar.",
-        "es": "Los procesos de aprendizaje y el desarrollo de habilidades están ausentes de las métricas tradicionales. ORI hace visibles el desarrollo de habilidades en prácticas abiertas, los programas de alfabetización en metadatos, el apoyo a investigadores diversos, la formación en datos FAIR y el fortalecimiento institucional."
+        "en": "Traditional metrics do not record what people learn. Open research information shows training in open research practices and in FAIR data, programmes that teach how to work with metadata, support for researchers from under-represented groups, and the capacity an institution builds.",
+        "de": "Traditionelle Metriken halten nicht fest, was Menschen lernen. Offene Forschungsinformationen zeigen Schulungen zu offenen Forschungspraktiken und zu FAIR-Daten, Programme zum Umgang mit Metadaten, die Unterstützung von Forschenden aus unterrepräsentierten Gruppen und die Fähigkeiten, die eine Institution aufbaut.",
+        "es": "Las métricas tradicionales no registran lo que las personas aprenden. La información abierta sobre investigación muestra la formación en prácticas de investigación abierta y en datos FAIR, los programas que enseñan a trabajar con metadatos, el apoyo a investigadores de grupos subrepresentados y las capacidades que una institución desarrolla."
       },
       "whoBenefits": {
-        "en": "Early-career researchers gain recognition for growing expertise; underrepresented communities receive targeted support; institutions build sustainable open science capabilities.",
-        "de": "Nachwuchsforschende erhalten Anerkennung für wachsende Expertise; unterrepräsentierte Gemeinschaften erhalten gezielte Unterstützung; Institutionen bauen nachhaltige Open-Science-Fähigkeiten auf.",
-        "es": "Los investigadores en etapa temprana obtienen reconocimiento por su creciente experiencia; las comunidades subrepresentadas reciben apoyo dirigido; las instituciones construyen capacidades sostenibles de ciencia abierta."
+        "en": "Early-career researchers are recognised for the skills they acquire; under-represented communities receive support directed at them; institutions build lasting capacity for open science.",
+        "de": "Nachwuchsforschende werden für erworbene Kompetenzen anerkannt; unterrepräsentierte Gemeinschaften erhalten gezielte Unterstützung; Institutionen bauen dauerhafte Fähigkeiten für Open Science auf.",
+        "es": "Los investigadores en etapa temprana obtienen reconocimiento por las habilidades que adquieren; las comunidades subrepresentadas reciben apoyo dirigido a ellas; las instituciones desarrollan capacidades duraderas de ciencia abierta."
       }
     },
     {
@@ -135,14 +135,14 @@
         "es": "Interoperabilidad y calidad de metadatos"
       },
       "description": {
-        "en": "Infrastructure enabling research connectivity is invisible in traditional metrics. ORI promotes harmonized metadata schemas, persistent identifier (PID) adoption, standardized vocabularies, system integration and APIs, and cross-platform data exchange.",
-        "de": "Die Infrastruktur, die Forschung vernetzt, ist in traditionellen Metriken unsichtbar. ORI fördert harmonisierte Metadatenschemata, die Übernahme persistenter Identifikatoren (PIDs), standardisierte Vokabulare, Systemintegration und APIs sowie plattformübergreifenden Datenaustausch.",
-        "es": "La infraestructura que conecta la investigación es invisible en las métricas tradicionales. ORI promueve esquemas de metadatos armonizados, la adopción de identificadores persistentes (PID), vocabularios estandarizados, integración de sistemas y APIs, e intercambio de datos entre plataformas."
+        "en": "Traditional metrics do not show whether the information about research is complete, correct and connected. Open research information promotes harmonised metadata schemas, persistent identifier (PID) adoption, standardised vocabularies, system integration and APIs, and cross-platform data exchange. Because the information is open, those who use it can check it against its source and report what is wrong.",
+        "de": "Traditionelle Metriken zeigen nicht, ob die Informationen über Forschung vollständig, korrekt und miteinander verknüpft sind. Offene Forschungsinformationen fördern harmonisierte Metadatenschemata, die Übernahme persistenter Identifikatoren (PIDs), standardisierte Vokabulare, Systemintegration und APIs sowie plattformübergreifenden Datenaustausch. Weil die Informationen offen sind, kann, wer sie nutzt, sie an der Quelle prüfen und Fehler melden.",
+        "es": "Las métricas tradicionales no muestran si la información sobre la investigación está completa, es correcta y está conectada. La información abierta sobre investigación promueve esquemas de metadatos armonizados, la adopción de identificadores persistentes (PID), vocabularios estandarizados, integración de sistemas y APIs, e intercambio de datos entre plataformas. Como la información es abierta, quien la usa puede comprobarla en su fuente y avisar de lo que está mal."
       },
       "whoBenefits": {
-        "en": "Infrastructure providers ensure system interoperability; researchers access data across institutional boundaries; libraries and data stewards maintain high-quality metadata.",
-        "de": "Infrastrukturanbieter sichern die Interoperabilität der Systeme; Forschende greifen über institutionelle Grenzen hinweg auf Daten zu; Bibliotheken und Data Stewards pflegen hochwertige Metadaten.",
-        "es": "Los proveedores de infraestructura aseguran la interoperabilidad; los investigadores acceden a datos a través de fronteras institucionales; las bibliotecas y custodios de datos mantienen metadatos de alta calidad."
+        "en": "Infrastructure providers ensure system interoperability; researchers access data across institutional boundaries; libraries and data stewards maintain high-quality metadata; services that reuse the information can check it against its source.",
+        "de": "Infrastrukturanbieter sichern die Interoperabilität der Systeme; Forschende greifen über institutionelle Grenzen hinweg auf Daten zu; Bibliotheken und Data Stewards pflegen hochwertige Metadaten; Dienste, die die Informationen nachnutzen, können sie an der Quelle prüfen.",
+        "es": "Los proveedores de infraestructura aseguran la interoperabilidad; los investigadores acceden a datos a través de fronteras institucionales; las bibliotecas y custodios de datos mantienen metadatos de alta calidad; los servicios que reutilizan la información pueden comprobarla en su fuente."
       }
     },
     {
@@ -155,14 +155,14 @@
         "es": "Infraestructura y habilitación técnica"
       },
       "description": {
-        "en": "Technical foundations enabling research are invisible in traditional output metrics. ORI supports the services and the organisations that run them: sustainable infrastructure development, platform reliability, and innovation in research tools.",
-        "de": "Die technischen Grundlagen der Forschung sind in traditionellen Output-Metriken unsichtbar. ORI unterstützt die Dienste und die Organisationen, die sie betreiben: nachhaltige Infrastrukturentwicklung, Plattformzuverlässigkeit und Innovation bei Forschungswerkzeugen.",
-        "es": "Los cimientos técnicos que habilitan la investigación son invisibles en las métricas tradicionales. ORI apoya los servicios y las organizaciones que los operan: el desarrollo sostenible de infraestructura, la confiabilidad de plataformas y la innovación en herramientas."
+        "en": "Traditional output metrics do not show the technical services that research depends on. Open research information supports those services and the organisations that run them: infrastructure that can be sustained, platforms that stay available, and new tools for research.",
+        "de": "Traditionelle Output-Metriken zeigen nicht die technischen Dienste, auf die Forschung angewiesen ist. Offene Forschungsinformationen stützen diese Dienste und die Organisationen, die sie betreiben: Infrastruktur, die sich dauerhaft tragen lässt, Plattformen, die verfügbar bleiben, und neue Werkzeuge für die Forschung.",
+        "es": "Las métricas tradicionales de productos no muestran los servicios técnicos de los que depende la investigación. La información abierta sobre investigación sostiene esos servicios y a las organizaciones que los operan: infraestructura que se puede mantener en el tiempo, plataformas que siguen disponibles y herramientas nuevas para investigar."
       },
       "whoBenefits": {
-        "en": "Technology providers develop sustainable platforms; research infrastructure organizations gain recognition for essential work; institutions justify infrastructure investments.",
-        "de": "Technologieanbieter entwickeln nachhaltige Plattformen; Infrastrukturorganisationen erhalten Anerkennung für essenzielle Arbeit; Institutionen begründen Infrastrukturinvestitionen.",
-        "es": "Los proveedores de tecnología desarrollan plataformas sostenibles; las organizaciones de infraestructura obtienen reconocimiento por su trabajo esencial; las instituciones justifican sus inversiones."
+        "en": "Technology providers can build platforms that last; organisations that run research infrastructure are recognised for work that others depend on; institutions can justify what they invest in infrastructure.",
+        "de": "Technologieanbieter können Plattformen bauen, die Bestand haben; Organisationen, die Forschungsinfrastruktur betreiben, werden für Arbeit anerkannt, auf die andere angewiesen sind; Institutionen können begründen, was sie in Infrastruktur investieren.",
+        "es": "Los proveedores de tecnología pueden construir plataformas que duren; las organizaciones que operan infraestructura de investigación obtienen reconocimiento por un trabajo del que otros dependen; las instituciones pueden justificar lo que invierten en infraestructura."
       }
     },
     {
@@ -175,9 +175,9 @@
         "es": "Dirección estratégica y autonomía institucional"
       },
       "description": {
-        "en": "Traditional metrics say nothing about what research costs or about who supplies the information used to decide. ORI lets institutions steer rather than merely comply, in two ways. (a) It makes the scholarly communication system itself observable: the costs and terms of publishing and the conduct and performance of venues. Institutions can then reallocate resources towards community-led and Diamond infrastructure, and researchers can choose where to publish on visible terms. (b) It reduces dependency on proprietary data sources and supplier lock-in: institutions build their own analyses, indicators and tools, fitted to their own strategy, instead of taking a supplier's.",
-        "de": "Traditionelle Metriken sagen nichts darüber, was Forschung kostet oder wer die Informationen liefert, auf deren Grundlage entschieden wird. ORI erlaubt Institutionen zu steuern statt nur zu erfüllen, auf zwei Wegen. (a) Sie macht das Publikationssystem selbst beobachtbar: Kosten und Bedingungen des Publizierens sowie Verhalten und Leistung der Publikationsorte. Institutionen können dann Mittel in gemeinschaftlich getragene und Diamond-Infrastruktur umwidmen, und Forschende können Publikationsorte zu sichtbaren Bedingungen wählen. (b) Sie verringert die Abhängigkeit von proprietären Datenquellen und von einzelnen Anbietern: Institutionen bauen eigene Analysen, Indikatoren und Werkzeuge auf, passend zur eigenen Strategie, statt die eines Anbieters zu übernehmen.",
-        "es": "Las métricas tradicionales no dicen nada sobre lo que cuesta la investigación ni sobre quién suministra la información con la que se decide. La ORI permite a las instituciones dirigir en vez de solo cumplir, de dos maneras. (a) Hace observable el propio sistema de comunicación académica: los costos y condiciones de publicación y la conducta y el desempeño de los vehículos de publicación. Las instituciones pueden entonces reasignar recursos hacia infraestructura comunitaria y Diamond, y los investigadores pueden elegir dónde publicar en condiciones visibles. (b) Reduce la dependencia de fuentes de datos propietarias y de proveedores: las instituciones construyen sus propios análisis, indicadores y herramientas, ajustados a su estrategia, en vez de tomar los de un proveedor."
+        "en": "Traditional metrics say nothing about what research costs or about who supplies the information used to decide. Open research information gives institutions two means to steer. (a) It makes the scholarly communication system itself observable: the costs and terms of publishing and the conduct and performance of venues. Institutions can then reallocate resources towards community-led and Diamond infrastructure, and researchers can choose where to publish on visible terms. (b) It reduces dependency on proprietary data sources and supplier lock-in: institutions build their own analyses, indicators and tools, fitted to their own strategy, instead of taking a supplier's.",
+        "de": "Traditionelle Metriken sagen nichts darüber, was Forschung kostet oder wer die Informationen liefert, auf deren Grundlage entschieden wird. Offene Forschungsinformationen geben Institutionen zwei Mittel, um zu steuern. (a) Sie machen das Publikationssystem selbst beobachtbar: Kosten und Bedingungen des Publizierens sowie Verhalten und Leistung der Publikationsorte. Institutionen können dann Mittel in gemeinschaftlich getragene und Diamond-Infrastruktur umwidmen, und Forschende können Publikationsorte zu sichtbaren Bedingungen wählen. (b) Sie verringern die Abhängigkeit von proprietären Datenquellen und von einzelnen Anbietern: Institutionen bauen eigene Analysen, Indikatoren und Werkzeuge auf, passend zur eigenen Strategie, statt die eines Anbieters zu übernehmen.",
+        "es": "Las métricas tradicionales no dicen nada sobre lo que cuesta la investigación ni sobre quién suministra la información con la que se decide. La información abierta sobre investigación da a las instituciones dos medios para dirigir. (a) Hace observable el propio sistema de comunicación académica: los costos y condiciones de publicación y la conducta y el desempeño de los vehículos de publicación. Las instituciones pueden entonces reasignar recursos hacia infraestructura comunitaria y Diamond, y los investigadores pueden elegir dónde publicar en condiciones visibles. (b) Reduce la dependencia de fuentes de datos propietarias y de proveedores: las instituciones construyen sus propios análisis, indicadores y herramientas, ajustados a su estrategia, en vez de tomar los de un proveedor."
       },
       "whoBenefits": {
         "en": "Institutions decide where to invest on their own evidence rather than a supplier's; libraries and research managers can justify a budget shift and work with indicators fitted to their institution; community-led and Diamond infrastructures become fundable on visible grounds; researchers choose venues on transparent terms; funders and policy makers see the real economics of scholarly communication.",
@@ -197,7 +197,7 @@
       "description": {
         "en": "Traditional metrics count what each organisation produces, not what others build with its information. Open research information can be built on by others: one organisation's open data becomes the input of another's service, practices spread between peer institutions, and shared infrastructure can be run by alliances rather than bought separately.",
         "de": "Traditionelle Metriken zählen, was jede Organisation hervorbringt, nicht, was andere mit ihren Informationen aufbauen. Offene Forschungsinformationen können von anderen weiterverwendet werden: Die offenen Daten einer Organisation werden zur Grundlage des Dienstes einer anderen, Praktiken verbreiten sich zwischen vergleichbaren Institutionen, und gemeinsame Infrastruktur kann von Allianzen betrieben statt einzeln eingekauft werden.",
-        "es": "Las métricas tradicionales cuentan lo que produce cada organización, no lo que otras construyen con su información. La información de investigación abierta puede ser aprovechada por otros: los datos abiertos de una organización se vuelven el insumo del servicio de otra, las prácticas se difunden entre instituciones pares y la infraestructura compartida puede ser operada por alianzas en vez de comprarse por separado."
+        "es": "Las métricas tradicionales cuentan lo que produce cada organización, no lo que otras construyen con su información. La información abierta sobre investigación puede ser aprovechada por otros: los datos abiertos de una organización se vuelven el insumo del servicio de otra, las prácticas se difunden entre instituciones pares y la infraestructura compartida puede ser operada por alianzas en vez de comprarse por separado."
       },
       "whoBenefits": {
         "en": "Service builders start from existing open data instead of collecting it again; institutions join shared initiatives that others opened; alliances and networks share the cost of running infrastructure.",
@@ -215,14 +215,14 @@
         "es": "Evaluación para el aprendizaje y la responsabilidad"
       },
       "description": {
-        "en": "Traditional metrics drive competitive ranking rather than learning. ORI enables formative assessment approaches, multi-dimensional impact evaluation, equity-focused evaluation frameworks, organizational learning mechanisms, and responsible research assessment practices.",
-        "de": "Traditionelle Metriken treiben kompetitives Ranking statt Lernen. ORI ermöglicht formative Bewertungsansätze, mehrdimensionale Wirkungsevaluation, gerechtigkeitsorientierte Bewertungsrahmen, organisationales Lernen und verantwortungsvolle Forschungsbewertung.",
-        "es": "Las métricas tradicionales impulsan el ranking competitivo en vez del aprendizaje. ORI habilita enfoques de evaluación formativa, evaluación multidimensional del impacto, marcos centrados en la equidad, mecanismos de aprendizaje organizacional y prácticas responsables de evaluación."
+        "en": "Traditional metrics are used to rank researchers and institutions against each other, not to learn from the results. Open research information makes other kinds of assessment possible: formative assessment, evaluation of impact in several dimensions, evaluation that attends to equity, and assessment from which an organisation learns. These are the practices of responsible research assessment.",
+        "de": "Traditionelle Metriken dienen dazu, Forschende und Institutionen in Ranglisten zu vergleichen, nicht dazu, aus den Ergebnissen zu lernen. Offene Forschungsinformationen machen andere Formen der Bewertung möglich: formative Bewertung, die Bewertung von Wirkung in mehreren Dimensionen, Bewertung, die auf Gerechtigkeit achtet, und Bewertung, aus der eine Organisation lernt. Das sind die Praktiken verantwortungsvoller Forschungsbewertung.",
+        "es": "Las métricas tradicionales se usan para ordenar a investigadores e instituciones en rankings, no para aprender de los resultados. La información abierta sobre investigación hace posibles otras formas de evaluar: la evaluación formativa, la evaluación del impacto en varias dimensiones, la evaluación que atiende a la equidad y la evaluación de la que una organización aprende. Son las prácticas de la evaluación responsable de la investigación."
       },
       "whoBenefits": {
-        "en": "Evaluators assess research quality beyond output counts; institutions learn what works and why; researchers receive developmental feedback rather than just judgment.",
-        "de": "Evaluatoren bewerten Forschungsqualität jenseits von Output-Zahlen; Institutionen lernen, was funktioniert und warum; Forschende erhalten entwicklungsorientiertes Feedback statt bloßer Beurteilung.",
-        "es": "Los evaluadores valoran la calidad más allá de los conteos; las instituciones aprenden qué funciona y por qué; los investigadores reciben retroalimentación formativa en vez de solo juicio."
+        "en": "Evaluators can assess the quality of research and not only count outputs; institutions learn what works and why; researchers receive feedback that helps them develop, and not only a verdict.",
+        "de": "Evaluatoren können die Qualität von Forschung bewerten und nicht nur Outputs zählen; Institutionen lernen, was funktioniert und warum; Forschende erhalten Rückmeldungen, die ihnen bei der Entwicklung helfen, und nicht nur ein Urteil.",
+        "es": "Los evaluadores pueden valorar la calidad de la investigación y no solo contar productos; las instituciones aprenden qué funciona y por qué; los investigadores reciben comentarios que les ayudan a desarrollarse, y no solo un veredicto."
       }
     },
     {
@@ -235,14 +235,14 @@
         "es": "Visibilidad, equidad y relevancia social"
       },
       "description": {
-        "en": "Societal impact and public engagement are undervalued in traditional metrics. ORI enhances research accessibility for non-academic audiences, citizen science enablement, geographic and linguistic equity, SDG alignment tracking, and public engagement.",
-        "de": "Gesellschaftliche Wirkung und öffentliches Engagement werden in traditionellen Metriken unterbewertet. ORI verbessert die Zugänglichkeit von Forschung für nicht-akademische Zielgruppen, ermöglicht Citizen Science, fördert geografische und sprachliche Gerechtigkeit, SDG-Ausrichtung und öffentliche Beteiligung.",
-        "es": "El impacto social y la participación pública están subvalorados en las métricas tradicionales. ORI mejora la accesibilidad de la investigación para audiencias no académicas, habilita la ciencia ciudadana, promueve la equidad geográfica y lingüística, el seguimiento de la alineación con los ODS y la participación pública."
+        "en": "Traditional metrics give little weight to the effect of research on society and to public engagement. Open research information makes research easier to find and use outside academia, supports citizen science and public engagement, makes research from more regions and in more languages visible, and shows how research relates to the Sustainable Development Goals (SDGs).",
+        "de": "Traditionelle Metriken geben der Wirkung von Forschung auf die Gesellschaft und der Beteiligung der Öffentlichkeit wenig Gewicht. Offene Forschungsinformationen machen Forschung außerhalb der Wissenschaft leichter auffindbar und nutzbar, unterstützen Citizen Science und die Beteiligung der Öffentlichkeit, machen Forschung aus mehr Regionen und in mehr Sprachen sichtbar und zeigen, wie Forschung mit den Zielen für nachhaltige Entwicklung (SDGs) zusammenhängt.",
+        "es": "Las métricas tradicionales dan poco peso al efecto de la investigación en la sociedad y a la participación del público. La información abierta sobre investigación hace que la investigación sea más fácil de encontrar y de usar fuera de la academia, apoya la ciencia ciudadana y la participación del público, da visibilidad a la investigación de más regiones y en más lenguas, y muestra cómo se relaciona la investigación con los Objetivos de Desarrollo Sostenible (ODS)."
       },
       "whoBenefits": {
-        "en": "Civil society organizations access relevant research; citizen scientists contribute meaningfully; policymakers connect research to societal priorities; communities worldwide participate in research.",
-        "de": "Zivilgesellschaftliche Organisationen greifen auf relevante Forschung zu; Citizen Scientists leisten sinnvolle Beiträge; Politikgestalter verbinden Forschung mit gesellschaftlichen Prioritäten; Gemeinschaften weltweit nehmen an Forschung teil.",
-        "es": "Las organizaciones de la sociedad civil acceden a investigación relevante; los científicos ciudadanos contribuyen de forma significativa; los responsables de políticas conectan la investigación con las prioridades sociales; las comunidades de todo el mundo participan."
+        "en": "Civil society organisations can reach the research that concerns them; citizen scientists can contribute; policymakers can connect research with what society needs; communities in more parts of the world can take part in research.",
+        "de": "Zivilgesellschaftliche Organisationen können die Forschung erreichen, die sie betrifft; Citizen Scientists können beitragen; Politikgestalter können Forschung mit dem verbinden, was die Gesellschaft braucht; Gemeinschaften in mehr Teilen der Welt können an Forschung teilnehmen.",
+        "es": "Las organizaciones de la sociedad civil pueden llegar a la investigación que les concierne; los científicos ciudadanos pueden contribuir; los responsables de políticas pueden conectar la investigación con lo que la sociedad necesita; comunidades de más partes del mundo pueden participar en la investigación."
       }
     }
   ]

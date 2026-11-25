@@ -51,3 +51,20 @@ test("every translatable field carries all three locales", () => {
     assertLocalized(b.whoBenefits, `${b.id}.whoBenefits`);
   }
 });
+
+// German and Spanish do not address the reader (no "Sie", no "tú" forms): the English is the
+// original and the other two are written in impersonal forms, as in the sibling tools.
+test("German and Spanish UI strings do not address the reader", async () => {
+  const draft = (await import("../site/draft/i18n.js")).UI;
+  const address = {
+    de: /\b(Sie können|Ihnen|Ihre[mnrs]?|bittet Sie|Sie schreiben|Sie einreichen)\b/,
+    es: /\b(puedes|haz clic|selecciona|escribes|envías|citándote|te pide|tu navegador|tus)\b/i,
+  };
+  for (const [loc, re] of Object.entries(address)) {
+    for (const dict of [UI[loc], draft[loc]]) {
+      for (const [key, text] of Object.entries(dict)) {
+        assert.doesNotMatch(text, re, `${loc}.${key} addresses the reader`);
+      }
+    }
+  }
+});

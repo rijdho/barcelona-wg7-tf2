@@ -89,6 +89,18 @@ test("B2 does not reclaim what B9 was added to hold", () => {
 // out of B7 because they overlapped with B4: in one coder's reading of the six
 // case responses, the three from infrastructures fit both. B4 is the information, B7 the
 // service that holds it. Put either phrase back and the pair collides again.
+// B4 (reworded 2026-11-25): three case responses name quality or traceability and mean
+// the information itself. The description has to say that open information can be checked
+// against its source, in every language, or the benefit covers only exchange again.
+test("B4 covers the quality of the information itself", () => {
+  const b4 = data.benefits.find((b) => b.id === "B4");
+  const need = { en: /check it against its source/, de: /an der Quelle prüfen/, es: /comprobarla en su fuente/ };
+  for (const [loc, re] of Object.entries(need)) {
+    assert.match(b4.description[loc], re, `B4 (${loc}) says the information can be checked`);
+    assert.doesNotMatch(b4.description[loc], /^(Infrastructure|Die Infrastruktur|La infraestructura)/, `B4 (${loc}) opens with the information, not the infrastructure`);
+  }
+});
+
 test("B7 does not reclaim what B4 holds", () => {
   const b7 = data.benefits.find((b) => b.id === "B7");
   for (const loc of ["en", "de", "es"]) {

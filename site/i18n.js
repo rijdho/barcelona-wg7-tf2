@@ -9,10 +9,7 @@ export const UI = {
     title: "The Ten Benefits",
     eyebrow: "The value of open research information",
     lede:
-      "What research systems gain when information about research is open: " +
-      "ten transformative benefits in three axes, flowing into trustworthy research, " +
-      "sustainable innovation, and societal impact. Select any item to trace its connections. " +
-      "Everything runs in your browser; nothing is tracked or sent anywhere.",
+      "What research systems gain when information about research is open: ten benefits in three axes, leading to trustworthy research, sustainable innovation and societal impact. Select an item to see what it connects to. The page loads nothing from another server and has no analytics.",
     navView: "View",
     navExplorer: "Benefits map",
     navDraft: "Draft: full taxonomy",
@@ -36,38 +33,21 @@ export const UI = {
     railSource: "Source on GitHub",
     railFamily: "Part of",
     aboutBody:
-      "This explorer renders \"The Value of Open Research Information: Ten Transformative Benefits\" " +
+      "This explorer shows \"The Value of Open Research Information: Ten Transformative Benefits\" " +
       "(brief, v{version}), a working document of Task Force 2 of Working Group 7 of the Barcelona " +
       "Declaration on Open Research Information. Content is licensed CC BY 4.0; the English text is " +
-      "the authoritative wording. A fuller stakeholder and benefits taxonomy is published here as an " +
-      "explicitly labelled draft (view 02); it has not been reviewed or endorsed by WG7-TF2.",
+      "the authoritative wording. A fuller stakeholder and benefits taxonomy is published here as a " +
+      "draft (view 02); it has not been reviewed or endorsed by WG7-TF2.",
     aboutHowTitle: "How it works",
     aboutHowBody:
-      "The Barcelona Declaration commits signatories to making openness the default, working with " +
-      "open systems, supporting infrastructure sustainability, and enabling collective action. " +
-      "Those commitments unlock the ten benefits shown here, each read as: what traditional " +
-      "metrics miss, what ORI makes possible, and who benefits. This page is a static site; the " +
-      "data behind it is a single JSON file in the repository, and every change to it is versioned.",
+      "The Barcelona Declaration commits signatories to making openness the default, working with open systems, supporting infrastructure sustainability, and enabling collective action. The brief describes ten benefits that follow from those commitments. Each one states what traditional metrics miss, what open research information adds, and who benefits. This page is a static site: it reads one JSON file from the repository, and every change to that file is recorded in the repository's history.",
     aboutSuggestBody:
-      "Two channels, pick whichever suits you: a structured GitHub issue (public and traceable, " +
-      "needs a GitHub account; the explorer's button pre-fills it for the selected item), or the " +
-      "shared WG7-TF2 spreadsheet, which needs no account at all.",
+      "There are two ways to suggest something. A GitHub issue is public and can be traced, and needs a GitHub account; the button fills in the form for the selected item. The shared WG7-TF2 spreadsheet needs no account.",
     contribUseBody:
-      "Every contribution is tied to a specific element of the framework, so nothing lands in a " +
-      "general inbox. You can propose a change, share an example of the element as it stands, or " +
-      "both. Wording feedback flows into the next version of the brief. Your perspective " +
-      "records which kind of actor says what about which benefit, evidence the task force uses to " +
-      "validate and refine the fuller stakeholder and benefits taxonomy under community review. " +
-      "Concrete examples feed the case study collection. Everything arrives as a public, versioned " +
-      "record: each suggestion keeps its link, and the exported CSV in the repository is the " +
-      "working dataset of the review. What you submit is contributed under CC BY 4.0, so the "
-      + "task force can reuse it with attribution to you; the form asks you to confirm this.",
+      "Each contribution refers to one element of the framework. You can propose a change, give an example of the element as it stands, or both. A suggestion about wording is considered for the next version of the brief. The form also asks from which perspective you write, so that the task force can see which kind of actor says what about which benefit. Every suggestion made through GitHub is public: it keeps its own link, and all of them are exported to a CSV file in the repository. What you submit is contributed under CC BY 4.0, so the task force can reuse it with attribution to you; the form asks you to confirm this.",
     aboutCreditsTitle: "Credits",
     aboutCredits:
-      "Built and maintained by Ricardo Hartley (@rijdho) as a contribution to Task Force 2 of " +
-      "Working Group 7 of the Barcelona Declaration; the brief itself is the work of the task " +
-      "force. Community suggestions are credited in their own issues and in the exported " +
-      "suggestions dataset.",
+      "Built and maintained by Ricardo Hartley Belmar (@rijdho) as a contribution to Task Force 2 of Working Group 7 of the Barcelona Declaration. Version 0.1 of the brief is the work of Task Force 2; the changes since then are the author's proposals to it, listed at the end of the brief. Suggestions from the community are credited in their own issues and in the exported file of suggestions.",
     aboutRefsTitle: "References",
     sourceLabel: "Source:",
     sourceLink: "source\u00a0\u2197",
@@ -77,10 +57,7 @@ export const UI = {
     title: "Die zehn Nutzen",
     eyebrow: "Der Wert offener Forschungsinformation",
     lede:
-      "Was Forschungssysteme gewinnen, wenn Informationen über Forschung offen sind: " +
-      "zehn transformative Nutzen in drei Achsen, die in vertrauenswürdige Forschung, " +
-      "nachhaltige Innovation und gesellschaftliche Wirkung münden. Element auswählen, um seine " +
-      "Verbindungen zu verfolgen. Alles läuft im Browser; nichts wird erfasst oder gesendet.",
+      "Was Forschungssysteme gewinnen, wenn Informationen über Forschung offen sind: zehn Nutzen in drei Achsen, die zu vertrauenswürdiger Forschung, nachhaltiger Innovation und gesellschaftlicher Wirkung führen. Element auswählen, um seine Verbindungen zu sehen. Die Seite lädt nichts von anderen Servern und hat keine Analyse-Software.",
     navView: "Ansicht",
     navExplorer: "Nutzen-Karte",
     navDraft: "Entwurf: vollständige Taxonomie",
@@ -107,39 +84,19 @@ export const UI = {
       "Dieser Explorer zeigt \"The Value of Open Research Information: Ten Transformative Benefits\" " +
       "(Brief, v{version}), ein Arbeitsdokument der Task Force 2 der Working Group 7 der Barcelona " +
       "Declaration on Open Research Information. Inhalte stehen unter CC BY 4.0; der englische Text " +
-      "ist maßgeblich. Eine umfassendere Stakeholder- und Nutzen-Taxonomie ist hier als ausdrücklich " +
-      "gekennzeichneter Entwurf veröffentlicht (Ansicht 02); sie wurde von WG7-TF2 weder geprüft " +
+      "ist maßgeblich. Eine umfassendere Stakeholder- und Nutzen-Taxonomie ist hier als " +
+      "Entwurf veröffentlicht (Ansicht 02); sie wurde von WG7-TF2 weder geprüft " +
       "noch bestätigt.",
     aboutHowTitle: "Wie es funktioniert",
     aboutHowBody:
-      "Die Barcelona Declaration verpflichtet ihre Unterzeichner, Offenheit zum Standard zu machen, " +
-      "mit offenen Systemen zu arbeiten, die Nachhaltigkeit der Infrastruktur zu unterstützen und " +
-      "kollektives Handeln zu ermöglichen. Diese Verpflichtungen erschließen die zehn hier gezeigten " +
-      "Nutzen, jeweils gelesen als: was traditionelle Metriken übersehen, was ORI möglich macht und " +
-      "wer profitiert. Diese Seite ist statisch; die Daten dahinter sind eine einzige JSON-Datei im " +
-      "Repository, und jede Änderung daran ist versioniert.",
+      "Die Barcelona Declaration verpflichtet ihre Unterzeichner, Offenheit zum Standard zu machen, mit offenen Systemen zu arbeiten, die Nachhaltigkeit der Infrastruktur zu unterstützen und kollektives Handeln zu ermöglichen. Der Brief beschreibt zehn Nutzen, die aus diesen Verpflichtungen folgen. Jeder nennt, was traditionelle Metriken übersehen, was offene Forschungsinformationen hinzufügen und wer profitiert. Diese Seite ist statisch: Sie liest eine JSON-Datei aus dem Repository, und jede Änderung an dieser Datei ist in der Historie des Repositorys festgehalten.",
     aboutSuggestBody:
-      "Zwei Wege, je nachdem, was passt: ein strukturiertes GitHub-Issue (öffentlich und " +
-      "nachvollziehbar, erfordert ein GitHub-Konto; der Button im Explorer füllt es für das " +
-      "gewählte Element vor) oder das gemeinsame WG7-TF2-Spreadsheet, ganz ohne Konto.",
+      "Es gibt zwei Wege, etwas vorzuschlagen. Ein GitHub-Issue ist öffentlich und nachvollziehbar und erfordert ein GitHub-Konto; der Button füllt das Formular für das gewählte Element aus. Das gemeinsame WG7-TF2-Spreadsheet erfordert kein Konto.",
     contribUseBody:
-      "Jeder Beitrag ist an ein konkretes Element des Rahmens gebunden, nichts landet in einem " +
-      "allgemeinen Posteingang. Sie können eine Änderung vorschlagen, ein Beispiel für das Element " +
-      "in seiner jetzigen Form teilen oder beides. Formulierungsfeedback fließt in die nächste " +
-      "Version des Briefs ein. " +
-      "Ihre Perspektive erfasst, welche Art von Akteur was über welchen Nutzen sagt, Evidenz, mit " +
-      "der die Task Force die umfassendere Stakeholder- und Nutzen-Taxonomie in der " +
-      "Community-Review validiert und verfeinert. Konkrete Beispiele speisen die " +
-      "Fallstudiensammlung. Alles ist öffentlich und versioniert: jeder Vorschlag behält seinen " +
-      "Link, und das exportierte CSV im Repository ist der Arbeitsdatensatz der Review. Was Sie "
-      + "einreichen, wird unter CC BY 4.0 beigetragen, damit die Task Force es mit Namensnennung "
-      + "weiterverwenden kann; das Formular bittet Sie, dem zuzustimmen.",
+      "Jeder Beitrag bezieht sich auf ein Element des Rahmens. Möglich sind ein Änderungsvorschlag, ein Beispiel für das Element in seiner jetzigen Form oder beides. Ein Vorschlag zur Formulierung wird für die nächste Version des Briefs geprüft. Das Formular fragt auch, aus welcher Perspektive der Beitrag kommt, damit die Task Force sehen kann, welche Art von Akteur was über welchen Nutzen sagt. Jeder Vorschlag über GitHub ist öffentlich: Er behält seinen eigenen Link, und alle werden in eine CSV-Datei im Repository exportiert. Beiträge stehen unter CC BY 4.0, damit die Task Force sie mit Namensnennung weiterverwenden kann; das Formular verlangt dazu eine Zustimmung.",
     aboutCreditsTitle: "Credits",
     aboutCredits:
-      "Erstellt und gepflegt von Ricardo Hartley (@rijdho) als Beitrag zur Task Force 2 der " +
-      "Working Group 7 der Barcelona Declaration; der Brief selbst ist die Arbeit der Task Force. " +
-      "Vorschläge aus der Community werden in ihren eigenen Issues und im exportierten " +
-      "Vorschlagsdatensatz namentlich geführt.",
+      "Erstellt und gepflegt von Ricardo Hartley Belmar (@rijdho) als Beitrag zur Task Force 2 der Working Group 7 der Barcelona Declaration. Version 0.1 des Briefs ist die Arbeit der Task Force 2; die Änderungen seither sind Vorschläge des Autors an sie und stehen am Ende des Briefs. Vorschläge aus der Community werden in ihren eigenen Issues und in der exportierten Datei der Vorschläge namentlich geführt.",
     aboutRefsTitle: "Referenzen",
     sourceLabel: "Quelle:",
     sourceLink: "Quelle\u00a0\u2197",
@@ -149,10 +106,7 @@ export const UI = {
     title: "Los diez beneficios",
     eyebrow: "El valor de la información abierta sobre investigación",
     lede:
-      "Lo que ganan los sistemas de investigación cuando la información sobre la investigación es " +
-      "abierta: diez beneficios transformadores en tres ejes, que desembocan en investigación " +
-      "confiable, innovación sostenible e impacto social. Selecciona un elemento para trazar sus " +
-      "conexiones. Todo funciona en tu navegador; no se rastrea ni se envía nada.",
+      "Lo que ganan los sistemas de investigación cuando la información sobre la investigación es abierta: diez beneficios en tres ejes, que llevan a investigación confiable, innovación sostenible e impacto social. Al seleccionar un elemento se ve con qué se conecta. La página no carga nada de otros servidores y no tiene analítica.",
     navView: "Vista",
     navExplorer: "Mapa de beneficios",
     navDraft: "Borrador: taxonomía completa",
@@ -165,7 +119,7 @@ export const UI = {
     detailVision: "Conduce a",
     detailAxis: "Eje",
     clearSelection: "Limpiar selección",
-    hint: "Nada seleccionado. Haz clic en un eje, beneficio o resultado para resaltar sus conexiones; clic de nuevo para limpiar.",
+    hint: "Nada seleccionado. Un clic en un eje, beneficio o resultado resalta sus conexiones; otro clic las quita.",
     share: "Copiar enlace a esta vista",
     suggest: "Sugerir un cambio o ejemplo (issue de GitHub)",
     suggestSheet: "Sugerir en la hoja compartida (Google Sheets)",
@@ -180,37 +134,18 @@ export const UI = {
       "(brief, v{version}), un documento de trabajo del Task Force 2 del Working Group 7 de la Barcelona " +
       "Declaration on Open Research Information. El contenido está bajo CC BY 4.0; el texto en inglés es " +
       "la redacción autorizada. Una taxonomía más completa de stakeholders y beneficios está publicada " +
-      "aquí como borrador explícitamente etiquetado (vista 02); no ha sido revisada ni respaldada " +
+      "aquí como borrador (vista 02); no ha sido revisada ni respaldada " +
       "por WG7-TF2.",
     aboutHowTitle: "Cómo funciona",
     aboutHowBody:
-      "La Barcelona Declaration compromete a sus firmantes a hacer de la apertura el estándar, trabajar " +
-      "con sistemas abiertos, apoyar la sostenibilidad de la infraestructura y habilitar la acción " +
-      "colectiva. Esos compromisos desbloquean los diez beneficios que se muestran aquí, cada uno leído " +
-      "como: qué pasan por alto las métricas tradicionales, qué hace posible ORI y quién se beneficia. " +
-      "Esta página es estática; los datos detrás son un único archivo JSON en el repositorio, y cada " +
-      "cambio queda versionado.",
+      "La Barcelona Declaration compromete a sus firmantes a hacer de la apertura el estándar, trabajar con sistemas abiertos, apoyar la sostenibilidad de la infraestructura y habilitar la acción colectiva. El brief describe diez beneficios que se siguen de esos compromisos. Cada uno dice qué pasan por alto las métricas tradicionales, qué añade la información abierta sobre investigación y quién se beneficia. Esta página es estática: lee un archivo JSON del repositorio, y cada cambio en ese archivo queda en el historial del repositorio.",
     aboutSuggestBody:
-      "Dos canales, elige el que te acomode: un issue estructurado de GitHub (público y " +
-      "trazable, requiere cuenta de GitHub; el botón del explorador lo prellena para el " +
-      "elemento seleccionado), o la hoja de cálculo compartida del WG7-TF2, sin cuenta alguna.",
+      "Hay dos maneras de sugerir algo. Un issue de GitHub es público y trazable, y requiere una cuenta de GitHub; el botón rellena el formulario para el elemento seleccionado. La hoja de cálculo compartida del WG7-TF2 no requiere cuenta.",
     contribUseBody:
-      "Cada aportación queda atada a un elemento concreto del marco, nada cae en un buzón " +
-      "genérico. Puedes proponer un cambio, compartir un ejemplo del elemento tal como está, o " +
-      "ambas cosas. Los comentarios de redacción fluyen a la próxima versión del brief. Tu " +
-      "perspectiva registra qué tipo de actor dice qué sobre qué beneficio, evidencia que el task " +
-      "force usa para validar y refinar la taxonomía más completa de stakeholders y beneficios en " +
-      "revisión comunitaria. Los ejemplos concretos alimentan la colección de casos de estudio. " +
-      "Todo queda como registro público y versionado: cada sugerencia conserva su enlace, y el CSV " +
-      "exportado en el repositorio es el conjunto de datos de trabajo de la revisión. Lo que "
-      + "envías se aporta bajo CC BY 4.0, de modo que el grupo de trabajo pueda reutilizarlo "
-      + "citándote; el formulario te pide confirmarlo.",
+      "Cada aportación se refiere a un elemento del marco. Se puede proponer un cambio, dar un ejemplo del elemento tal como está, o ambas cosas. Una sugerencia de redacción se considera para la próxima versión del brief. El formulario pregunta también desde qué perspectiva se escribe, para que el task force pueda ver qué tipo de actor dice qué sobre qué beneficio. Cada sugerencia hecha por GitHub es pública: conserva su propio enlace, y todas se exportan a un archivo CSV en el repositorio. Lo enviado se aporta bajo CC BY 4.0, de modo que el task force pueda reutilizarlo con atribución; el formulario pide confirmarlo.",
     aboutCreditsTitle: "Créditos",
     aboutCredits:
-      "Creado y mantenido por Ricardo Hartley (@rijdho) como contribución al Task Force 2 del " +
-      "Working Group 7 de la Barcelona Declaration; el brief mismo es obra del task force. Las " +
-      "sugerencias de la comunidad se acreditan en sus propios issues y en el conjunto de datos " +
-      "de sugerencias exportado.",
+      "Creado y mantenido por Ricardo Hartley Belmar (@rijdho) como contribución al Task Force 2 del Working Group 7 de la Barcelona Declaration. La versión 0.1 del brief es obra del Task Force 2; los cambios posteriores son propuestas del autor al Task Force 2 y están al final del brief. Las sugerencias de la comunidad se acreditan en sus propios issues y en el archivo exportado de sugerencias.",
     aboutRefsTitle: "Referencias",
     sourceLabel: "Fuente:",
     sourceLink: "fuente\u00a0\u2197",

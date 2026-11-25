@@ -17,8 +17,8 @@ export const UI = {
     lede:
       "Who participates in Open Research Information, and what value it creates: " +
       "ten benefit dimensions in three axes, reached by eleven stakeholder categories " +
-      "through eight functional roles. Select any item to trace its connections. " +
-      "Everything runs in your browser; nothing is tracked or sent anywhere.",
+      "through eight functional roles. Select an item to see what it connects to. " +
+      "The page loads nothing from another server and has no analytics.",
     navView: "View",
     navExplorer: "Explorer",
     colStakeholders: "Stakeholder categories",
@@ -53,8 +53,8 @@ export const UI = {
     lede:
       "Wer an Open Research Information teilnimmt und welchen Wert sie schafft: " +
       "zehn Nutzendimensionen in drei Achsen, erreicht von elf Stakeholder-Kategorien " +
-      "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu verfolgen. " +
-      "Alles läuft im Browser; nichts wird erfasst oder gesendet.",
+      "über acht funktionale Rollen. Element auswählen, um seine Verbindungen zu sehen. " +
+      "Die Seite lädt nichts von anderen Servern und hat keine Analyse-Software.",
     navView: "Ansicht",
     navExplorer: "Explorer",
     colStakeholders: "Stakeholder-Kategorien",
@@ -89,8 +89,8 @@ export const UI = {
     lede:
       "Quién participa en la información abierta sobre investigación y qué valor crea: " +
       "diez dimensiones de beneficio en tres ejes, alcanzadas por once categorías de stakeholders " +
-      "a través de ocho roles funcionales. Selecciona un elemento para trazar sus conexiones. " +
-      "Todo funciona en tu navegador; no se rastrea ni se envía nada.",
+      "a través de ocho roles funcionales. Al seleccionar un elemento se ve con qué se conecta. " +
+      "La página no carga nada de otros servidores y no tiene analítica.",
     navView: "Vista",
     navExplorer: "Explorador",
     colStakeholders: "Categorías de stakeholders",
@@ -103,7 +103,7 @@ export const UI = {
     detailRolesDelivering: "Se entrega a través de",
     detailAxis: "Eje",
     clearSelection: "Limpiar selección",
-    hint: "Nada seleccionado. Haz clic en un stakeholder, rol o beneficio para resaltar sus conexiones; clic de nuevo para limpiar.",
+    hint: "Nada seleccionado. Un clic en un stakeholder, rol o beneficio resalta sus conexiones; otro clic las quita.",
     share: "Copiar enlace a esta vista",
     suggest: "Sugerir un cambio",
     shared: "Enlace copiado",

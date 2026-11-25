@@ -12,7 +12,7 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
 ### Added
 
 - **B10 Reuse & Collective Action**, a tenth benefit in Axis II (brief v0.3). It holds what
-  four of the six responses in the WG7 case study collection describe and no benefit named:
+  five of the six responses in the WG7 case study collection describe and no benefit named:
   one organisation's open information built on by another, practices spreading between
   peers, infrastructure run by an alliance. The draft taxonomy reaches it from the Enabler
   and Coordinator roles and from four stakeholder categories.
@@ -27,6 +27,19 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
   closing section says what each change rests on and what six responses cannot show.
 - The explorer, the benefits map, the option lists, the issue form and the spreadsheet plan
   are regenerated for ten benefits, in English, German and Spanish. Assets move to `?v=22`.
+- **B4 covers the quality of the information itself** (2026-11-25, still brief v0.3). Its
+  description opens with the information, not the infrastructure, and adds that open
+  information can be checked against its source; three responses name quality,
+  traceability or replicability and do not mean research outputs. A test holds the new clause in all three languages. Assets
+  move to `?v=24`.
+- **Every description and every text of the page is reworded** (2026-11-25), in English,
+  German and Spanish: the descriptions of B1, B2, B3, B5, B6, B7 and B8 are sentences
+  that say who can do what, in place of lists of noun phrases; the summary table of the
+  brief is rewritten from them; the page no longer says that nothing is sent anywhere, and
+  says what it loads and stores; the credits say which part of the brief is the task
+  force's and which is proposed by the author.
+- README: the status section lists each version once, and the statements about tracking,
+  the tests and the archived record are reworded to what the code and the record show.
 - The README's status and caveats describe v0.3.
 
 - The abstract in `CITATION.cff` names the address where the tool runs, so the Zenodo record

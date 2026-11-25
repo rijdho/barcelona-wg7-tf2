@@ -6,7 +6,7 @@ Generated from `site/data/taxonomy.json` (brief v0.3) by
 ```mermaid
 flowchart TB
   accTitle: The ten benefits of open research information
-  accDescr: The Barcelona Declaration commitments unlock Open Research Information, which delivers ten benefits in three axes; the benefits flow into trustworthy research, sustainable innovation, and societal impact, leading to research that is visible, valued, and impactful.
+  accDescr: The four commitments of the Barcelona Declaration lead to open research information, which has ten benefits in three axes; the benefits lead to three outcomes (trustworthy research, sustainable innovation and societal impact), and these to research that is visible, valued and impactful.
   START["Barcelona Declaration<br/>4 commitments"] --> ORI["Open Research Information<br/>structured · open · machine-readable"]
   ORI --> A1["Quality & Trust"]
   ORI --> A2["Collaboration & Innovation"]
@@ -40,7 +40,7 @@ flowchart TB
   O3 --> VISION
 ```
 
-Read top to bottom: the Declaration's commitments unlock ORI; ORI delivers the ten
-benefit dimensions grouped in three axes; the benefits flow into three outcomes and,
-together, into the vision. Definitions and who benefits from each dimension are in
+Read top to bottom: the commitments of the Declaration, open research information, the
+ten benefits in their three axes, the three outcomes and the vision. The description of
+each benefit and who benefits from it are in
 `ORI_Benefits_Overview_brief.md`.

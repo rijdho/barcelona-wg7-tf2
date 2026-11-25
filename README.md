@@ -2,19 +2,19 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22231440.svg)](https://doi.org/10.5281/zenodo.22231440)
 
-**The ten transformative benefits of Open Research Information, as an interactive
-explorer.**
+**Ten benefits of open research information, as a brief and an interactive explorer.**
 
 Contribution to Task Force 2 of Working Group 7 of the Barcelona Declaration on Open
 Research Information. The brief maps what research systems gain when information about
 research is open: ten benefit dimensions in three axes (Quality & Trust, Collaboration &
-Innovation, Impact & Relevance), flowing into trustworthy research, sustainable innovation,
-and societal impact.
+Innovation, Impact & Relevance), which lead to three outcomes: trustworthy research,
+sustainable innovation and societal impact.
 
 🔗 **Live:** https://rijdho.github.io/barcelona-wg7-tf2/
 
 The explorer is available in **English, German and Spanish** (auto-detected, switchable)
-and runs entirely in the browser: nothing is tracked, nothing is sent anywhere. Its
+and runs in the browser. It loads nothing from another server and has no analytics; it
+keeps the chosen language and theme in the browser's local storage. Its
 "Suggest a change or example" button opens a pre-filled GitHub issue form, which takes a
 proposed change, an example of the element as it stands, or both; contributions are
 exported automatically to `suggestions/suggestions.csv`.
@@ -50,7 +50,7 @@ scripts/
   generate-sheet.mjs                      Describes the spreadsheet channel from the
                                           same sources (npm run sheet)
   build-sheet.py                          Turns that description into an xlsx with
-                                          real data validation, to import into the
+                                          data validation, to import into the
                                           shared WG7-TF2 spreadsheet
 tests/
   data.test.mjs                           Counts, referential integrity, exact match
@@ -90,19 +90,18 @@ _ref/                                     Source material and internal TF2 mater
 ## Status (2026-11-14)
 
 WG7-TF2 has not yet reviewed the brief. Coordinators: Christian, Ricardo, Bianca, Barbara.
+Version 0.1 is the work of Task Force 2; every change since then is a proposal to it.
 
-The brief moved to **v0.3** on 2026-11-14, after the six responses in the WG7 case study
-collection were placed against it: a tenth benefit, **B10 Reuse & Collective Action**, joins
-Axis II; B9 names its two parts, the publishing system made observable and independence
-from proprietary sources; and B7 gives up two phrases that overlapped with B4. These are proposals
-put to the task force, not decisions it has taken. See the brief's closing sections for
-what changed and why.
+- **v0.3** (2026-11-14, B4 reworded on 2026-11-25): the six responses in the WG7 case study
+  collection were read against the benefits. B10 Reuse & Collective Action was added to
+  Axis II, B9 was split into two parts (the publishing system made observable, and
+  independence from proprietary sources), two phrases that B7 shared with B4 were removed
+  from B7, and B4 now covers the quality of the information itself.
+- **v0.2** (2026-08-26): one case study, from the University of Milan, was read against
+  the benefits. B9 Strategic Steering & Institutional Autonomy was added to Axis II, and
+  the clause "open science policy implementation" was removed from B2.
 
-The brief moved to **v0.2** on 2026-08-26: a ninth benefit, **B9 Strategic Steering &
-Institutional Autonomy**, joins Axis II, and B2 gives up the clause that made it absorb
-every institutional case. Both changes came out of placing a real TF1 case study against
-the framework rather than out of rereading the definitions, and both are proposals put to
-the task force, not decisions it has taken.
+The last two sections of the brief give the reason for each change.
 
 | Milestone | Status |
 | --- | --- |
@@ -110,7 +109,7 @@ the task force, not decisions it has taken.
 | Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.3 |
 | Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 and B10 to keep its parity contract with the brief |
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
-| Cases placed against the framework | Six, the responses in the WG7 case study collection on 2026-11-14, the source of the v0.3 changes. Two of them were placed on 2026-08-26: University of Milan, the source of the v0.2 changes, and a second chosen to test whether B9 over-reaches |
+| Cases read against the benefits | Six, the responses in the WG7 case study collection on 2026-11-14. Two of them were first read on 2026-08-26: the University of Milan response, and a second one chosen because it has no costs in it |
 | Community review by WG7-TF2 | Not yet held |
 | Zenodo DOI / publication | Archived at v0.2.0 (2026-09-01), concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440); archived as a working document, not as an agreed framework |
 
@@ -123,9 +122,10 @@ npm test
 Node's built-in runner, no dependencies. Seven layers:
 
 1. **The framework**: counts and referential integrity of `site/data/taxonomy.json`; axis
-   and outcome groupings must match the brief. It also refuses to let B2 reclaim the
-   "policy implementation" clause B9 holds, or B7 the standards and interoperability that
-   B4 holds, in any of the three languages, and it checks that B9 names both of its parts.
+   and outcome groupings must match the brief. In all three languages it also checks that
+   B2 does not contain "policy implementation", that B7 does not contain the two phrases
+   moved to B4, that B9 has both of its parts, and that B4 mentions checking the
+   information against its source.
 2. **i18n**: identical key sets, matching placeholders, full locale coverage, and array
    lengths pinned where overlays align by index.
 3. **The draft taxonomy**: its own integrity, and that it may extend the brief without
@@ -143,10 +143,9 @@ Node's built-in runner, no dependencies. Seven layers:
 7. **The spreadsheet channel**: its plan carries the same closed lists as the form, an
    agreement column, and the terms verbatim with the licence URL spelled out.
 
-Every check was written by injecting the defect it catches, confirming the suite goes red,
-and reverting. These are failures that leave nothing to see: a renamed form label exports
-an empty column while the CSV still opens in Excel, and an asset left at the previous `?v=`
-brings the page up blank while looking deployed.
+The checks cover failures that show no error. Two examples: a renamed form label exports an
+empty column while the CSV still opens, and an asset left at the previous `?v=` leaves the
+page blank after a deploy that reported success.
 
 ## Run locally
 
@@ -196,10 +195,11 @@ number.
 ## Caveats
 
 The brief is a v0.3 working document that WG7-TF2 has not reviewed; wording and groupings
-may change as a result. B9, B10 and the narrowing of B2 and B7 are the proposals of one
-coordinator on the evidence of six self-selected case responses (B9 and B2 on the first
-two), read once and without a second coder. That is enough to show where the framework has no place for what a case
-reports, and not enough to fix its wording or to say how often a benefit occurs. It is a
+may change as a result. B9, B10 and the changes to B2, B4 and B7 are the proposals of one
+member of the task force. They rest on six self-selected case responses (B9 and B2 on the
+first two), read by one coder without a codebook. Such a reading shows where the framework
+has no place for what a case reports. It cannot settle the wording of a benefit or say how
+often a benefit occurs. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
@@ -232,9 +232,11 @@ which always resolves to the latest version. Cite that one; the version DOI
 ([10.5281/zenodo.22231441](https://doi.org/10.5281/zenodo.22231441) for v0.2.0) is only for
 pinning a specific snapshot.
 
-**What the record archives is a working document, and it says so.** A Zenodo record cannot
-be unpublished, so the version that carries a DOI has to be honest about its own standing:
-v0.2 is numbered below 1.0 because WG7-TF2 has not reviewed it, and B9 together with the
-narrowing of B2 are proposals put to the task force, not decisions it has taken. That is
-written into the record's own abstract, not only here. Whatever the group agrees becomes a
-later version under the same concept DOI.
+The authors are cited as Hartley Belmar, Ricardo (ORCID
+[0000-0001-5058-9309](https://orcid.org/0000-0001-5058-9309)) and Barcelona Declaration on
+Open Research Information, Working Group 7, Task Force 2.
+
+The archived version, v0.2.0, is a working document: WG7-TF2 has not reviewed it, and B9
+and the change to B2 are proposals to the task force. The abstract of the Zenodo record
+says so as well. A version that the group agrees will be archived under the same concept
+DOI.
