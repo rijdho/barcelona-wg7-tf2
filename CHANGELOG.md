@@ -4,10 +4,15 @@ All notable changes to this repository are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-Versions tracked the brief up to 0.2.0. Since 0.3.0 the repository has its own number, and
-the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed the brief.
+Versions tracked the brief up to 0.2.0. Release 0.3.0 carried brief v0.2, and the brief
+states its own version. At 0.4.0 the two numbers are the same again. Both stay below 1.0 until WG7-TF2 has reviewed the brief.
 
 ## [Unreleased]
+
+## [0.4.0] - 2026-11-25
+
+Brief v0.4: ten benefits. The brief had the number 0.5 for some hours on 2026-11-25; no
+version with that number was released.
 
 ### Added
 
@@ -42,12 +47,10 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
   of Working Group 7, in place of the author's name, and the About page no longer has a
   Credits section (2026-11-25). The authors are named in `CITATION.cff` and in the README.
   Assets move to `?v=26`.
-- **The brief is at v0.5** (2026-11-25). The benefits are those of v0.4; the number moves
-  with the change of credits on the page. Assets move to `?v=27`.
 - The draft taxonomy defines B1, B2 and B8 as the brief does since v0.4 (2026-11-25): its
   one-line definitions spoke of research itself, and the two views of the page gave two
   readings of the same benefit. A test holds the three definitions in every language.
-  Assets move to `?v=28`.
+  Assets move to `?v=29`.
 - **Every description and every text of the page is reworded** (2026-11-25), in English,
   German and Spanish: the descriptions of B1, B2, B3, B5, B6, B7 and B8 are sentences
   that say who can do what, in place of lists of noun phrases; the summary table of the
@@ -62,6 +65,9 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
   leads to it and not only to the repository.
 
 ## [0.3.0]: 2026-09-24
+
+Archived on Zenodo as [10.5281/zenodo.22944869](https://doi.org/10.5281/zenodo.22944869).
+It carried brief v0.2, with nine benefits.
 
 ### Changed
 

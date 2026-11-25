@@ -1,6 +1,6 @@
 # The Ten Benefits of Open Research Information
 
-Generated from `site/data/taxonomy.json` (brief v0.5) by
+Generated from `site/data/taxonomy.json` (brief v0.4) by
 `scripts/generate-diagram.mjs`. Do not edit by hand; edit the JSON and regenerate.
 
 ```mermaid
