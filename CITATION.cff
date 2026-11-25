@@ -7,7 +7,7 @@ abstract: >-
   Trust, Collaboration & Innovation, Impact & Relevance) that lead to trustworthy
   research, sustainable innovation and societal impact. Contribution to Task Force
   2 of Working Group 7 of the Barcelona Declaration on Open Research Information.
-  The brief is at version 0.4, a working document. Two benefits (B9 Strategic
+  The brief is at version 0.5, a working document. Two benefits (B9 Strategic
   Steering & Institutional Autonomy and B10 Reuse & Collective Action) and the
   changes to B1, B2, B4, B7 and B8 are proposals put to WG7-TF2, not decisions the task
   force has taken. The explorer runs entirely in the browser and is available in English,
@@ -31,7 +31,7 @@ identifiers:
 repository-code: "https://github.com/rijdho/barcelona-wg7-tf2"
 url: "https://rijdho.github.io/barcelona-wg7-tf2/"
 license: CC-BY-4.0
-version: "0.4.0"
+version: "0.5.0"
 date-released: "2026-11-25"
 keywords:
   - open research information

@@ -1,6 +1,6 @@
 # The Value of Open Research Information: Ten Transformative Benefits
 
-**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 0.4 (Brief) **Date:** February 2026, revised August and November 2026
+**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 0.5 (Brief) **Date:** February 2026, revised August and November 2026
 
 **Open research information (ORI)** is structured, machine-readable metadata about research actors, activities, inputs, outputs and impacts, made openly available through open infrastructures that use standard protocols and identifiers.
 
@@ -85,6 +85,11 @@ See [`Benefits_map.md`](Benefits_map.md) for the flow diagram. It is generated f
 `site/data/taxonomy.json`, the same file the explorer reads.
 
 ---
+
+## **Changes in 0.5 (25 November 2026)**
+
+The benefits and their texts are those of 0.4. The explorer now credits Task Force 2 of
+Working Group 7 in its rail, and its About page no longer has a credits section.
 
 ## **Changes in 0.4 (25 November 2026)**
 

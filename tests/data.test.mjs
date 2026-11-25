@@ -1,5 +1,5 @@
 // Integrity of site/data/taxonomy.json against the brief ("Ten
-// Transformative Benefits", v0.4): counts, referential integrity, and
+// Transformative Benefits", v0.5): counts, referential integrity, and
 // cross-consistency of the axis and outcome groupings. Aimed at silent
 // failures: a mistyped id still renders, it just drops a connection.
 
