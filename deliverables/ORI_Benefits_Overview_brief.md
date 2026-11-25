@@ -1,6 +1,6 @@
 # The Value of Open Research Information: Ten Transformative Benefits
 
-**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 0.3 (Brief) **Date:** February 2026, revised August and November 2026
+**Barcelona Declaration Working Group 7 - Task Force 2** **Version:** 0.4 (Brief) **Date:** February 2026, revised August and November 2026
 
 **Open research information (ORI)** is structured, machine-readable metadata about research actors, activities, inputs, outputs and impacts, made openly available through open infrastructures that use standard protocols and identifiers.
 
@@ -14,18 +14,18 @@ This brief describes ten benefits that follow from those commitments. Each one s
 
 #### **B1: Research Output Quality & Traceability**
 
-Traditional metrics count publications and say little about how the research was done. When the data, methods and versions behind a result are recorded and linked to it, other researchers can check the result and repeat the work.  
-**Who benefits:** Researchers can verify each other's work and build on it; institutions can show quality by more than citations; funders can follow the outputs of what they fund.
+Traditional metrics count publications and say little about how the research was done. Open metadata on publications, research data, software, samples and instruments, linked to each other, show what a research output rests on and what was made from it. Researchers and others can then find the outputs that matter to them, assess them, and check and repeat the work.  
+**Who benefits:** Researchers can find and verify each other's work and build on it; societal stakeholders can find and assess the research that concerns them; institutions can show quality by more than citations; funders can follow the outputs of what they fund.
 
 #### **B2: Governance, Ethics & Compliance**
 
-Publication counts do not show whether research was conducted ethically and within the rules. With open research information, an institution can show which ethics approvals a project holds, how it protects personal data, and who answers for the way the research is conducted. The principle is "as open as possible, as closed as necessary".  
-**Who benefits:** Research institutions can show that they work responsibly; funders can check that the work they fund meets their ethical requirements; policymakers can see whether regulations are followed.
+Publication counts do not show whether research follows the rules that apply to it. With open research information, an institution can show that its research meets ethical and data protection requirements, and an institution, a funder or a government can check whether its policies, for instance on open access, are met, with figures that others can check too. Not all research information can be open: information that cannot be shared ethically, such as information with privacy implications, stays closed. The principle is "as open as possible, as closed as necessary".  
+**Who benefits:** Research institutions can show that they work responsibly; funders and governments can check whether their policies are met; anyone who uses the figures can verify them.
 
 #### **B8: Integrity & Accountability**
 
-Traditional metrics do not reveal misconduct or conflicts of interest. Open research information helps to detect and prevent misconduct: it discloses who funded a study, keeps a record of what was done and what was changed, and lets the public hold research to account.  
-**Who benefits:** Research communities earn trust by working in the open; evaluators can find integrity problems early; civil society can see how research is held to account.
+Traditional metrics do not show what information a decision about research rests on. When research information is open, those who are assessed can see and audit the information used about them, information on funding and grants shows who funded a study, and it is visible where the information comes from and how it was processed. Open information also helps to detect misconduct and conflicts of interest.  
+**Who benefits:** Researchers and institutions can audit the information by which they are assessed; evaluators can find integrity problems early; civil society can see who funded research and how it is held to account.
 
 ### **AXIS II: COLLABORATION & INNOVATION**
 
@@ -70,9 +70,9 @@ Traditional metrics give little weight to the effect of research on society and 
 
 | Benefit | What traditional metrics miss | What open research information adds |
 | :---- | :---- | :---- |
-| **B1: Research Output Quality & Traceability** | How the research was done | Results that can be checked and repeated |
-| **B2: Governance, Ethics & Compliance** | Whether research was conducted ethically and within the rules | Approvals, data protection and responsibility on record |
-| **B8: Integrity & Accountability** | Misconduct and conflicts of interest | Funding disclosed, a record of what was done |
+| **B1: Research Output Quality & Traceability** | How the research was done | Outputs that can be found, traced and assessed through open metadata |
+| **B2: Governance, Ethics & Compliance** | Whether research follows the rules that apply to it | Compliance that can be shown, and checked with figures open to others |
+| **B8: Integrity & Accountability** | What information a decision about research rests on | Information that those assessed can audit, with its funding and its origin visible |
 | **B3: Capacity Building & Inclusive Training** | What people learn | Training and capacity on record |
 | **B4: Interoperability & Metadata Quality** | Fragmented systems, information that cannot be checked | Data exchange, information checked against its source |
 | **B7: Infrastructure & Technical Enablement** | The technical services research depends on | Services that can be sustained, and recognition for those who run them |
@@ -85,6 +85,36 @@ See [`Benefits_map.md`](Benefits_map.md) for the flow diagram. It is generated f
 `site/data/taxonomy.json`, the same file the explorer reads.
 
 ---
+
+## **Changes in 0.4 (25 November 2026)**
+
+- **B1, B2 and B8 are rewritten around research information.** The Barcelona Declaration
+  defines research information as "information (sometimes referred to as metadata) relating
+  to the conduct and communication of research". The texts of these three benefits
+  described research itself: reproducible results, ethics approvals, misconduct. The
+  Declaration mentions none of the three, and in the six case responses B1 and B8 were
+  reported by none and B2 by one.
+- **B1** now says what open metadata on publications, data, software, samples and
+  instruments let people do with a research output: find it, see what it rests on and
+  assess it. The Declaration calls research information "indispensable for researchers and
+  societal stakeholders to find and assess relevant research outputs".
+- **B2** now says that an institution, a funder or a government can check whether its
+  policies are met, with figures that others can check too. It keeps ethics and data
+  protection, and adds the limit the Declaration sets: "Research information that cannot be
+  ethically shared, including information that has privacy implications, should not be made
+  open."
+- **B8** now says that those who are assessed can audit the information used about them.
+  The Declaration says that open research information "enables information used in
+  research evaluations to be accessible and auditable by those being assessed". B8 also
+  says that information on funding shows who funded a study and that the origin of the
+  information is visible. Detecting misconduct is kept from v0.1.
+- **The line between B4 and B8.** B4 is about whether the information is correct and who
+  can correct it. B8 is about who can see what a decision rests on. One passage moves from
+  a question mark to B8: a journal index that shows the source of its metadata.
+
+These are proposals of one member put to the task force. They were written on 25 November
+2026 and nobody else has read them. With the new texts, one of the six responses reports
+B8 and one B2; none reports B1 or B3.
 
 ## **Changes in 0.3 (November 2026)**
 

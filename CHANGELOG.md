@@ -32,6 +32,12 @@ the brief states its own version. Both stay below 1.0 until WG7-TF2 has reviewed
   information can be checked against its source; three responses name quality,
   traceability or replicability and do not mean research outputs. A test holds the new clause in all three languages. Assets
   move to `?v=24`.
+- **The brief is at v0.4** (2026-11-25). B1, B2 and B8 are rewritten around research
+  information as the Barcelona Declaration defines it: B1 says what open metadata let
+  people do with a research output, B2 that policies can be checked with figures open to
+  others, B8 that those who are assessed can audit the information used about them. The
+  brief's section "Changes in 0.4" quotes the Declaration for each. A test holds the three
+  texts in every language. Assets move to `?v=25`.
 - **Every description and every text of the page is reworded** (2026-11-25), in English,
   German and Spanish: the descriptions of B1, B2, B3, B5, B6, B7 and B8 are sentences
   that say who can do what, in place of lists of noun phrases; the summary table of the

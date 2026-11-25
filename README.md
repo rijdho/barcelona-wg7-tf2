@@ -24,7 +24,7 @@ exported automatically to `suggestions/suggestions.csv`.
 ```
 deliverables/
   ORI_Benefits_Overview_brief.md          The brief: ten benefits in three axes,
-                                          with who benefits from each (v0.3, Nov 2026)
+                                          with who benefits from each (v0.4, Nov 2026)
   Benefits_map.md                         Flow map (Mermaid), generated from
                                           site/data/taxonomy.json
 site/
@@ -87,11 +87,15 @@ _ref/                                     Source material and internal TF2 mater
                                           (private, not versioned)
 ```
 
-## Status (2026-11-14)
+## Status (2026-11-25)
 
 WG7-TF2 has not yet reviewed the brief. Coordinators: Christian, Ricardo, Bianca, Barbara.
 Version 0.1 is the work of Task Force 2; every change since then is a proposal to it.
 
+- **v0.4** (2026-11-25): B1, B2 and B8 were rewritten around research information as the
+  Barcelona Declaration defines it. Their texts described research itself (reproducible
+  results, ethics approvals, misconduct), which the Declaration does not mention and the
+  six case responses hardly report.
 - **v0.3** (2026-11-14, B4 reworded on 2026-11-25): the six responses in the WG7 case study
   collection were read against the benefits. B10 Reuse & Collective Action was added to
   Axis II, B9 was split into two parts (the publishing system made observable, and
@@ -101,12 +105,12 @@ Version 0.1 is the work of Task Force 2; every change since then is a proposal t
   the benefits. B9 Strategic Steering & Institutional Autonomy was added to Axis II, and
   the clause "open science policy implementation" was removed from B2.
 
-The last two sections of the brief give the reason for each change.
+The last three sections of the brief give the reason for each change.
 
 | Milestone | Status |
 | --- | --- |
-| Benefits overview brief | v0.3 (2026-11-14); v0.2 2026-08-26; v0.1 circulated Feb 2026 |
-| Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.3 |
+| Benefits overview brief | v0.4 (2026-11-25); v0.3 2026-11-14; v0.2 2026-08-26; v0.1 circulated Feb 2026 |
+| Interactive explorer + benefits map | Live on GitHub Pages, regenerated for v0.4 |
 | Full stakeholder and benefits taxonomy | Published as an explicitly labeled draft exercise (site/draft/); extended to B9 and B10 to keep its parity contract with the brief |
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | Cases read against the benefits | Six, the responses in the WG7 case study collection on 2026-11-14. Two of them were first read on 2026-08-26: the University of Milan response, and a second one chosen because it has no costs in it |
@@ -194,8 +198,8 @@ number.
 
 ## Caveats
 
-The brief is a v0.3 working document that WG7-TF2 has not reviewed; wording and groupings
-may change as a result. B9, B10 and the changes to B2, B4 and B7 are the proposals of one
+The brief is a v0.4 working document that WG7-TF2 has not reviewed; wording and groupings
+may change as a result. B9, B10 and the changes to B1, B2, B4, B7 and B8 are the proposals of one
 member of the task force. They rest on six self-selected case responses (B9 and B2 on the
 first two), read by one coder without a codebook. Such a reading shows where the framework
 has no place for what a case reports. It cannot settle the wording of a benefit or say how
@@ -203,7 +207,7 @@ often a benefit occurs. It is a
 qualitative framework for advocacy and communication, not a measurement instrument: it
 does not rank benefits, weigh them against each other, or support quantitative claims
 about the size of any benefit. The German and Spanish texts in the explorer are working
-translations of the English v0.3, which remains the authoritative wording.
+translations of the English v0.4, which remains the authoritative wording.
 
 ## Note
 

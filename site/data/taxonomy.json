@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "date": "2026-11",
   "source": "deliverables/ORI_Benefits_Overview_brief.md",
   "vision": {
@@ -55,14 +55,14 @@
         "es": "Calidad y trazabilidad de los productos de investigación"
       },
       "description": {
-        "en": "Traditional metrics count publications and say little about how the research was done. When the data, methods and versions behind a result are recorded and linked to it, other researchers can check the result and repeat the work.",
-        "de": "Traditionelle Metriken zählen Publikationen und sagen wenig darüber, wie geforscht wurde. Wenn die Daten, Methoden und Versionen hinter einem Ergebnis festgehalten und mit ihm verknüpft sind, können andere Forschende das Ergebnis prüfen und die Arbeit wiederholen.",
-        "es": "Las métricas tradicionales cuentan publicaciones y dicen poco de cómo se hizo la investigación. Cuando los datos, los métodos y las versiones que sostienen un resultado quedan registrados y enlazados con él, otros investigadores pueden comprobar el resultado y repetir el trabajo."
+        "en": "Traditional metrics count publications and say little about how the research was done. Open metadata on publications, research data, software, samples and instruments, linked to each other, show what a research output rests on and what was made from it. Researchers and others can then find the outputs that matter to them, assess them, and check and repeat the work.",
+        "de": "Traditionelle Metriken zählen Publikationen und sagen wenig darüber, wie geforscht wurde. Offene Metadaten zu Publikationen, Forschungsdaten, Software, Proben und Instrumenten, die miteinander verknüpft sind, zeigen, worauf ein Forschungsergebnis beruht und was daraus entstanden ist. Forschende und andere können dann die für sie relevanten Ergebnisse finden, sie beurteilen und die Arbeit prüfen und wiederholen.",
+        "es": "Las métricas tradicionales cuentan publicaciones y dicen poco de cómo se hizo la investigación. Los metadatos abiertos de publicaciones, datos de investigación, software, muestras e instrumentos, enlazados entre sí, muestran en qué se apoya un producto de investigación y qué se hizo a partir de él. Los investigadores y otras personas pueden entonces encontrar los productos que les interesan, valorarlos, y comprobar y repetir el trabajo."
       },
       "whoBenefits": {
-        "en": "Researchers can verify each other's work and build on it; institutions can show quality by more than citations; funders can follow the outputs of what they fund.",
-        "de": "Forschende können die Arbeit anderer prüfen und darauf aufbauen; Institutionen können Qualität an mehr als Zitationen zeigen; Förderer können verfolgen, was aus geförderten Projekten hervorgeht.",
-        "es": "Los investigadores pueden verificar el trabajo de otros y construir sobre él; las instituciones pueden mostrar calidad con algo más que citas; los financiadores pueden seguir los productos de lo que financian."
+        "en": "Researchers can find and verify each other's work and build on it; societal stakeholders can find and assess the research that concerns them; institutions can show quality by more than citations; funders can follow the outputs of what they fund.",
+        "de": "Forschende können die Arbeit anderer finden, prüfen und darauf aufbauen; gesellschaftliche Akteure können die Forschung finden und beurteilen, die sie betrifft; Institutionen können Qualität an mehr als Zitationen zeigen; Förderer können verfolgen, was aus geförderten Projekten hervorgeht.",
+        "es": "Los investigadores pueden encontrar y verificar el trabajo de otros y construir sobre él; los actores de la sociedad pueden encontrar y valorar la investigación que les concierne; las instituciones pueden mostrar calidad con algo más que citas; los financiadores pueden seguir los productos de lo que financian."
       }
     },
     {
@@ -75,14 +75,14 @@
         "es": "Gobernanza, ética y cumplimiento"
       },
       "description": {
-        "en": "Publication counts do not show whether research was conducted ethically and within the rules. With open research information, an institution can show which ethics approvals a project holds, how it protects personal data, and who answers for the way the research is conducted. The principle is \"as open as possible, as closed as necessary\".",
-        "de": "Publikationszahlen zeigen nicht, ob ethisch und regelkonform geforscht wurde. Mit offenen Forschungsinformationen kann eine Institution zeigen, welche Ethikvoten ein Projekt hat, wie es personenbezogene Daten schützt und wer für die Durchführung der Forschung verantwortlich ist. Es gilt der Grundsatz \"so offen wie möglich, so geschlossen wie nötig\".",
-        "es": "Los conteos de publicaciones no muestran si la investigación se hizo de forma ética y dentro de las normas. Con información abierta sobre investigación, una institución puede mostrar qué aprobaciones éticas tiene un proyecto, cómo protege los datos personales y quién responde por la forma en que se investiga. El principio es \"tan abierto como sea posible, tan cerrado como sea necesario\"."
+        "en": "Publication counts do not show whether research follows the rules that apply to it. With open research information, an institution can show that its research meets ethical and data protection requirements, and an institution, a funder or a government can check whether its policies, for instance on open access, are met, with figures that others can check too. Not all research information can be open: information that cannot be shared ethically, such as information with privacy implications, stays closed. The principle is \"as open as possible, as closed as necessary\".",
+        "de": "Publikationszahlen zeigen nicht, ob Forschung die für sie geltenden Regeln einhält. Mit offenen Forschungsinformationen kann eine Institution zeigen, dass ihre Forschung ethische Anforderungen und den Datenschutz erfüllt, und eine Institution, ein Förderer oder eine Regierung kann prüfen, ob ihre Vorgaben, etwa zu Open Access, eingehalten werden, mit Zahlen, die auch andere prüfen können. Nicht alle Forschungsinformationen können offen sein: Informationen, die sich ethisch nicht teilen lassen, etwa solche mit Bezug zur Privatsphäre, bleiben geschlossen. Es gilt der Grundsatz \"so offen wie möglich, so geschlossen wie nötig\".",
+        "es": "Los conteos de publicaciones no muestran si la investigación cumple las normas que se le aplican. Con información abierta sobre investigación, una institución puede mostrar que su investigación cumple los requisitos éticos y de protección de datos, y una institución, un financiador o un gobierno puede comprobar si se cumplen sus políticas, por ejemplo de acceso abierto, con cifras que otros también pueden comprobar. No toda la información sobre investigación puede ser abierta: la que no se puede compartir de forma ética, como la que afecta a la privacidad, se mantiene cerrada. El principio es \"tan abierto como sea posible, tan cerrado como sea necesario\"."
       },
       "whoBenefits": {
-        "en": "Research institutions can show that they work responsibly; funders can check that the work they fund meets their ethical requirements; policymakers can see whether regulations are followed.",
-        "de": "Forschungseinrichtungen können zeigen, dass sie verantwortungsvoll arbeiten; Förderer können prüfen, ob geförderte Arbeiten ihre ethischen Anforderungen erfüllen; Politikgestalter können sehen, ob Vorgaben eingehalten werden.",
-        "es": "Las instituciones de investigación pueden mostrar que trabajan de forma responsable; los financiadores pueden comprobar que lo que financian cumple sus requisitos éticos; los responsables de políticas pueden ver si las normas se cumplen."
+        "en": "Research institutions can show that they work responsibly; funders and governments can check whether their policies are met; anyone who uses the figures can verify them.",
+        "de": "Forschungseinrichtungen können zeigen, dass sie verantwortungsvoll arbeiten; Förderer und Regierungen können prüfen, ob ihre Vorgaben eingehalten werden; wer die Zahlen nutzt, kann sie überprüfen.",
+        "es": "Las instituciones de investigación pueden mostrar que trabajan de forma responsable; los financiadores y los gobiernos pueden comprobar si se cumplen sus políticas; quien usa las cifras puede verificarlas."
       }
     },
     {
@@ -95,14 +95,14 @@
         "es": "Integridad y rendición de cuentas"
       },
       "description": {
-        "en": "Traditional metrics do not reveal misconduct or conflicts of interest. Open research information helps to detect and prevent misconduct: it discloses who funded a study, keeps a record of what was done and what was changed, and lets the public hold research to account.",
-        "de": "Traditionelle Metriken zeigen weder Fehlverhalten noch Interessenkonflikte. Offene Forschungsinformationen helfen, Fehlverhalten zu erkennen und ihm vorzubeugen: Sie legen offen, wer eine Studie finanziert hat, halten fest, was getan und was geändert wurde, und erlauben der Öffentlichkeit, von der Forschung Rechenschaft zu verlangen.",
-        "es": "Las métricas tradicionales no muestran la mala conducta ni los conflictos de interés. La información abierta sobre investigación ayuda a detectar y prevenir la mala conducta: da a conocer quién financió un estudio, deja registro de lo que se hizo y de lo que se cambió, y permite que el público pida cuentas a la investigación."
+        "en": "Traditional metrics do not show what information a decision about research rests on. When research information is open, those who are assessed can see and audit the information used about them, information on funding and grants shows who funded a study, and it is visible where the information comes from and how it was processed. Open information also helps to detect misconduct and conflicts of interest.",
+        "de": "Traditionelle Metriken zeigen nicht, auf welchen Informationen eine Entscheidung über Forschung beruht. Sind Forschungsinformationen offen, können die Bewerteten die über sie verwendeten Informationen einsehen und überprüfen, Informationen zu Förderungen zeigen, wer eine Studie finanziert hat, und es ist sichtbar, woher die Informationen stammen und wie sie verarbeitet wurden. Offene Informationen helfen außerdem, Fehlverhalten und Interessenkonflikte zu erkennen.",
+        "es": "Las métricas tradicionales no muestran en qué información se apoya una decisión sobre la investigación. Cuando la información sobre investigación es abierta, quienes son evaluados pueden ver y auditar la información que se usa sobre ellos, la información de financiamiento muestra quién financió un estudio, y se ve de dónde viene la información y cómo se procesó. La información abierta ayuda además a detectar la mala conducta y los conflictos de interés."
       },
       "whoBenefits": {
-        "en": "Research communities earn trust by working in the open; evaluators can find integrity problems early; civil society can see how research is held to account.",
-        "de": "Forschungsgemeinschaften gewinnen Vertrauen, indem sie offen arbeiten; Evaluatoren können Integritätsprobleme früh erkennen; die Zivilgesellschaft kann sehen, wie Forschung Rechenschaft ablegt.",
-        "es": "Las comunidades de investigación ganan confianza al trabajar de forma abierta; los evaluadores pueden detectar pronto los problemas de integridad; la sociedad civil puede ver cómo rinde cuentas la investigación."
+        "en": "Researchers and institutions can audit the information by which they are assessed; evaluators can find integrity problems early; civil society can see who funded research and how it is held to account.",
+        "de": "Forschende und Institutionen können die Informationen überprüfen, nach denen sie bewertet werden; Evaluatoren können Integritätsprobleme früh erkennen; die Zivilgesellschaft kann sehen, wer Forschung finanziert hat und wie sie Rechenschaft ablegt.",
+        "es": "Los investigadores y las instituciones pueden auditar la información con la que se les evalúa; los evaluadores pueden detectar pronto los problemas de integridad; la sociedad civil puede ver quién financió la investigación y cómo rinde cuentas."
       }
     },
     {

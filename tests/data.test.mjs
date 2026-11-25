@@ -1,5 +1,5 @@
 // Integrity of site/data/taxonomy.json against the brief ("Ten
-// Transformative Benefits", v0.3): counts, referential integrity, and
+// Transformative Benefits", v0.4): counts, referential integrity, and
 // cross-consistency of the axis and outcome groupings. Aimed at silent
 // failures: a mistyped id still renders, it just drops a connection.
 
@@ -128,4 +128,22 @@ test("B10 sits beside B9", () => {
   assert.ok(b10, "B10 exists");
   assert.equal(b10.axis, "A2", "B10 sits in Collaboration & Innovation");
   assert.equal(b10.outcome, "O2", "and flows into Sustainable Innovation");
+});
+
+// v0.4 rewrote B1, B2 and B8 around research information, as the Barcelona Declaration defines
+// it: B1 is what open metadata let people do with an output, B2 that policies can be checked,
+// B8 that those who are assessed can audit the information used about them. A locale that
+// keeps the older text describes research itself again, and nothing renders differently.
+test("B1, B2 and B8 are written about research information", () => {
+  const need = {
+    B1: { en: /Open metadata on publications/, de: /Offene Metadaten zu Publikationen/, es: /metadatos abiertos de publicaciones/ },
+    B2: { en: /check whether its policies/, de: /ob ihre Vorgaben/, es: /si se cumplen sus políticas/ },
+    B8: { en: /audit the information used about them/, de: /die über sie verwendeten Informationen/, es: /auditar la información que se usa sobre ellos/ },
+  };
+  for (const [id, locs] of Object.entries(need)) {
+    const b = data.benefits.find((x) => x.id === id);
+    for (const [loc, re] of Object.entries(locs)) {
+      assert.match(b.description[loc], re, `${id} (${loc}) is about research information`);
+    }
+  }
 });
