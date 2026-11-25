@@ -11,6 +11,7 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [0.4.1] - 2026-11-25
 
+Archived on Zenodo as [10.5281/zenodo.24527855](https://doi.org/10.5281/zenodo.24527855).
 Brief v0.4, as in 0.4.0. This release corrects the explorer and the README that 0.4.0 archived.
 
 ### Fixed

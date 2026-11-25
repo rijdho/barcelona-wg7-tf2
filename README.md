@@ -115,7 +115,7 @@ The last three sections of the brief give the reason for each change.
 | Suggestion channels | GitHub issue form and shared spreadsheet, both generated from the taxonomy; a comment on any cell of the sheet counts as a contribution |
 | Cases read against the benefits | Six, the responses in the WG7 case study collection on 2026-11-14. Two of them were first read on 2026-08-26: the University of Milan response, and a second one chosen because it has no costs in it |
 | Community review by WG7-TF2 | Not yet held |
-| Zenodo DOI / publication | Archived at v0.4.0 (2026-11-25), concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440); archived as a working document, not as an agreed framework |
+| Zenodo DOI / publication | Archived at v0.4.1 (2026-11-25), concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440); archived as a working document, not as an agreed framework |
 
 ## Tests
 
@@ -233,7 +233,7 @@ If you use this brief, its taxonomy or the explorer, please cite it: see
 [`CITATION.cff`](CITATION.cff) or the "Cite this repository" button on GitHub. Archived on
 Zenodo: concept DOI [10.5281/zenodo.22231440](https://doi.org/10.5281/zenodo.22231440),
 which always resolves to the latest version. Cite that one; the version DOI
-([10.5281/zenodo.24527291](https://doi.org/10.5281/zenodo.24527291) for v0.4.0) is only for
+([10.5281/zenodo.24527855](https://doi.org/10.5281/zenodo.24527855) for v0.4.1) is only for
 pinning a specific snapshot.
 
 The authors are cited as Hartley Belmar, Ricardo (ORCID
