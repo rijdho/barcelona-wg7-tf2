@@ -31,7 +31,7 @@ identifiers:
 repository-code: "https://github.com/rijdho/barcelona-wg7-tf2"
 url: "https://rijdho.github.io/barcelona-wg7-tf2/"
 license: CC-BY-4.0
-version: "0.4.0"
+version: "0.4.1"
 date-released: "2026-11-25"
 keywords:
   - open research information

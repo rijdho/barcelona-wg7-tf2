@@ -9,6 +9,10 @@ states its own version. At 0.4.0 the two numbers are the same again. Both stay b
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-11-25
+
+Brief v0.4, as in 0.4.0. This release corrects the explorer and the README that 0.4.0 archived.
+
 ### Fixed
 
 - The draft definition of B2 said that funders and governments check ethical and data
